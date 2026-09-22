@@ -26,23 +26,24 @@
   }
 
   /* ===================================================================
-     2. DESIGN TOKENS — cf. DESIGN.md section 2 & 3 (source de vérité)
+     2. DESIGN TOKENS — cf. DESIGN.md section 2 & 3 (source de vérité) — v2
      =================================================================== */
   :root {
-    --color-bg:              #f3eee6;
-    --color-surface:         #fffcf7;
-    --color-surface-2:       #e9ded0;
-    --color-surface-inverse: #4e3931;
-    --color-accent:          #765443;
-    --color-accent-hover:    #5f4436;
-    --color-accent-soft:     #ded5ca;
-    --color-accent-soft-2:   #dde2d6;
-    --color-text:            #332d29;
-    --color-text-inverse:    #fffcf7;
-    --color-text-muted:      #746b64;
-    --color-border:          #e3ded6;
-    --color-success:         #69785e;
-    --color-error:           #c0524b;
+    --color-bg:              #f6f1e8;
+    --color-bg-soft:         #fbf8f3;
+    --color-surface:         #fffdf8;
+    --color-surface-2:       #eee6d9;
+    --color-surface-inverse: #47342c;
+    --color-accent:          #7a5a45;
+    --color-accent-hover:    #614433;
+    --color-accent-soft:     #e3d6c8;
+    --color-accent-soft-2:   #dee3d3;
+    --color-text:            #33281f;
+    --color-text-inverse:    #fdf9f3;
+    --color-text-muted:      #7b6f63;
+    --color-border:          #e6ddd0;
+    --color-success:         #6b7a5c;
+    --color-error:           #b8493f;
 
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body:    'Inter', system-ui, sans-serif;
@@ -70,7 +71,13 @@
     border-bottom: 1px solid var(--color-border);
   }
   .page-header h1 { font-size: 2.25rem; }
-  .page-header p { color: var(--color-text-muted); margin-top: 12px; max-width: 640px; }
+  .page-header p { color: var(--color-text-muted); margin-top: 12px; max-width: 680px; }
+  .page-header .sg-tag {
+    display: inline-block; margin-top: 16px;
+    font: 700 0.7rem/1 var(--font-body); text-transform: uppercase;
+    letter-spacing: 0.05em; color: var(--color-accent);
+    background: var(--color-accent-soft-2); padding: 4px 10px; border-radius: 999px;
+  }
 
   section.sg-section {
     padding: 56px 0;
@@ -145,6 +152,7 @@
   .type-body-muted{ font: 400 0.9rem/1.5 var(--font-body); color: var(--color-text-muted); }
   .type-meta      { font: 400 0.8rem/1.4 var(--font-body); color: var(--color-text-muted); }
   .type-quote     { font: 400 1.25rem/1.4 var(--font-display); font-style: italic; }
+  .type-badge     { display: inline-block; font: 700 0.7rem/1 var(--font-body); text-transform: uppercase; letter-spacing: 0.05em; }
 
   /* ===================================================================
      6. BOUTONS
@@ -165,7 +173,19 @@
   .btn-primary:hover { background: var(--color-accent-hover); }
   .btn-primary:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(118,84,67,0.35);
+    box-shadow: 0 0 0 3px rgba(122,90,69,0.35);
+  }
+  .btn-primary.compact { padding: 10px 20px; }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    border-radius: 999px;
+    padding: 12px 22px;
+    font: 600 0.85rem var(--font-body);
+    cursor: pointer;
+    text-decoration: none;
   }
   .btn-on-inverse {
     display: inline-flex; align-items: center; gap: 8px;
@@ -186,7 +206,7 @@
   }
 
   /* ===================================================================
-     7. CARDS
+     7. CARDS GÉNÉRIQUES (claire / inversée)
      =================================================================== */
   .card-row { display: grid; grid-template-columns: 1fr; gap: 20px; }
   @media (min-width: 768px) { .card-row { grid-template-columns: 1fr 1fr; } }
@@ -203,9 +223,9 @@
     border-radius: 20px;
     padding: 28px;
   }
-  .card-inverse .eyebrow { color: rgba(255,252,247,0.7); }
+  .card-inverse .eyebrow { color: rgba(253,249,243,0.7); }
   .card-inverse h3 { color: var(--color-text-inverse); }
-  .card-inverse a { color: rgba(255,252,247,0.75); }
+  .card-inverse a { color: rgba(253,249,243,0.75); }
 
   /* ===================================================================
      8. BLOC AVANT / APRÈS
@@ -225,56 +245,146 @@
   .avant-apres li { padding: 6px 0; font-size: 0.95rem; }
 
   /* ===================================================================
-     9. LIGNE DE MODULE
+     9. CARD CONCEPT — numérotée, foncée (nouveau v2)
      =================================================================== */
-  .module-row {
-    display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px;
-    padding: 32px 0;
+  .concept-grid {
+    display: grid; grid-template-columns: 1fr; gap: 16px;
+  }
+  @media (min-width: 640px)  { .concept-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .concept-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+  .concept-card {
+    background: var(--color-surface-inverse);
+    color: var(--color-text-inverse);
+    border-radius: 20px;
+    padding: 28px;
+  }
+  .concept-card .num {
+    display: block;
+    font: 400 1.4rem/1 var(--font-display); font-style: italic;
+    color: var(--color-text-inverse); opacity: .8;
+    margin-bottom: 24px;
+  }
+  .concept-card h3 { font-size: 1.15rem; color: var(--color-text-inverse); }
+  .concept-card p { font: 400 0.85rem/1.5 var(--font-body); color: rgba(253,249,243,0.7); margin-top: 6px; }
+
+  /* ===================================================================
+     10. CARD "ÉLÉMENTS CLÉS" (nouveau v2)
+     =================================================================== */
+  .key-points-card { background: var(--color-surface); border-radius: 24px; padding: 32px; }
+  .key-points-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+  .key-points-list { list-style: none; margin: 8px 0 0; padding: 0; }
+  .key-points-list li {
+    display: flex; gap: 12px; padding: 14px 0;
     border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
   }
-  .module-row:last-child { border-bottom: none; }
-  .module-row .num { font: 400 1.4rem/1 var(--font-display); font-style: italic; color: var(--color-accent); width: 40px; }
-  .module-row .content { flex: 1 1 260px; }
-  .module-row .content h3 { font-size: 1.25rem; }
-  .module-row .content p { margin: 4px 0 0; color: var(--color-text-muted); font-size: 0.9rem; }
-  .module-row .meta { margin-top: 8px; font-size: 0.8rem; color: var(--color-text-muted); }
-  .module-row .side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex: 0 0 auto; margin-left: auto; }
+  .key-points-list li:last-child { border-bottom: none; }
+  .key-points-list .num { font: 400 1rem/1 var(--font-display); font-style: italic; color: var(--color-accent); flex-shrink: 0; }
+  .key-points-check {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--color-accent-soft-2);
+    border-radius: 14px; padding: 14px 16px; margin-top: 16px;
+    font-size: 0.85rem;
+  }
+  .key-points-check .mark {
+    width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+    background: var(--color-success); color: var(--color-text-inverse);
+    display: flex; align-items: center; justify-content: center; font-size: 0.7rem;
+  }
 
   /* ===================================================================
-     10. MINI PROGRESS BAR + BARRE AVEC LABEL
+     11. MINI-KANBAN (nouveau v2)
      =================================================================== */
-  .progress-track {
-    width: 90px; height: 3px; border-radius: 999px;
-    background: var(--color-surface-2); overflow: hidden;
+  .kanban {
+    background: var(--color-surface-2); border-radius: 20px; padding: 20px;
+    display: grid; grid-template-columns: 1fr; gap: 16px;
   }
-  .progress-fill { height: 100%; background: var(--color-accent); border-radius: 999px; }
-  .progress-label { font-size: 0.75rem; color: var(--color-text-muted); }
-
-  .progress-labeled-track {
-    width: 100%; height: 6px; border-radius: 999px;
-    background: var(--color-surface-2); overflow: hidden; margin-top: 8px;
+  @media (min-width: 640px) { .kanban { grid-template-columns: repeat(3, 1fr); } }
+  .kanban-col-head {
+    font: 600 0.75rem/1 var(--font-body); color: var(--color-text-muted);
+    margin-bottom: 10px; display: flex; justify-content: space-between;
   }
-  .progress-labeled-fill { height: 100%; background: var(--color-accent); border-radius: 999px; }
-  .progress-labeled-head { display: flex; justify-content: space-between; align-items: baseline; }
-  .progress-labeled-head span:first-child { font-size: 0.8rem; color: var(--color-text-muted); }
-  .progress-labeled-head span:last-child { font: 400 1.1rem/1 var(--font-display); font-style: italic; }
+  .kanban-task {
+    background: var(--color-surface); border-radius: 12px; padding: 10px 12px;
+    margin-bottom: 8px; display: flex; gap: 8px; align-items: flex-start;
+  }
+  .kanban-task .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent); margin-top: 5px; flex-shrink: 0; }
+  .kanban-task .title { font-size: 0.85rem; display: block; }
+  .kanban-task .sub { font-size: 0.75rem; color: var(--color-text-muted); }
 
   /* ===================================================================
-     11. SIDEBAR LISTE (cas pratique)
+     12. BANDEAU PLEIN ÉCRAN INVERSÉ (nouveau v2)
      =================================================================== */
-  .sidebar-list { background: var(--color-surface); border-radius: 24px; padding: 8px 24px; }
-  .sidebar-row {
-    display: flex; align-items: center; gap: 16px; padding: 16px 0;
-    border-bottom: 1px solid var(--color-border);
+  .inverse-banner {
+    background: var(--color-surface-inverse); color: var(--color-text-inverse);
+    padding: 56px 0; margin: 0 -24px;
   }
-  .sidebar-row:last-child { border-bottom: none; }
-  .sidebar-row .icon { width: 24px; font-size: 1.25rem; }
-  .sidebar-row .title { font: 500 1.05rem var(--font-display); }
-  .sidebar-row .sub { margin-left: auto; font-size: 0.8rem; color: var(--color-text-muted); }
-  .sidebar-row .arrow { margin-left: 12px; color: var(--color-text-muted); }
+  .inverse-banner .container { padding: 0 24px; }
+  .inverse-banner h2 { color: var(--color-text-inverse); margin-bottom: 28px; }
+  .inverse-banner-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  @media (min-width: 768px) { .inverse-banner-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+  .inverse-banner-grid h4 { font: 600 0.95rem/1.3 var(--font-body); margin: 0 0 6px; color: var(--color-text-inverse); }
+  .inverse-banner-grid p { font: 400 0.85rem/1.5 var(--font-body); color: rgba(253,249,243,0.7); margin: 0; }
 
   /* ===================================================================
-     12. AVATARS TEMPLATES
+     13. CARD MODÈLE — avec badge (nouveau v2, remplace la ligne "Dupliquer")
+     =================================================================== */
+  .template-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 1024px) { .template-grid { grid-template-columns: repeat(3, 1fr); } }
+  .template-card { position: relative; background: var(--color-surface); border-radius: 20px; padding: 24px; }
+  .template-badge {
+    display: inline-block;
+    font: 700 0.7rem/1 var(--font-body); text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .template-badge.populaire { background: var(--color-surface-inverse); color: var(--color-text-inverse); }
+  .template-badge.essentiel { background: var(--color-accent-soft-2); color: var(--color-text); }
+  .template-badge.nouveau   { background: var(--color-accent-soft); color: var(--color-text); }
+  .template-card h3 { font-size: 1.1rem; margin-top: 16px; }
+  .template-card p { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 6px; }
+  .template-card a.link { display: inline-block; margin-top: 16px; font: 600 0.8rem var(--font-body); color: var(--color-accent); text-decoration: none; }
+
+  /* ===================================================================
+     14. CARD RESSOURCE — foncée, liste interne (nouveau v2)
+     =================================================================== */
+  .resource-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 1024px) { .resource-grid { grid-template-columns: repeat(3, 1fr); } }
+  .resource-card { background: var(--color-surface-inverse); color: var(--color-text-inverse); border-radius: 20px; padding: 28px; }
+  .resource-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(253,249,243,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+  .resource-card h3 { font-size: 1.2rem; margin-top: 16px; color: var(--color-text-inverse); }
+  .resource-card > p { font-size: 0.85rem; color: rgba(253,249,243,0.7); margin-top: 6px; }
+  .resource-list { list-style: none; margin: 20px 0 0; padding: 0; }
+  .resource-list li {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+    padding: 8px 0; border-bottom: 1px solid rgba(253,249,243,0.12);
+    font-size: 0.8rem;
+  }
+  .resource-list li:last-child { border-bottom: none; }
+  .resource-tag {
+    font-size: 0.7rem; padding: 2px 8px; border-radius: 999px;
+    background: rgba(253,249,243,0.12); color: var(--color-text-inverse);
+  }
+
+  /* ===================================================================
+     15. CARD ARTICLE — "aller plus loin" (nouveau v2)
+     =================================================================== */
+  .article-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 1024px) { .article-grid { grid-template-columns: repeat(3, 1fr); } }
+  .article-card .thumb {
+    aspect-ratio: 4/3; border-radius: 16px; background: var(--color-surface-2);
+    margin-bottom: 16px; display: flex; align-items: center; justify-content: center;
+    color: var(--color-text-muted); font-size: 0.8rem;
+  }
+  .article-card .type-eyebrow { display: block; margin-bottom: 6px; }
+  .article-card h3 { font-size: 1.05rem; }
+  .article-card a.link {
+    display: inline-block; margin-top: 8px; font-size: 0.8rem; color: var(--color-text-muted);
+    text-decoration: none; transition: color 150ms ease;
+  }
+  .article-card a.link:hover { color: var(--color-accent); }
+
+  /* ===================================================================
+     16. AVATARS (équipe / à propos) — conservé
      =================================================================== */
   .avatar-row { display: flex; gap: 16px; flex-wrap: wrap; }
   .avatar {
@@ -286,7 +396,19 @@
   .avatar.soft-2 { background: var(--color-accent-soft-2); }
 
   /* ===================================================================
-     13. CHECKLIST
+     17. PROGRESSION (conservé — utilisé sur mon-parcours.html)
+     =================================================================== */
+  .progress-labeled-track {
+    width: 100%; height: 6px; border-radius: 999px;
+    background: var(--color-surface-2); overflow: hidden; margin-top: 8px;
+  }
+  .progress-labeled-fill { height: 100%; background: var(--color-accent); border-radius: 999px; }
+  .progress-labeled-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .progress-labeled-head span:first-child { font-size: 0.8rem; color: var(--color-text-muted); }
+  .progress-labeled-head span:last-child { font: 400 1.1rem/1 var(--font-display); font-style: italic; }
+
+  /* ===================================================================
+     18. CHECKLIST (conservé — réutilisable sur mon-parcours.html)
      =================================================================== */
   .checklist { list-style: none; margin: 0; padding: 0; }
   .checklist li { display: flex; align-items: center; gap: 12px; padding: 12px 0; }
@@ -302,7 +424,7 @@
   .check-box.checked { background: var(--color-success); border-color: var(--color-success); }
 
   /* ===================================================================
-     14. ACCORDÉON FAQ
+     19. ACCORDÉON FAQ (conservé — à propos.html)
      =================================================================== */
   .accordion-item { border-bottom: 1px solid var(--color-border); }
   .accordion-trigger {
@@ -318,7 +440,7 @@
   .accordion-item[data-open="true"] .accordion-panel { display: block; }
 
   /* ===================================================================
-     15. BLOCKQUOTE
+     20. BLOCKQUOTE
      =================================================================== */
   .sg-blockquote {
     border-left: 3px solid var(--color-accent);
@@ -331,6 +453,16 @@
     color: var(--color-text-muted);
     font-size: 0.85rem;
   }
+
+  .deprecated-note {
+    background: var(--color-accent-soft);
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    color: var(--color-text);
+    margin-bottom: 28px;
+  }
+  .deprecated-note strong { color: var(--color-accent); }
 </style>
 </head>
 <body>
@@ -342,8 +474,10 @@
       <p>
         Référence vivante des tokens et composants définis dans
         <code>DESIGN.md</code>. À consulter avant toute page ou tout
-        composant du site de formation Studio Nova.
+        composant du site (accueil, méthode, ressources, à propos, mon
+        parcours).
       </p>
+      <span class="sg-tag">v2 — hub de ressources</span>
     </div>
   </header>
 
@@ -353,9 +487,10 @@
     <section class="sg-section" id="palette">
       <span class="eyebrow">01 — Couleurs</span>
       <h2>Palette</h2>
-      <p class="sg-note">Cf. DESIGN.md section 2. Aucune couleur hors de cette liste.</p>
+      <p class="sg-note">Cf. DESIGN.md section 2. Aucune couleur hors de cette liste. <code>--color-bg-soft</code> est nouveau en v2 (alternance de fond entre sections).</p>
       <div class="swatch-grid">
         <div class="swatch"><div class="swatch-color" style="background:var(--color-bg)"></div><div class="swatch-info"><strong>bg</strong><code>--color-bg</code></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:var(--color-bg-soft)"></div><div class="swatch-info"><strong>bg-soft</strong><code>--color-bg-soft</code></div></div>
         <div class="swatch"><div class="swatch-color" style="background:var(--color-surface)"></div><div class="swatch-info"><strong>surface</strong><code>--color-surface</code></div></div>
         <div class="swatch"><div class="swatch-color" style="background:var(--color-surface-2)"></div><div class="swatch-info"><strong>surface-2</strong><code>--color-surface-2</code></div></div>
         <div class="swatch"><div class="swatch-color" style="background:var(--color-surface-inverse)"></div><div class="swatch-info"><strong>surface-inverse</strong><code>--color-surface-inverse</code></div></div>
@@ -377,16 +512,17 @@
       <h2>Échelle typographique</h2>
       <p class="sg-note">Playfair Display pour titres/citations/nombres ; Inter pour tout le reste. Cf. DESIGN.md section 3.</p>
 
-      <div class="type-row"><span class="type-label">H1 hero — Playfair Display 2.75rem/500</span><span class="type-h1-hero">Maîtriser Notion en entreprise</span></div>
+      <div class="type-row"><span class="type-label">H1 hero — Playfair Display 2.75rem/500</span><span class="type-h1-hero">Apprendre à utiliser Notion, étape par étape.</span></div>
       <div class="type-row"><span class="type-label">H1 page — Playfair Display 2.25rem/500</span><span class="type-h1-page">Poser les bases, ensemble.</span></div>
-      <div class="type-row"><span class="type-label">H2 section — Playfair Display 1.75rem/500</span><span class="type-h2">Apprendre en faisant.</span></div>
-      <div class="type-row"><span class="type-label">H3 card — Playfair Display 1.25rem/500</span><span class="type-h3">Découvrir Notion</span></div>
-      <div class="type-row"><span class="type-label">Numéro de module — Playfair Display italic 1.4rem</span><span class="type-number">01</span></div>
-      <div class="type-row"><span class="type-label">Eyebrow — Inter 0.7rem/700 uppercase</span><span class="type-eyebrow">Cas pratique · Studio Nova</span></div>
+      <div class="type-row"><span class="type-label">H2 section — Playfair Display 1.75rem/500</span><span class="type-h2">Quatre notions essentielles pour démarrer.</span></div>
+      <div class="type-row"><span class="type-label">H3 card — Playfair Display 1.25rem/500</span><span class="type-h3">C'est quoi Notion ?</span></div>
+      <div class="type-row"><span class="type-label">Numéro de card — Playfair Display italic 1.4rem</span><span class="type-number">01</span></div>
+      <div class="type-row"><span class="type-label">Eyebrow — Inter 0.7rem/700 uppercase</span><span class="type-eyebrow">Les bases de Notion</span></div>
       <div class="type-row"><span class="type-label">Citation — Playfair Display italic 1.25rem</span><span class="type-quote">« Une bonne architecture se comprend avant même qu'on l'explique. »</span></div>
-      <div class="type-row"><span class="type-label">Body — Inter 1rem/400</span><span class="type-body">Organisez, centralisez et partagez efficacement l'information — sans jargon.</span></div>
-      <div class="type-row"><span class="type-label">Body muted — Inter 0.9rem/400</span><span class="type-body-muted">Six templates sobres, prêts à dupliquer et à adapter au vocabulaire de Studio Nova.</span></div>
-      <div class="type-row"><span class="type-label">Meta — Inter 0.8rem/400</span><span class="type-meta">35 min · Vidéo · Exercice · Quiz</span></div>
+      <div class="type-row"><span class="type-label">Body — Inter 1rem/400</span><span class="type-body">Guide simple pour découvrir Notion et organiser ses infos, sans expérience préalable.</span></div>
+      <div class="type-row"><span class="type-label">Body muted — Inter 0.9rem/400</span><span class="type-body-muted">Chaque concept est simple. Ensemble, ils permettent d'organiser tout type d'information.</span></div>
+      <div class="type-row"><span class="type-label">Meta — Inter 0.8rem/400</span><span class="type-meta">8 min de lecture · Méthode</span></div>
+      <div class="type-row"><span class="type-label">Badge — Inter 0.7rem/700 uppercase</span><span class="type-badge" style="background:var(--color-accent-soft-2);padding:4px 10px;border-radius:999px;">Essentiel</span></div>
     </section>
 
     <!-- BOUTONS -->
@@ -396,6 +532,8 @@
       <p class="sg-note">Cf. DESIGN.md section 4. Un seul bouton primaire visible par section.</p>
       <div class="btn-row">
         <button class="btn-primary">Commencer →</button>
+        <button class="btn-primary compact">Mon parcours →</button>
+        <button class="btn-outline">Voir tous les templates →</button>
         <button class="btn-primary" style="background:var(--color-accent-hover)">Commencer → <span style="font-size:0.7rem;opacity:.8">(hover)</span></button>
       </div>
       <div class="demo-inverse-block" style="margin-top:20px;">
@@ -403,15 +541,15 @@
       </div>
     </section>
 
-    <!-- CARDS -->
+    <!-- CARDS GÉNÉRIQUES -->
     <section class="sg-section" id="cards">
-      <span class="eyebrow">04 — Cards</span>
-      <h2>Cards claire &amp; inversée</h2>
+      <span class="eyebrow">04 — Cards claire &amp; inversée (génériques)</span>
+      <h2>Cards de base</h2>
       <div class="card-row">
         <div class="card">
-          <span class="eyebrow">Dernière étape</span>
-          <h3>Validez vos acquis avec le test final.</h3>
-          <p class="type-meta" style="margin-top:8px;">15 questions · environ 12 minutes · résultat immédiat</p>
+          <span class="eyebrow">Et maintenant ?</span>
+          <h3>Vous savez utiliser les bases de Notion.</h3>
+          <p class="type-meta" style="margin-top:8px;">Téléchargez le lexique et commencez à créer votre premier espace.</p>
         </div>
         <div class="card-inverse">
           <span class="eyebrow">Après</span>
@@ -429,6 +567,7 @@
     <section class="sg-section" id="avant-apres">
       <span class="eyebrow">05 — Bloc Avant / Après</span>
       <h2>Avant / Après</h2>
+      <p class="sg-note">Conservé de la v1 — utilisé sur <code>a-propos.html</code>.</p>
       <div class="avant-apres">
         <div class="card">
           <span class="eyebrow">Avant</span>
@@ -452,96 +591,229 @@
       </div>
     </section>
 
-    <!-- LIGNE DE MODULE -->
-    <section class="sg-section" id="module">
-      <span class="eyebrow">06 — Ligne de module</span>
-      <h2>Liste des modules</h2>
-      <div>
-        <div class="module-row">
+    <!-- CARD CONCEPT -->
+    <section class="sg-section" id="concept">
+      <span class="eyebrow">06 — Card concept (nouveau v2)</span>
+      <h2>Grille de concepts numérotés</h2>
+      <p class="sg-note">Remplace la "ligne de module" de la v1. Grille (pas de liste à séparateurs) : ce sont des items parallèles, pas une séquence.</p>
+      <div class="concept-grid">
+        <div class="concept-card">
           <span class="num">01</span>
-          <div class="content">
-            <h3>Découvrir Notion</h3>
-            <p>Interface, pages, espaces et blocs</p>
-            <div class="meta">35 min · Vidéo · Exercice · Quiz</div>
-          </div>
-          <div class="side">
-            <span class="progress-label">60 %</span>
-            <div class="progress-track"><div class="progress-fill" style="width:60%"></div></div>
-            <button class="btn-primary" style="margin-top:8px;">Commencer →</button>
+          <h3>C'est quoi Notion ?</h3>
+          <p>Outil pour écrire et regrouper ses infos.</p>
+        </div>
+        <div class="concept-card">
+          <span class="num">02</span>
+          <h3>Les pages</h3>
+          <p>Espaces à remplir et ranger.</p>
+        </div>
+        <div class="concept-card">
+          <span class="num">03</span>
+          <h3>Les bases de données</h3>
+          <p>Suivre des listes (tâches, projets).</p>
+        </div>
+        <div class="concept-card">
+          <span class="num">04</span>
+          <h3>Les vues</h3>
+          <p>Une info s'affiche en tableau, liste ou calendrier.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD ÉLÉMENTS CLÉS -->
+    <section class="sg-section" id="elements-cles">
+      <span class="eyebrow">07 — Card "éléments clés" (nouveau v2)</span>
+      <h2>Liste interne numérotée + encart validé</h2>
+      <div class="card-row">
+        <div class="key-points-card">
+          <h3>Les éléments clés</h3>
+          <ul class="key-points-list">
+            <li><span class="num">01</span> Une page = espace pour écrire, ranger, imbriquer.</li>
+            <li><span class="num">02</span> Une base de données = tableau avec lignes et colonnes.</li>
+            <li><span class="num">03</span> Une propriété = info liée à un élément, pour trier et filtrer.</li>
+          </ul>
+          <div class="key-points-check">
+            <span class="mark">✓</span>
+            <span>Une base s'affiche en tableau, calendrier ou liste selon le besoin, sans dupliquer l'info.</span>
           </div>
         </div>
-        <div class="module-row">
-          <span class="num">02</span>
-          <div class="content">
-            <h3>Structurer l'information</h3>
-            <p>Arborescence, pages et bases de données</p>
-            <div class="meta">50 min · Vidéo · Exercice · Quiz</div>
-          </div>
-          <div class="side">
-            <span class="progress-label">20 %</span>
-            <div class="progress-track"><div class="progress-fill" style="width:20%"></div></div>
-            <button class="btn-primary" style="margin-top:8px;">Commencer →</button>
+        <div>
+          <span class="eyebrow">08 — Mini-Kanban (nouveau v2)</span>
+          <div class="kanban">
+            <div>
+              <div class="kanban-col-head"><span>À faire</span><span>2</span></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Refonte accueil</span><span class="sub">Équipe contenu</span></div></div>
+            </div>
+            <div>
+              <div class="kanban-col-head"><span>En cours</span><span>3</span></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Refonte accueil</span><span class="sub">Équipe contenu</span></div></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Guide éditorial</span><span class="sub">Équipe contenu</span></div></div>
+            </div>
+            <div>
+              <div class="kanban-col-head"><span>Terminé</span><span>4</span></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Refonte accueil</span><span class="sub">Équipe contenu</span></div></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BARRE DE PROGRESSION AVEC LABEL -->
+    <!-- BANDEAU INVERSÉ -->
+    <section class="sg-section" id="bandeau" style="padding:0 0 56px;border-bottom:1px solid var(--color-border);">
+      <div class="container" style="padding-top:56px;">
+        <span class="eyebrow">09 — Bandeau plein écran inversé (nouveau v2)</span>
+        <h2>Les bons réflexes</h2>
+        <p class="sg-note">Va bord à bord dans le vrai site (pas de border-radius, pas de <code>.container</code> visible autour). Démo ici contenue pour rester dans le guide de style.</p>
+      </div>
+      <div class="inverse-banner">
+        <div class="container">
+          <h2>Les bons réflexes à adopter dès le départ.</h2>
+          <div class="inverse-banner-grid">
+            <div><h4>Rester simple</h4><p>Commencez avec peu de pages et de propriétés.</p></div>
+            <div><h4>Nommer clairement</h4><p>Préférez des noms évidents pour que tout le monde s'y retrouve.</p></div>
+            <div><h4>Ranger régulièrement</h4><p>Un espace ordonné reste utile dans la durée.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD MODÈLE -->
+    <section class="sg-section" id="modeles">
+      <span class="eyebrow">10 — Card modèle avec badge, sans icône (nouveau v2)</span>
+      <h2>Modèles prêts à l'emploi</h2>
+      <div class="deprecated-note"><strong>Remplace</strong> la "ligne Dupliquer" à séparateurs de la v1. La card modèle n'a <strong>plus d'icône</strong> au-dessus du titre (retirée par l'utilisatrice) — seulement badge, titre, description, lien.</div>
+      <div class="template-grid">
+        <div class="template-card">
+          <span class="template-badge populaire">Populaire</span>
+          <h3>Tableau de bord personnel</h3>
+          <p>Un espace d'accueil avec vos priorités, tâches en cours et liens utiles.</p>
+          <a href="#" class="link">Utiliser ce modèle →</a>
+        </div>
+        <div class="template-card">
+          <span class="template-badge essentiel">Essentiel</span>
+          <h3>Suivi de projet</h3>
+          <p>Suivez vos projets de l'idée à la livraison avec un Kanban simple et efficace.</p>
+          <a href="#" class="link">Utiliser ce modèle →</a>
+        </div>
+        <div class="template-card">
+          <span class="template-badge nouveau">Nouveau</span>
+          <h3>Base de notes</h3>
+          <p>Centralisez vos notes, idées et références dans un espace consultable et organisé.</p>
+          <a href="#" class="link">Utiliser ce modèle →</a>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:24px;">
+        <button class="btn-outline">Voir tous les templates →</button>
+      </div>
+    </section>
+
+    <!-- CARD RESSOURCE -->
+    <section class="sg-section" id="ressources">
+      <span class="eyebrow">11 — Card ressource (nouveau v2)</span>
+      <h2>Apprendre au format qui vous convient</h2>
+      <div class="resource-grid">
+        <div class="resource-card">
+          <div class="resource-icon">📖</div>
+          <h3>Tutoriels</h3>
+          <p>Des guides pas à pas pour découvrir chaque fonctionnalité à votre rythme.</p>
+          <ul class="resource-list">
+            <li><span>Créer sa première page</span><span>5 min</span></li>
+            <li><span>Créer une base de données</span><span>7 min</span></li>
+            <li><span>Filtres et tris</span><span>6 min</span></li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">🎬</div>
+          <h3>Vidéos</h3>
+          <p>Des démonstrations courtes pour comprendre chaque concept en quelques minutes.</p>
+          <ul class="resource-list">
+            <li><span>Découvrir Notion en 15 min</span><span>19:00</span></li>
+            <li><span>Créer sa 1ère base</span><span>12:00</span></li>
+            <li><span>Raccourcis utiles</span><span>8:30</span></li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">📄</div>
+          <h3>Documents</h3>
+          <p>Checklists, lexique et modèles à télécharger et garder sous la main.</p>
+          <ul class="resource-list">
+            <li><span>Checklist démarrage</span><span class="resource-tag">PDF</span></li>
+            <li><span>Lexique Notion</span><span class="resource-tag">PDF</span></li>
+            <li><span>Modèle de page</span><span class="resource-tag">PDF</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD ARTICLE -->
+    <section class="sg-section" id="articles">
+      <span class="eyebrow">12 — Card article (nouveau v2)</span>
+      <h2>Aller plus loin</h2>
+      <div class="article-grid">
+        <article class="article-card">
+          <div class="thumb">image 4:3</div>
+          <span class="type-eyebrow">Méthode</span>
+          <h3>Choisir ses propriétés</h3>
+          <a href="#" class="link">8 min de lecture →</a>
+        </article>
+        <article class="article-card">
+          <div class="thumb">image 4:3</div>
+          <span class="type-eyebrow">Organisation</span>
+          <h3>Garder un espace simple</h3>
+          <a href="#" class="link">8 min de lecture →</a>
+        </article>
+        <article class="article-card">
+          <div class="thumb">image 4:3</div>
+          <span class="type-eyebrow">Rangement</span>
+          <h3>Ranger ses pages</h3>
+          <a href="#" class="link">8 min de lecture →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- AVATARS -->
+    <section class="sg-section" id="avatars">
+      <span class="eyebrow">13 — Avatars (équipe / à propos)</span>
+      <h2>Avatars initiales</h2>
+      <p class="sg-note">Conservé de la v1, réservé aux pastilles d'équipe sur <code>a-propos.html</code> — les templates utilisent désormais des icônes de card, pas des avatars.</p>
+      <div class="avatar-row">
+        <div class="avatar soft-1">J</div>
+        <div class="avatar soft-2">L</div>
+        <div class="avatar soft-1">S</div>
+      </div>
+    </section>
+
+    <!-- PROGRESSION -->
     <section class="sg-section" id="progression">
-      <span class="eyebrow">07 — Progression</span>
+      <span class="eyebrow">14 — Progression (conservé — mon-parcours.html)</span>
       <h2>Barre avec label</h2>
       <div class="card" style="max-width:420px;">
         <div class="progress-labeled-head">
-          <span>Progression</span>
+          <span>Progression de lecture</span>
           <span>4 / 6</span>
         </div>
         <div class="progress-labeled-track"><div class="progress-labeled-fill" style="width:66%"></div></div>
       </div>
     </section>
 
-    <!-- SIDEBAR LISTE -->
-    <section class="sg-section" id="sidebar">
-      <span class="eyebrow">08 — Sidebar liste</span>
-      <h2>Liste sidebar (cas pratique)</h2>
-      <div class="sidebar-list" style="max-width:480px;">
-        <div class="sidebar-row"><span class="icon">🏠</span><span class="title">Accueil</span><span class="sub">Les nouvelles et raccourcis</span><span class="arrow">→</span></div>
-        <div class="sidebar-row"><span class="icon">👥</span><span class="title">Équipe</span><span class="sub">Les rôles et contacts</span><span class="arrow">→</span></div>
-        <div class="sidebar-row"><span class="icon">🚀</span><span class="title">Projets</span><span class="sub">Le travail en cours</span><span class="arrow">→</span></div>
-      </div>
-    </section>
-
-    <!-- AVATARS -->
-    <section class="sg-section" id="avatars">
-      <span class="eyebrow">09 — Avatars templates</span>
-      <h2>Avatars (boîte à outils)</h2>
-      <div class="avatar-row">
-        <div class="avatar soft-1">P</div>
-        <div class="avatar soft-2">W</div>
-        <div class="avatar soft-1">É</div>
-        <div class="avatar soft-2">C</div>
-        <div class="avatar soft-1">R</div>
-        <div class="avatar soft-2">K</div>
-      </div>
-    </section>
-
     <!-- CHECKLIST -->
     <section class="sg-section" id="checklist">
-      <span class="eyebrow">10 — Checklist</span>
-      <h2>Checklist projet final</h2>
+      <span class="eyebrow">15 — Checklist (conservé — réutilisable mon-parcours.html)</span>
+      <h2>Checklist</h2>
       <div class="card" style="max-width:480px;">
         <ul class="checklist">
-          <li><button class="check-box checked" aria-pressed="true">✓</button> Créer la page d'accueil Studio Nova</li>
-          <li><button class="check-box checked" aria-pressed="true">✓</button> Structurer l'espace Équipe</li>
-          <li><button class="check-box" aria-pressed="false"></button> Ajouter le calendrier partagé</li>
-          <li><button class="check-box" aria-pressed="false"></button> Publier la FAQ et le Helpdesk</li>
+          <li><button class="check-box checked" aria-pressed="true">✓</button> Section "Les bases de Notion" lue</li>
+          <li><button class="check-box checked" aria-pressed="true">✓</button> Section "Méthode" lue</li>
+          <li><button class="check-box" aria-pressed="false"></button> Modèle "Suivi de projet" utilisé</li>
+          <li><button class="check-box" aria-pressed="false"></button> Lexique téléchargé</li>
         </ul>
       </div>
       <p class="sg-note" style="margin-top:12px;">Cliquer une case bascule son état (démo).</p>
     </section>
 
-    <!-- ACCORDEON -->
+    <!-- ACCORDEON FAQ -->
     <section class="sg-section" id="accordeon">
-      <span class="eyebrow">11 — Accordéon FAQ</span>
+      <span class="eyebrow">16 — Accordéon FAQ (conservé — a-propos.html)</span>
       <h2>FAQ</h2>
       <div id="faq-demo">
         <div class="accordion-item" data-open="true">
@@ -563,7 +835,7 @@
 
     <!-- BLOCKQUOTE -->
     <section class="sg-section" id="citation">
-      <span class="eyebrow">12 — Citation</span>
+      <span class="eyebrow">17 — Citation</span>
       <h2>Blockquote</h2>
       <blockquote class="sg-blockquote type-quote">
         « Une bonne architecture se comprend avant même qu'on l'explique. »
@@ -574,7 +846,7 @@
 
   <footer class="sg-footer">
     <div class="container">
-      Guide de style généré à partir de <code>DESIGN.md</code> — Notion pour l'entreprise · Travail de diplôme ESIG
+      Guide de style généré à partir de <code>DESIGN.md</code> v2 — Notion pour l'entreprise · Travail de diplôme ESIG
     </div>
   </footer>
 
