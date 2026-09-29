@@ -95,6 +95,10 @@ a {
   color: var(--color-text-muted);
 }
 
+.mt-32 {
+  margin-top: 32px;
+}
+
 .eyebrow {
   display: block;
   font: 700 0.7rem/1.4 var(--font-body);
