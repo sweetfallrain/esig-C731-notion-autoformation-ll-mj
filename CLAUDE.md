@@ -1,27 +1,44 @@
 # CLAUDE.md — Notion pour l'entreprise (Travail pratique ESIG)
 
-> **v2 — réadapté à la nouvelle maquette (accueil, sept. 2026).** Le projet
-> passe d'un LMS à 5 modules progressifs + quiz noté à un **guide de
-> référence type hub de ressources** (nav Accueil · Méthode · Ressources ·
-> À propos + CTA « Mon parcours »). Voir « Notes de migration » en bas de
-> fichier pour le détail de ce qui change et les hypothèses prises en
-> l'absence de maquette pour les pages intérieures.
+> **v3 — contenu généralisé, structure inspirée d'un tutoriel vidéo (sept.
+> 2026).** Le contenu abandonne le prisme "Studio Nova" (PME fictive) pour
+> s'adresser à un public général qui découvre Notion. La page `methode.html`
+> devient une page longue qui déroule 5 parties dans l'ordre : Pourquoi
+> Notion → Les bases → Types de blocs → Collaboration & partage → Modèles/
+> bases de données. `index.html` redevient un teaser court (visuel, peu
+> textuel) qui renvoie vers `methode.html`. Voir « Notes de migration » en
+> bas de fichier pour l'historique complet (v1 → v2 → v3).
+>
+> *(v2 — réadapté à la nouvelle maquette (accueil, sept. 2026) : passage d'un
+> LMS à 5 modules progressifs + quiz noté à un guide de référence type hub de
+> ressources (nav Accueil · Méthode · Ressources · À propos + CTA « Mon
+> parcours »). Toujours d'actualité pour l'architecture générale des pages —
+> seul le contenu change en v3.)*
 
 ## Contexte du projet
 
-Site web de formation professionnelle **« Notion pour l'entreprise »**, réalisé
-dans le cadre d'un travail pratique ESIG (filière Informaticienne de gestion).
-Le site apprend à un collaborateur à structurer l'information dans Notion, à
-travers le cas pratique fictif de **Studio Nova**, une PME de 30 collaborateurs
-qui veut centraliser ses informations dispersées (mails, Excel, Drive, Teams,
-papier) dans un espace Notion unique.
+Site web **« Notion pour l'entreprise »**, réalisé dans le cadre d'un travail
+pratique ESIG (filière Informaticienne de gestion). Le site apprend à
+**n'importe qui** — pas seulement un profil "entreprise" — à comprendre et à
+utiliser Notion : pourquoi l'utiliser, comment il est construit (pages,
+blocs, bases de données), comment collaborer et partager, et comment aller
+plus loin avec des modèles. Le ton s'adresse directement au lecteur ("vous"),
+sans mise en scène d'une entreprise fictive.
 
-Le site est désormais un **guide de référence consultable librement** (plutôt
-qu'un parcours linéaire obligatoire) : accueil qui donne un aperçu de
-l'ensemble du contenu, page Méthode (comment Notion est construit), page
-Ressources (modèles, tutoriels, vidéos, documents, articles), page À propos
-(le projet, Studio Nova, l'équipe), et un espace personnel « Mon parcours »
-qui remplace l'ancien tableau de progression des 5 modules.
+> **v3 — abandon du cas pratique "Studio Nova"** : la v1/v2 s'appuyait sur une
+> PME fictive de 30 collaborateurs comme fil rouge. Ce cadrage est supprimé :
+> le contenu est désormais 100 % généraliste (aucune référence à une
+> entreprise en particulier), conformément au retour de l'utilisatrice
+> ("je voulais quelque chose qui s'adresse à tout le monde"). Le nom du site
+> et le sujet ("Notion pour l'entreprise" / usage professionnel de Notion)
+> restent inchangés — seul l'habillage narratif disparaît.
+
+Le site est un **guide de référence consultable librement** (plutôt qu'un
+parcours linéaire obligatoire) : accueil = teaser court et visuel, page
+Méthode = le cœur pédagogique (déroulé complet, structuré comme un tutoriel),
+page Ressources (modèles, tutoriels, vidéos, documents, articles), page À
+propos (le projet, ses objectifs, son autrice), et un espace personnel « Mon
+parcours » qui remplace l'ancien tableau de progression des 5 modules.
 
 ## Stack technique
 
@@ -47,7 +64,7 @@ notion-pour-lentreprise/
 ├── index.html                       (Accueil — aperçu de tout le guide)
 ├── methode.html                     (Comment Notion est construit)
 ├── ressources.html                  (Modèles, tutoriels, vidéos, documents, articles)
-├── a-propos.html                    (Le projet, Studio Nova, l'équipe)
+├── a-propos.html                    (Le projet : objectifs, public, contexte ESIG)
 ├── mon-parcours.html                (Espace personnel — lecture, modèles marqués)
 ├── css/
 │   ├── variables.css                (design tokens issus de DESIGN.md)
@@ -109,66 +126,112 @@ pas de librairie d'icônes externe.
 12. **JS vanilla modulaire** : un fichier = une responsabilité (`nav.js`,
 `parcours.js`, `accordion.js`), pas de logique métier mélangée dans le HTML
 (pas d'`onclick=""` inline).
+13. **Captures d'écran Notion réelles** (nouveau v3) : à utiliser dans
+`methode.html` partie 2 "Les bases" (arborescence de pages) et partie 3
+"Types de blocs" (un ou deux exemples de blocs en situation), en
+remplacement des placeholders/mockups génériques quand une capture est
+disponible. Règles :
+  - Stockées dans `images/captures/`, nommées par sujet
+    (`arborescence-pages.png`, `bloc-liste-taches.png`…).
+  - `border-radius: 12px` + `box-shadow` légère (cf. niveau 1 de
+    `DESIGN.md` section 6) pour rester cohérentes avec le reste du design
+    system — jamais une capture brute sans cadre.
+  - `alt` toujours descriptif du contenu réel de la capture (pas juste
+    "capture d'écran Notion") — cf. règle d'accessibilité section 9.
+  - Peuvent recevoir une légende courte en dessous (`<figcaption>`, Inter
+    0.8rem color-text-muted) si le contexte n'est pas évident sans elle.
+  - Ne remplacent pas le mockup générique du hero (P3), pensé comme un
+    visuel de marque, pas une capture pédagogique.
 
 ---
 
-## Structure de contenu (résumé)
+## Structure de contenu (résumé) — v3
 
-* **Accueil** (`index.html`) — aperçu du guide en une seule page longue :
+* **Accueil** (`index.html`) — **teaser court et visuel**, pas de
+  développement (le contenu dense vit sur `methode.html`) :
   * Hero 2 colonnes : eyebrow « ACCUEIL · Guide débutant », H1
     « Apprendre à utiliser Notion, étape par étape. », sous-titre, mockup
-    produit à droite (aperçu d'un espace Notion factice « Studio Nova »).
-  * **Les bases de Notion** : eyebrow « LES BASES DE NOTION », H2
-    « Quatre notions essentielles pour démarrer. », note à droite, grille de
-    4 concept cards foncées numérotées (01 C'est quoi Notion ? / 02 Les
-    pages / 03 Les bases de données / 04 Les vues).
-  * **Méthode (aperçu)** : eyebrow « MÉTHODE », H2 « Comprendre comment
-    Notion est construit. », paragraphe + card « Les éléments clés » (3
-    points numérotés + encart validé) ; puis mini-Kanban « Tâches — vue
-    Kanban » à gauche / H2 « Une base de données = un tableau structuré. » à
-    droite.
-  * **Bandeau plein écran inversé** : H2 « Les bons réflexes à adopter dès
-    le départ. », 3 colonnes texte (Rester simple / Nommer clairement /
-    Ranger régulièrement).
-  * **Modèles prêts à l'emploi** : eyebrow « MODÈLES PRÊTS À L'EMPLOI », H2
-    « Démarrez avec un modèle existant. », grille de 3 cards modèle avec
-    badge (Populaire / Essentiel / Nouveau) — **sans icône** au-dessus du
-    titre — + bouton « Voir tous les templates → » vers `ressources.html`.
-  * **Ressources** : eyebrow « RESSOURCES », H2 « Apprendre au format qui
-    vous convient. », grille de 3 cards ressource foncées (Tutoriels /
-    Vidéos / Documents) avec liste interne.
-  * **Aller plus loin** : eyebrow « ALLER PLUS LOIN », H2 « Continuez votre
-    apprentissage. », lien « Voir toute la bibliothèque → » vers
-    `ressources.html`, grille de 3 cards article (image 4:3 + catégorie +
-    titre + durée de lecture).
-  * **Fin du guide** : H2 « Vous savez utiliser les bases de Notion. »,
-    paragraphe, card « Et maintenant ? » avec bouton « Télécharger le
-    lexique → ».
+    produit générique à droite (aperçu neutre d'un espace Notion — pas de
+    nom d'entreprise, libellés génériques type « Mon espace », « Projets »,
+    « Notes »).
+  * **Pourquoi Notion ?** (aperçu) : eyebrow « POURQUOI NOTION », H2 courte,
+    grille de 3-4 cards concept parmi les 6 raisons développées sur
+    `methode.html` (cf. ci-dessous), + lien « Voir toutes les raisons → »
+    vers `methode.html#pourquoi-notion`.
+  * **Bandeau plein écran inversé** (conservé de la v2) : H2 « Les bons
+    réflexes à adopter dès le départ. », 3 colonnes texte (Rester simple /
+    Nommer clairement / Ranger régulièrement).
+  * **Modèles prêts à l'emploi** : grille de 3 cards modèle avec badge
+    (Populaire / Essentiel / Nouveau, sans icône) + bouton « Voir tous les
+    templates → » vers `ressources.html`.
+  * **Aller plus loin** : grille de 3 cards article + lien « Voir toute la
+    bibliothèque → » vers `ressources.html`.
+  * **Fin** : card « Et maintenant ? » avec bouton « Découvrir la méthode
+    complète → » vers `methode.html` (remplace le lien vers un lexique à
+    télécharger, qui n'a plus de raison d'être en position de clôture
+    puisque la méthode elle-même n'a pas encore été lue à ce stade).
 
-* **Méthode** (`methode.html`) — développe en profondeur ce que l'accueil ne
-  fait qu'introduire : les 4 notions essentielles (une section par notion,
-  avec exemples Studio Nova), le détail de la construction d'une base de
-  données (propriétés, vues), et le cas pratique fil rouge (arborescence
-  cible Studio Nova : Accueil, Projets, Équipe, Ressources, reprend le
-  contenu ex-« cas pratique » de la v1).
+* **Méthode** (`methode.html`) — **le cœur du site**, structurée comme un
+  tutoriel en 5 parties, dans cet ordre, chacune avec sa propre ancre :
 
-* **Ressources** (`ressources.html`) — bibliothèque complète : grille des 6
-  modèles à dupliquer (au lieu des 3 mis en avant sur l'accueil), les 3
-  blocs ressources (tutoriels / vidéos / documents) au complet, et la
-  bibliothèque d'articles « aller plus loin » (au lieu des 3 mis en avant).
-  Chaque modèle peut être « marqué » pour `mon-parcours.html`.
+  1. **Pourquoi utiliser Notion** (`#pourquoi-notion`) — eyebrow « POURQUOI
+     NOTION », H1/H2 d'ouverture. Grille de 6 concept cards (composant
+     "Card concept" de `DESIGN.md`, numérotées 01-06) : Centraliser les
+     informations · Planifier un projet · Prendre des notes · Planifier ses
+     finances · Partager un calendrier · Travailler à plusieurs
+     (collaboration). Chaque card : titre court + 1 phrase, pas de pavé de
+     texte. Peut ouvrir sur le bloc Avant/Après existant (« L'information se
+     disperse » → « Un espace centralisé »), toujours générique.
+  2. **Les bases** (`#les-bases`) — explique le fonctionnement structurel
+     avant les détails : une page peut contenir plusieurs sous-pages (pas de
+     limite de profondeur), Notion n'a pas de concept de dossier — tout est
+     une page, et le contenu d'une page est un empilement de blocs. Prévoir
+     un visuel schématique (arborescence de pages en cascade, ou captures
+     d'écran annotées si disponibles) + card "Les éléments clés" (composant
+     `DESIGN.md`) résumant ces 3 règles.
+  3. **Les types de blocs** (`#types-de-blocs`) — la section la plus dense,
+     organisée en 3 groupes, chacun en "Card ressource" (composant
+     `DESIGN.md`, réutilisé tel quel — icône + titre + liste interne) :
+     * *Blocs classiques* : texte, page, titre (utile pour une table des
+       matières), liste (à puces / numérotée / menu déroulant / tâche),
+       citation ou encadré.
+     * *Blocs médias* : image, vidéo, lien (avec ou sans mise en page/aperçu).
+     * *Blocs d'intégration* : connecteurs vers d'autres outils (Google
+       Maps, Figma, etc.).
+  4. **Collaboration & partage** (`#collaboration`) — travailler à plusieurs
+     dans le même espace, gérer le partage d'une page, et **publier une
+     page en site web** pour la rendre accessible sans compte Notion.
+     Peut reprendre le format bandeau inversé ou une grille de 2-3 cards
+     concept.
+  5. **Modèles & bases de données** (`#modeles-bases-de-donnees`) — transition
+     naturelle vers la pratique : rappel du concept de base de données/vues
+     (mini-Kanban + texte déjà rédigés en v2, conservés), puis teaser de 3
+     cards modèle (composant "Card modèle") + lien « Voir tous les
+     templates → » vers `ressources.html`.
 
-* **À propos** (`a-propos.html`) — présentation du projet et de Studio Nova
-  (repris de l'ex-page « Avant de commencer » de la v1 : objectifs, public,
-  prérequis, périmètre), + éventuellement la FAQ helpdesk (accordéon,
-  reprise de la v1) si l'on ne crée pas de page dédiée.
+  Un sommaire (liste de 5 liens ancrés) en tête de page permet de sauter
+  directement à une partie.
 
-* **Mon parcours** (`mon-parcours.html`) — remplace l'ancien
-  `construisez-votre-espace.html` + `test-final.html` : liste des sections
-  du guide déjà lues (progression en %), liste des modèles marqués depuis
-  `ressources.html`, bouton pour reprendre la lecture là où elle s'est
-  arrêtée. **Pas de quiz noté** dans cette version (supprimé, cf. Notes de
-  migration).
+* **Ressources** (`ressources.html`) — inchangé sur le fond (v2) : grille
+  complète des 6 modèles à dupliquer, les 3 blocs ressources (tutoriels /
+  vidéos / documents) au complet, bibliothèque d'articles « aller plus
+  loin ». Chaque modèle peut être « marqué » pour `mon-parcours.html`.
+
+* **À propos** (`a-propos.html`) — présentation du **projet** (objectif du
+  guide, à qui il s'adresse — "toute personne qui découvre Notion", pas un
+  profil entreprise en particulier — contexte du travail de diplôme ESIG),
+  **sans** présentation de Studio Nova. Le bloc Avant/Après (déjà générique
+  dans son contenu — mails introuvables / Excel isolés / dossiers sans
+  logique → source de vérité unique) peut être conservé ici en clôture, ou
+  déplacé dans `methode.html` partie 1 (cf. ci-dessus) — à choisir selon ce
+  qui rend chaque page la plus légère. + éventuellement la FAQ (accordéon,
+  déjà générique, aucune référence Studio Nova à retirer).
+
+* **Mon parcours** (`mon-parcours.html`) — inchangé (v2) : liste des
+  sections de `methode.html` déjà lues (progression en %, une entrée par
+  ancre des 5 parties), liste des modèles marqués depuis `ressources.html`,
+  bouton pour reprendre la lecture là où elle s'est arrêtée. Toujours pas de
+  quiz noté.
 
 ---
 
@@ -229,33 +292,39 @@ ferme au clic et au clavier (Échap).
 ### P3 — Page Accueil (index.html)
 
 ```
-Crée @index.html, page longue en sections alternant --color-bg / --color-bg-soft
-(cf. @DESIGN.md section 5) :
+Crée @index.html — page COURTE et visuelle (le contenu dense vit sur
+methode.html, ne pas le dupliquer ici), sections alternant --color-bg /
+--color-bg-soft (cf. @DESIGN.md section 5) :
 
 1. Hero (2 colonnes ≥ 1024px) : eyebrow « ACCUEIL · GUIDE DÉBUTANT », H1
    « Apprendre à utiliser Notion, étape par étape. », sous-titre, mockup
-   produit à droite (composant "Hero — aperçu produit" de @DESIGN.md).
-2. Les bases de Notion : eyebrow, H2, note à droite, grille de 4 concept
-   cards numérotées (composant "Card concept" de @DESIGN.md).
-3. Méthode (aperçu) : eyebrow « MÉTHODE », H2, card "Les éléments clés" +
-   mini-Kanban (composant "Mini-Kanban" de @DESIGN.md) à côté du texte
-   "Une base de données = un tableau structuré".
-4. Bandeau plein écran inversé "Les bons réflexes à adopter dès le départ"
+   produit générique à droite (composant "Hero — aperçu produit" de
+   @DESIGN.md — aucun nom d'entreprise dans les libellés du mockup, rester
+   sur du générique : "Mon espace", "Projets", "Notes"…).
+2. Pourquoi Notion (aperçu) : eyebrow « POURQUOI NOTION », H2 courte,
+   grille de 3-4 "Card concept" (composant de @DESIGN.md) reprenant les
+   raisons les plus parlantes parmi les 6 développées sur methode.html
+   (ex. Centraliser les informations / Planifier un projet / Travailler à
+   plusieurs), + lien "Voir toutes les raisons →" vers
+   methode.html#pourquoi-notion.
+3. Bandeau plein écran inversé "Les bons réflexes à adopter dès le départ"
    (composant dédié de @DESIGN.md, bord à bord, pas de border-radius).
-5. Modèles prêts à l'emploi : grille de 3 "Card modèle" avec badges +
-   bouton outline "Voir tous les templates →" vers ressources.html.
-6. Ressources : grille de 3 "Card ressource" (Tutoriels / Vidéos / Documents).
-7. Aller plus loin : grille de 3 "Card article" + lien "Voir toute la
+4. Modèles prêts à l'emploi : grille de 3 "Card modèle" avec badges (sans
+   icône) + bouton outline "Voir tous les templates →" vers ressources.html.
+5. Aller plus loin : grille de 3 "Card article" + lien "Voir toute la
    bibliothèque →" vers ressources.html.
-8. Fin du guide : H2 + card "Et maintenant ?" avec bouton "Télécharger le
-   lexique →".
+6. Fin : H2 + card "Et maintenant ?" avec bouton "Découvrir la méthode
+   complète →" vers methode.html (pas de lexique à télécharger ici, la
+   méthode n'a pas encore été lue à ce stade du parcours).
 
 Respecte @DESIGN.md (typographie, cartes, grilles, bandeau inversé) et le
-mobile-first (grilles empilées < breakpoints définis section 8).
+mobile-first (grilles empilées < breakpoints définis section 8). Aucune
+référence à une entreprise fictive dans le texte ou les visuels.
 
 Critère de succès : page fonctionnelle à 375px, 768px et 1440px de large,
 les sections alternent bien de fond, le bandeau "bons réflexes" va bord à
-bord sans marge résiduelle à aucune largeur.
+bord sans marge résiduelle à aucune largeur, la page reste courte (pas de
+pavé de texte long — c'est le rôle de methode.html).
 ```
 
 ---
@@ -266,20 +335,27 @@ bord sans marge résiduelle à aucune largeur.
 Crée @a-propos.html :
 
 - Nav globale.
-- Eyebrow « À PROPOS », H1 « Poser les bases, ensemble. », paragraphe de
-  contexte Studio Nova.
+- Eyebrow « À PROPOS », H1 « Un guide pour apprendre Notion, sans jargon. »,
+  paragraphe de contexte généraliste : à qui s'adresse ce guide (toute
+  personne qui découvre Notion, aucun profil "entreprise" présupposé) et
+  pourquoi il existe. Le contexte du travail de diplôme ESIG peut être
+  mentionné en une phrase, sans devenir le sujet de la page.
 - Grille de 4 cards courtes (Objectifs / Public / Prérequis / Périmètre),
-  1 colonne < 768px.
-- Bloc Avant/Après (composant conservé de la v1, cf. @DESIGN.md — Avant en
+  1 colonne < 768px — contenu générique, aucune mention d'entreprise fictive.
+- Bloc Avant/Après (composant conservé de la v1/v2, cf. @DESIGN.md — Avant en
   card claire, Après en card inversée, flèche de transition ≥ 1024px) :
-  « L'information se disperse » → « Un espace Notion centralisé ».
-- (Optionnel selon arbitrage) FAQ en accordéon reprise de l'ex-helpdesk v1,
-  si aucune page dédiée n'est créée pour elle.
+  « L'information se disperse » → « Un espace Notion centralisé ». Contenu
+  déjà générique — à garder ici en clôture, ou à déplacer dans
+  methode.html#pourquoi-notion (P5) selon ce qui allège le mieux chaque page.
+- (Optionnel selon arbitrage) FAQ en accordéon reprise de l'ex-helpdesk v1
+  (déjà générique, rien à retirer), si aucune page dédiée n'est créée pour elle.
 
-Respecte @DESIGN.md.
+Respecte @DESIGN.md. Aucune référence à Studio Nova ou à toute autre
+entreprise fictive.
 
 Critère de succès : le bloc Avant/Après s'affiche côte à côte ≥ 1024px et
-empilé < 1024px, sans jamais casser la mise en page à 375px.
+empilé < 1024px, sans jamais casser la mise en page à 375px ; aucun texte de
+la page ne suppose un contexte "entreprise" particulier.
 ```
 
 ---
@@ -287,26 +363,63 @@ empilé < 1024px, sans jamais casser la mise en page à 375px.
 ### P5 — Page Méthode
 
 ```
-Crée @methode.html :
+Crée @methode.html — page longue, structurée comme un tutoriel en 5 parties
+numérotées, chacune avec un id d'ancre, précédées d'un sommaire (liste de 5
+liens) en tête de page :
 
 - Nav globale.
 - Eyebrow « MÉTHODE », H1 « Comprendre comment Notion est construit. »,
-  sous-titre.
-- Reprend et développe la grille de 4 concept cards de l'accueil, mais avec
-  une section détaillée par notion (H2 + paragraphe + éventuel visuel) :
-  01 C'est quoi Notion, 02 Les pages, 03 Les bases de données, 04 Les vues.
-- Section "Une base de données = un tableau structuré" développée : mini-
-  Kanban (composant de @DESIGN.md) + explication des propriétés et des vues
-  (tableau, calendrier, liste).
-- Cas pratique fil rouge Studio Nova (repris de la v1) : blockquote « Une
-  bonne architecture se comprend avant même qu'on l'explique. », arborescence
-  cible en grille de cards (pas de sidebar à séparateurs, cf. règle grille
-  généralisée de @DESIGN.md v2).
+  sous-titre, sommaire des 5 parties (liens ancrés).
 
-Respecte @DESIGN.md.
+- **1. Pourquoi utiliser Notion** (`id="pourquoi-notion"`) :
+  eyebrow « POURQUOI NOTION », H2. Grille de 6 "Card concept" numérotées
+  (composant de @DESIGN.md, 01-06) : Centraliser les informations /
+  Planifier un projet / Prendre des notes / Planifier ses finances /
+  Partager un calendrier / Travailler à plusieurs (collaboration) — chaque
+  card : titre court + 1 phrase, pas de paragraphe. Peut précéder ce bloc
+  d'un Avant/Après (composant conservé de @DESIGN.md — repris de
+  a-propos.html si l'arbitrage P4 le déplace ici) : « L'information se
+  disperse » → « Un espace centralisé ».
 
-Critère de succès : chaque notion a sa propre ancre (id), navigable depuis
-un sommaire en tête de page ; layout correct à 375/768/1440px.
+- **2. Les bases** (`id="les-bases"`) : eyebrow, H2. Explique dans l'ordre :
+  une page peut contenir plusieurs sous-pages (pas de limite de
+  profondeur) ; Notion n'a pas de concept de dossier — tout est une page ;
+  le contenu d'une page est un empilement de blocs. Prévoir un visuel
+  schématique (arborescence de pages en cascade — SVG simple ou image
+  annotée) + card "Les éléments clés" (composant de @DESIGN.md) qui résume
+  ces 3 règles en liste numérotée.
+
+- **3. Les types de blocs** (`id="types-de-blocs"`) : eyebrow, H2. 3 "Card
+  ressource" (composant de @DESIGN.md — icône + titre + liste interne),
+  en grille :
+    * Blocs classiques : texte, page, titre (utile pour une table des
+      matières), liste (puces / numérotée / menu déroulant / tâche),
+      citation ou encadré.
+    * Blocs médias : image, vidéo, lien (avec ou sans mise en page).
+    * Blocs d'intégration : connecteurs vers d'autres outils (Google Maps,
+      Figma, etc.).
+
+- **4. Collaboration & partage** (`id="collaboration"`) : eyebrow, H2.
+  Travailler à plusieurs dans le même espace, partager une page avec des
+  droits différenciés, et publier une page en site web pour la rendre
+  accessible sans compte Notion. Bandeau plein écran inversé (composant de
+  @DESIGN.md) ou grille de 2-3 "Card concept" selon ce qui reste le plus
+  lisible.
+
+- **5. Modèles & bases de données** (`id="modeles-bases-de-donnees"`) :
+  eyebrow, H2. Reprend le mini-Kanban (composant de @DESIGN.md) +
+  explication des propriétés et des vues (tableau, calendrier, liste) —
+  contenu déjà rédigé en v2, conservé tel quel. Termine par un teaser de 3
+  "Card modèle" (sans icône, cf. section 4 de @DESIGN.md) + lien "Voir tous
+  les templates →" vers ressources.html.
+
+Respecte @DESIGN.md. Aucune référence à Studio Nova ou à toute autre
+entreprise fictive — le "vous" s'adresse à n'importe quel lecteur.
+
+Critère de succès : chaque partie a sa propre ancre (id), navigable depuis
+le sommaire en tête de page ; layout correct à 375/768/1440px ; la partie 3
+(types de blocs) est la plus dense visuellement mais reste scannable (listes
+courtes dans chaque card, pas de paragraphes).
 ```
 
 ---
@@ -404,6 +517,42 @@ P1 (design system) → P2 (nav) → P3 (Accueil) → P4 (À propos)
 → P5 (Méthode) → P6 (Ressources) → P7 (Mon parcours)
 → P8 (Responsive & accessibilité)
 ```
+
+---
+
+## Notes de migration (v3 — sept. 2026)
+
+Suite au premier jet de contenu produit à partir de la v2, retour de
+l'utilisatrice : contenu jugé "pas très clair", "trop textuel", et surtout
+mal cadré ("il se positionne du point de vue de l'entreprise Studio Nova
+alors que je voulais quelque chose qui s'adresse à tout le monde"). Elle a
+fourni une structure inspirée d'un tutoriel vidéo, en 5 parties (Pourquoi
+Notion → Les bases → Types de blocs → Collaboration & partage → Modèles/
+bases de données), validée comme suit :
+
+- **Emplacement du contenu** : tout regroupé sur `methode.html`, qui devient
+  la page longue en 5 parties. `index.html` redevient un teaser court et
+  visuel. **[confirmé par l'utilisatrice]**
+- **Cas pratique Studio Nova** : supprimé entièrement — plus aucune
+  référence à une entreprise fictive nulle part sur le site, contenu 100 %
+  généraliste. **[confirmé par l'utilisatrice, tranche définitivement
+  l'hypothèse "sidebar liste (cas pratique)" restée ouverte en v2]**
+- **Page À propos** : recentrée sur le projet lui-même (objectifs, public,
+  contexte ESIG en une phrase) plutôt que sur la présentation de Studio
+  Nova. Le bloc Avant/Après (déjà générique dans son contenu) peut y rester
+  ou être déplacé en ouverture de la partie 1 de methode.html — cette
+  micro-décision reste un arbitrage libre en l'absence de préférence
+  exprimée, sans impact structurel.
+- **Fin du guide sur l'accueil** : le bouton "Télécharger le lexique" cède sa
+  place à "Découvrir la méthode complète →" — le lexique n'a plus de sens en
+  clôture d'accueil puisque la méthode (qui contient tout le contenu dense)
+  n'a pas encore été lue à ce stade du parcours. Le lexique téléchargeable
+  peut réapparaître en fin de methode.html si souhaité (non spécifié par
+  l'utilisatrice — à proposer plus tard si besoin).
+- **Densité de texte** : consigne explicite à observer sur toutes les pages,
+  pas seulement methode.html — cards courtes (titre + 1 phrase), listes
+  plutôt que paragraphes, visuels/schémas quand c'est possible (ex. partie
+  "Les bases" — arborescence de pages).
 
 ---
 

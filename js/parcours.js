@@ -5,12 +5,11 @@
   var SECTION_PREFIX = 'notion-guide:section-lue:';
 
   var GUIDE_SECTIONS = [
-    { id: 'les-bases', page: 'index.html', label: 'Les bases de Notion' },
-    { id: 'methode-apercu', page: 'index.html', label: 'Méthode (aperçu)' },
-    { id: 'c-est-quoi-notion', page: 'methode.html', label: "C'est quoi Notion ?" },
-    { id: 'les-pages', page: 'methode.html', label: 'Les pages' },
-    { id: 'les-bases-de-donnees', page: 'methode.html', label: 'Les bases de données' },
-    { id: 'les-vues', page: 'methode.html', label: 'Les vues' }
+    { id: 'pourquoi-notion', page: 'methode.html', label: 'Pourquoi utiliser Notion' },
+    { id: 'les-bases', page: 'methode.html', label: 'Les bases' },
+    { id: 'types-de-blocs', page: 'methode.html', label: 'Les types de blocs' },
+    { id: 'collaboration', page: 'methode.html', label: 'Collaboration & partage' },
+    { id: 'modeles-bases-de-donnees', page: 'methode.html', label: 'Modèles & bases de données' }
   ];
 
   var TEMPLATES = {
@@ -235,7 +234,7 @@
       link.href = next.page + '#' + next.id;
       link.textContent = 'Reprendre la lecture →';
     } else {
-      link.href = 'index.html';
+      link.href = 'methode.html#' + GUIDE_SECTIONS[0].id;
       link.textContent = 'Revoir le guide →';
     }
   }

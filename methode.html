@@ -56,105 +56,201 @@
         <span class="eyebrow">MÉTHODE</span>
         <h1>Comprendre comment Notion est construit.</h1>
         <p class="text-muted lead">
-          Quatre notions suffisent à comprendre n'importe quel espace
-          Notion. Ce sont elles qui structurent la façon dont Studio Nova
-          organise ses projets, son équipe et ses ressources.
+          Le guide complet, en cinq parties : pourquoi utiliser Notion,
+          comment il est construit, comment collaborer, et comment aller
+          plus vite avec des modèles.
         </p>
         <nav class="toc" aria-label="Sommaire">
-          <a href="#c-est-quoi-notion" class="toc__link">01 · C'est quoi Notion ?</a>
-          <a href="#les-pages" class="toc__link">02 · Les pages</a>
-          <a href="#les-bases-de-donnees" class="toc__link">03 · Les bases de données</a>
-          <a href="#les-vues" class="toc__link">04 · Les vues</a>
+          <a href="#pourquoi-notion" class="toc__link">01 · Pourquoi Notion</a>
+          <a href="#les-bases" class="toc__link">02 · Les bases</a>
+          <a href="#types-de-blocs" class="toc__link">03 · Types de blocs</a>
+          <a href="#collaboration" class="toc__link">04 · Collaboration & partage</a>
+          <a href="#modeles-bases-de-donnees" class="toc__link">05 · Modèles & bases de données</a>
         </nav>
       </div>
     </section>
 
-    <!-- 01 C'EST QUOI NOTION -->
-    <section class="section bg-soft" id="c-est-quoi-notion">
+    <!-- 01 POURQUOI NOTION -->
+    <section class="section bg-soft" id="pourquoi-notion">
       <div class="container">
         <span class="eyebrow">01</span>
-        <h2>C'est quoi Notion ?</h2>
-        <p class="text-muted lead">
-          Notion réunit dans un seul espace ce qui est aujourd'hui dispersé
-          entre plusieurs outils : écrire, organiser des listes, partager
-          des documents. Chez Studio Nova, ça remplace les mails de suivi,
-          les fichiers Excel isolés et les dossiers Drive sans structure
-          claire.
-        </p>
-        <button type="button" class="mark-read-btn" data-mark-section="c-est-quoi-notion" aria-pressed="false">Marquer comme lu</button>
+        <h2>Pourquoi utiliser Notion ?</h2>
+        <div class="concept-grid mt-32">
+          <div class="concept-card">
+            <span class="num">01</span>
+            <h3>Centraliser les informations</h3>
+            <p>Regroupez notes, documents et projets au même endroit, accessible par toute l'équipe.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">02</span>
+            <h3>Planifier un projet</h3>
+            <p>Suivez les tâches de l'idée à la livraison avec un tableau Kanban simple.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">03</span>
+            <h3>Prendre des notes</h3>
+            <p>Notez vos idées, réunions et références dans des pages faciles à retrouver.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">04</span>
+            <h3>Planifier ses finances</h3>
+            <p>Suivez un budget personnel ou professionnel dans une base de données claire.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">05</span>
+            <h3>Partager un calendrier</h3>
+            <p>Visualisez des échéances et événements en vue calendrier, partagée avec qui vous voulez.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">06</span>
+            <h3>Travailler à plusieurs</h3>
+            <p>Collaborez en temps réel sur les mêmes pages, avec des droits d'accès adaptés.</p>
+          </div>
+        </div>
+        <button type="button" class="mark-read-btn" data-mark-section="pourquoi-notion" aria-pressed="false">Marquer comme lu</button>
       </div>
     </section>
 
-    <!-- 02 LES PAGES -->
-    <section class="section bg" id="les-pages">
+    <!-- 02 LES BASES -->
+    <section class="section bg" id="les-bases">
       <div class="container">
         <span class="eyebrow">02</span>
-        <h2>Les pages</h2>
+        <h2>Les bases : pages, blocs, pas de dossiers.</h2>
         <p class="text-muted lead">
-          Une page est un espace que l'on remplit librement : texte,
-          images, listes, ou d'autres pages imbriquées à l'intérieur.
-          Studio Nova a par exemple une page « Projets » qui contient une
-          sous-page par client.
+          Avant les détails, il faut comprendre comment Notion structure
+          l'information : tout est organisé autour de trois règles simples.
         </p>
-        <button type="button" class="mark-read-btn" data-mark-section="les-pages" aria-pressed="false">Marquer comme lu</button>
+
+        <div class="key-points-card">
+          <h3>Les éléments clés</h3>
+          <ul class="key-points-list">
+            <li><span class="num">01</span> Une page peut contenir d'autres pages, imbriquées sans limite de profondeur.</li>
+            <li><span class="num">02</span> Notion n'a pas de dossiers : tout est une page, même ce qui ressemble à un classeur.</li>
+            <li><span class="num">03</span> Le contenu d'une page est un empilement de blocs — texte, liste, image, base de données…</li>
+          </ul>
+          <div class="key-points-check">
+            <span class="mark">✓</span>
+            <span>Une arborescence de pages remplace avantageusement des dossiers imbriqués : plus simple à réorganiser, sans jamais perdre de contenu.</span>
+          </div>
+        </div>
+
+        <figure class="capture mt-32">
+          <img src="images/captures/arborescence-pages.png" alt="Arborescence de pages Notion : une page « Espace de travail » contenant plusieurs sous-pages, elles-mêmes divisées en sous-pages.">
+          <figcaption>Une page peut en contenir d'autres, sans limite de profondeur.</figcaption>
+        </figure>
+
+        <button type="button" class="mark-read-btn" data-mark-section="les-bases" aria-pressed="false">Marquer comme lu</button>
       </div>
     </section>
 
-    <!-- 03 LES BASES DE DONNEES (intro) -->
-    <section class="section bg-soft" id="les-bases-de-donnees">
+    <!-- 03 TYPES DE BLOCS -->
+    <section class="section bg-soft" id="types-de-blocs">
       <div class="container">
         <span class="eyebrow">03</span>
-        <h2>Les bases de données</h2>
+        <h2>Les types de blocs</h2>
         <p class="text-muted lead">
-          Une base de données est un ensemble d'éléments organisés en
-          tableau, avec des propriétés communes (statut, responsable,
-          échéance…). C'est l'outil idéal pour suivre des listes qui
-          évoluent dans le temps, comme les projets ou les tâches de
-          Studio Nova. Le détail de sa construction est développé ci-dessous.
+          Une page se construit bloc par bloc. Voici les familles de blocs
+          les plus utiles pour démarrer.
         </p>
-        <button type="button" class="mark-read-btn" data-mark-section="les-bases-de-donnees" aria-pressed="false">Marquer comme lu</button>
+
+        <div class="resource-grid mt-32">
+          <div class="resource-card">
+            <div class="resource-icon" aria-hidden="true">📝</div>
+            <h3>Blocs classiques</h3>
+            <p>Le texte et la structure de base d'une page.</p>
+            <ul class="resource-list">
+              <li><span>Texte</span></li>
+              <li><span>Page (sous-page imbriquée)</span></li>
+              <li><span>Titre (utile pour une table des matières)</span></li>
+              <li><span>Liste à puces, numérotée, à cocher ou menu déroulant</span></li>
+              <li><span>Citation ou encadré</span></li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon" aria-hidden="true">🎬</div>
+            <h3>Blocs médias</h3>
+            <p>Pour illustrer ou enrichir une page.</p>
+            <ul class="resource-list">
+              <li><span>Image</span></li>
+              <li><span>Vidéo</span></li>
+              <li><span>Lien (avec ou sans aperçu)</span></li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon" aria-hidden="true">🔗</div>
+            <h3>Blocs d'intégration</h3>
+            <p>Pour connecter d'autres outils directement dans la page.</p>
+            <ul class="resource-list">
+              <li><span>Google Maps</span></li>
+              <li><span>Figma</span></li>
+              <li><span>Et bien d'autres connecteurs</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="capture mt-32">
+          <img src="images/captures/bloc-liste-taches.png" alt="Bloc liste de tâches dans une page Notion, avec plusieurs cases à cocher et certaines tâches déjà marquées comme terminées.">
+          <figcaption>Un bloc liste de tâches, avec cases à cocher.</figcaption>
+        </figure>
+
+        <button type="button" class="mark-read-btn" data-mark-section="types-de-blocs" aria-pressed="false">Marquer comme lu</button>
       </div>
     </section>
 
-    <!-- 04 LES VUES -->
-    <section class="section bg" id="les-vues">
+    <!-- 04 COLLABORATION & PARTAGE -->
+    <section class="section bg" id="collaboration">
       <div class="container">
         <span class="eyebrow">04</span>
-        <h2>Les vues</h2>
+        <h2>Collaboration & partage</h2>
         <p class="text-muted lead">
-          Une même base de données peut s'afficher sous plusieurs vues :
-          tableau pour tout voir d'un coup, calendrier pour les échéances,
-          liste pour une lecture rapide. Changer de vue ne duplique jamais
-          les données.
+          Notion se construit rarement seul. Voici comment travailler à
+          plusieurs sans perdre le contrôle.
         </p>
-        <button type="button" class="mark-read-btn" data-mark-section="les-vues" aria-pressed="false">Marquer comme lu</button>
+        <div class="concept-grid mt-32">
+          <div class="concept-card">
+            <span class="num">01</span>
+            <h3>Travailler à plusieurs</h3>
+            <p>Plusieurs personnes peuvent modifier la même page en temps réel, comme un document partagé.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">02</span>
+            <h3>Partager une page</h3>
+            <p>Donnez un accès en lecture ou en modification, à une personne ou à toute une équipe.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">03</span>
+            <h3>Publier en site web</h3>
+            <p>Rendez une page accessible publiquement, sans compte Notion, via un simple lien.</p>
+          </div>
+        </div>
+        <button type="button" class="mark-read-btn" data-mark-section="collaboration" aria-pressed="false">Marquer comme lu</button>
       </div>
     </section>
 
-    <!-- UNE BASE DE DONNEES = UN TABLEAU STRUCTURE -->
-    <section class="section bg-soft" id="base-de-donnees-detail">
+    <!-- 05 MODELES & BASES DE DONNEES -->
+    <section class="section bg-soft" id="modeles-bases-de-donnees">
       <div class="container">
-        <h2>Une base de données = un tableau structuré.</h2>
+        <span class="eyebrow">05</span>
+        <h2>Modèles & bases de données</h2>
         <p class="text-muted lead">
-          Chaque ligne de la base est un élément (une tâche, un projet),
-          chaque colonne une propriété (statut, échéance, responsable).
-          Les propriétés permettent de trier, filtrer et regrouper
-          l'information sans jamais la dupliquer.
+          Une fois les bases posées, les bases de données permettent de
+          structurer des listes qui évoluent dans le temps : chaque ligne
+          est un élément, chaque colonne une propriété.
         </p>
 
         <div class="kanban kanban--intro" aria-hidden="true">
           <div>
             <div class="kanban-col-head"><span>À faire</span><span>2</span></div>
-            <div class="kanban-task"><span class="dot"></span><div><span class="title">Refonte accueil</span><span class="sub">Équipe contenu</span></div></div>
-            <div class="kanban-task"><span class="dot"></span><div><span class="title">Guide éditorial</span><span class="sub">Équipe contenu</span></div></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Rédiger la page d'accueil</span><span class="sub">Cette semaine</span></div></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Préparer la présentation</span><span class="sub">Priorité haute</span></div></div>
           </div>
           <div>
             <div class="kanban-col-head"><span>En cours</span><span>1</span></div>
-            <div class="kanban-task"><span class="dot"></span><div><span class="title">Base de modèles</span><span class="sub">Équipe produit</span></div></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Mettre à jour le calendrier</span><span class="sub">En cours</span></div></div>
           </div>
           <div>
             <div class="kanban-col-head"><span>Terminé</span><span>1</span></div>
-            <div class="kanban-task"><span class="dot"></span><div><span class="title">Arborescence Studio Nova</span><span class="sub">Équipe produit</span></div></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Créer le modèle de suivi</span><span class="sub">Terminé récemment</span></div></div>
           </div>
         </div>
 
@@ -172,52 +268,33 @@
             <p>Une lecture rapide et compacte, sans les colonnes secondaires.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- CAS PRATIQUE FIL ROUGE -->
-    <section class="section bg" id="cas-pratique">
-      <div class="container">
-        <span class="eyebrow">CAS PRATIQUE</span>
-        <h2>L'arborescence cible de Studio Nova.</h2>
-        <blockquote class="quote">
-          Une bonne architecture se comprend avant même qu'on l'explique.
-        </blockquote>
-
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>Accueil</h3>
-            <p>Le point d'entrée de l'espace, avec les annonces et les priorités de l'équipe.</p>
-            <ul>
-              <li>Tableau de bord équipe</li>
-              <li>Annonces</li>
-            </ul>
+        <h3 class="mt-32">Des modèles pour démarrer plus vite</h3>
+        <div class="template-grid">
+          <div class="template-card">
+            <span class="template-badge populaire">Populaire</span>
+            <h3>Tableau de bord personnel</h3>
+            <p>Un espace d'accueil avec vos priorités, tâches en cours et liens utiles.</p>
+            <a href="ressources.html" class="template-card__link">Utiliser ce modèle →</a>
           </div>
-          <div class="info-card">
-            <h3>Projets</h3>
-            <p>Une base de données par client, suivie en vue Kanban.</p>
-            <ul>
-              <li>Kanban projets</li>
-              <li>Archives</li>
-            </ul>
+          <div class="template-card">
+            <span class="template-badge essentiel">Essentiel</span>
+            <h3>Suivi de projet</h3>
+            <p>Suivez vos projets de l'idée à la livraison avec un Kanban simple et efficace.</p>
+            <a href="ressources.html" class="template-card__link">Utiliser ce modèle →</a>
           </div>
-          <div class="info-card">
-            <h3>Équipe</h3>
-            <p>Les informations liées aux collaborateurs de Studio Nova.</p>
-            <ul>
-              <li>Trombinoscope</li>
-              <li>Congés</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <h3>Ressources</h3>
-            <p>Les modèles et documents partagés par toute l'équipe.</p>
-            <ul>
-              <li>Modèles</li>
-              <li>Documentation</li>
-            </ul>
+          <div class="template-card">
+            <span class="template-badge nouveau">Nouveau</span>
+            <h3>Base de notes</h3>
+            <p>Centralisez vos notes, idées et références dans un espace consultable et organisé.</p>
+            <a href="ressources.html" class="template-card__link">Utiliser ce modèle →</a>
           </div>
         </div>
+        <div class="template-actions">
+          <a href="ressources.html" class="btn-outline">Voir tous les templates →</a>
+        </div>
+
+        <button type="button" class="mark-read-btn" data-mark-section="modeles-bases-de-donnees" aria-pressed="false">Marquer comme lu</button>
       </div>
     </section>
 
