@@ -713,6 +713,133 @@
 }
 
 /* ===================================================================
+   Grille "cards courtes" — a-propos.html (Objectifs/Public/Prérequis/Périmètre)
+   =================================================================== */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.info-card {
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+}
+
+.info-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 6px;
+}
+
+/* ===================================================================
+   Bloc Avant / Après — conservé de la v1
+   =================================================================== */
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+.before-after__panel {
+  background: var(--color-surface);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
+}
+
+.before-after__panel h3 {
+  font-size: 1.2rem;
+}
+
+.before-after__panel ul {
+  margin-top: 16px;
+}
+
+.before-after__panel li {
+  padding: 6px 0;
+  font-size: 0.95rem;
+}
+
+.before-after__panel--after {
+  background: var(--color-surface-inverse);
+  color: var(--color-text-inverse);
+}
+
+.before-after__panel--after h3 {
+  color: var(--color-text-inverse);
+}
+
+.before-after__panel--after .eyebrow {
+  color: rgba(253, 249, 243, 0.7);
+}
+
+.before-after__arrow {
+  display: none;
+  color: var(--color-text-muted);
+}
+
+/* ===================================================================
+   Accordéon FAQ — conservé de la v1
+   =================================================================== */
+.faq-list {
+  margin-top: 24px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 20px 0;
+  font: 500 0.95rem var(--font-body);
+  color: var(--color-text);
+}
+
+.accordion-trigger .plus {
+  color: var(--color-accent);
+  transition: transform 150ms ease;
+  font-size: 1.1rem;
+}
+
+.accordion-item[data-open="true"] .plus {
+  transform: rotate(45deg);
+}
+
+.accordion-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
+  border-radius: 4px;
+}
+
+.accordion-panel {
+  display: none;
+  padding: 0 0 20px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.accordion-item[data-open="true"] .accordion-panel {
+  display: block;
+}
+
+/* ===================================================================
    Focus visible — liens texte (jamais d'outline supprimé sans remplacement)
    =================================================================== */
 .section-head__link:focus-visible,

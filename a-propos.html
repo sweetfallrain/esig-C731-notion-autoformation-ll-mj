@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a href="index.html" class="site-nav__brand">
+        <span class="site-nav__logo" aria-hidden="true"></span>
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+      </a>
+
+      <nav class="site-nav__links" aria-label="Navigation principale">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+
+      <a href="mon-parcours.html" class="btn-primary btn-primary--compact site-nav__cta">Mon parcours →</a>
+
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-mobile">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Ouvrir le menu</span>
+      </button>
+    </div>
+
+    <div class="site-nav__mobile" id="site-nav-mobile" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+      <div class="site-nav__mobile-head">
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+        <button type="button" class="site-nav__close" aria-label="Fermer le menu">✕</button>
+      </div>
+      <nav aria-label="Navigation principale (mobile)">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+      <a href="mon-parcours.html" class="btn-primary">Mon parcours →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INTRO -->
+    <section class="section bg" id="intro">
+      <div class="container">
+        <span class="eyebrow">À PROPOS</span>
+        <h1>Poser les bases, ensemble.</h1>
+        <p class="text-muted lead">
+          Studio Nova est une PME de 30 collaborateurs dont les informations
+          sont aujourd'hui dispersées entre mails, fichiers Excel, Drive,
+          Teams et papier. Ce guide accompagne l'équipe dans la mise en
+          place d'un espace Notion unique pour centraliser projets,
+          ressources et documentation.
+        </p>
+      </div>
+    </section>
+
+    <!-- OBJECTIFS / PUBLIC / PREREQUIS / PERIMETRE -->
+    <section class="section bg-soft" id="cadre">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Objectifs</h3>
+            <p>Apprendre à structurer l'information dans Notion à travers un cas pratique concret, pour être autonome sur son espace de travail.</p>
+          </div>
+          <div class="info-card">
+            <h3>Public</h3>
+            <p>Les collaborateurs de Studio Nova qui centralisent aujourd'hui leurs informations dans des mails, des fichiers Excel et des dossiers partagés.</p>
+          </div>
+          <div class="info-card">
+            <h3>Prérequis</h3>
+            <p>Aucune expérience de Notion n'est nécessaire — seulement l'envie de mieux organiser son travail.</p>
+          </div>
+          <div class="info-card">
+            <h3>Périmètre</h3>
+            <p>Les bases de Notion (pages, bases de données, vues) — pas les automatisations avancées ni l'API.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVANT / APRES -->
+    <section class="section bg" id="avant-apres">
+      <div class="container">
+        <span class="eyebrow">STUDIO NOVA</span>
+        <h2>D'une information dispersée à un espace centralisé.</h2>
+        <div class="before-after">
+          <div class="before-after__panel">
+            <span class="eyebrow">Avant</span>
+            <h3>L'information se disperse</h3>
+            <ul>
+              <li>— Mails introuvables</li>
+              <li>— Tableaux Excel isolés</li>
+              <li>— Dossiers sans logique</li>
+            </ul>
+          </div>
+          <div class="before-after__arrow" aria-hidden="true">→</div>
+          <div class="before-after__panel before-after__panel--after">
+            <span class="eyebrow">Après</span>
+            <h3>Un espace Notion centralisé</h3>
+            <ul>
+              <li>✓ Une source de vérité</li>
+              <li>✓ Des équipes alignées</li>
+              <li>✓ Un savoir facile à retrouver</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-soft" id="faq">
+      <div class="container">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions fréquentes.</h2>
+
+        <div class="faq-list">
+          <div class="accordion-item" data-open="true">
+            <button class="accordion-trigger" aria-expanded="true" aria-controls="faq-panel-1">
+              Comment retrouver une page rapidement ?
+              <span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="faq-panel-1">
+              Utilisez la recherche globale (Ctrl/Cmd + K) ou les favoris de la sidebar.
+            </div>
+          </div>
+
+          <div class="accordion-item" data-open="false">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-2">
+              Qui peut modifier une base de données ?
+              <span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="faq-panel-2">
+              Les membres avec un accès « Peut modifier » sur l'espace concerné.
+            </div>
+          </div>
+
+          <div class="accordion-item" data-open="false">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-3">
+              Faut-il tout réorganiser dès le premier jour ?
+              <span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="faq-panel-3">
+              Non — commencez avec quelques pages essentielles, puis structurez au fur et à mesure des besoins réels de l'équipe.
+            </div>
+          </div>
+
+          <div class="accordion-item" data-open="false">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-4">
+              Que devient l'existant (mails, Excel, Drive) ?
+              <span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="faq-panel-4">
+              Il est repris progressivement dans Notion, page par page, sans tout migrer d'un coup.
+            </div>
+          </div>
+
+          <div class="accordion-item" data-open="false">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-panel-5">
+              Où trouver de l'aide si je suis bloqué·e ?
+              <span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-panel" id="faq-panel-5">
+              Consultez les tutoriels et documents de la page <a href="ressources.html">Ressources</a>, ou demandez à un collègue déjà à l'aise avec Notion.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/accordion.js" defer></script>
+</body>
+</html>
