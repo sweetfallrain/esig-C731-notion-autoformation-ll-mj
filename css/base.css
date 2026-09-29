@@ -40,6 +40,17 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
+/* Triptyque Eyebrow → Titre → Sous-titre, gap 12px (DESIGN.md section 3) */
+h1 + p,
+h2 + p,
+h3 + p {
+  margin-top: 12px;
+}
+
+.lead {
+  max-width: 640px;
+}
+
 a {
   color: inherit;
 }

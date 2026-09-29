@@ -43,6 +43,10 @@
   .inverse-banner-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -71,5 +75,18 @@
   .resource-grid,
   .article-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .before-after {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .before-after__arrow {
+    display: flex;
+    align-items: center;
   }
 }
