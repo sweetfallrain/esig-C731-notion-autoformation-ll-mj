@@ -156,3 +156,9 @@ a {
   outline: none;
   box-shadow: 0 0 0 3px rgba(253, 249, 243, 0.35);
 }
+
+a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
+  border-radius: 2px;
+}
