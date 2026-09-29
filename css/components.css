@@ -1051,6 +1051,22 @@ section[id] {
 }
 
 /* ===================================================================
+   Capture d'écran Notion — cf. CLAUDE.md règle 13
+   =================================================================== */
+.capture img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
+}
+
+.capture figcaption {
+  margin-top: 8px;
+  font: 400 0.8rem var(--font-body);
+  color: var(--color-text-muted);
+}
+
+/* ===================================================================
    Focus visible — liens texte (jamais d'outline supprimé sans remplacement)
    =================================================================== */
 .section-head__link:focus-visible,
