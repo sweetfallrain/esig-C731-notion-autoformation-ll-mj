@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion pour l'entreprise — Apprendre à utiliser Notion, étape par étape</title>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a href="index.html" class="site-nav__brand">
+        <span class="site-nav__logo" aria-hidden="true"></span>
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+      </a>
+
+      <nav class="site-nav__links" aria-label="Navigation principale">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+
+      <a href="mon-parcours.html" class="btn-primary btn-primary--compact site-nav__cta">Mon parcours →</a>
+
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-mobile">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Ouvrir le menu</span>
+      </button>
+    </div>
+
+    <div class="site-nav__mobile" id="site-nav-mobile" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+      <div class="site-nav__mobile-head">
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+        <button type="button" class="site-nav__close" aria-label="Fermer le menu">✕</button>
+      </div>
+      <nav aria-label="Navigation principale (mobile)">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+      <a href="mon-parcours.html" class="btn-primary">Mon parcours →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="section bg" id="hero">
+      <div class="container hero">
+        <div class="hero__copy">
+          <span class="eyebrow">ACCUEIL · GUIDE DÉBUTANT</span>
+          <h1>Apprendre à utiliser Notion, étape par étape.</h1>
+          <p class="hero__subtitle">Un guide de référence pensé pour les équipes de Studio Nova : structurez vos pages, vos bases de données et vos vues sans repartir de zéro.</p>
+        </div>
+        <div class="hero__mockup" aria-hidden="true">
+          <div class="hero__mockup-bar"><span></span><span></span><span></span></div>
+          <div class="hero__mockup-body">
+            <div class="hero__mockup-sidebar">
+              <div class="hero__mockup-sidebar-item"><span></span>Accueil</div>
+              <div class="hero__mockup-sidebar-item"><span></span>Projets</div>
+              <div class="hero__mockup-sidebar-item"><span></span>Équipe</div>
+              <div class="hero__mockup-sidebar-item"><span></span>Ressources</div>
+            </div>
+            <div class="hero__mockup-main">
+              <h3>Espace Studio Nova</h3>
+              <p>Vue d'ensemble des projets en cours et des ressources de l'équipe.</p>
+              <div class="hero__stats">
+                <div class="hero__stat">
+                  <span class="hero__stat-label">Pages</span>
+                  <span class="hero__stat-value">24</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-label">Membres</span>
+                  <span class="hero__stat-value">30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__mockup-block"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LES BASES DE NOTION -->
+    <section class="section bg-soft" id="bases">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">LES BASES DE NOTION</span>
+            <h2>Quatre notions essentielles pour démarrer.</h2>
+          </div>
+          <p class="section-head__note">Ces quatre notions suffisent pour comprendre et utiliser n'importe quel espace Notion.</p>
+        </div>
+        <div class="concept-grid">
+          <div class="concept-card">
+            <span class="num">01</span>
+            <h3>C'est quoi Notion ?</h3>
+            <p>Un outil pour écrire, organiser et regrouper toutes vos informations au même endroit.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">02</span>
+            <h3>Les pages</h3>
+            <p>Des espaces à remplir et à ranger, qui peuvent s'imbriquer les uns dans les autres.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">03</span>
+            <h3>Les bases de données</h3>
+            <p>Des tableaux structurés pour suivre des listes : tâches, projets, contacts.</p>
+          </div>
+          <div class="concept-card">
+            <span class="num">04</span>
+            <h3>Les vues</h3>
+            <p>Une même base de données peut s'afficher en tableau, en calendrier ou en liste.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTHODE (APERÇU) -->
+    <section class="section bg" id="methode-apercu">
+      <div class="container">
+        <span class="eyebrow">MÉTHODE</span>
+        <h2>Comprendre comment Notion est construit.</h2>
+        <p class="text-muted">Avant de créer votre espace, il est utile de comprendre les briques de base sur lesquelles tout repose.</p>
+
+        <div class="key-points-card">
+          <h3>Les éléments clés</h3>
+          <ul class="key-points-list">
+            <li><span class="num">01</span> Une page = un espace pour écrire, ranger et imbriquer du contenu.</li>
+            <li><span class="num">02</span> Une base de données = un tableau avec des lignes et des colonnes.</li>
+            <li><span class="num">03</span> Une propriété = une information liée à un élément, utile pour trier et filtrer.</li>
+          </ul>
+          <div class="key-points-check">
+            <span class="mark">✓</span>
+            <span>Une même base s'affiche en tableau, calendrier ou liste selon le besoin, sans dupliquer l'information.</span>
+          </div>
+        </div>
+
+        <div class="methode-preview">
+          <div class="kanban" aria-hidden="true">
+            <div>
+              <div class="kanban-col-head"><span>À faire</span><span>2</span></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Refonte accueil</span><span class="sub">Équipe contenu</span></div></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Guide éditorial</span><span class="sub">Équipe contenu</span></div></div>
+            </div>
+            <div>
+              <div class="kanban-col-head"><span>En cours</span><span>1</span></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Base de modèles</span><span class="sub">Équipe produit</span></div></div>
+            </div>
+            <div>
+              <div class="kanban-col-head"><span>Terminé</span><span>1</span></div>
+              <div class="kanban-task"><span class="dot"></span><div><span class="title">Arborescence Studio Nova</span><span class="sub">Équipe produit</span></div></div>
+            </div>
+          </div>
+          <div>
+            <h2>Une base de données = un tableau structuré.</h2>
+            <p class="text-muted">Chaque ligne est un élément (une tâche, un projet), chaque colonne une propriété (statut, échéance, responsable). Les vues permettent d'afficher ces mêmes données sous différentes formes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANDEAU INVERSÉ — BONS RÉFLEXES -->
+    <section class="inverse-banner" id="bons-reflexes">
+      <div class="container">
+        <h2>Les bons réflexes à adopter dès le départ.</h2>
+        <div class="inverse-banner-grid">
+          <div>
+            <h3>Rester simple</h3>
+            <p>Commencez avec peu de pages et de propriétés, puis complexifiez si besoin.</p>
+          </div>
+          <div>
+            <h3>Nommer clairement</h3>
+            <p>Préférez des noms évidents pour que toute l'équipe s'y retrouve.</p>
+          </div>
+          <div>
+            <h3>Ranger régulièrement</h3>
+            <p>Un espace ordonné reste utile et lisible dans la durée.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODÈLES PRÊTS À L'EMPLOI -->
+    <section class="section bg-soft" id="modeles">
+      <div class="container">
+        <span class="eyebrow">MODÈLES PRÊTS À L'EMPLOI</span>
+        <h2>Démarrez avec un modèle existant.</h2>
+        <div class="template-grid">
+          <div class="template-card">
+            <span class="template-badge populaire">Populaire</span>
+            <h3>Tableau de bord personnel</h3>
+            <p>Un espace d'accueil avec vos priorités, tâches en cours et liens utiles.</p>
+            <a href="ressources.html" class="template-card__link">Utiliser ce modèle →</a>
+          </div>
+          <div class="template-card">
+            <span class="template-badge essentiel">Essentiel</span>
+            <h3>Suivi de projet</h3>
+            <p>Suivez vos projets de l'idée à la livraison avec un Kanban simple et efficace.</p>
+            <a href="ressources.html" class="template-card__link">Utiliser ce modèle →</a>
+          </div>
+          <div class="template-card">
+            <span class="template-badge nouveau">Nouveau</span>
+            <h3>Base de notes</h3>
+            <p>Centralisez vos notes, idées et références dans un espace consultable et organisé.</p>
+            <a href="ressources.html" class="template-card__link">Utiliser ce modèle →</a>
+          </div>
+        </div>
+        <div class="template-actions">
+          <a href="ressources.html" class="btn-outline">Voir tous les templates →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESSOURCES -->
+    <section class="section bg" id="ressources">
+      <div class="container">
+        <span class="eyebrow">RESSOURCES</span>
+        <h2>Apprendre au format qui vous convient.</h2>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon" aria-hidden="true">📖</div>
+            <h3>Tutoriels</h3>
+            <p>Des guides pas à pas pour découvrir chaque fonctionnalité à votre rythme.</p>
+            <ul class="resource-list">
+              <li><span>Créer sa première page</span><span>5 min</span></li>
+              <li><span>Créer une base de données</span><span>7 min</span></li>
+              <li><span>Filtres et tris</span><span>6 min</span></li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon" aria-hidden="true">🎬</div>
+            <h3>Vidéos</h3>
+            <p>Des démonstrations courtes pour comprendre chaque concept en quelques minutes.</p>
+            <ul class="resource-list">
+              <li><span>Découvrir Notion en 15 min</span><span>19:00</span></li>
+              <li><span>Créer sa 1ère base</span><span>12:00</span></li>
+              <li><span>Raccourcis utiles</span><span>8:30</span></li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon" aria-hidden="true">📄</div>
+            <h3>Documents</h3>
+            <p>Checklists, lexique et modèles à télécharger et garder sous la main.</p>
+            <ul class="resource-list">
+              <li><span>Checklist démarrage</span><span class="resource-tag">PDF</span></li>
+              <li><span>Lexique Notion</span><span class="resource-tag">PDF</span></li>
+              <li><span>Modèle de page</span><span class="resource-tag">PDF</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALLER PLUS LOIN -->
+    <section class="section bg-soft" id="aller-plus-loin">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">ALLER PLUS LOIN</span>
+            <h2>Continuez votre apprentissage.</h2>
+          </div>
+          <a href="ressources.html" class="section-head__link">Voir toute la bibliothèque →</a>
+        </div>
+        <div class="article-grid">
+          <article class="article-card">
+            <div class="thumb">Image 4:3</div>
+            <span class="eyebrow">Méthode</span>
+            <h3>Choisir ses propriétés</h3>
+            <a href="ressources.html" class="article-card__link">8 min de lecture →</a>
+          </article>
+          <article class="article-card">
+            <div class="thumb">Image 4:3</div>
+            <span class="eyebrow">Organisation</span>
+            <h3>Garder un espace simple</h3>
+            <a href="ressources.html" class="article-card__link">8 min de lecture →</a>
+          </article>
+          <article class="article-card">
+            <div class="thumb">Image 4:3</div>
+            <span class="eyebrow">Rangement</span>
+            <h3>Ranger ses pages</h3>
+            <a href="ressources.html" class="article-card__link">8 min de lecture →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIN DU GUIDE -->
+    <section class="section bg" id="fin-du-guide">
+      <div class="container closing">
+        <div>
+          <span class="eyebrow">FIN DU GUIDE</span>
+          <h2>Vous savez utiliser les bases de Notion.</h2>
+          <p class="text-muted">Vous connaissez maintenant les quatre notions essentielles, la méthode pour construire une base de données et les bons réflexes à adopter. Il ne reste qu'à passer à la pratique.</p>
+        </div>
+        <div class="closing__card">
+          <h3>Et maintenant ?</h3>
+          <p>Téléchargez le lexique et commencez à créer votre premier espace Notion.</p>
+          <a href="#" class="btn-primary">Télécharger le lexique →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>
