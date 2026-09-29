@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Méthode — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a href="index.html" class="site-nav__brand">
+        <span class="site-nav__logo" aria-hidden="true"></span>
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+      </a>
+
+      <nav class="site-nav__links" aria-label="Navigation principale">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+
+      <a href="mon-parcours.html" class="btn-primary btn-primary--compact site-nav__cta">Mon parcours →</a>
+
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-mobile">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Ouvrir le menu</span>
+      </button>
+    </div>
+
+    <div class="site-nav__mobile" id="site-nav-mobile" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+      <div class="site-nav__mobile-head">
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+        <button type="button" class="site-nav__close" aria-label="Fermer le menu">✕</button>
+      </div>
+      <nav aria-label="Navigation principale (mobile)">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+      <a href="mon-parcours.html" class="btn-primary">Mon parcours →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INTRO + SOMMAIRE -->
+    <section class="section bg" id="intro">
+      <div class="container">
+        <span class="eyebrow">MÉTHODE</span>
+        <h1>Comprendre comment Notion est construit.</h1>
+        <p class="text-muted lead">
+          Quatre notions suffisent à comprendre n'importe quel espace
+          Notion. Ce sont elles qui structurent la façon dont Studio Nova
+          organise ses projets, son équipe et ses ressources.
+        </p>
+        <nav class="toc" aria-label="Sommaire">
+          <a href="#c-est-quoi-notion" class="toc__link">01 · C'est quoi Notion ?</a>
+          <a href="#les-pages" class="toc__link">02 · Les pages</a>
+          <a href="#les-bases-de-donnees" class="toc__link">03 · Les bases de données</a>
+          <a href="#les-vues" class="toc__link">04 · Les vues</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 01 C'EST QUOI NOTION -->
+    <section class="section bg-soft" id="c-est-quoi-notion">
+      <div class="container">
+        <span class="eyebrow">01</span>
+        <h2>C'est quoi Notion ?</h2>
+        <p class="text-muted lead">
+          Notion réunit dans un seul espace ce qui est aujourd'hui dispersé
+          entre plusieurs outils : écrire, organiser des listes, partager
+          des documents. Chez Studio Nova, ça remplace les mails de suivi,
+          les fichiers Excel isolés et les dossiers Drive sans structure
+          claire.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 LES PAGES -->
+    <section class="section bg" id="les-pages">
+      <div class="container">
+        <span class="eyebrow">02</span>
+        <h2>Les pages</h2>
+        <p class="text-muted lead">
+          Une page est un espace que l'on remplit librement : texte,
+          images, listes, ou d'autres pages imbriquées à l'intérieur.
+          Studio Nova a par exemple une page « Projets » qui contient une
+          sous-page par client.
+        </p>
+      </div>
+    </section>
+
+    <!-- 03 LES BASES DE DONNEES (intro) -->
+    <section class="section bg-soft" id="les-bases-de-donnees">
+      <div class="container">
+        <span class="eyebrow">03</span>
+        <h2>Les bases de données</h2>
+        <p class="text-muted lead">
+          Une base de données est un ensemble d'éléments organisés en
+          tableau, avec des propriétés communes (statut, responsable,
+          échéance…). C'est l'outil idéal pour suivre des listes qui
+          évoluent dans le temps, comme les projets ou les tâches de
+          Studio Nova. Le détail de sa construction est développé ci-dessous.
+        </p>
+      </div>
+    </section>
+
+    <!-- 04 LES VUES -->
+    <section class="section bg" id="les-vues">
+      <div class="container">
+        <span class="eyebrow">04</span>
+        <h2>Les vues</h2>
+        <p class="text-muted lead">
+          Une même base de données peut s'afficher sous plusieurs vues :
+          tableau pour tout voir d'un coup, calendrier pour les échéances,
+          liste pour une lecture rapide. Changer de vue ne duplique jamais
+          les données.
+        </p>
+      </div>
+    </section>
+
+    <!-- UNE BASE DE DONNEES = UN TABLEAU STRUCTURE -->
+    <section class="section bg-soft" id="base-de-donnees-detail">
+      <div class="container">
+        <h2>Une base de données = un tableau structuré.</h2>
+        <p class="text-muted lead">
+          Chaque ligne de la base est un élément (une tâche, un projet),
+          chaque colonne une propriété (statut, échéance, responsable).
+          Les propriétés permettent de trier, filtrer et regrouper
+          l'information sans jamais la dupliquer.
+        </p>
+
+        <div class="kanban kanban--intro" aria-hidden="true">
+          <div>
+            <div class="kanban-col-head"><span>À faire</span><span>2</span></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Refonte accueil</span><span class="sub">Équipe contenu</span></div></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Guide éditorial</span><span class="sub">Équipe contenu</span></div></div>
+          </div>
+          <div>
+            <div class="kanban-col-head"><span>En cours</span><span>1</span></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Base de modèles</span><span class="sub">Équipe produit</span></div></div>
+          </div>
+          <div>
+            <div class="kanban-col-head"><span>Terminé</span><span>1</span></div>
+            <div class="kanban-task"><span class="dot"></span><div><span class="title">Arborescence Studio Nova</span><span class="sub">Équipe produit</span></div></div>
+          </div>
+        </div>
+
+        <div class="info-grid info-grid--3">
+          <div class="info-card">
+            <h3>Tableau</h3>
+            <p>Toutes les lignes et propriétés visibles d'un coup d'œil, comme un tableur.</p>
+          </div>
+          <div class="info-card">
+            <h3>Calendrier</h3>
+            <p>Les éléments positionnés selon leur date d'échéance.</p>
+          </div>
+          <div class="info-card">
+            <h3>Liste</h3>
+            <p>Une lecture rapide et compacte, sans les colonnes secondaires.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAS PRATIQUE FIL ROUGE -->
+    <section class="section bg" id="cas-pratique">
+      <div class="container">
+        <span class="eyebrow">CAS PRATIQUE</span>
+        <h2>L'arborescence cible de Studio Nova.</h2>
+        <blockquote class="quote">
+          Une bonne architecture se comprend avant même qu'on l'explique.
+        </blockquote>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Accueil</h3>
+            <p>Le point d'entrée de l'espace, avec les annonces et les priorités de l'équipe.</p>
+            <ul>
+              <li>Tableau de bord équipe</li>
+              <li>Annonces</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Projets</h3>
+            <p>Une base de données par client, suivie en vue Kanban.</p>
+            <ul>
+              <li>Kanban projets</li>
+              <li>Archives</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Équipe</h3>
+            <p>Les informations liées aux collaborateurs de Studio Nova.</p>
+            <ul>
+              <li>Trombinoscope</li>
+              <li>Congés</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Ressources</h3>
+            <p>Les modèles et documents partagés par toute l'équipe.</p>
+            <ul>
+              <li>Modèles</li>
+              <li>Documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/nav.js" defer></script>
+</body>
+</html>
