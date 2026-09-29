@@ -9,6 +9,20 @@
   .section {
     padding: 80px 0;
   }
+
+  /* Nav globale : desktop >= 768px, plus de hamburger/overlay */
+  .site-nav__links,
+  .site-nav__cta {
+    display: flex;
+  }
+
+  .site-nav__toggle {
+    display: none;
+  }
+
+  .site-nav__mobile {
+    display: none !important;
+  }
 }
 
 @media (min-width: 1024px) {

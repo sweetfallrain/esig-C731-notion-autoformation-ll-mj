@@ -32,6 +32,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
+  padding-top: 64px;
 }
 
 h1, h2, h3 {
@@ -67,6 +68,18 @@ a {
 /* ===================================================================
    Utilitaires de texte
    =================================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .eyebrow {
   display: block;
   font: 700 0.7rem/1.4 var(--font-body);
