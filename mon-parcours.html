@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon parcours — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container site-nav__inner">
+      <a href="index.html" class="site-nav__brand">
+        <span class="site-nav__logo" aria-hidden="true"></span>
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+      </a>
+
+      <nav class="site-nav__links" aria-label="Navigation principale">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+
+      <a href="mon-parcours.html" class="btn-primary btn-primary--compact site-nav__cta">Mon parcours →</a>
+
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-mobile">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Ouvrir le menu</span>
+      </button>
+    </div>
+
+    <div class="site-nav__mobile" id="site-nav-mobile" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+      <div class="site-nav__mobile-head">
+        <span class="site-nav__wordmark">Notion pour l'entreprise</span>
+        <button type="button" class="site-nav__close" aria-label="Fermer le menu">✕</button>
+      </div>
+      <nav aria-label="Navigation principale (mobile)">
+        <a href="index.html" data-nav-link>Accueil</a>
+        <a href="methode.html" data-nav-link>Méthode</a>
+        <a href="ressources.html" data-nav-link>Ressources</a>
+        <a href="a-propos.html" data-nav-link>À propos</a>
+      </nav>
+      <a href="mon-parcours.html" class="btn-primary">Mon parcours →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INTRO -->
+    <section class="section bg" id="intro">
+      <div class="container">
+        <span class="eyebrow">MON PARCOURS</span>
+        <h1>Votre progression, en un coup d'œil.</h1>
+        <p class="text-muted lead">
+          Retrouvez ici les sections du guide déjà lues et les modèles que
+          vous avez marqués depuis la page Ressources.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROGRESSION -->
+    <section class="section bg-soft" id="progression">
+      <div class="container">
+        <span class="eyebrow">PROGRESSION</span>
+        <h2>Où en êtes-vous ?</h2>
+
+        <div class="progress-card mt-32">
+          <div class="progress-labeled-head">
+            <span>Progression de lecture</span>
+            <span data-progress-label>0 / 0</span>
+          </div>
+          <div class="progress-labeled-track">
+            <div class="progress-labeled-fill" data-progress-fill style="width:0%"></div>
+          </div>
+        </div>
+
+        <ul class="checklist" data-section-checklist></ul>
+
+        <a href="index.html" data-resume-link class="btn-primary mt-32">Reprendre la lecture →</a>
+      </div>
+    </section>
+
+    <!-- MODELES MARQUES -->
+    <section class="section bg" id="modeles-marques">
+      <div class="container">
+        <span class="eyebrow">MODÈLES</span>
+        <h2>Vos modèles marqués.</h2>
+        <p class="text-muted lead" data-empty-templates hidden>
+          Vous n'avez encore marqué aucun modèle — direction
+          <a href="ressources.html">Ressources →</a>
+        </p>
+        <div class="template-grid" data-marked-templates></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/parcours.js" defer></script>
+</body>
+</html>
