@@ -557,6 +557,33 @@
   margin-top: 32px;
 }
 
+.template-card__mark {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.template-card__mark[aria-pressed="true"] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.template-card__mark:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
