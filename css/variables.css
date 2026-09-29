@@ -1,0 +1,48 @@
+/* ===================================================================
+   Design tokens — cf. DESIGN.md section 2 & 3 (source de vérité)
+   =================================================================== */
+:root {
+  --color-bg:              #f6f1e8;
+  --color-bg-soft:         #fbf8f3;
+  --color-surface:         #fffdf8;
+  --color-surface-2:       #eee6d9;
+  --color-surface-inverse: #47342c;
+  --color-accent:          #7a5a45;
+  --color-accent-hover:    #614433;
+  --color-accent-soft:     #e3d6c8;
+  --color-accent-soft-2:   #dee3d3;
+  --color-text:            #33281f;
+  --color-text-inverse:    #fdf9f3;
+  --color-text-muted:      #7b6f63;
+  --color-border:          #e6ddd0;
+  --color-success:         #6b7a5c;
+  --color-error:           #b8493f;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+}
+
+/* ===================================================================
+   Polices auto-hébergées — cf. fonts/
+   =================================================================== */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

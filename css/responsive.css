@@ -1,0 +1,18 @@
+/* ===================================================================
+   Breakpoints — cf. DESIGN.md section 8 (mobile-first)
+   =================================================================== */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 64px;
+  }
+}
