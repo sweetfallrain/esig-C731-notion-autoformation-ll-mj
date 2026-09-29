@@ -1,6 +1,14 @@
 /* ===================================================================
    Breakpoints — cf. DESIGN.md section 8 (mobile-first)
    =================================================================== */
+
+/* Palier propre au composant "Card concept" — DESIGN.md section 4 */
+@media (min-width: 640px) {
+  .concept-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 40px;
@@ -23,10 +31,45 @@
   .site-nav__mobile {
     display: none !important;
   }
+
+  .kanban {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .inverse-banner {
+    padding: 64px 0;
+  }
+
+  .inverse-banner-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
     padding: 0 64px;
+  }
+
+  .concept-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1.15fr 1fr;
+  }
+
+  .methode-preview {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .closing {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .template-grid,
+  .resource-grid,
+  .article-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

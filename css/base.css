@@ -80,6 +80,10 @@ a {
   border: 0;
 }
 
+.text-muted {
+  color: var(--color-text-muted);
+}
+
 .eyebrow {
   display: block;
   font: 700 0.7rem/1.4 var(--font-body);
