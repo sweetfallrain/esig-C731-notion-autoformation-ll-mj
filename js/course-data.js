@@ -13,9 +13,9 @@
       id: 'm1', num: '01', title: 'Découvrir Notion',
       desc: 'Comprendre à quoi sert Notion et te repérer dans son interface.',
       lessons: [
-        { id: 'm1-l1', title: 'À quoi sert Notion', file: null, minutes: 4 },
-        { id: 'm1-l2', title: 'Se repérer dans l’interface', file: null, minutes: 6 },
-        { id: 'm1-l3', title: 'Entrer dans Studio Nova', file: null, minutes: 4 }
+        { id: 'm1-l1', title: 'À quoi sert Notion', file: 'lecons/m01-l01-a-quoi-sert-notion.html', minutes: 4 },
+        { id: 'm1-l2', title: 'Se repérer dans l’interface', file: 'lecons/m01-l02-se-reperer-dans-l-interface.html', minutes: 6 },
+        { id: 'm1-l3', title: 'Entrer dans Studio Nova', file: 'lecons/m01-l03-entrer-dans-studio-nova.html', minutes: 4 }
       ]
     },
     {

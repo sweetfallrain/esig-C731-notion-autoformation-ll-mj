@@ -260,6 +260,39 @@ Contenu : description, barre de progression du module, leçons (pastille
 Hauteur minimale 44px pour tous les boutons cliquables.
 ```
 
+### Image explicative (`.illustration`) — étape « Comprendre »
+```
+Chaque étape « Comprendre » contient au moins une image explicative, placée
+  juste après l'explication : schéma SVG (images/illustrations/) ou capture
+  annotée (images/captures/). <figure> + <figcaption> Inter 0.85rem muted.
+Schémas SVG : fond --color-surface-2, uniquement les couleurs de la palette,
+  texte en Inter / Playfair, alt décrivant ce que montre le schéma.
+```
+
+### Comparatif Avant / Après (`.compare`)
+```
+<table> à 2 colonnes : « Avant » (texte muted, marque « — ») et « Après »
+  (fond --color-bg, marque « ✓ » --color-success). Titres en Playfair.
+< 640px : une carte par ligne, libellé « Avant » / « Après » affiché
+  au-dessus de chaque cellule (data-label).
+```
+
+### Interface simulée (`.ui-sim`)
+```
+Fausse fenêtre Notion (cadre .notion-page) : barre latérale --color-bg à
+  gauche (au-dessus < 640px), barre du haut, page avec lignes grisées.
+Points numérotés .hotspot : rond 26px --color-accent, chiffre blanc ;
+  actif = --color-surface-inverse + halo --color-accent-soft, aria-pressed.
+Explication sous la fenêtre (aria-live). Toujours marquée « Simulation ».
+```
+
+### Carte de l'espace (`.space-map`)
+```
+Liste à séparateurs : branche ├─ / └─ muted, nom en gras, description muted,
+  pill d'état : « Module X » (--color-surface-2) ou « Créée ✓ »
+  (--color-accent-soft-2) quand la leçon data-built-by est terminée.
+```
+
 ### Icônes
 ```
 SVG inline au trait (stroke 1.5–2.5, currentColor), aria-hidden="true".
@@ -279,6 +312,9 @@ Plus d'emojis comme pictogrammes (v4) : rendu inégal selon les systèmes et
   par ligne au corps 1.03rem).
 - **Une leçon = 4 étapes** affichées une à la fois (Comprendre · Voir ·
   Faire · Vérifier). Une étape doit tenir sans défilement excessif.
+- **Images par étape** : Comprendre = une image explicative (schéma ou
+  capture annotée) ; Voir = l'exemple Studio Nova, idéalement interactif ;
+  Faire = une capture sous chaque geste important ; Vérifier = aucune image.
 - Accueil : sections en panneaux clairs sur le beige, espacées de 40px.
 - Espacements : 8 / 12 / 16 / 20 / 28 / 40 / 48px.
 

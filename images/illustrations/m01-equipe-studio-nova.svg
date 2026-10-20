@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="320" rx="16" fill="#eee6d9"/>
+
+  <!-- Liens personnes → projets -->
+  <g stroke="#7a5a45" stroke-width="2" fill="none">
+    <path d="M120 150 C120 190 80 200 80 232"/>
+    <path d="M120 150 C120 190 200 200 200 232"/>
+    <path d="M300 150 C300 190 330 200 330 232"/>
+  </g>
+
+  <!-- Personnes -->
+  <g text-anchor="middle">
+    <circle cx="120" cy="82" r="30" fill="#e3d6c8" stroke="#7a5a45" stroke-width="2"/>
+    <text x="120" y="90" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#33281f">E</text>
+    <text x="120" y="134" font-size="15" font-weight="600" fill="#33281f">Emma</text>
+    <text x="120" y="152" font-size="12" fill="#7b6f63">Responsable de projet</text>
+
+    <circle cx="300" cy="82" r="30" fill="#dee3d3" stroke="#6b7a5c" stroke-width="2"/>
+    <text x="300" y="90" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#33281f">L</text>
+    <text x="300" y="134" font-size="15" font-weight="600" fill="#33281f">Lucas</text>
+    <text x="300" y="152" font-size="12" fill="#7b6f63">Membre de l'équipe</text>
+
+    <circle cx="480" cy="82" r="30" fill="#fffdf8" stroke="#7b6f63" stroke-width="2"/>
+    <text x="480" y="90" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#33281f">S</text>
+    <text x="480" y="134" font-size="15" font-weight="600" fill="#33281f">Sarah</text>
+    <text x="480" y="152" font-size="12" fill="#7b6f63">Cliente</text>
+
+    <circle cx="620" cy="82" r="30" fill="#fffdf8" stroke="#7b6f63" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="620" y="90" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#33281f">H</text>
+    <text x="620" y="134" font-size="15" font-weight="600" fill="#33281f">Hugo</text>
+    <text x="620" y="152" font-size="12" fill="#7b6f63">Hors des projets</text>
+  </g>
+
+  <!-- Projets -->
+  <g text-anchor="middle" font-size="13" font-weight="600" fill="#33281f">
+    <rect x="22" y="232" width="116" height="40" rx="20" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="80" y="257">Site Orion</text>
+    <rect x="142" y="232" width="116" height="40" rx="20" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="200" y="257">Campagne Atlas</text>
+    <rect x="272" y="232" width="116" height="40" rx="20" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="330" y="257">Identité Luna</text>
+  </g>
+  <text x="205" y="300" text-anchor="middle" font-size="12" fill="#7b6f63">Les trois projets de l'agence</text>
+</svg>

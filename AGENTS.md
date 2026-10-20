@@ -117,6 +117,9 @@ esig-C731-notion-autoformation-ll-mj/
 ├── index.html                 Accueil (présentation, programme, Studio Nova, méthode)
 ├── mon-parcours.html          Sommaire des 9 modules + progression
 ├── lecons/
+│   ├── m01-l01-a-quoi-sert-notion.html
+│   ├── m01-l02-se-reperer-dans-l-interface.html
+│   ├── m01-l03-entrer-dans-studio-nova.html
 │   └── m02-l03-comprendre-les-blocs.html   Leçon gabarit (modèle de toutes les leçons)
 ├── css/
 │   ├── variables.css          Tokens DESIGN.md §2-3 + @font-face
@@ -133,7 +136,9 @@ esig-C731-notion-autoformation-ll-mj/
 │   ├── quiz.js                Quiz à correction immédiate
 │   ├── notion-sim.js          Fausses pages Notion et simulation de base
 │   └── parcours.js            Page Mon parcours (accordéon, progression)
-├── images/captures/           Captures d'écran Notion (<module>-<sujet>.png)
+├── images/
+│   ├── captures/              Captures d'écran Notion (m<module>-<sujet>.png), faites par l'utilisatrice
+│   └── illustrations/         Schémas SVG aux couleurs du site (m<module>-<sujet>.svg)
 ├── fonts/
 ├── styleguide.html            Référence visuelle (v2, à mettre à jour)
 └── DESIGN.md
@@ -163,7 +168,7 @@ boutons précédent/suivant se génèrent depuis `course-data.js`.
 En tête : fil d'Ariane (module · leçon x sur y · durée), H1, objectif
 (« À la fin de cette leçon, tu sauras… »), repère d'étapes. Puis 4 étapes :
 
-1. **Comprendre** — introduction (2-4 phrases), explication, définition, erreur fréquente (bandeau Attention).
+1. **Comprendre** — introduction (2-4 phrases), explication, **image explicative** (schéma SVG ou capture annotée), définition, erreur fréquente (bandeau Attention).
 2. **Voir** — exemple Studio Nova, idéalement une simulation interactive.
 3. **Faire** — tutoriel pas à pas avec captures, astuce (bandeau Astuce), mini-exercice + résultat attendu.
 4. **Vérifier** — À retenir (2-4 idées), mini-quiz (1-3 questions, correction expliquée), bouton « Marquer comme terminée ».
@@ -198,8 +203,8 @@ En tête : fil d'Ariane (module · leçon x sur y · durée), H1, objectif
 1. Structure générale ✔ (v4 initiale)
 2. Navigation ✔
 3. Composants pédagogiques ✔ (démontrés dans la leçon gabarit m2-l3)
-4. Module 1 : rédiger le contenu complet, **validation par l'utilisatrice**,
-   puis intégration.
+4. Module 1 ✔ : contenu rédigé dans le document « Module 1 — Découvrir Notion »,
+   intégré (leçons m1-l1 à m1-l3). Captures d'écran encore à réaliser.
 5. Module 2, puis les suivants, un à la fois, avec validation entre chaque.
 
 Après chaque étape : résumer les fichiers modifiés, ce qui fonctionne, ce qui
