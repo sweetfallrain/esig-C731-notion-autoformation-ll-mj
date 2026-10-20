@@ -176,3 +176,9 @@
     margin: -20px -24px 0;
   }
 }
+
+@media (max-width: 479px) {
+  .db-timeline__axis { margin-left: 0; }
+  .db-timeline__row { flex-wrap: wrap; }
+  .db-timeline__label { flex-basis: 100%; }
+}
