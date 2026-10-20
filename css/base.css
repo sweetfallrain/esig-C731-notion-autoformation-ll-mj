@@ -8,20 +8,30 @@
 }
 
 body,
-h1, h2, h3,
-p, ul, ol,
-figure {
+h1, h2, h3, h4,
+p, ul, ol, dl, dd,
+figure, fieldset {
   margin: 0;
 }
 
-ul, ol {
+fieldset {
   padding: 0;
-  list-style: none;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+button {
+  font: inherit;
+  color: inherit;
 }
 
 /* ===================================================================
@@ -32,7 +42,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
-  padding-top: 64px;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
@@ -40,44 +50,30 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
-/* Triptyque Eyebrow → Titre → Sous-titre, gap 12px (DESIGN.md section 3) */
-h1 + p,
-h2 + p,
-h3 + p {
-  margin-top: 12px;
-}
-
-.lead {
-  max-width: 640px;
-}
-
 a {
-  color: inherit;
+  color: var(--color-accent);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+strong {
+  font-weight: 600;
+}
+
+:where(a, button, input, summary):focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 4px;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 /* ===================================================================
-   Layout
-   =================================================================== */
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.section {
-  padding: 48px 0;
-}
-
-.bg {
-  background: var(--color-bg);
-}
-
-.bg-soft {
-  background: var(--color-bg-soft);
-}
-
-/* ===================================================================
-   Utilitaires de texte
+   Utilitaires
    =================================================================== */
 .sr-only {
   position: absolute;
@@ -95,70 +91,95 @@ a {
   color: var(--color-text-muted);
 }
 
-.mt-32 {
-  margin-top: 32px;
+.meta {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
 }
 
-.eyebrow {
-  display: block;
-  font: 700 0.7rem/1.4 var(--font-body);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-accent);
-  margin-bottom: 12px;
+.meta a {
+  color: var(--color-text-muted);
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 300;
+  background: var(--color-surface-inverse);
+  color: var(--color-text-inverse);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 12px;
+  color: var(--color-text-inverse);
 }
 
 /* ===================================================================
-   Boutons
+   Boutons — DESIGN.md §4
    =================================================================== */
-.btn-primary {
+.btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  min-height: 44px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font: 600 0.85rem/1 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.btn-primary {
   background: var(--color-accent);
   color: var(--color-text-inverse);
-  border: none;
-  border-radius: 999px;
-  padding: 13px 24px;
-  font: 600 0.85rem var(--font-body);
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 150ms ease;
+  border: 1px solid var(--color-accent);
 }
 
 .btn-primary:hover {
   background: var(--color-accent-hover);
-}
-
-.btn-primary:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-}
-
-.btn-primary--inverse {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  border: none;
+  border-color: var(--color-accent-hover);
   color: var(--color-text-inverse);
-  font: 600 0.85rem var(--font-body);
-  cursor: pointer;
-  text-decoration: none;
-  padding: 0;
 }
 
-.btn-primary--inverse:hover {
-  text-decoration: underline;
+.btn-outline {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
 }
 
-.btn-primary--inverse:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(253, 249, 243, 0.35);
+.btn-outline:hover {
+  background: var(--color-bg-soft);
+  color: var(--color-text);
 }
 
-a:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-  border-radius: 2px;
+.btn-light {
+  background: var(--color-text-inverse);
+  color: var(--color-text);
+  border: 1px solid var(--color-text-inverse);
+}
+
+.btn-light:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.btn-light:focus-visible {
+  box-shadow: var(--focus-ring-inverse);
+}
+
+.btn--compact {
+  min-height: 40px;
+  padding: 10px 20px;
+}
+
+.btn[aria-pressed="true"].btn-outline {
+  background: var(--color-accent-soft-2);
+  border-color: var(--color-accent-soft-2);
 }

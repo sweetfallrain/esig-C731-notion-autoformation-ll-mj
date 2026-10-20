@@ -1,263 +1,136 @@
+/* ===================================================================
+   Page Mon parcours : progression globale, bouton « Reprendre »,
+   accordéon des 9 modules (généré depuis course-data.js).
+   =================================================================== */
 (function () {
   'use strict';
 
-  var TEMPLATE_PREFIX = 'notion-guide:modele-marque:';
-  var SECTION_PREFIX = 'notion-guide:section-lue:';
+  const Course = window.NotionCourse;
+  const Progress = window.NotionProgress;
 
-  var GUIDE_SECTIONS = [
-    { id: 'pourquoi-notion', page: 'methode.html', label: 'Pourquoi utiliser Notion' },
-    { id: 'les-bases', page: 'methode.html', label: 'Les bases' },
-    { id: 'types-de-blocs', page: 'methode.html', label: 'Les types de blocs' },
-    { id: 'collaboration', page: 'methode.html', label: 'Collaboration & partage' },
-    { id: 'modeles-bases-de-donnees', page: 'methode.html', label: 'Modèles & bases de données' }
-  ];
-
-  var TEMPLATES = {
-    'tableau-de-bord-personnel': {
-      title: 'Tableau de bord personnel',
-      description: "Un espace d'accueil avec vos priorités, tâches en cours et liens utiles.",
-      badge: 'populaire'
-    },
-    'suivi-de-projet': {
-      title: 'Suivi de projet',
-      description: "Suivez vos projets de l'idée à la livraison avec un Kanban simple et efficace.",
-      badge: 'essentiel'
-    },
-    'base-de-notes': {
-      title: 'Base de notes',
-      description: 'Centralisez vos notes, idées et références dans un espace consultable et organisé.',
-      badge: 'nouveau'
-    },
-    'base-de-contacts': {
-      title: 'Base de contacts',
-      description: "Retrouvez tous vos contacts professionnels avec leurs coordonnées et l'historique des échanges.",
-      badge: 'populaire'
-    },
-    'suivi-budgetaire': {
-      title: 'Suivi budgétaire',
-      description: "Suivez les dépenses par catégorie et gardez une vue d'ensemble sur le budget de l'équipe.",
-      badge: 'essentiel'
-    },
-    'bibliotheque-de-ressources': {
-      title: 'Bibliothèque de ressources',
-      description: "Rassemblez les documents et liens utiles à toute l'équipe dans un espace unique.",
-      badge: 'nouveau'
-    }
-  };
-
-  var BADGE_LABELS = {
-    populaire: 'Populaire',
-    essentiel: 'Essentiel',
-    nouveau: 'Nouveau'
-  };
-
-  // --- Modèles marqués ---------------------------------------------------
-
-  function markTemplate(id) {
-    localStorage.setItem(TEMPLATE_PREFIX + id, 'true');
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) { node.className = className; }
+    if (text !== undefined) { node.textContent = text; }
+    return node;
   }
 
-  function unmarkTemplate(id) {
-    localStorage.removeItem(TEMPLATE_PREFIX + id);
+  function moduleState(module) {
+    const p = Progress.forModule(module);
+    if (p.done === p.total) { return { label: 'Terminé ✓', className: 'pill pill--done', cta: 'Revoir le module' }; }
+    if (p.done > 0) { return { label: 'En cours', className: 'pill pill--doing', cta: 'Continuer' }; }
+    return { label: 'À venir', className: 'pill', cta: 'Commencer' };
   }
 
-  function isTemplateMarked(id) {
-    return localStorage.getItem(TEMPLATE_PREFIX + id) === 'true';
-  }
+  function renderSummary() {
+    const overall = Progress.overall();
+    const count = document.querySelector('[data-overall-count]');
+    const fill = document.querySelector('[data-overall-fill]');
+    const bar = document.querySelector('[data-overall-bar]');
+    const resumeTitle = document.querySelector('[data-resume-title]');
+    const resumeLink = document.querySelector('[data-resume-link]');
 
-  function getMarkedTemplates() {
-    var ids = [];
-    for (var i = 0; i < localStorage.length; i++) {
-      var key = localStorage.key(i);
-      if (key && key.indexOf(TEMPLATE_PREFIX) === 0) {
-        ids.push(key.slice(TEMPLATE_PREFIX.length));
-      }
-    }
-    return ids;
-  }
+    const total = document.querySelector('[data-overall-total]');
+    if (count) { count.textContent = String(overall.done); }
+    if (total) { total.textContent = String(overall.total); }
+    if (fill) { fill.style.width = Progress.percent(overall) + '%'; }
+    if (bar) { bar.setAttribute('aria-label', overall.done + ' leçons terminées sur ' + overall.total); }
 
-  function updateMarkButton(button, marked) {
-    button.setAttribute('aria-pressed', String(marked));
-    button.textContent = marked ? '✓' : '🔖';
-    button.setAttribute('aria-label', marked ? 'Retirer des modèles marqués' : 'Marquer ce modèle');
-  }
-
-  function setupMarkButtons() {
-    document.querySelectorAll('[data-mark-template]').forEach(function (button) {
-      var id = button.getAttribute('data-mark-template');
-      updateMarkButton(button, isTemplateMarked(id));
-
-      button.addEventListener('click', function () {
-        var marked = isTemplateMarked(id);
-        if (marked) {
-          unmarkTemplate(id);
-        } else {
-          markTemplate(id);
-        }
-        updateMarkButton(button, !marked);
-      });
-    });
-  }
-
-  // --- Sections lues -------------------------------------------------------
-
-  function markSectionRead(id) {
-    localStorage.setItem(SECTION_PREFIX + id, 'true');
-  }
-
-  function isSectionRead(id) {
-    return localStorage.getItem(SECTION_PREFIX + id) === 'true';
-  }
-
-  function getReadingProgress() {
-    var read = GUIDE_SECTIONS.filter(function (section) {
-      return isSectionRead(section.id);
-    }).length;
-    return { read: read, total: GUIDE_SECTIONS.length };
-  }
-
-  function setupMarkSectionButtons() {
-    document.querySelectorAll('[data-mark-section]').forEach(function (button) {
-      var id = button.getAttribute('data-mark-section');
-
-      function markAsRead() {
-        button.setAttribute('aria-pressed', 'true');
-        button.disabled = true;
-        button.textContent = 'Section lue ✓';
-      }
-
-      if (isSectionRead(id)) {
-        markAsRead();
-      }
-
-      button.addEventListener('click', function () {
-        markSectionRead(id);
-        markAsRead();
-      });
-    });
-  }
-
-  // --- Page mon-parcours.html ---------------------------------------------
-
-  function renderProgress() {
-    var track = document.querySelector('[data-progress-track]');
-    var label = document.querySelector('[data-progress-label]');
-    var fill = document.querySelector('[data-progress-fill]');
-    if (!track && !label && !fill) {
-      return;
-    }
-    var progress = getReadingProgress();
-    var percent = progress.total === 0 ? 0 : Math.round((progress.read / progress.total) * 100);
-    if (label) {
-      label.textContent = progress.read + ' / ' + progress.total;
-    }
-    if (fill) {
-      fill.style.width = percent + '%';
+    const next = Progress.nextLesson();
+    if (next && resumeTitle && resumeLink) {
+      resumeTitle.textContent = next.title;
+      resumeLink.href = next.file;
+      resumeLink.textContent = overall.done === 0 ? 'Commencer →' : 'Reprendre →';
     }
   }
 
-  function renderChecklist() {
-    var list = document.querySelector('[data-section-checklist]');
-    if (!list) {
-      return;
-    }
+  function renderModules(list) {
+    const openId = (window.location.hash || '').replace('#', '') || null;
+    const next = Progress.nextLesson();
     list.innerHTML = '';
-    GUIDE_SECTIONS.forEach(function (section) {
-      var read = isSectionRead(section.id);
-      var item = document.createElement('li');
 
-      var box = document.createElement('span');
-      box.className = 'check-box' + (read ? ' checked' : '');
-      box.setAttribute('aria-hidden', 'true');
-      box.textContent = read ? '✓' : '';
-      item.appendChild(box);
+    Course.MODULES.forEach(function (module) {
+      const p = Progress.forModule(module);
+      const state = moduleState(module);
+      const containsNext = next && next.moduleId === module.id;
+      const startOpen = openId ? openId === module.id : containsNext;
 
-      var text = document.createElement('span');
-      text.textContent = section.label;
-      item.appendChild(text);
+      const item = el('li', 'module-list__item');
+      item.id = module.id;
 
-      var link = document.createElement('a');
-      link.href = section.page + '#' + section.id;
-      link.textContent = read ? 'Revoir →' : 'Lire →';
-      item.appendChild(link);
+      const head = el('button', 'module-list__head');
+      head.type = 'button';
+      head.setAttribute('aria-expanded', String(startOpen));
+      head.setAttribute('aria-controls', module.id + '-body');
+      head.appendChild(el('span', 'module-list__num', module.num));
+      const title = el('span', 'module-list__title');
+      title.appendChild(el('strong', '', module.title));
+      title.appendChild(el('span', '', module.lessons.length + ' leçons · ' + p.done + ' terminée' + (p.done > 1 ? 's' : '')));
+      head.appendChild(title);
+      head.appendChild(el('span', state.className, state.label));
+      const sign = el('span', 'module-list__sign', startOpen ? '−' : '+');
+      sign.setAttribute('aria-hidden', 'true');
+      head.appendChild(sign);
+      item.appendChild(head);
 
+      const body = el('div', 'module-list__body');
+      body.id = module.id + '-body';
+      body.hidden = !startOpen;
+      body.appendChild(el('p', '', module.desc));
+
+      const bar = el('div', 'progress');
+      bar.setAttribute('role', 'img');
+      bar.setAttribute('aria-label', p.done + ' leçons terminées sur ' + p.total);
+      const fill = el('div', 'progress__fill');
+      fill.style.width = Progress.percent(p) + '%';
+      bar.appendChild(fill);
+      body.appendChild(bar);
+
+      const lessons = el('ol', 'lesson-list');
+      let firstLink = null;
+      module.lessons.forEach(function (lesson) {
+        const done = Progress.isDone(lesson.id);
+        const isNext = next && next.id === lesson.id;
+        const li = el('li', done ? 'is-done' : (isNext ? 'is-current' : ''));
+        const dot = el('span', 'lesson-list__dot', done ? '✓' : '');
+        dot.setAttribute('aria-hidden', 'true');
+        li.appendChild(dot);
+        if (lesson.file) {
+          const link = el('a', '', lesson.title);
+          link.href = lesson.file;
+          li.appendChild(link);
+          if (isNext || !firstLink) { firstLink = lesson.file; }
+        } else {
+          li.appendChild(el('span', '', lesson.title));
+        }
+        const stateText = done ? 'Terminée' : (isNext ? 'Prochaine leçon' : (lesson.file ? lesson.minutes + ' min' : 'Bientôt'));
+        li.appendChild(el('span', 'lesson-list__state', stateText));
+        lessons.appendChild(li);
+      });
+      body.appendChild(lessons);
+
+      if (firstLink) {
+        const cta = el('a', 'btn btn-outline', state.cta + ' →');
+        cta.href = firstLink;
+        body.appendChild(cta);
+      }
+
+      head.addEventListener('click', function () {
+        const open = head.getAttribute('aria-expanded') !== 'true';
+        head.setAttribute('aria-expanded', String(open));
+        body.hidden = !open;
+        sign.textContent = open ? '−' : '+';
+      });
+
+      item.appendChild(body);
       list.appendChild(item);
     });
   }
 
-  function renderMarkedTemplates() {
-    var grid = document.querySelector('[data-marked-templates]');
-    var empty = document.querySelector('[data-empty-templates]');
-    if (!grid) {
-      return;
-    }
-    var ids = getMarkedTemplates().filter(function (id) {
-      return TEMPLATES[id];
-    });
-
-    grid.innerHTML = '';
-
-    if (ids.length === 0) {
-      if (empty) {
-        empty.hidden = false;
-      }
-      return;
-    }
-
-    if (empty) {
-      empty.hidden = true;
-    }
-
-    ids.forEach(function (id) {
-      var data = TEMPLATES[id];
-      var card = document.createElement('div');
-      card.className = 'template-card';
-      card.innerHTML =
-        '<span class="template-badge ' + data.badge + '">' + BADGE_LABELS[data.badge] + '</span>' +
-        '<h3>' + data.title + '</h3>' +
-        '<p>' + data.description + '</p>' +
-        '<a href="ressources.html" class="template-card__link">Voir dans Ressources →</a>';
-      grid.appendChild(card);
-    });
-  }
-
-  function renderResumeLink() {
-    var link = document.querySelector('[data-resume-link]');
-    if (!link) {
-      return;
-    }
-    var next = GUIDE_SECTIONS.filter(function (section) {
-      return !isSectionRead(section.id);
-    })[0];
-
-    if (next) {
-      link.href = next.page + '#' + next.id;
-      link.textContent = 'Reprendre la lecture →';
-    } else {
-      link.href = 'methode.html#' + GUIDE_SECTIONS[0].id;
-      link.textContent = 'Revoir le guide →';
-    }
-  }
-
-  function setupMonParcoursPage() {
-    renderProgress();
-    renderChecklist();
-    renderMarkedTemplates();
-    renderResumeLink();
-  }
-
-  window.NotionGuide = window.NotionGuide || {};
-  window.NotionGuide.markTemplate = markTemplate;
-  window.NotionGuide.unmarkTemplate = unmarkTemplate;
-  window.NotionGuide.isTemplateMarked = isTemplateMarked;
-  window.NotionGuide.getMarkedTemplates = getMarkedTemplates;
-  window.NotionGuide.markSectionRead = markSectionRead;
-  window.NotionGuide.isSectionRead = isSectionRead;
-  window.NotionGuide.getReadingProgress = getReadingProgress;
-
   document.addEventListener('DOMContentLoaded', function () {
-    setupMarkButtons();
-    setupMarkSectionButtons();
-    setupMonParcoursPage();
+    const list = document.querySelector('[data-module-list]');
+    if (!list) { return; }
+    renderSummary();
+    renderModules(list);
   });
 })();
