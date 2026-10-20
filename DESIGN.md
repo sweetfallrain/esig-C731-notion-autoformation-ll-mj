@@ -293,6 +293,22 @@ Liste à séparateurs : branche ├─ / └─ muted, nom en gras, description 
   (--color-accent-soft-2) quand la leçon data-built-by est terminée.
 ```
 
+### Simulations de manipulation (`js/block-sims.js`)
+```
+Menu « / » (.slash-sim) : champ combobox + liste filtrée (listbox), flèches
+  et Entrée ; le bloc choisi s'affiche dans la fausse page.
+Menu de la poignée (.block-sim) : poignée ⋮⋮ = bouton, menu Monter /
+  Descendre / Dupliquer / Supprimer / Transformer + Annuler / Réinitialiser.
+  Monter / Descendre remplacent le glisser-déposer (utilisable au clavier).
+Sous-pages (.subpage-sim) : fausse barre latérale + page ; un bloc page
+  ouvre la sous-page, bouton « Retour ».
+Éléments statiques de fausse page : .np-cover, .np-icon, .np-title, .np-h1,
+  .np-h2, .np-text, .np-callout, .np-quote, .np-divider, .np-file,
+  .np-todo (case réellement cochable), .np-toggle (<details> natif).
+Seule exception à la règle « pas d'emoji » : l'icône d'un encadré ou d'un
+  fichier À L'INTÉRIEUR d'une simulation, parce que Notion les affiche ainsi.
+```
+
 ### Icônes
 ```
 SVG inline au trait (stroke 1.5–2.5, currentColor), aria-hidden="true".

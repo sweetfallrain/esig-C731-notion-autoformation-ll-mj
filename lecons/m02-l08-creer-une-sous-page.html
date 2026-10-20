@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créer une sous-page — Module 2 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+</head>
+<body data-lesson="m2-l8" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m2">Pages et blocs</a> · Leçon 8 sur 8 · 6 min</p>
+      <h1>Créer une sous-page</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras créer une sous-page depuis l'intérieur d'une page, y mener un lien, et faire la différence entre une page et un bloc de contenu.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Ta page d'accueil est prête, mais Studio Nova aura besoin d'autres pages : les projets, les ressources, les notes. Pour que tout reste rangé au même endroit, ces pages vont vivre <strong>à l'intérieur</strong> de la page « Studio Nova ».</p>
+        <p>Une <strong>sous-page</strong> est une page rangée à l'intérieur d'une autre page. Tu en as déjà créé une sans le savoir : « Accueil — Studio Nova » est une sous-page de « Studio Nova » (leçon 2.2).</p>
+        <p>Depuis l'intérieur d'une page, tape <strong>« /page »</strong> : Notion crée une sous-page et l'ouvre. Dans la page de départ, elle apparaît comme une ligne avec une petite icône de document : c'est un <strong>bloc page</strong>. Un clic dessus ouvre la sous-page.</p>
+        <p>C'est la différence essentielle de ce module :</p>
+        <ul>
+          <li>un <strong>bloc de contenu</strong> (texte, titre, liste, encadré…) vit dans la page. Il fait partie de ce que tu lis ;</li>
+          <li>un <strong>bloc page</strong> est une porte vers une autre page, qui a son propre titre et son propre contenu.</li>
+        </ul>
+        <p>Une sous-page peut elle-même contenir des sous-pages, sans limite. Dans la barre latérale, la petite flèche devant une page affiche les pages qu'elle contient.</p>
+        <p>Pour faire un lien vers une page qui existe déjà, tape <strong>« @ »</strong> suivi du début de son titre, puis choisis-la dans la liste. Tu verras les liens en détail au module 3.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m02-page-ou-bloc.svg" alt="Schéma : la page « Studio Nova » contient un bloc texte, étiqueté « Vit dans la page », et deux blocs page, « Accueil — Studio Nova » et « Projets », étiquetés « Ouvre une autre page » ; des flèches mènent de ces deux blocs vers deux pages plus petites, chacune avec son propre contenu." width="720" height="320">
+          <figcaption>Bloc de contenu ou bloc page ?</figcaption>
+        </figure>
+        <p class="definition">Un bloc de contenu fait partie de la page ; un bloc page ouvre une autre page.</p>
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> supprimer un bloc page supprime la sous-page et tout ce qu'elle contient. Elle part dans la Corbeille. Avant de supprimer une ligne avec une icône de document, vérifie que tu veux vraiment supprimer toute la page.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">L'espace Studio Nova et ses sous-pages</h2>
+        <p>Survole chaque ligne de la page « Studio Nova », puis clique sur un bloc page pour l'ouvrir. Tu peux aussi naviguer avec la fausse barre latérale.</p>
+        <div data-subpage-sim></div>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Créer « Projets » et « Ressources », puis les relier à l'accueil</h2>
+        <ol class="tutorial">
+          <li>Ouvre ta page « Studio Nova ». Clique sur une ligne vide en bas de la page.</li>
+          <li>Tape « /page » et appuie sur Entrée. Une nouvelle page vide s'ouvre.</li>
+          <li>Donne-lui le titre « Projets ». Elle restera vide jusqu'au module 4, où tu y créeras la base des projets.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la sous-page « Projets », avec le fil d'Ariane « Studio Nova / Projets » en haut">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Sous-page « Projets » et son fil d'Ariane · images/captures/m02-sous-page-projets.png</span>
+              </div>
+            </figure></li>
+          <li>Clique sur « Studio Nova » dans le fil d'Ariane pour revenir à la page principale. La ligne « Projets » y est apparue, avec une icône de document.</li>
+          <li>Recommence pour créer la sous-page « Ressources ».</li>
+          <li>Ouvre ta page « Accueil — Studio Nova ». Sous le séparateur, ajoute un titre 2 « Liens utiles ».</li>
+          <li>En dessous, tape « @Projets » et choisis la page « Projets » dans la liste. Va à la ligne et fais de même avec « @Ressources ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la liste qui apparaît après avoir tapé « @Projets »">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Liste après « @Projets » · images/captures/m02-mention-page.png</span>
+              </div>
+            </figure></li>
+          <li>Clique sur le lien « Projets » : tu arrives sur la sous-page.</li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> le fil d'Ariane, en haut de l'écran, est le moyen le plus rapide de remonter d'une sous-page vers la page qui la contient.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Les sous-pages de Studio Nova</h3>
+          <ol>
+            <li>Dans « Studio Nova », crée les sous-pages « Projets » et « Ressources » avec « /page ».</li>
+            <li>Dans l'Accueil, ajoute la section « Liens utiles » avec un lien vers chacune.</li>
+            <li>Dans la barre latérale, déplie « Studio Nova ».</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> sous « Studio Nova », la barre latérale affiche trois pages : « Accueil — Studio Nova », « Projets » et « Ressources ». La page d'accueil se termine par « Liens utiles », avec deux liens qui ouvrent ces pages.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Une sous-page est une page rangée dans une autre ; « /page » en crée une depuis l'intérieur d'une page.</li>
+            <li>Dans la page qui la contient, la sous-page apparaît comme un bloc page : une porte vers une autre page.</li>
+            <li>Supprimer un bloc page supprime la sous-page entière (récupérable dans la Corbeille).</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Dans ta page « Studio Nova », la ligne « Projets » a une icône de document. Qu'est-ce que c'est ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Un bloc texte en gras.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Un bloc page, qui ouvre la sous-page « Projets ».</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Un fichier PDF joint à la page.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>L'icône de document signale un bloc page. Un clic dessus ouvre la sous-page « Projets », qui a son propre contenu.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Tu supprimes la ligne « Ressources » (un bloc page) dans « Studio Nova ». Que se passe-t-il ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Seule la ligne disparaît ; la page « Ressources » reste intacte ailleurs.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">La page « Ressources » et tout son contenu partent dans la Corbeille.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Rien : on ne peut pas supprimer un bloc page.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le bloc page et la sous-page ne font qu'un. Supprimer l'un supprime l'autre. Heureusement, la page reste récupérable dans la Corbeille, ou avec Ctrl + Z tout de suite.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="module-end">
+          <h2>Fin du module 2</h2>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice récapitulatif du module · dans Notion</p>
+          <h3>Crée ta première page d'équipe</h3>
+          <p class="exercise__result">Tu as appris tout ce qu'il faut pour créer une vraie page d'équipe. Cette fois, ce n'est plus Studio Nova : c'est ta propre équipe. Coche chaque étape une fois réalisée.</p>
+          <ul class="exercise__checklist">
+            <li><label><input type="checkbox"><span>1. Dans la section « Privé », <strong>crée une page</strong>.</span></label></li>
+            <li><label><input type="checkbox"><span>2. <strong>Donne-lui un titre</strong> clair, par exemple « Équipe — Comptabilité » ou « Équipe — Accueil client », et ajoute une icône.</span></label></li>
+            <li><label><input type="checkbox"><span>3. <strong>Ajoute un texte</strong> d'une phrase qui présente l'équipe.</span></label></li>
+            <li><label><input type="checkbox"><span>4. <strong>Crée un titre de niveau 2</strong> : « Cette semaine ».</span></label></li>
+            <li><label><input type="checkbox"><span>5. <strong>Ajoute trois tâches</strong> sous forme de checklist.</span></label></li>
+            <li><label><input type="checkbox"><span>6. <strong>Ajoute un encadré</strong> avec une information importante pour l'équipe (une réunion, une date limite…).</span></label></li>
+            <li><label><input type="checkbox"><span>7. <strong>Crée une sous-page</strong> « Notes de réunion » avec « /page ».</span></label></li>
+          </ul>
+          <h4>Résultat attendu</h4>
+          <p class="exercise__result">Dans « Privé », une page avec icône et titre clair. Son contenu ressemble à ceci :</p>
+          <pre>Équipe — Comptabilité
+
+L'équipe comptable gère les factures et les paiements de l'entreprise.
+
+[Encadré] Clôture du mois le 30 : toutes les factures avant le 28.
+
+Cette semaine
+☐ Valider les factures fournisseurs
+☐ Préparer le rapport mensuel
+☐ Mettre à jour le tableau des paiements
+
+▤ Notes de réunion</pre>
+          <p class="exercise__result">La dernière ligne est un bloc page : un clic ouvre la sous-page « Notes de réunion », vide pour l'instant. Toutes les autres lignes sont des blocs de contenu.</p>
+        </div>
+
+        <h2 class="module-quiz-title">Quiz du module 2</h2>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 4</span><span class="quiz__question">Ta page d'équipe contient un titre 2, un texte, trois tâches et un encadré. Combien de blocs de contenu contient-elle ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="mq1" value="a"><span class="quiz__option-text">Un seul : la page entière.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq1" value="b" data-correct><span class="quiz__option-text">Six : un bloc par ligne.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq1" value="c"><span class="quiz__option-text">Aucun : les blocs n'existent que dans les bases de données.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Chaque ligne est un bloc : le titre 2, le texte, chacune des trois tâches et l'encadré, soit six blocs. Le titre de la page, tout en haut, n'est pas un bloc : c'est le nom de la page.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 4</span><span class="quiz__question">Quelle phrase décrit le mieux une page Notion ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="mq2" value="a"><span class="quiz__option-text">Un document figé, comme un PDF.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq2" value="b"><span class="quiz__option-text">Un tableau de lignes et de colonnes.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq2" value="c" data-correct><span class="quiz__option-text">Une pile de blocs indépendants, qui peut aussi contenir d'autres pages.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une page est faite de blocs que tu ajoutes, déplaces et transformes librement. Certains de ces blocs sont des pages : c'est comme ça qu'on range des pages dans d'autres pages.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 3 sur 4</span><span class="quiz__question">Emma veut que « Réunion d'équipe chaque lundi » soit tout en haut de l'accueil. Elle a écrit cette phrase en bas. Que fait-elle ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="mq3" value="a" data-correct><span class="quiz__option-text">Elle glisse le bloc vers le haut avec sa poignée ⋮⋮.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq3" value="b"><span class="quiz__option-text">Elle supprime toute la page et recommence.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq3" value="c"><span class="quiz__option-text">Elle crée une sous-page « Réunion ».</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Chaque bloc se déplace seul, avec sa poignée. Inutile de tout réécrire, et une sous-page cacherait l'information au lieu de la montrer.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 4 sur 4</span><span class="quiz__question">Quelle est la différence entre un bloc texte et un bloc page ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="mq4" value="a" data-correct><span class="quiz__option-text">Le bloc texte fait partie de la page ; le bloc page ouvre une autre page.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq4" value="b"><span class="quiz__option-text">Le bloc page est simplement un texte plus grand.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq4" value="c"><span class="quiz__option-text">Il n'y a aucune différence.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le bloc texte est du contenu que tu lis directement dans la page. Le bloc page est une porte : il mène vers une autre page, avec son propre titre et son propre contenu.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

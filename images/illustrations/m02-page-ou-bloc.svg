@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="320" rx="16" fill="#eee6d9"/>
+  <rect x="32" y="40" width="330" height="240" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+  <text x="52" y="76" font-size="18" font-weight="700" fill="#33281f">Studio Nova</text>
+  <g font-size="13" fill="#33281f">
+    <rect x="48" y="96" width="298" height="34" rx="8" fill="#f6f1e8"/><text x="60" y="118">Espace de travail de l'agence…</text>
+    <rect x="48" y="146" width="298" height="34" rx="8" fill="#fffdf8" stroke="#7a5a45"/>
+    <path d="M62 155 L70 149 L78 155 V168 H62 Z" fill="none" stroke="#7a5a45" stroke-width="1.8"/><text x="88" y="168" text-decoration="underline">Accueil — Studio Nova</text>
+    <rect x="48" y="196" width="298" height="34" rx="8" fill="#fffdf8" stroke="#7a5a45"/>
+    <rect x="63" y="203" width="14" height="18" rx="2" fill="none" stroke="#7a5a45" stroke-width="1.8"/><text x="88" y="218">Projets</text>
+  </g>
+  <rect x="226" y="98" width="112" height="22" rx="11" fill="#dee3d3"/><text x="282" y="113" text-anchor="middle" font-size="11" font-weight="600" fill="#33281f">Vit dans la page</text>
+  <rect x="226" y="236" width="120" height="22" rx="11" fill="#e3d6c8"/><text x="286" y="251" text-anchor="middle" font-size="11" font-weight="600" fill="#33281f">Ouvre une autre page</text>
+
+  <g fill="none" stroke="#7a5a45" stroke-width="2">
+    <path d="M346 163 C420 163 420 90 470 90"/><path d="M462 82 L472 90 L462 98"/>
+    <path d="M346 213 C420 213 420 220 470 220"/><path d="M462 212 L472 220 L462 228"/>
+  </g>
+  <g font-size="12" fill="#33281f">
+    <rect x="476" y="40" width="216" height="110" rx="10" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="492" y="66" font-weight="700" font-size="14">Accueil — Studio Nova</text>
+    <rect x="492" y="80" width="170" height="8" rx="4" fill="#eee6d9"/><rect x="492" y="96" width="140" height="8" rx="4" fill="#eee6d9"/>
+    <rect x="492" y="114" width="10" height="10" rx="2" fill="none" stroke="#7b6f63"/><rect x="508" y="116" width="120" height="6" rx="3" fill="#eee6d9"/>
+    <rect x="476" y="170" width="216" height="100" rx="10" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="492" y="196" font-weight="700" font-size="14">Projets</text>
+    <text x="492" y="222" fill="#7b6f63">Son propre contenu</text>
+  </g>
+</svg>

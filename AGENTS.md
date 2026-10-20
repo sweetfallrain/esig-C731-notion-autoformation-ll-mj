@@ -150,7 +150,7 @@ L'ordre et les identifiants vivent dans `js/course-data.js` (source unique).
 Une leçon sans fichier apparaît dans le sommaire comme « bientôt ».
 
 1. **Découvrir Notion** — À quoi sert Notion · Se repérer dans l'interface · Entrer dans Studio Nova
-2. **Pages et blocs** — Qu'est-ce qu'une page · Créer et nommer une page · Comprendre les blocs · La commande « / » · Les blocs essentiels · Déplacer, dupliquer, transformer · Créer une sous-page
+2. **Pages et blocs** — Qu'est-ce qu'une page · Créer et nommer une page · Comprendre les blocs · La commande « / » · Titres et listes · Bascules, encadrés, liens et médias · Déplacer, dupliquer, supprimer, transformer · Créer une sous-page (+ exercice récapitulatif et quiz du module)
 3. **Organiser et naviguer** — L'arborescence · Les liens entre pages · Barre latérale et favoris · La recherche
 4. **Bases de données** — Pourquoi une base · Une entrée est une page · Les propriétés · Créer la base Projets · Modifier les propriétés
 5. **Vues, filtres et tris** — Une base, plusieurs vues · Table, liste et board · Calendrier, galerie, timeline · Filtrer, trier, regrouper
@@ -203,9 +203,12 @@ En tête : fil d'Ariane (module · leçon x sur y · durée), H1, objectif
 1. Structure générale ✔ (v4 initiale)
 2. Navigation ✔
 3. Composants pédagogiques ✔ (démontrés dans la leçon gabarit m2-l3)
-4. Module 1 ✔ : contenu rédigé dans le document « Module 1 — Découvrir Notion »,
-   intégré (leçons m1-l1 à m1-l3). Captures d'écran encore à réaliser.
-5. Module 2, puis les suivants, un à la fois, avec validation entre chaque.
+4. Module 1 ✔ et module 2 ✔ : rédigés dans les documents « Module 1 — Découvrir
+   Notion » et « Module 2 — Pages et blocs », puis intégrés. Captures encore à réaliser.
+5. **Décision de l'utilisatrice (oct. 2026)** : les modules 3 à 9 sont rédigés et
+   intégrés directement dans le site, sans validation intermédiaire ; elle relit et
+   corrige l'ensemble à la fin. Chaque module reste commité séparément.
+
 
 Après chaque étape : résumer les fichiers modifiés, ce qui fonctionne, ce qui
 reste à faire, et les décisions prises. Si un point est ambigu ou change une
@@ -240,6 +243,7 @@ Nouveau cahier des charges de l'utilisatrice + maquette validée (canevas
 - **Icônes** : emojis → SVG inline. **[décision d'intégration]**
 - **Progression** : clés `notion-guide:*` (v2-v3) abandonnées au profit de
   `notion-formation:lecon-terminee:<id>`. **[décision d'intégration]**
+- **Module 2 découpé en 8 leçons** (« Les blocs essentiels » dépassait 8 min) : parcours de 38 leçons. **[décision d'intégration]**
 - **Sommaire latéral généré en JS** depuis `course-data.js`, pour ne pas
   recopier 37 liens dans chaque leçon. **[décision d'intégration]**
 - **À vérifier dans Notion** : le titre d'une page n'est pas présenté comme

@@ -22,13 +22,14 @@
       id: 'm2', num: '02', title: 'Pages et blocs',
       desc: 'La logique de base : une page est composée de blocs que tu crées, déplaces et transformes.',
       lessons: [
-        { id: 'm2-l1', title: 'Qu’est-ce qu’une page', file: null, minutes: 4 },
-        { id: 'm2-l2', title: 'Créer et nommer une page', file: null, minutes: 5 },
+        { id: 'm2-l1', title: 'Qu’est-ce qu’une page', file: 'lecons/m02-l01-quest-ce-qu-une-page.html', minutes: 4 },
+        { id: 'm2-l2', title: 'Créer et nommer une page', file: 'lecons/m02-l02-creer-et-nommer-une-page.html', minutes: 5 },
         { id: 'm2-l3', title: 'Comprendre les blocs', file: 'lecons/m02-l03-comprendre-les-blocs.html', minutes: 6 },
-        { id: 'm2-l4', title: 'La commande « / »', file: null, minutes: 5 },
-        { id: 'm2-l5', title: 'Les blocs essentiels', file: null, minutes: 8 },
-        { id: 'm2-l6', title: 'Déplacer, dupliquer, transformer', file: null, minutes: 6 },
-        { id: 'm2-l7', title: 'Créer une sous-page', file: null, minutes: 5 }
+        { id: 'm2-l4', title: 'La commande « / »', file: 'lecons/m02-l04-la-commande-slash.html', minutes: 5 },
+        { id: 'm2-l5', title: 'Titres et listes', file: 'lecons/m02-l05-titres-et-listes.html', minutes: 7 },
+        { id: 'm2-l6', title: 'Bascules, encadrés, liens et médias', file: 'lecons/m02-l06-bascules-encadres-liens-medias.html', minutes: 7 },
+        { id: 'm2-l7', title: 'Déplacer, dupliquer, supprimer, transformer', file: 'lecons/m02-l07-deplacer-dupliquer-supprimer-transformer.html', minutes: 6 },
+        { id: 'm2-l8', title: 'Créer une sous-page', file: 'lecons/m02-l08-creer-une-sous-page.html', minutes: 6 }
       ]
     },
     {

@@ -1410,3 +1410,440 @@ html:not(.js) .lesson-nav--steps {
 .status {
   white-space: nowrap;
 }
+
+/* ===================================================================
+   Module 2 — éléments de fausse page Notion (DESIGN.md §4 « Fausse page »)
+   =================================================================== */
+.np-cover {
+  height: 72px;
+  margin: -20px -16px 0;
+  background: var(--color-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.np-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 6px 8px;
+  border-radius: 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.np-title {
+  margin: 0 0 12px 8px;
+  font: 700 1.35rem/1.2 var(--font-body);
+}
+
+.np-h1 { font: 700 1.25rem/1.3 var(--font-body); margin: 6px 8px; }
+.np-h2 { font: 600 1.05rem/1.3 var(--font-body); margin: 14px 8px 6px; }
+.np-text { margin: 4px 8px; font-size: 0.95rem; }
+
+.np-callout {
+  display: flex;
+  gap: 10px;
+  margin: 10px 8px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  font-size: 0.95rem;
+}
+
+.np-quote {
+  margin: 10px 8px;
+  padding-left: 14px;
+  border-left: 3px solid var(--color-text);
+  font-size: 0.95rem;
+}
+
+.np-divider {
+  margin: 14px 8px;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.np-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 8px;
+  font-size: 0.9rem;
+}
+
+/* Bascule : <details> natif, accessible au clavier */
+.np-toggle {
+  margin: 6px 8px;
+  font-size: 0.95rem;
+}
+
+.np-toggle > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  border-radius: 6px;
+}
+
+.np-toggle > summary::-webkit-details-marker {
+  display: none;
+}
+
+.np-toggle > summary::before {
+  content: "▸";
+  color: var(--color-text-muted);
+  transition: transform 150ms ease;
+}
+
+.np-toggle[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.np-toggle > div {
+  padding: 4px 0 4px 22px;
+}
+
+.np-toggle > div p {
+  margin: 4px 0;
+}
+
+/* Checklist cliquable */
+.np-todo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 8px;
+  padding: 4px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  accent-color: var(--color-accent);
+}
+
+.np-todo input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.np-todo:has(input:checked) span {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.np-tag {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* ===================================================================
+   Menu « / » simulé
+   =================================================================== */
+.slash-sim__row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+}
+
+.slash-sim__slash {
+  font-weight: 600;
+}
+
+.slash-sim__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: var(--color-text);
+  padding: 4px 0;
+}
+
+.slash-sim__input:focus-visible {
+  box-shadow: none;
+}
+
+.slash-sim__row:focus-within {
+  box-shadow: var(--focus-ring);
+}
+
+.slash-sim__menu {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 6px;
+  max-width: 300px;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+  font-size: 0.9rem;
+}
+
+.slash-sim__option,
+.slash-sim__empty {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.slash-sim__empty {
+  cursor: default;
+  color: var(--color-text-muted);
+}
+
+.slash-sim__option.is-active {
+  background: var(--color-accent-soft);
+  font-weight: 600;
+}
+
+.slash-sim__result {
+  margin-top: 12px;
+  min-height: 8px;
+}
+
+.slash-sim__preview {
+  padding: 6px 8px;
+  border-left: 3px solid transparent;
+}
+
+.slash-sim__preview--titre-1 { font: 700 1.25rem/1.3 var(--font-body); }
+.slash-sim__preview--titre-2 { font: 600 1.05rem/1.3 var(--font-body); }
+.slash-sim__preview--titre-3 { font: 600 0.95rem/1.3 var(--font-body); }
+.slash-sim__preview--encadre { background: var(--color-bg); border-radius: var(--radius-sm); }
+.slash-sim__preview--citation { border-left-color: var(--color-text); }
+.slash-sim__preview--separateur { border-top: 1px solid var(--color-border); padding: 0; margin: 12px 0; }
+.slash-sim__preview--image { height: 64px; background: var(--color-surface-2); border-radius: var(--radius-sm); color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; }
+.slash-sim__preview--page { text-decoration: underline; }
+
+/* ===================================================================
+   Menu de la poignée simulé
+   =================================================================== */
+.block-sim__heading {
+  margin: 0 0 6px 4px;
+  font: 600 1.05rem/1.3 var(--font-body);
+}
+
+.block-sim__list {
+  list-style: none;
+  padding: 0;
+}
+
+.block-sim__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.95rem;
+}
+
+.block-sim__handle {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.block-sim__handle[aria-expanded="true"] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.block-sim__marker {
+  width: 16px;
+  text-align: center;
+}
+
+.block-sim__menu {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 8px 36px;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+}
+
+.block-sim__action {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.block-sim__action:hover {
+  background: var(--color-accent-soft);
+}
+
+.block-sim__empty {
+  padding: 8px 4px;
+  color: var(--color-text-muted);
+}
+
+.block-sim__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ===================================================================
+   Sous-pages simulées
+   =================================================================== */
+.ui-sim__nav {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.ui-sim__nav:hover {
+  background: var(--color-bg-soft);
+}
+
+.subpage-sim__back {
+  margin-bottom: 12px;
+}
+
+.subpage-sim__doc {
+  width: 18px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.subpage-sim__link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.subpage-sim__block--page .notion-block__btn {
+  cursor: pointer;
+}
+
+/* Checklist d'un exercice (sur fond foncé) */
+.exercise__checklist {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.exercise__checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-inverse-line);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  cursor: pointer;
+  accent-color: var(--color-accent-soft-2);
+}
+
+.exercise__checklist input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.exercise__checklist input:focus-visible {
+  box-shadow: var(--focus-ring-inverse);
+}
+
+.exercise__checklist label:has(input:checked) span {
+  color: var(--color-text-inverse-muted);
+  text-decoration: line-through;
+}
+
+.exercise pre {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--color-inverse-line);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--color-text-inverse);
+}
+
+.exercise h4 {
+  margin: 20px 0 8px;
+  font: 600 1rem/1.3 var(--font-body);
+  color: var(--color-text-inverse);
+}
+
+.prose .result-page {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.module-end {
+  margin: 48px 0 20px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+.module-end h2,
+.module-quiz-title {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+.module-quiz-title {
+  margin-top: 40px;
+}
+
+/* Fausses pages Notion placées dans .prose : neutralise les marges du texte de leçon */
+.prose .notion-page p {
+  margin: 4px 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.prose .notion-page .np-title { margin: 0 0 12px 8px; font-size: 1.35rem; line-height: 1.2; }
+.prose .notion-page .np-h1 { margin: 6px 8px; font-size: 1.25rem; line-height: 1.3; }
+.prose .notion-page .np-h2 { margin: 14px 8px 6px; font-size: 1.05rem; line-height: 1.3; }
+.prose .notion-page .block-sim__heading { margin: 0 0 6px 4px; font-size: 1.05rem; }
+.prose .notion-page .ui-sim__page-title { margin: 0 0 10px; font-size: 1.3rem; }
+.prose .notion-page .ui-sim__section { margin: 14px 6px 4px; font-size: 0.75rem; }
+.prose .notion-page .np-tag { font-size: 0.75rem; }
+.prose .np-quote { margin: 10px 8px; }
