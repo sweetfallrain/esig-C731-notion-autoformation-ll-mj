@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="300" rx="16" fill="#eee6d9"/>
+  <g font-size="14" fill="#33281f">
+    <rect x="24" y="24" width="324" height="252" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="44" y="56" font-weight="700" font-size="15">Sous-page (/page)</text>
+    <text x="44" y="80" font-size="12" fill="#7b6f63">Crée une NOUVELLE page, rangée ici</text>
+    <rect x="44" y="100" width="130" height="34" rx="8" fill="#f6f1e8"/><text x="58" y="122">Notes &amp; réunions</text>
+    <path d="M110 134 V170" stroke="#7a5a45" stroke-width="2"/><path d="M104 162 L110 172 L116 162" fill="none" stroke="#7a5a45" stroke-width="2"/>
+    <rect x="70" y="176" width="190" height="34" rx="8" fill="#fffdf8" stroke="#7a5a45"/><text x="84" y="198">▤ Réunion d'équipe</text>
+    <text x="44" y="246" font-size="12" fill="#7b6f63">La page n'existe qu'à cet endroit.</text>
+
+    <rect x="372" y="24" width="324" height="252" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="392" y="56" font-weight="700" font-size="15">Lien (@ ou /lien)</text>
+    <text x="392" y="80" font-size="12" fill="#7b6f63">Pointe vers une page qui EXISTE DÉJÀ ailleurs</text>
+    <rect x="392" y="100" width="150" height="34" rx="8" fill="#f6f1e8"/><text x="404" y="122">Réunion d'équipe</text>
+    <rect x="392" y="176" width="190" height="34" rx="8" fill="#fffdf8" stroke="#e6ddd0"/><text x="404" y="198">Accueil — Studio Nova</text>
+    <path d="M500 134 C560 150 560 160 520 176" fill="none" stroke="#7a5a45" stroke-width="2" stroke-dasharray="5 4"/><path d="M528 168 L518 178 L514 166" fill="none" stroke="#7a5a45" stroke-width="2"/>
+    <text x="392" y="246" font-size="12" fill="#7b6f63">La page reste où elle est ; on y accède d'un clic.</text>
+  </g>
+</svg>

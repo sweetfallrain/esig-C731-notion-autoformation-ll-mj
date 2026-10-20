@@ -36,10 +36,10 @@
       id: 'm3', num: '03', title: 'Organiser et naviguer',
       desc: 'Ranger tes pages, les relier entre elles et retrouver une information rapidement.',
       lessons: [
-        { id: 'm3-l1', title: 'L’arborescence', file: null, minutes: 5 },
-        { id: 'm3-l2', title: 'Les liens entre pages', file: null, minutes: 5 },
-        { id: 'm3-l3', title: 'Barre latérale et favoris', file: null, minutes: 4 },
-        { id: 'm3-l4', title: 'La recherche', file: null, minutes: 3 }
+        { id: 'm3-l1', title: 'L’arborescence', file: 'lecons/m03-l01-l-arborescence.html', minutes: 5 },
+        { id: 'm3-l2', title: 'Les liens entre pages', file: 'lecons/m03-l02-les-liens-entre-pages.html', minutes: 5 },
+        { id: 'm3-l3', title: 'Barre latérale et favoris', file: 'lecons/m03-l03-barre-laterale-et-favoris.html', minutes: 4 },
+        { id: 'm3-l4', title: 'La recherche', file: 'lecons/m03-l04-la-recherche.html', minutes: 3 }
       ]
     },
     {
