@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une entrée est une page — Module 4 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m4-l2" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m4">Bases de données</a> · Leçon 2 sur 6 · 5 min</p>
+      <h1>Une entrée est une page</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras qu'une ligne de base de données est une page complète, et tu sauras l'ouvrir pour y écrire.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Voici l'idée la plus importante du module, celle qui rend Notion différent d'un tableur : <strong>chaque ligne d'une base de données est une page</strong>.</p>
+        <p>Dans un tableau Excel, une ligne n'est qu'une suite de cases. Dans Notion, quand tu ouvres une ligne, tu découvres une page complète, avec deux parties :</p>
+        <ul>
+          <li>en haut, les <strong>propriétés</strong> : les informations des colonnes (statut, responsable, échéance…), présentées comme une fiche ;</li>
+          <li>en dessous, le <strong>contenu</strong> : une page normale, où tu ajoutes des blocs comme au module 2 (texte, checklist, encadré, sous-page…).</li>
+        </ul>
+        <p>Pense à un classeur de fiches cartonnées : sur la tranche, tu lis le nom et la date ; quand tu sors la fiche, tu as toute la place pour écrire. Dans Notion, on appelle chaque ligne une <strong>entrée</strong> de la base.</p>
+        <p>Pour ouvrir une entrée, survole son nom et clique sur <strong>« Ouvrir »</strong> (<em>Open</em>), ou clique simplement sur son nom. Selon les réglages, elle s'ouvre sur le côté de l'écran (aperçu latéral) ou en plein écran.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m04-ligne-page.svg" alt="Schéma : à gauche, la base « Projets » avec la ligne « Site Orion » mise en avant. Une flèche mène à droite vers la page « Site Orion » ouverte : en haut, un encadré de propriétés (Statut : En cours, Responsable : Emma, Échéance : 15 novembre), puis en dessous le contenu de la page, une phrase et une checklist." width="720" height="320">
+          <figcaption>Une ligne de la base s'ouvre en page complète : propriétés en haut, contenu en dessous.</figcaption>
+        </figure>
+        <p class="definition">Une entrée de base de données est une page : ses propriétés forment les colonnes, et son contenu se remplit de blocs.</p>
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> supprimer une ligne de la base supprime toute la page et son contenu. Comme pour une page, elle part dans la Corbeille et reste récupérable quelque temps.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Ouvrir un projet de Studio Nova</h2>
+        <p>Voici la future base « Projets » de Studio Nova. Clique sur le nom d'un projet pour l'ouvrir : tu découvres ses propriétés, puis le contenu de sa page.</p>
+        <div data-db data-views="table" data-columns="basic"></div>
+        <p>Dans la page « Site Orion », Emma a écrit un résumé et une checklist. Ce contenu n'apparaît pas dans le tableau : le tableau ne montre que les propriétés. C'est ce qui garde la base lisible, même avec beaucoup de détails dans chaque projet.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Ta première ligne-page</h2>
+        <p>Avant de créer la vraie base « Projets » (leçon 4.5), fais un essai dans une page de brouillon.</p>
+        <ol class="tutorial">
+          <li>Crée une page « Brouillon base » dans « Privé ».</li>
+          <li>Dans la page, tape « /tableau » (<em>/table</em>) et choisis la vue Tableau. Une petite base apparaît, avec les colonnes « Nom » et « Étiquettes ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu « / » ouvert sur la proposition Tableau">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Créer un tableau avec « / » · images/captures/m04-slash-tableau.png</span>
+              </div>
+            </figure></li>
+          <li>Si Notion te demande une source de données, choisis « Nouvelle base de données » (<em>New database</em>).</li>
+          <li>Clique dans la première case de « Nom » et écris « Test ».</li>
+          <li>Survole « Test » : un bouton « Ouvrir » apparaît. Clique dessus.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : une ligne de tableau survolée avec le bouton « Ouvrir » visible à droite du nom">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Bouton « Ouvrir » sur une ligne · images/captures/m04-bouton-ouvrir.png</span>
+              </div>
+            </figure></li>
+          <li>La page « Test » s'ouvre. Sous les propriétés, clique sur la zone vide et écris une phrase, puis ajoute une checklist avec « /todo ».</li>
+          <li>Ferme la page : dans le tableau, seule la ligne « Test » est visible. Ton texte est rangé dans la page.</li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> dans une entrée ouverte sur le côté, l'icône en haut à gauche permet de l'ouvrir en pleine page. Pratique pour écrire un long compte rendu.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Une ligne, une page</h3>
+          <ol>
+            <li>Dans « Brouillon base », ajoute deux lignes : « Test » et « Test 2 ».</li>
+            <li>Ouvre « Test 2 » et écris-y trois tâches en checklist.</li>
+            <li>Supprime ensuite la page « Brouillon base » : tu n'en auras plus besoin.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> en ouvrant « Test 2 », tu retrouves tes trois tâches sous les propriétés. Dans le tableau, elles n'apparaissent pas : chaque ligne garde son contenu dans sa propre page.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Chaque ligne d'une base de données est une page, appelée entrée.</li>
+            <li>Une entrée a des propriétés (en haut) et un contenu fait de blocs (en dessous).</li>
+            <li>Le tableau n'affiche que les propriétés : le contenu reste dans la page.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Lucas veut noter les remarques du client sur le projet Luna. Où les écrit-il ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Dans une nouvelle colonne « Remarques » très large.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Dans le contenu de la page « Identité Luna », en ouvrant la ligne.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Dans une page séparée, sans lien avec la base.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Chaque ligne est une page : les remarques détaillées vont dans son contenu. Les colonnes restent réservées aux informations courtes qu'on veut voir, trier ou filtrer.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Tu ouvres la ligne « Campagne Atlas ». Que vois-tu en haut de la page ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a" data-correct><span class="quiz__option-text">Ses propriétés : statut, responsable, échéance…</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b"><span class="quiz__option-text">Les autres projets de la base.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Rien : une ligne ne s'ouvre pas.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>En haut de l'entrée, Notion affiche ses propriétés comme une fiche ; le contenu libre vient en dessous.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

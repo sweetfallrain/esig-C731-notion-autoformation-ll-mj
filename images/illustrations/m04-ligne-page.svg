@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="320" rx="16" fill="#eee6d9"/>
+  <g font-size="13" fill="#33281f">
+    <rect x="24" y="40" width="300" height="150" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="44" y="68" font-weight="700" font-size="15">Base « Projets »</text>
+    <rect x="44" y="82" width="260" height="26" fill="#f6f1e8"/>
+    <g font-size="12" font-weight="600" fill="#7b6f63"><text x="52" y="100">Nom</text><text x="170" y="100">Statut</text><text x="244" y="100">Resp.</text></g>
+    <rect x="44" y="112" width="260" height="28" rx="4" fill="#fffdf8" stroke="#7a5a45" stroke-width="2"/>
+    <text x="52" y="131" font-weight="600">Site Orion</text><text x="170" y="131">En cours</text><text x="244" y="131">Emma</text>
+    <text x="52" y="162">Identité Luna</text><text x="170" y="162">À faire</text><text x="244" y="162">Lucas</text>
+    <text x="44" y="226" font-size="12" fill="#7b6f63">Une ligne de la base…</text>
+
+    <path d="M310 126 C360 126 360 80 400 80" fill="none" stroke="#7a5a45" stroke-width="2.5"/><path d="M390 72 L402 80 L390 89" fill="none" stroke="#7a5a45" stroke-width="2.5"/>
+
+    <rect x="404" y="24" width="292" height="272" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="424" y="58" font-weight="700" font-size="18">Site Orion</text>
+    <rect x="420" y="70" width="260" height="78" rx="8" fill="#f6f1e8"/>
+    <g font-size="12"><text x="432" y="90" fill="#7b6f63">Statut</text><text x="520" y="90">En cours</text>
+    <text x="432" y="112" fill="#7b6f63">Responsable</text><text x="520" y="112">Emma</text>
+    <text x="432" y="134" fill="#7b6f63">Échéance</text><text x="520" y="134">15 novembre</text></g>
+    <text x="680" y="162" text-anchor="end" font-size="11" fill="#7a5a45" font-weight="600">Propriétés</text>
+    <path d="M420 172 H680" stroke="#e6ddd0"/>
+    <text x="424" y="198">Refonte du site vitrine du client.</text>
+    <text x="424" y="224">☑ Valider l'arborescence</text>
+    <text x="424" y="248">☐ Finaliser la maquette</text>
+    <text x="680" y="282" text-anchor="end" font-size="11" fill="#7a5a45" font-weight="600">Contenu de la page (blocs)</text>
+    <text x="424" y="306" font-size="12" fill="#7b6f63">…est une page complète.</text>
+  </g>
+</svg>

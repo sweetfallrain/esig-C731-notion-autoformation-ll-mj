@@ -46,11 +46,12 @@
       id: 'm4', num: '04', title: 'Bases de données',
       desc: 'Une base est une collection de pages décrites par des propriétés. Tu crées la base « Projets ».',
       lessons: [
-        { id: 'm4-l1', title: 'Pourquoi une base', file: null, minutes: 5 },
-        { id: 'm4-l2', title: 'Une entrée est une page', file: null, minutes: 5 },
-        { id: 'm4-l3', title: 'Les propriétés', file: null, minutes: 8 },
-        { id: 'm4-l4', title: 'Créer la base Projets', file: null, minutes: 7 },
-        { id: 'm4-l5', title: 'Modifier les propriétés', file: null, minutes: 5 }
+        { id: 'm4-l1', title: 'Pourquoi une base', file: 'lecons/m04-l01-pourquoi-une-base.html', minutes: 5 },
+        { id: 'm4-l2', title: 'Une entrée est une page', file: 'lecons/m04-l02-une-entree-est-une-page.html', minutes: 5 },
+        { id: 'm4-l3', title: 'Les propriétés essentielles', file: 'lecons/m04-l03-les-proprietes-essentielles.html', minutes: 6 },
+        { id: 'm4-l4', title: 'Sélection, statut, personne', file: 'lecons/m04-l04-selection-statut-personne.html', minutes: 6 },
+        { id: 'm4-l5', title: 'Créer la base Projets', file: 'lecons/m04-l05-creer-la-base-projets.html', minutes: 8 },
+        { id: 'm4-l6', title: 'Ajouter, ouvrir, modifier', file: 'lecons/m04-l06-ajouter-ouvrir-modifier.html', minutes: 6 }
       ]
     },
     {

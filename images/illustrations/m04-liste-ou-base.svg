@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="300" rx="16" fill="#eee6d9"/>
+  <g font-size="13" fill="#33281f">
+    <rect x="24" y="24" width="290" height="252" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="44" y="54" font-weight="700" font-size="15">Une liste dans une page</text>
+    <text x="44" y="92">• Site Orion — Emma — en cours — 15/11</text>
+    <text x="44" y="120">• Identité Luna — Lucas — 28/11 — à faire</text>
+    <text x="44" y="148">• Campagne Atlas — fini — Emma</text>
+    <text x="44" y="176" fill="#7b6f63">• … qui est en retard ?</text>
+    <text x="44" y="232" font-size="12" fill="#7b6f63">Les informations sont mélangées dans le texte.</text>
+    <text x="44" y="252" font-size="12" fill="#7b6f63">Impossible de trier ou de filtrer.</text>
+
+    <path d="M326 150 H392" stroke="#7a5a45" stroke-width="2.5"/><path d="M382 140 L394 150 L382 160" fill="none" stroke="#7a5a45" stroke-width="2.5"/>
+
+    <rect x="406" y="24" width="290" height="252" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="426" y="54" font-weight="700" font-size="15">Une base de données</text>
+    <rect x="426" y="72" width="250" height="28" fill="#f6f1e8"/>
+    <g font-size="12" font-weight="600" fill="#7b6f63"><text x="434" y="91">Nom</text><text x="534" y="91">Statut</text><text x="608" y="91">Échéance</text></g>
+    <g font-size="12">
+      <text x="434" y="124">Site Orion</text><rect x="530" y="111" width="62" height="20" rx="10" fill="#e3d6c8"/><text x="537" y="125">En cours</text><text x="608" y="124">15 nov.</text>
+      <text x="434" y="156">Identité Luna</text><rect x="530" y="143" width="56" height="20" rx="10" fill="#f6f1e8" stroke="#e6ddd0"/><text x="537" y="157">À faire</text><text x="608" y="156">28 nov.</text>
+      <text x="434" y="188">Campagne Atlas</text><rect x="530" y="175" width="58" height="20" rx="10" fill="#dee3d3"/><text x="537" y="189">Terminé</text><text x="608" y="188">5 nov.</text>
+    </g>
+    <path d="M426 104 H676 M426 136 H676 M426 168 H676 M426 200 H676" stroke="#e6ddd0"/>
+    <text x="426" y="232" font-size="12" fill="#7b6f63">Chaque information a sa colonne.</text>
+    <text x="426" y="252" font-size="12" fill="#7b6f63">On trie, on filtre, on change de vue.</text>
+  </g>
+</svg>
