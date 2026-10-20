@@ -2139,3 +2139,4 @@ html:not(.js) .lesson-nav--steps {
 
 /* Espace sous une base simulée, avant le paragraphe suivant */
 .prose [data-db] { margin-bottom: 1.25em; }
+.prose > .notion-page { margin-bottom: 1.25em; }

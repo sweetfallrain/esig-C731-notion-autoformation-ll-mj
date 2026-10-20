@@ -68,10 +68,10 @@
       id: 'm6', num: '06', title: 'Construire un espace pro',
       desc: 'Un bon espace n’est pas le plus rempli : c’est celui où l’équipe trouve vite ce qu’elle cherche.',
       lessons: [
-        { id: 'm6-l1', title: 'Les 5 parties de Studio Nova', file: null, minutes: 6 },
-        { id: 'm6-l2', title: 'Nommer clairement', file: null, minutes: 4 },
-        { id: 'm6-l3', title: 'Une page d’accueil simple', file: null, minutes: 5 },
-        { id: 'm6-l4', title: 'Ranger régulièrement', file: null, minutes: 6 }
+        { id: 'm6-l1', title: 'Les 5 parties de Studio Nova', file: 'lecons/m06-l01-les-5-parties-de-studio-nova.html', minutes: 6 },
+        { id: 'm6-l2', title: 'Nommer clairement', file: 'lecons/m06-l02-nommer-clairement.html', minutes: 4 },
+        { id: 'm6-l3', title: 'Une page d’accueil simple', file: 'lecons/m06-l03-une-page-d-accueil-simple.html', minutes: 6 },
+        { id: 'm6-l4', title: 'Ranger régulièrement', file: 'lecons/m06-l04-ranger-regulierement.html', minutes: 6 }
       ]
     },
     {
