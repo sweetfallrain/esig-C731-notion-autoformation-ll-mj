@@ -88,18 +88,18 @@
       id: 'm8', num: '08', title: 'Cas pratique Studio Nova',
       desc: 'Assembler tout ce que tu as appris dans un espace complet et cohérent.',
       lessons: [
-        { id: 'm8-l1', title: 'Le brief', file: null, minutes: 3 },
-        { id: 'm8-l2', title: 'Construire l’espace', file: null, minutes: 8 },
-        { id: 'm8-l3', title: 'Vérifier le résultat', file: null, minutes: 5 }
+        { id: 'm8-l1', title: 'Le brief', file: 'lecons/m08-l01-le-brief.html', minutes: 4 },
+        { id: 'm8-l2', title: 'Construire l’espace', file: 'lecons/m08-l02-construire-l-espace.html', minutes: 10 },
+        { id: 'm8-l3', title: 'Vérifier le résultat', file: 'lecons/m08-l03-verifier-le-resultat.html', minutes: 5 }
       ]
     },
     {
       id: 'm9', num: '09', title: 'Quiz final et conclusion',
       desc: 'Valider ton parcours et repartir avec les bons réflexes.',
       lessons: [
-        { id: 'm9-l1', title: 'Quiz final', file: null, minutes: 8 },
-        { id: 'm9-l2', title: 'Récapitulatif', file: null, minutes: 4 },
-        { id: 'm9-l3', title: 'Et maintenant ?', file: null, minutes: 3 }
+        { id: 'm9-l1', title: 'Quiz final', file: 'lecons/m09-l01-quiz-final.html', minutes: 10 },
+        { id: 'm9-l2', title: 'Récapitulatif', file: 'lecons/m09-l02-recapitulatif.html', minutes: 4 },
+        { id: 'm9-l3', title: 'Et maintenant ?', file: 'lecons/m09-l03-et-maintenant.html', minutes: 3 }
       ]
     }
   ];

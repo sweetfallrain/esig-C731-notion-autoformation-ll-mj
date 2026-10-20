@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="240" rx="16" fill="#eee6d9"/>
+  <g font-size="13" fill="#33281f" text-anchor="middle">
+    <g><rect x="24" y="30" width="156" height="180" rx="12" fill="#fffdf8" stroke="#e6ddd0"/><text x="102" y="74" font-size="26" fill="#7a5a45" font-weight="700">1</text><text x="102" y="112" font-weight="700">Une seule place</text><text x="102" y="140" font-size="12">par information ;</text><text x="102" y="158" font-size="12">ailleurs, un lien</text><text x="102" y="176" font-size="12">ou une vue.</text></g>
+    <g><rect x="196" y="30" width="156" height="180" rx="12" fill="#fffdf8" stroke="#e6ddd0"/><text x="274" y="74" font-size="26" fill="#7a5a45" font-weight="700">2</text><text x="274" y="112" font-weight="700">Ça se répète ?</text><text x="274" y="140" font-size="12">Alors c'est</text><text x="274" y="158" font-size="12">une base de données.</text></g>
+    <g><rect x="368" y="30" width="156" height="180" rx="12" fill="#fffdf8" stroke="#e6ddd0"/><text x="446" y="74" font-size="26" fill="#7a5a45" font-weight="700">3</text><text x="446" y="112" font-weight="700">Un titre clair</text><text x="446" y="140" font-size="12">type + sujet</text><text x="446" y="158" font-size="12">(+ date).</text></g>
+    <g><rect x="540" y="30" width="156" height="180" rx="12" fill="#fffdf8" stroke="#e6ddd0"/><text x="618" y="74" font-size="26" fill="#7a5a45" font-weight="700">4</text><text x="618" y="112" font-weight="700">Le bon accès</text><text x="618" y="140" font-size="12">le plus bas</text><text x="618" y="158" font-size="12">qui suffit.</text></g>
+  </g>
+</svg>

@@ -205,6 +205,30 @@ Toujours les MÊMES données (base Projets de Studio Nova) quelle que soit
   la vue — c'est le message pédagogique.
 Cliquer un nom de projet ouvre sa page (propriétés en <dl> + contenu).
 Table : overflow-x auto sur mobile. Calendrier : grille 7 colonnes.
+Script js/db-sim.js. Attributs :
+  data-db                       active la simulation
+  data-views="table,list,board,calendar,gallery,timeline"  (1re = départ)
+  data-columns="basic|full"     basic = Nom, Statut, Responsable, Priorité,
+                                Échéance ; full = + Client, Budget, Tags, Facturé
+  data-tools="true"             menus Filtre / Tri / Regrouper (table, liste,
+                                galerie) + compteur « n projets affichés sur 3 »
+  data-open="orion"             page ouverte au départ
+```
+
+### Exercice de classement (`.sort-ex`)
+```
+Script js/sort-ex.js. Une ligne par élément : libellé + <select>.
+  .sort-ex__row[data-answer][data-explain] ; boutons data-sort-check et
+  data-sort-reset ; score en role="status".
+Correction ligne par ligne : bordure success / error, explication sous la
+  ligne. Utilisé dans les étapes Voir ou Faire (modules 4 à 8).
+```
+
+### Autres éléments de simulation
+```
+.space-compare : deux fausses barres latérales côte à côte (espace A / B).
+.search-sim__field / .search-sim__results : fenêtre de recherche statique.
+.prose > pre : chemin ou arborescence en texte, pre-wrap (fond --color-bg).
 ```
 
 ### À retenir (`.key-points`)

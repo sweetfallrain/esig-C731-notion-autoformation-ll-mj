@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le brief — Module 8 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m8-l1" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m8">Cas pratique Studio Nova</a> · Leçon 1 sur 3 · 4 min</p>
+      <h1>Le brief</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras découper une demande d'équipe en actions concrètes dans Notion.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Place à la pratique. Dans ce module, tu ne découvres rien de nouveau : tu <strong>assembles</strong> tout ce que tu as appris pour répondre à une vraie demande, comme au travail.</p>
+        <p>Voici la situation. Studio Nova vient de signer un nouveau client, <strong>Vega</strong>, pour une brochure. Et lundi, <strong>Hugo</strong>, un stagiaire, rejoint l'équipe. Emma te confie la mise à jour de l'espace Notion pour que les deux arrivées se passent bien.</p>
+        <p>Lis le brief d'Emma attentivement : chaque phrase correspond à quelque chose à construire.</p>
+        <div class="notion-page" role="group" aria-label="Simulation d'une page Notion : Brief — Arrivée de Vega et de Hugo">
+          <div class="notion-page__bar">Studio Nova / Notes &amp; réunions / <strong>Brief — Arrivée de Vega et de Hugo</strong><span class="notion-page__tag">Simulation</span></div>
+          <div class="notion-page__body">
+            <p class="np-h1">Brief — Arrivée de Vega et de Hugo</p>
+            <p class="np-text">Salut ! Deux nouveautés cette semaine, j'ai besoin de toi pour préparer l'espace :</p>
+            <p class="np-text">1. Ajoute le projet <strong>« Brochure Vega »</strong> (client Vega, échéance le 4 décembre, priorité moyenne, responsable : Lucas).</p>
+            <p class="np-text">2. Crée les trois premières tâches : recevoir les textes du client (Sarah), proposer une mise en page (Lucas), relire le premier jet (Emma).</p>
+            <p class="np-text">3. Je veux suivre l'avancement sur un board, et voir les échéances dans un calendrier.</p>
+            <p class="np-text">4. Écris une page pour accueillir Hugo : ce qu'il doit lire, à qui demander.</p>
+            <p class="np-text">5. Prépare le compte rendu de la réunion de lancement Vega du 24 novembre.</p>
+            <p class="np-text">6. L'accueil doit montrer les accès rapides et les tâches de la semaine.</p>
+            <p class="np-text">7. Hugo doit pouvoir tout lire, mais il ne modifie rien pour l'instant.</p>
+            <p class="np-text">Et garde l'espace propre, comme d'habitude ! — Emma</p>
+          </div>
+        </div>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m08-espace-cible.svg" alt="À gauche, l'espace attendu : Studio Nova contient Accueil, Projets (base, 3 vues), Tâches (base, 2 vues), Ressources avec la sous-page « Procédure — Accueil des stagiaires », et Notes et réunions avec « Réunion de lancement Vega — 24 nov. ». À droite, les huit exigences du brief : nouveau projet Brochure Vega, trois tâches pour Vega avec responsables, vues Suivi et Échéances, procédure d'accueil pour Hugo, compte rendu de lancement, accueil avec accès rapides et tâches de la semaine, partage avec Hugo au bon niveau, titres clairs sans page en vrac." width="720" height="320">
+          <figcaption>L'espace à obtenir et les exigences du brief.</figcaption>
+        </figure>
+        <p class="definition">Un brief se découpe en tâches concrètes : pour chaque demande, on choisit la bonne brique Notion.</p>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> avant de construire, relis le brief et souligne les verbes : « ajoute », « crée », « suivre », « écris ». Chaque verbe est une action à faire dans Notion.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Du brief aux briques Notion</h2>
+        <p>Emma a commencé à traduire son brief en briques Notion. Compare la demande, telle qu'elle l'a écrite, et ce qu'il faut construire.</p><table class="compare">
+          <caption class="sr-only">Demandes du brief comparées aux briques Notion à utiliser</caption>
+          <thead>
+            <tr><th scope="col">La demande d'Emma</th><th scope="col">Ce qu'il faut construire</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="La demande d'Emma"><span class="compare__mark" aria-hidden="true">—</span>« Ajoute le projet Brochure Vega »</td><td data-label="Ce qu'il faut construire"><span class="compare__mark" aria-hidden="true">✓</span>Une nouvelle entrée dans la base Projets (module 4).</td></tr>
+            <tr><td data-label="La demande d'Emma"><span class="compare__mark" aria-hidden="true">—</span>« Crée les trois premières tâches »</td><td data-label="Ce qu'il faut construire"><span class="compare__mark" aria-hidden="true">✓</span>Trois entrées dans la base Tâches, avec un responsable chacune (module 6).</td></tr>
+            <tr><td data-label="La demande d'Emma"><span class="compare__mark" aria-hidden="true">—</span>« Suivre l'avancement… voir les échéances »</td><td data-label="Ce qu'il faut construire"><span class="compare__mark" aria-hidden="true">✓</span>Une vue Board et une vue Calendrier (module 5).</td></tr>
+            <tr><td data-label="La demande d'Emma"><span class="compare__mark" aria-hidden="true">—</span>« Une page pour accueillir Hugo »</td><td data-label="Ce qu'il faut construire"><span class="compare__mark" aria-hidden="true">✓</span>Une sous-page dans Ressources, avec un titre clair (modules 3 et 6).</td></tr>
+            <tr><td data-label="La demande d'Emma"><span class="compare__mark" aria-hidden="true">—</span>« Hugo doit pouvoir tout lire »</td><td data-label="Ce qu'il faut construire"><span class="compare__mark" aria-hidden="true">✓</span>Un partage en « Peut consulter » (module 7).</td></tr>
+          </tbody>
+        </table>
+        <p>Aucune demande n'exige de créer une nouvelle base ou une nouvelle partie : l'espace construit dans les modules précédents suffit. C'est le signe d'une bonne structure.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Traduire le brief</h2>
+        <p>À toi de traduire les demandes restantes. Pour chacune, choisis la brique Notion qui y répond.</p>
+        <div class="sort-ex" data-sort-ex role="group" aria-label="Traduire le brief en briques Notion">
+          <div class="sort-ex__row" data-answer="page" data-explain="Un compte rendu est une sous-page de Notes &amp; réunions : « Réunion de lancement Vega — 24 nov. ».">
+            <label class="sort-ex__label" for="q81a">« Prépare le compte rendu de la réunion de lancement Vega. »</label>
+            <select id="q81a"><option value="">Choisis…</option><option value="entree">Une entrée de base</option><option value="vue">Une vue</option><option value="page">Une page ou sous-page</option><option value="partage">Un réglage de partage</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="entree" data-explain="C'est une tâche : une entrée de la base Tâches, avec Lucas comme responsable.">
+            <label class="sort-ex__label" for="q81b">« Proposer une mise en page (Lucas). »</label>
+            <select id="q81b"><option value="">Choisis…</option><option value="entree">Une entrée de base</option><option value="vue">Une vue</option><option value="page">Une page ou sous-page</option><option value="partage">Un réglage de partage</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="vue" data-explain="Une vue liée de la base Tâches, filtrée sur la semaine, insérée dans l'accueil.">
+            <label class="sort-ex__label" for="q81c">« L'accueil doit montrer les tâches de la semaine. »</label>
+            <select id="q81c"><option value="">Choisis…</option><option value="entree">Une entrée de base</option><option value="vue">Une vue</option><option value="page">Une page ou sous-page</option><option value="partage">Un réglage de partage</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="partage" data-explain="Un réglage de partage : Hugo en « Peut consulter ».">
+            <label class="sort-ex__label" for="q81d">« Hugo ne modifie rien pour l'instant. »</label>
+            <select id="q81d"><option value="">Choisis…</option><option value="entree">Une entrée de base</option><option value="vue">Une vue</option><option value="page">Une page ou sous-page</option><option value="partage">Un réglage de partage</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="vue" data-explain="Une vue Calendrier de la base Projets, sur la propriété Échéance.">
+            <label class="sort-ex__label" for="q81e">« Voir les échéances dans un calendrier. »</label>
+            <select id="q81e"><option value="">Choisis…</option><option value="entree">Une entrée de base</option><option value="vue">Une vue</option><option value="page">Une page ou sous-page</option><option value="partage">Un réglage de partage</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__actions">
+            <button type="button" class="btn btn-primary" data-sort-check>Vérifier mes réponses</button>
+            <button type="button" class="btn btn-outline" data-sort-reset>Recommencer</button>
+          </div>
+          <p class="sort-ex__score" data-sort-score role="status"></p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Ta liste de travail</h3>
+          <ol>
+            <li>Recopie les sept demandes du brief dans une page « Brouillon — Cas pratique ».</li>
+            <li>En face de chacune, note la brique Notion à utiliser et l'endroit où elle va.</li>
+            <li>Transforme la liste en checklist : tu cocheras chaque ligne à la leçon suivante.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> une checklist de sept lignes, par exemple : « ☐ Projet Brochure Vega → entrée dans Projets ». Tu as un plan clair avant de toucher à l'espace.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Un brief se découpe en actions : une demande, une brique Notion.</li>
+            <li>Avant de construire, on vérifie si la structure existante suffit.</li>
+            <li>Une liste de travail en checklist évite d'oublier une demande.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Le brief demande « suivre l'avancement sur un board ». Que construis-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Une nouvelle base « Avancement ».</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Une vue Board de la base existante.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Une page avec un tableau dessiné à la main.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une vue suffit : les projets existent déjà, on change seulement leur affichage.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Où ranger la page d'accueil de Hugo ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a" data-correct><span class="quiz__option-text">Dans Ressources, sous un titre clair comme « Procédure — Accueil des stagiaires ».</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b"><span class="quiz__option-text">En vrac dans Privé.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Dans la base Projets.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>C'est un document utile à tous et réutilisable : il va dans Ressources, avec un titre « type + sujet ».</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

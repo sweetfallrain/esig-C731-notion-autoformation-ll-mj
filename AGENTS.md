@@ -243,9 +243,24 @@ Nouveau cahier des charges de l'utilisatrice + maquette validée (canevas
 - **Icônes** : emojis → SVG inline. **[décision d'intégration]**
 - **Progression** : clés `notion-guide:*` (v2-v3) abandonnées au profit de
   `notion-formation:lecon-terminee:<id>`. **[décision d'intégration]**
-- **Module 2 découpé en 8 leçons** (« Les blocs essentiels » dépassait 8 min) : parcours de 38 leçons. **[décision d'intégration]**
+- **Module 2 découpé en 8 leçons** (« Les blocs essentiels » dépassait 8 min). **[décision d'intégration]**
+- **Module 4 passé à 6 leçons** (pourquoi une base, une entrée est une page,
+  propriétés essentielles, sélection/statut/personne, créer la base Projets,
+  ajouter/ouvrir/modifier) : **parcours de 39 leçons**. **[décision d'intégration]**
+- **Modules 3 à 9 intégrés directement**, sans validation intermédiaire ;
+  l'utilisatrice relit et corrige l'ensemble à la fin. **[confirmé]**
+- **Libellés français de Notion à vérifier** sur l'interface réelle (seuls les
+  libellés anglais ont été confirmés sur l'aide officielle ; ils sont donnés
+  entre parenthèses dans les leçons) : niveaux d'accès (« Accès complet »,
+  « Peut modifier », « Peut modifier le contenu », « Peut commenter »,
+  « Peut consulter »), accès général, « Déplacer vers », « Ajouter aux
+  favoris », « Lien vers une page », « Copier le lien », « Rétroliens »,
+  noms des vues, « Vue liée », « Nouvelle page », démarrage d'une page vide
+  par « Tableau » (m04-l05), groupes du type Statut.
+- **Captures d'écran** : tous les emplacements `images/captures/m0X-*.png`
+  sont des placeholders à remplir par l'utilisatrice.
 - **Sommaire latéral généré en JS** depuis `course-data.js`, pour ne pas
-  recopier 37 liens dans chaque leçon. **[décision d'intégration]**
+  recopier 39 liens dans chaque leçon. **[décision d'intégration]**
 - **À vérifier dans Notion** : le titre d'une page n'est pas présenté comme
   un bloc dans la simulation (comportement actuel de Notion à confirmer sur
   l'espace de démo).
