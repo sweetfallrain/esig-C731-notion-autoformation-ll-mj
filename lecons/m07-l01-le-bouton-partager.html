@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le bouton Partager — Module 7 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m7-l1" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m7">Partager et collaborer</a> · Leçon 1 sur 4 · 4 min</p>
+      <h1>Le bouton Partager</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras te repérer dans le menu Partager et faire la différence entre partager et publier.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Jusqu'ici, ton espace Studio Nova était dans « Privé » : toi seul le voyais. Pour travailler en équipe, il faut <strong>partager</strong>. Tout se passe dans un seul bouton : <strong>« Partager »</strong> (<em>Share</em>), en haut à droite de chaque page.</p>
+        <p>Le menu qui s'ouvre a deux onglets : <strong>« Partager »</strong> pour inviter des personnes, et <strong>« Publier »</strong> (<em>Publish</em>) pour mettre la page en ligne sur le web, visible par n'importe qui. Pour travailler en équipe, tu n'utiliseras que le premier.</p>
+        <p>Dans l'onglet « Partager », tu trouves quatre éléments :</p>
+        <ol>
+          <li><strong>Le champ d'invitation</strong> : tape l'e-mail ou le nom d'un collègue, puis « Inviter ».</li>
+          <li><strong>La liste des personnes</strong> qui ont accès, chacune avec son niveau d'accès (leçon suivante).</li>
+          <li><strong>L'accès général</strong> (<em>General access</em>) : qui d'autre peut ouvrir la page. « Seules les personnes invitées » (<em>Only people invited</em>), « Tous les membres de l'espace de travail » (<em>Everyone at workspace</em>) ou « Toute personne disposant du lien » (<em>Anyone on the web with link</em>).</li>
+          <li><strong>« Copier le lien »</strong> (<em>Copy link</em>), pour envoyer l'adresse de la page.</li>
+        </ol>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m07-menu-partager.svg" alt="Le menu Partager, schématisé avec quatre zones numérotées : 1, le champ e-mail ou nom et le bouton Inviter ; 2, la liste des personnes : Emma (toi) avec Accès complet, Lucas avec Peut modifier ; 3, l'accès général réglé sur « Seules les personnes invitées » ; 4, Copier le lien. Les onglets Partager et Publier sont en haut." width="720" height="320">
+          <figcaption>Le menu Partager : inviter, voir qui a accès, régler l'accès général, copier le lien.</figcaption>
+        </figure>
+        <p class="definition">« Partager » donne accès à des personnes précises ; « Publier » met la page en ligne pour tout le monde.</p>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> copier le lien ne donne <strong>aucun accès</strong> par lui-même. Si la personne n'est pas invitée et que l'accès général est « Seules les personnes invitées », elle verra un message lui demandant de demander l'accès.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Emma partage Site Orion</h2>
+        <p>Emma partage la page « Site Orion » avec Lucas. Clique sur les numéros pour découvrir chaque partie du menu.</p>
+        <div data-ui-sim>
+          <div class="notion-page">
+            <div class="notion-page__bar">Studio Nova / Projets / <strong>Site Orion</strong> · menu Partager<span class="notion-page__tag">Simulation</span></div>
+            <div class="ui-sim__page">
+                <p class="ui-sim__section">Partager · Publier <button type="button" class="hotspot" data-hotspot data-title="Les deux onglets" data-info="« Partager » invite des personnes précises. « Publier » met la page sur le web, visible par n'importe qui : à réserver aux contenus publics.">1</button></p>
+                <div class="ui-sim__row">E-mail ou nom… <span class="ui-sim__share">Inviter</span> <button type="button" class="hotspot" data-hotspot data-title="Inviter" data-info="Tape l'e-mail de Lucas, choisis son niveau d'accès, puis « Inviter ». Il reçoit un e-mail et la page apparaît dans sa section « Partagé ».">2</button></div>
+                <div class="ui-sim__row">Emma (toi) — Accès complet</div>
+                <div class="ui-sim__row">Lucas — Peut modifier ▾ <button type="button" class="hotspot" data-hotspot data-title="Niveau d'accès" data-info="Le menu ▾ permet de changer le niveau de Lucas, ou de lui retirer l'accès. Les niveaux sont expliqués à la leçon suivante.">3</button></div>
+                <div class="ui-sim__row">Accès général : Seules les personnes invitées ▾ <button type="button" class="hotspot" data-hotspot data-title="Accès général" data-info="Règle qui, en plus des personnes invitées, peut ouvrir la page. « Seules les personnes invitées » est le réglage le plus sûr.">4</button></div>
+                <div class="ui-sim__row">Copier le lien <button type="button" class="hotspot" data-hotspot data-title="Copier le lien" data-info="Copie l'adresse de la page. Le lien ne donne pas d'accès : seules les personnes autorisées pourront l'ouvrir.">5</button></div>
+            </div>
+          </div>
+          <p class="notion-info" data-ui-info aria-live="polite"><strong>Choisis un numéro.</strong> Il y a 5 points à découvrir dans ce menu.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Découvrir le menu Partager</h2>
+        <ol class="tutorial">
+          <li>Ouvre la page « Projets » de Studio Nova. En haut à droite, clique sur « Partager ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu Partager ouvert sur la page Projets, onglet Partager actif">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Menu Partager · images/captures/m07-menu-partager.png</span>
+              </div>
+            </figure></li>
+          <li>Lis la liste des personnes : pour l'instant, il n'y a que toi.</li>
+          <li>Regarde le réglage d'accès général. Laisse-le sur « Seules les personnes invitées ».</li>
+          <li>Clique sur l'onglet « Publier » pour le découvrir, <strong>sans cliquer sur le bouton de publication</strong>. Reviens sur « Partager ».</li>
+          <li>Si un collègue utilise Notion avec toi et a accepté de t'aider, tape son e-mail, choisis « Peut consulter », puis « Inviter ». Sinon, passe cette étape.</li>
+          <li>Clique sur « Copier le lien » et colle-le dans une note : c'est l'adresse de la page.</li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> n'invite jamais une adresse e-mail au hasard pour tester. L'invitation envoie un vrai e-mail et donne un vrai accès à tes pages.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Explorer le menu Partager</h3>
+          <ol>
+            <li>Ouvre le menu Partager de « Projets ».</li>
+            <li>Repère les quatre zones : invitation, liste des personnes, accès général, copier le lien.</li>
+            <li>Copie le lien de la page.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> tu sais où inviter quelqu'un et où vérifier qui a accès. L'accès général est resté sur « Seules les personnes invitées » et rien n'a été publié sur le web.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Le bouton « Partager » est en haut à droite de chaque page.</li>
+            <li>« Partager » donne accès à des personnes précises ; « Publier » met la page sur le web.</li>
+            <li>Copier le lien ne donne aucun accès par lui-même.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Emma copie le lien de « Site Orion » et l'envoie à Sarah, qui n'a pas été invitée. L'accès général est « Seules les personnes invitées ». Que voit Sarah ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">La page complète.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Un message lui proposant de demander l'accès.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Une copie modifiable de la page.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le lien n'est qu'une adresse. Sans invitation, Sarah doit demander l'accès.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">À quoi sert l'onglet « Publier » ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">À inviter un collègue.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">À mettre la page en ligne, visible par n'importe qui sur le web.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">À enregistrer la page.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Publier rend la page publique. Pour travailler en équipe, on utilise l'onglet « Partager ».</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

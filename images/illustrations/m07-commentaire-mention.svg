@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="280" rx="16" fill="#eee6d9"/>
+  <g font-size="13" fill="#33281f">
+    <rect x="24" y="24" width="400" height="232" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="44" y="58" font-weight="700" font-size="16">Site Orion</text>
+    <text x="44" y="94">La page d'accueil présente</text>
+    <rect x="42" y="104" width="192" height="22" fill="#e3d6c8"/><text x="44" y="120">les trois offres du client.</text>
+    <text x="44" y="150">Le menu reprend l'arborescence validée.</text>
+    <path d="M236 115 H448" stroke="#7a5a45" stroke-width="2" stroke-dasharray="4 4"/>
+    <rect x="448" y="60" width="248" height="150" rx="12" fill="#fffdf8" stroke="#7a5a45" stroke-width="2"/>
+    <circle cx="472" cy="88" r="12" fill="#e3d6c8"/><text x="472" y="92" text-anchor="middle" font-size="11" font-weight="700">E</text>
+    <text x="492" y="92" font-weight="600">Emma</text>
+    <text x="464" y="120">Il manque l'offre « Entretien ».</text>
+    <text x="464" y="140"><tspan fill="#7a5a45" font-weight="700">@Lucas</tspan> peux-tu l'ajouter ?</text>
+    <rect x="464" y="164" width="88" height="28" rx="6" fill="#f6f1e8"/><text x="508" y="183" text-anchor="middle" font-size="12">Répondre</text>
+    <rect x="560" y="164" width="120" height="28" rx="6" fill="#f6f1e8"/><text x="620" y="183" text-anchor="middle" font-size="12">✓ Résoudre</text>
+    <text x="448" y="240" font-size="12" fill="#7b6f63">Lucas reçoit une notification dans sa Boîte de réception.</text>
+  </g>
+</svg>

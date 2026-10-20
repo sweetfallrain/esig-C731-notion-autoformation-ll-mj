@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="260" rx="16" fill="#eee6d9"/>
+  <g font-size="13" fill="#33281f">
+    <rect x="40" y="96" width="200" height="56" rx="10" fill="#47342c"/><text x="140" y="121" text-anchor="middle" fill="#fdf9f3" font-weight="700">Projets</text><text x="140" y="140" text-anchor="middle" fill="#fdf9f3" font-size="11">partagée avec Hugo</text>
+    <g fill="none" stroke="#7a5a45" stroke-width="2"><path d="M240 124 C290 124 290 60 330 60"/><path d="M240 124 H330"/><path d="M240 124 C290 124 290 188 330 188"/></g>
+    <rect x="330" y="38" width="200" height="44" rx="10" fill="#fffdf8" stroke="#e6ddd0"/><text x="430" y="65" text-anchor="middle">Site Orion</text>
+    <rect x="330" y="102" width="200" height="44" rx="10" fill="#fffdf8" stroke="#e6ddd0"/><text x="430" y="129" text-anchor="middle">Identité Luna</text>
+    <rect x="330" y="166" width="200" height="44" rx="10" fill="#fffdf8" stroke="#b8493f" stroke-width="2"/><text x="430" y="193" text-anchor="middle">Budget confidentiel</text>
+    <text x="546" y="60" font-size="12" fill="#6b7a5c" font-weight="600">Hugo y a accès</text>
+    <text x="546" y="124" font-size="12" fill="#6b7a5c" font-weight="600">Hugo y a accès</text>
+    <text x="546" y="188" font-size="12" fill="#b8493f" font-weight="600">Hugo y a accès</text>
+    <text x="546" y="204" font-size="12" fill="#b8493f">aussi !</text>
+    <text x="40" y="236" font-size="12" fill="#7b6f63">Partager une page partage aussi toutes ses sous-pages.</text>
+  </g>
+</svg>

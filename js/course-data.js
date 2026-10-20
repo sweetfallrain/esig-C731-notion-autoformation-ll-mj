@@ -78,10 +78,10 @@
       id: 'm7', num: '07', title: 'Partager et collaborer',
       desc: 'Emma partage un projet avec Lucas : choisir le bon niveau d’accès, commenter, mentionner.',
       lessons: [
-        { id: 'm7-l1', title: 'Le bouton Partager', file: null, minutes: 4 },
-        { id: 'm7-l2', title: 'Les niveaux d’accès', file: null, minutes: 7 },
-        { id: 'm7-l3', title: 'Commentaires et mentions', file: null, minutes: 5 },
-        { id: 'm7-l4', title: 'Avant de partager', file: null, minutes: 5 }
+        { id: 'm7-l1', title: 'Le bouton Partager', file: 'lecons/m07-l01-le-bouton-partager.html', minutes: 4 },
+        { id: 'm7-l2', title: 'Les niveaux d’accès', file: 'lecons/m07-l02-les-niveaux-d-acces.html', minutes: 7 },
+        { id: 'm7-l3', title: 'Commentaires et mentions', file: 'lecons/m07-l03-commentaires-et-mentions.html', minutes: 5 },
+        { id: 'm7-l4', title: 'Avant de partager', file: 'lecons/m07-l04-avant-de-partager.html', minutes: 5 }
       ]
     },
     {
