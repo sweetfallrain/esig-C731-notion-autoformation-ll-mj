@@ -2136,3 +2136,6 @@ html:not(.js) .lesson-nav--steps {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+
+/* Espace sous une base simulée, avant le paragraphe suivant */
+.prose [data-db] { margin-bottom: 1.25em; }
