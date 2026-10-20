@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créer la base Projets — Module 4 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m4-l5" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m4">Bases de données</a> · Leçon 5 sur 6 · 8 min</p>
+      <h1>Créer la base Projets</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu auras créé la base « Projets » de Studio Nova, avec ses cinq propriétés et ses trois premiers projets.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Tu as tout ce qu'il faut : tu sais ce qu'est une base, qu'une ligne est une page, et quels types de propriétés choisir. Place à la construction de la vraie base « Projets » de Studio Nova.</p>
+        <p>Avant de cliquer, un bon réflexe : <strong>dessiner la base sur papier</strong>. Quelles informations veut-on voir pour chaque projet ? Emma et Lucas se sont mis d'accord sur cinq propriétés, pas plus :</p>
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Plan de la base Projets</caption>
+            <thead><tr><th scope="col">Propriété</th><th scope="col">Type</th><th scope="col">Options ou format</th></tr></thead>
+            <tbody>
+              <tr><td>Nom</td><td>Titre</td><td>Le nom du projet</td></tr>
+              <tr><td>Statut</td><td>Statut</td><td>À faire, En cours, Terminé</td></tr>
+              <tr><td>Responsable</td><td>Personne</td><td>Un membre de l'équipe</td></tr>
+              <tr><td>Échéance</td><td>Date</td><td>Le jour de livraison</td></tr>
+              <tr><td>Priorité</td><td>Sélection</td><td>Haute, Moyenne, Basse</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Deux façons de créer une base existent. Une base <strong>pleine page</strong> occupe toute une page : la page <em>est</em> la base. Une base <strong>intégrée</strong> (<em>inline</em>) est un bloc au milieu d'autres blocs. Pour « Projets », on veut une base pleine page : la page « Projets » ne contiendra que les projets.</p>
+        <p class="definition">Une base pleine page est une page entièrement occupée par une base de données ; une base intégrée est un bloc dans une page.</p>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> commence avec peu de propriétés. Il est facile d'en ajouter une plus tard ; une base avec quinze colonnes, personne ne la remplit.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">La base à construire</h2>
+        <p>Voici la base que tu vas obtenir à la fin de cette leçon, avec les trois projets de Studio Nova.</p>
+        <div data-db data-views="table" data-columns="basic"></div>
+        <p>Cinq colonnes, trois lignes : c'est simple, et pourtant cela suffit déjà pour savoir qui fait quoi, et pour quand.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Créer la base pas à pas</h2>
+        <ol class="tutorial">
+          <li>Ouvre la page « Projets », vide depuis le module 2.</li>
+          <li>Sous le titre, Notion propose plusieurs façons de commencer. Choisis <strong>« Tableau »</strong> (<em>Table</em>). Si tu ne vois pas cette proposition, tape « /tableau » et choisis la version pleine page.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page vide « Projets » avec les propositions de départ, dont « Tableau », sous le titre">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Démarrer la page avec un tableau · images/captures/m04-projets-demarrer-tableau.png</span>
+              </div>
+            </figure></li>
+          <li>La base apparaît avec une colonne « Nom ». Supprime les autres colonnes proposées par défaut, s'il y en a : clic sur le nom de la colonne, puis « Supprimer la propriété ».</li>
+          <li>Clique sur le <strong>+</strong> à droite des colonnes. Nomme la propriété « Statut » et choisis le type Statut. Les options À faire, En cours et Terminé (ou leurs équivalents) sont déjà créées : renomme-les si besoin.</li>
+          <li>Ajoute « Responsable », de type Personne.</li>
+          <li>Ajoute « Échéance », de type Date.</li>
+          <li>Ajoute « Priorité », de type Sélection. Clique dans une case et crée les trois options : Haute, Moyenne, Basse.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Projets » avec ses cinq colonnes, encore vide">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Base Projets et ses cinq propriétés · images/captures/m04-projets-colonnes.png</span>
+              </div>
+            </figure></li>
+          <li>Saisis les trois projets : Site Orion (En cours, Emma, 15 novembre, Haute) ; Identité Luna (À faire, Lucas, 28 novembre, Moyenne) ; Campagne Atlas (Terminé, Emma, 5 novembre, Basse).
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Projets » remplie avec les trois projets de Studio Nova">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Base Projets remplie · images/captures/m04-projets-remplie.png</span>
+              </div>
+            </figure></li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> si Lucas et Emma ne sont pas membres de ton espace Notion, la propriété Personne ne les proposera pas. Choisis-toi toi-même pour l'exercice, ou utilise une sélection « Responsable » avec leurs prénoms.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>La base « Projets » de Studio Nova</h3>
+          <ol>
+            <li>Transforme la page « Projets » en base pleine page.</li>
+            <li>Crée les cinq propriétés : Nom, Statut, Responsable, Échéance, Priorité.</li>
+            <li>Saisis les trois projets de Studio Nova.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> la page « Projets » affiche un tableau de cinq colonnes et trois lignes, identique à la simulation de l'étape 2. Dans la barre latérale, « Projets » est toujours rangée sous « Studio Nova ».</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Avant de créer une base, liste les propriétés et leur type.</li>
+            <li>Une base pleine page occupe toute la page ; une base intégrée est un bloc parmi d'autres.</li>
+            <li>Peu de propriétés au départ : on en ajoute au besoin.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Emma veut une page « Projets » qui ne contienne que la liste des projets. Quel type de base choisit-elle ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a" data-correct><span class="quiz__option-text">Une base pleine page.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b"><span class="quiz__option-text">Une base intégrée sous un long texte.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Une simple liste à puces.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une base pleine page occupe toute la page : la page « Projets » devient la base elle-même.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Lucas propose d'ajouter 14 colonnes dès le départ « pour être complet ». Que lui réponds-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Bonne idée : plus il y a de colonnes, mieux c'est.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">Mieux vaut commencer avec quelques propriétés utiles et en ajouter au besoin.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Notion limite les bases à 5 colonnes.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une base trop chargée n'est pas remplie. On commence simple, et on ajoute une propriété quand un vrai besoin apparaît.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

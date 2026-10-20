@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une page d'accueil simple — Module 6 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m6-l3" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m6">Construire un espace pro</a> · Leçon 3 sur 4 · 6 min</p>
+      <h1>Une page d'accueil simple</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras construire une page d'accueil qui oriente l'équipe en quelques secondes, avec une vue liée de la base des tâches.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>La page d'accueil est la première chose que voit l'équipe le matin. Elle n'a pas besoin d'être belle ou longue : elle doit répondre en dix secondes à trois questions.</p>
+        <ul>
+          <li><strong>Où suis-je ?</strong> Un mot d'accueil d'une ligne, dans un encadré.</li>
+          <li><strong>Où aller ?</strong> Des accès rapides vers les grandes parties de l'espace : Projets, Tâches, Ressources, Notes &amp; réunions.</li>
+          <li><strong>Que faire aujourd'hui ?</strong> Les tâches de la semaine, affichées directement.</li>
+        </ul>
+        <p>Pour la troisième partie, pas question de recopier les tâches : on insère une <strong>vue liée</strong> de la base « Tâches » (<em>Linked view</em>). C'est une fenêtre sur la base, affichée dans une autre page. Tu tapes « /vue liée » (ou « /linked »), tu choisis la base « Tâches », puis tu filtres sur les tâches de la semaine. Une tâche cochée dans l'accueil est cochée dans la base, puisque c'est la même.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m06-accueil-zones.svg" alt="Maquette de la page « Accueil — Studio Nova » en trois zones numérotées : 1, Accueillir : un encadré « Bienvenue ! Ici, tout ce qu'il faut pour la semaine » ; 2, Orienter : des accès rapides vers Projets, Tâches, Ressources, Notes et réunions ; 3, Agir : un tableau, vue « Cette semaine » de la base Tâches." width="720" height="320">
+          <figcaption>Une page d'accueil en trois zones : accueillir, orienter, agir.</figcaption>
+        </figure>
+        <p class="definition">Une vue liée affiche une base existante dans une autre page, sans rien copier.</p>
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> une page d'accueil qui grossit sans fin perd son rôle. Si tu as envie d'y ajouter un long texte, crée plutôt une page dans « Ressources » et mets un lien vers elle.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Le nouvel accueil de Studio Nova</h2>
+        <p>Voici la nouvelle page d'accueil de Studio Nova. Coche une tâche : dans le vrai Notion, elle serait aussi cochée dans la base « Tâches ».</p>
+        <div class="notion-page" role="group" aria-label="Simulation d'une page Notion : Accueil — Studio Nova">
+          <div class="notion-page__bar">Studio Nova / <strong>Accueil — Studio Nova</strong><span class="notion-page__tag">Simulation</span></div>
+          <div class="notion-page__body">
+            <p class="np-h1">Accueil — Studio Nova</p>
+            <div class="np-callout"><span aria-hidden="true">💡</span><span>Bienvenue ! Ici, tout ce qu'il faut pour la semaine. Une question ? Écris à Emma.</span></div>
+            <p class="np-h2">Accès rapides</p>
+            <p class="np-text"><span class="fake-link">Projets</span> · <span class="fake-link">Tâches</span> · <span class="fake-link">Ressources</span> · <span class="fake-link">Notes &amp; réunions</span></p>
+            <p class="np-h2">Cette semaine</p>
+            <p class="meta">Vue liée · Tâches · filtre : échéance cette semaine</p>
+            <label class="np-todo"><input type="checkbox"><span>Finaliser la maquette du site Orion — Emma</span></label>
+            <label class="np-todo"><input type="checkbox"><span>Préparer la réunion client — Lucas</span></label>
+            <label class="np-todo"><input type="checkbox"><span>Mettre à jour les ressources — Sarah</span></label>
+          </div>
+        </div>
+        <p>Trois zones, aucune information recopiée. Les accès rapides sont des liens, les tâches une vue de la base. Si Lucas ajoute une tâche pour cette semaine dans « Tâches », elle apparaît ici toute seule.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Refaire ta page d'accueil</h2>
+        <ol class="tutorial">
+          <li>Ouvre « Accueil — Studio Nova ». Supprime l'ancienne checklist « Cette semaine » du module 2 : les tâches vivent maintenant dans la base.</li>
+          <li>En haut, transforme ta phrase d'accueil en encadré (poignée ⋮⋮, puis « Transformer en » et « Encadré »).</li>
+          <li>Sous le titre 2 « Liens utiles », renomme-le « Accès rapides » et vérifie les quatre liens : Projets, Tâches, Ressources, Notes &amp; réunions (« @ » pour ceux qui manquent).</li>
+          <li>En dessous, ajoute un titre 2 « Cette semaine ». Tape « /vue liée » (<em>/linked view</em>) et choisis la base « Tâches ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu « / » avec l'option de vue liée de base de données, puis le choix de la base « Tâches »">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Insérer une vue liée · images/captures/m06-vue-liee.png</span>
+              </div>
+            </figure></li>
+          <li>Dans la vue liée, choisis la mise en page Liste ou Tableau, puis ajoute un filtre sur l'Échéance : « Cette semaine ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page d'accueil terminée avec l'encadré, les accès rapides et la vue liée des tâches de la semaine">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Accueil terminé · images/captures/m06-accueil-final.png</span>
+              </div>
+            </figure></li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> une vue liée a ses propres filtres : celle de l'accueil peut montrer « cette semaine » pendant que la base complète montre tout. Le filtre de l'une ne touche pas l'autre.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Un accueil en trois zones</h3>
+          <ol>
+            <li>Un encadré d'accueil d'une ou deux lignes.</li>
+            <li>Une section « Accès rapides » avec quatre liens.</li>
+            <li>Une section « Cette semaine » avec une vue liée de la base « Tâches », filtrée.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> en ouvrant l'accueil, tu vois en un écran où tu es, où aller et quoi faire. En cochant une tâche ici, puis en ouvrant la base « Tâches », tu la retrouves cochée.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Une page d'accueil répond à trois questions : où suis-je, où aller, que faire ?</li>
+            <li>Une vue liée affiche une base dans une autre page, sans rien copier.</li>
+            <li>L'accueil reste court : les longs contenus vont dans leur propre page.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Emma veut afficher les tâches de la semaine sur l'accueil. Quelle est la meilleure solution ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Recopier les tâches à la main chaque lundi.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Insérer une vue liée de la base « Tâches », filtrée sur la semaine.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Déplacer la base « Tâches » dans l'accueil.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La vue liée affiche les vraies tâches, toujours à jour, sans les dupliquer.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Sarah veut ajouter la procédure complète de facturation (deux pages de texte) à l'accueil. Que lui conseilles-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">La coller en bas de l'accueil.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">La ranger dans « Ressources » et mettre un lien depuis l'accueil si besoin.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">La mettre dans un encadré géant.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>L'accueil oriente ; les contenus longs vivent dans leur propre page.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

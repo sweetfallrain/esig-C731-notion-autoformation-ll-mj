@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="260" rx="16" fill="#eee6d9"/>
+  <g font-size="14" fill="#33281f">
+    <rect x="24" y="24" width="320" height="212" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="44" y="56" font-weight="700" font-size="15">Titres flous</text>
+    <text x="44" y="94">Nouvelle page</text><text x="44" y="126">notes 3</text><text x="44" y="158">TRUC IMPORTANT !!!</text><text x="44" y="190">réunion</text>
+    <path d="M44 99 H150" stroke="#b8493f" stroke-width="2"/><path d="M44 131 H102" stroke="#b8493f" stroke-width="2"/><path d="M44 163 H194" stroke="#b8493f" stroke-width="2"/><path d="M44 195 H100" stroke="#b8493f" stroke-width="2"/>
+    <text x="44" y="222" font-size="12" fill="#7b6f63">Impossible de deviner le contenu.</text>
+    <rect x="376" y="24" width="320" height="212" rx="12" fill="#fffdf8" stroke="#6b7a5c" stroke-width="2"/>
+    <text x="396" y="56" font-weight="700" font-size="15">Titres clairs</text>
+    <text x="396" y="94">Réunion client Orion — 12 nov.</text><text x="396" y="126">Procédure — Envoyer une facture</text><text x="396" y="158">Modèle — Devis</text><text x="396" y="190">Projet — Identité Luna</text>
+    <text x="396" y="222" font-size="12" fill="#7b6f63">Type + sujet (+ date) : on sait avant d'ouvrir.</text>
+  </g>
+</svg>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Une base, plusieurs vues — Module 5 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m5-l1" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m5">Vues, filtres et tris</a> · Leçon 1 sur 4 · 5 min</p>
+      <h1>Une base, plusieurs vues</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras ce qu'est une vue et en ajouter une à ta base, sans jamais dupliquer tes données.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Ta base « Projets » s'affiche en tableau. C'est pratique pour tout voir d'un coup, mais pas toujours : Emma veut voir l'avancement en colonnes, Lucas veut savoir ce qui tombe cette semaine. Faut-il créer une base pour chacun ? Non.</p>
+        <p>Une <strong>vue</strong> est une façon d'afficher une base. Une même base peut avoir autant de vues que tu veux : un tableau, des colonnes de suivi, un calendrier… Les projets, eux, ne sont enregistrés <strong>qu'une seule fois</strong>.</p>
+        <p>Compare avec des lunettes : tu peux regarder la même pièce avec des lunettes de lecture ou des lunettes de soleil. La pièce ne change pas ; seule ta façon de la voir change. Si tu changes le statut d'un projet dans le tableau, il change aussi dans le calendrier, puisque c'est le même projet.</p>
+        <p>Les vues apparaissent sous forme d'<strong>onglets</strong> en haut de la base. Pour en ajouter une, clique sur <strong>« + »</strong> à droite des onglets (ou « Ajouter une vue », <em>Add view</em>), choisis le type, puis donne-lui un nom.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m05-une-base-plusieurs-vues.svg" alt="Schéma : la base « Projets », enregistrée une seule fois, est reliée par trois flèches à trois vues : un tableau avec les trois projets, un board en trois colonnes À faire, En cours et Terminé, et un calendrier où les projets sont placés à leur date." width="720" height="320">
+          <figcaption>Une seule base, trois façons de la regarder.</figcaption>
+        </figure>
+        <p class="definition">Une vue est une façon d'afficher une base ; les données, elles, ne sont jamais dupliquées.</p>
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> supprimer une <strong>vue</strong> ne supprime aucun projet : seule la façon de les afficher disparaît. En revanche, supprimer la <strong>base</strong> supprime tous les projets. Lis bien le menu avant de cliquer.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Trois vues de la base Projets</h2>
+        <p>Voici la base « Projets » avec trois vues. Passe d'un onglet à l'autre : ce sont toujours les trois mêmes projets. Ouvre « Site Orion » dans une vue, puis dans une autre : c'est la même page.</p>
+        <div data-db data-views="table,board,calendar" data-columns="basic"></div>
+        <p>Chaque membre de l'équipe peut utiliser la vue qui lui convient, sans déranger les autres : Emma reste sur le board, Lucas sur le calendrier. Les informations restent les mêmes pour tout le monde.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Ajouter une vue « Suivi »</h2>
+        <ol class="tutorial">
+          <li>Ouvre ta base « Projets ». En haut, un onglet porte le nom de la vue actuelle, souvent « Tableau » (<em>Table</em>).</li>
+          <li>Double-clique sur cet onglet (ou clic droit, puis « Renommer ») et nomme-le « Tous les projets ».</li>
+          <li>Clique sur le <strong>+</strong> à droite de l'onglet. La liste des types de vues apparaît.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la liste des types de vues proposée après un clic sur « + » : Tableau, Board, Liste, Calendrier, Galerie, Timeline…">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Ajouter une vue · images/captures/m05-ajouter-vue.png</span>
+              </div>
+            </figure></li>
+          <li>Choisis <strong>Board</strong>. Notion range les projets en colonnes selon leur statut.</li>
+          <li>Renomme la nouvelle vue « Suivi ». Tu as maintenant deux onglets.</li>
+          <li>Dans « Suivi », passe « Identité Luna » en « En cours ». Reviens sur « Tous les projets » : le statut a changé là aussi.</li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> donne à chaque vue un nom qui dit à quoi elle sert (« Suivi », « Cette semaine », « Mes projets ») plutôt que son type (« Board 2 »).</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Deux vues pour la base Projets</h3>
+          <ol>
+            <li>Renomme la vue de départ « Tous les projets ».</li>
+            <li>Ajoute une vue Board nommée « Suivi ».</li>
+            <li>Modifie un statut dans « Suivi » et vérifie le changement dans « Tous les projets ».</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> deux onglets en haut de la base. Le changement de statut apparaît dans les deux vues, parce qu'il n'y a qu'un seul projet. Aucun projet n'a été dupliqué.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Une vue est une façon d'afficher une base ; les données ne sont jamais dupliquées.</li>
+            <li>Une modification faite dans une vue apparaît dans toutes les autres.</li>
+            <li>Supprimer une vue ne supprime aucune entrée ; supprimer la base, si.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Lucas change l'échéance de « Site Orion » dans la vue Calendrier. Que voit Emma dans la vue Tableau ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">L'ancienne date : chaque vue a ses propres données.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">La nouvelle date : c'est le même projet.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Deux lignes « Site Orion ».</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Les vues affichent les mêmes entrées. Une modification faite dans l'une se retrouve partout.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Sarah supprime la vue « Suivi ». Que deviennent les projets ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Ils sont tous supprimés.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">Ils restent intacts dans la base ; seule la vue disparaît.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Ils sont déplacés dans la Corbeille.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une vue n'est qu'une manière d'afficher la base. La supprimer ne touche à aucun projet.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bascules, encadrés, liens et médias — Module 2 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m2-l6" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m2">Pages et blocs</a> · Leçon 6 sur 8 · 7 min</p>
+      <h1>Bascules, encadrés, liens et médias</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras mettre une information en avant avec un encadré, replier un contenu dans une bascule, séparer des parties, et ajouter un lien, une image ou un fichier.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Avec les titres et les listes, ta page est déjà lisible. Quelques blocs de plus permettent de faire ressortir ce qui compte, de cacher ce qui est secondaire et d'ajouter des documents. Tu n'en as pas besoin partout : ils servent à des situations précises.</p>
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Six blocs de mise en forme, leur usage et un exemple chez Studio Nova</caption>
+            <thead><tr><th scope="col">Bloc</th><th scope="col">À quoi il sert</th><th scope="col">Exemple chez Studio Nova</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Encadré</strong></td><td>Mettre une information importante en avant, dans un cadre coloré avec une icône.</td><td>« Réunion d'équipe chaque lundi à 9 h. »</td></tr>
+              <tr><td><strong>Bascule</strong></td><td>Replier un contenu sous une ligne. Un clic sur la petite flèche l'ouvre ou le referme. Idéal pour ce qu'on ne lit pas tous les jours.</td><td>Les règles de l'espace, repliées sous « Règles de l'espace ».</td></tr>
+              <tr><td><strong>Citation</strong></td><td>Mettre une phrase en valeur, avec une barre verticale à gauche.</td><td>Une phrase d'un client dans une note de réunion.</td></tr>
+              <tr><td><strong>Séparateur</strong></td><td>Tracer une ligne horizontale entre deux parties.</td><td>Entre « Cette semaine » et « Liens utiles ».</td></tr>
+              <tr><td><strong>Lien</strong></td><td>Ouvrir une page web. Colle une adresse dans la page : Notion propose de l'afficher comme un lien simple ou comme un aperçu.</td><td>Le site du client Orion.</td></tr>
+              <tr><td><strong>Image et fichier</strong></td><td>Ajouter une image ou un document (PDF, présentation…) depuis ton ordinateur. Tu peux aussi le glisser directement dans la page.</td><td>Le logo de Luna, le devis du site Orion.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m02-blocs-mise-en-forme.svg" alt="Schéma d'une page avec quatre blocs étiquetés : un encadré « Réunion d'équipe chaque lundi à 9 h », une bascule fermée puis ouverte avec deux règles, une citation avec sa barre verticale et un séparateur." width="720" height="320">
+          <figcaption>Quatre blocs pour mettre en forme.</figcaption>
+        </figure>
+        <p class="definition">L'encadré fait ressortir, la bascule replie, le séparateur découpe.</p>
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> si tout est mis en avant, plus rien ne ressort. Garde un ou deux encadrés par page au maximum, pour les informations vraiment importantes.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Une page Studio Nova avec ces blocs</h2>
+        <p>Ouvre et referme la bascule « Règles de l'espace » : son contenu se cache, mais il est toujours là. Chaque ligne porte le nom de son bloc, à droite.</p>
+        <div class="notion-page" role="group" aria-label="Simulation d'une page Notion : Studio Nova">
+          <div class="notion-page__bar">Privé / <strong>Studio Nova</strong><span class="notion-page__tag">Simulation</span></div>
+          <div class="notion-page__body">
+            <div class="np-callout"><span aria-hidden="true">💡</span><span>Réunion d'équipe chaque lundi à 9 h.</span><span class="np-tag">Encadré</span></div>
+            <details class="np-toggle">
+              <summary>Règles de l'espace <span class="np-tag">Bascule</span></summary>
+              <div>
+                <p>Une page = un sujet.</p>
+                <p>Un titre clair pour chaque page.</p>
+              </div>
+            </details>
+            <blockquote class="np-quote">« Le site doit être prêt pour notre salon du 20 novembre. » — Client Orion <span class="np-tag">Citation</span></blockquote>
+            <hr class="np-divider">
+            <p class="np-file"><span aria-hidden="true">📎</span> Devis — Site Orion.pdf <span class="np-tag">Fichier</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Ajouter un encadré, un séparateur et une bascule</h2>
+        <ol class="tutorial">
+          <li>Ouvre ta page « Accueil — Studio Nova » et clique sur la ligne vide sous ta checklist.</li>
+          <li>Tape « /séparateur » et appuie sur Entrée : une ligne horizontale apparaît.</li>
+          <li>Sur la ligne vide en dessous, tape « /encadré » et appuie sur Entrée. Un cadre coloré apparaît, avec une icône.</li>
+          <li>Écris dans l'encadré : « Réunion d'équipe chaque lundi à 9 h. »
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : l'encadré « Réunion d'équipe chaque lundi à 9 h » sous le séparateur">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Encadré sous le séparateur · images/captures/m02-encadre.png</span>
+              </div>
+            </figure></li>
+          <li>Ouvre maintenant ta page « Studio Nova » (la page principale, pas l'Accueil). Sous ta phrase, tape « /bascule » et choisis le bloc bascule.</li>
+          <li>Écris « Règles de l'espace », puis clique sur la petite flèche devant pour l'ouvrir.</li>
+          <li>Clique sur la ligne vide qui apparaît à l'intérieur et écris : « Une page = un sujet. » Appuie sur Entrée et ajoute : « Un titre clair pour chaque page. »</li>
+          <li>Clique sur la flèche pour refermer la bascule : le contenu disparaît, mais il est toujours là.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la bascule « Règles de l'espace » ouverte, avec ses deux règles">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Bascule ouverte · images/captures/m02-bascule.png</span>
+              </div>
+            </figure></li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> pour ajouter une image ou un fichier, le plus simple est de le glisser depuis ton ordinateur directement dans la page, à l'endroit voulu. Notion crée le bloc tout seul.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Mettre l'essentiel en avant</h3>
+          <ol>
+            <li>Dans ta page d'accueil, ajoute un séparateur sous la checklist, puis l'encadré « Réunion d'équipe chaque lundi à 9 h. »</li>
+            <li>Dans ta page « Studio Nova », crée la bascule « Règles de l'espace » avec ses deux règles.</li>
+            <li>Ferme puis rouvre la bascule.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> dans l'Accueil, la checklist est suivie d'une ligne de séparation puis d'un encadré coloré. Dans « Studio Nova », la ligne « Règles de l'espace » affiche ses deux règles quand elle est ouverte, et les cache quand elle est fermée. L'encadré n'est pas encore à sa place idéale : tu le déplaceras à la leçon suivante.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>L'encadré met une information en avant ; à utiliser avec modération.</li>
+            <li>La bascule replie un contenu secondaire sous une ligne, sans le supprimer.</li>
+            <li>Pour ajouter une image ou un fichier, glisse-le dans la page ou utilise « / ».</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 3</span><span class="quiz__question">Toute l'équipe doit voir que les locaux sont fermés vendredi. Quel bloc choisir sur la page d'accueil ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Une bascule.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Un encadré.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Un séparateur.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>L'encadré attire l'œil grâce à son cadre coloré et son icône. Une bascule cacherait l'information, et un séparateur ne contient pas de texte.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 3</span><span class="quiz__question">La page d'un projet contient une longue liste de contacts que l'on consulte rarement. Comment alléger la page sans perdre la liste ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Supprimer la liste.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">La ranger dans une bascule.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">La mettre dans un encadré.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La bascule replie la liste sous une seule ligne. Elle reste dans la page et s'ouvre d'un clic quand on en a besoin. Un encadré, au contraire, la mettrait encore plus en avant.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 3 sur 3</span><span class="quiz__question">Tu refermes une bascule. Que devient son contenu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q3" value="a"><span class="quiz__option-text">Il est supprimé.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q3" value="b" data-correct><span class="quiz__option-text">Il est caché, mais toujours dans la page.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q3" value="c"><span class="quiz__option-text">Il part dans la Corbeille.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Refermer une bascule ne fait que masquer son contenu. Il réapparaît dès que tu cliques de nouveau sur la flèche.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

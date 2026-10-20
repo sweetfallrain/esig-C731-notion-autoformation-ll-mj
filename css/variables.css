@@ -1,5 +1,5 @@
 /* ===================================================================
-   Design tokens — cf. DESIGN.md section 2 & 3 (source de vérité)
+   Design tokens — cf. DESIGN.md v4 sections 2 & 3 (source de vérité)
    =================================================================== */
 :root {
   --color-bg:              #f6f1e8;
@@ -17,6 +17,19 @@
   --color-border:          #e6ddd0;
   --color-success:         #6b7a5c;
   --color-error:           #b8493f;
+
+  /* Valeurs dérivées (DESIGN.md §2) */
+  --color-text-inverse-muted: rgba(253, 249, 243, 0.8);
+  --color-inverse-line:       rgba(253, 249, 243, 0.15);
+  --focus-ring:               0 0 0 3px rgba(122, 90, 69, 0.35);
+  --focus-ring-inverse:       0 0 0 3px rgba(253, 249, 243, 0.45);
+  --shadow-1:                 0 4px 24px rgba(51, 29, 25, 0.05);
+
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   24px;
+  --radius-pill: 999px;
 
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;

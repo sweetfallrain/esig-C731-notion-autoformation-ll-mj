@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="320" rx="16" fill="#eee6d9"/>
+  <rect x="150" y="20" width="420" height="280" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+  <g font-size="13" fill="#33281f">
+    <text x="174" y="56" font-weight="700" font-size="18">Accueil — Studio Nova</text>
+    <rect x="170" y="70" width="380" height="34" rx="6" fill="#f6f1e8"/><text x="182" y="92">Bienvenue ! Ici, tout ce qu'il faut pour la semaine.</text>
+    <text x="174" y="132" font-weight="700">Accès rapides</text>
+    <text x="174" y="154" fill="#7a5a45">Projets · Tâches · Ressources · Notes &amp; réunions</text>
+    <text x="174" y="190" font-weight="700">Cette semaine</text>
+    <rect x="170" y="200" width="380" height="60" rx="6" fill="#fffdf8" stroke="#e6ddd0"/><path d="M170 220 H550 M170 240 H550" stroke="#e6ddd0"/>
+    <text x="174" y="282" font-size="12" fill="#7b6f63">Vue « Cette semaine » de la base Tâches</text>
+  </g>
+  <g font-size="12" font-weight="600" fill="#7a5a45">
+    <text x="140" y="92" text-anchor="end">1 · Accueillir</text>
+    <text x="140" y="146" text-anchor="end">2 · Orienter</text>
+    <text x="140" y="232" text-anchor="end">3 · Agir</text>
+  </g>
+  <g fill="#7a5a45"><circle cx="150" cy="87" r="4"/><circle cx="150" cy="141" r="4"/><circle cx="150" cy="227" r="4"/></g>
+</svg>

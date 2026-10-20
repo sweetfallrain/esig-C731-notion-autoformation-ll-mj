@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La commande « / » — Module 2 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m2-l4" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m2">Pages et blocs</a> · Leçon 4 sur 8 · 5 min</p>
+      <h1>La commande « / »</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras ajouter n'importe quel type de bloc grâce à la commande « / » ou au bouton « + ».</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Tu sais maintenant qu'une page est faite de blocs. Quand tu tapes du texte, Notion crée un bloc texte. Mais comment ajouter un titre, une case à cocher ou une image ? Avec un seul geste, que tu vas utiliser des dizaines de fois par jour : la barre oblique.</p>
+        <p>Sur une ligne vide, tape la touche <strong>« / »</strong> (la barre oblique, aussi appelée slash). Un menu s'ouvre : il liste tous les types de blocs que tu peux ajouter.</p>
+        <p>Tu n'as pas besoin de parcourir toute la liste. Continue simplement à taper le nom du bloc que tu cherches : le menu se réduit au fur et à mesure. Par exemple, « /tit » ne montre plus que les titres. Quand le bon bloc est en surbrillance, appuie sur Entrée.</p>
+        <p>Si tu préfères la souris, survole une ligne : un petit <strong>« + »</strong> apparaît à gauche, à côté de la poignée ⋮⋮. Un clic dessus ouvre le même menu, et ajoute le bloc juste en dessous.</p>
+        <p>Pour fermer le menu sans rien choisir, appuie sur Échap.</p>
+
+        <figure class="screenshot illustration">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran annotée : une ligne vide où l'on a tapé « /tit », et le menu réduit aux titres, avec deux étiquettes : « 1. Tape / sur une ligne vide » et « 2. Continue à taper pour filtrer »">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran annotée</strong>
+            <span>Le menu « / » filtré sur « tit » · images/captures/m02-menu-slash.png</span>
+          </div>
+          <figcaption>Tape « / », puis quelques lettres pour filtrer.</figcaption>
+        </figure>
+        <p class="definition">La touche « / » ouvre le menu des blocs : tape le nom du bloc, puis Entrée.</p>
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> le menu « / » ne s'ouvre que sur une ligne vide ou après une espace. Si tu tapes « / » collé à un mot, par exemple dans « et/ou », Notion pense que tu écris du texte normal. C'est voulu : tu peux toujours écrire une barre oblique dans une phrase.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Essaie le menu « / »</h2>
+        <p>Tape quelques lettres dans le champ, par exemple « titre », « liste » ou « encadré ». Utilise les flèches haut et bas pour choisir, puis Entrée pour ajouter le bloc à la fausse page.</p>
+        <div data-slash-sim></div>
+        <p>Chez Studio Nova, Emma veut ajouter le titre « Cette semaine » sur la page d'accueil. Elle tape « /titre 2 », appuie sur Entrée, puis écrit son titre.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Ajouter le titre « Cette semaine »</h2>
+        <ol class="tutorial">
+          <li>Ouvre ta page « Accueil — Studio Nova ».</li>
+          <li>Clique à la fin de la phrase de bienvenue et appuie sur Entrée : une nouvelle ligne vide apparaît.</li>
+          <li>Tape « / ». Le menu des blocs s'ouvre.</li>
+          <li>Continue à taper : « titre 2 ». Le menu ne montre plus que quelques blocs.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu filtré après avoir tapé « /titre 2 »">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Menu filtré sur « titre 2 » · images/captures/m02-slash-titre-2.png</span>
+              </div>
+            </figure></li>
+          <li>Appuie sur Entrée. La ligne devient un titre de taille moyenne, encore vide.</li>
+          <li>Écris « Cette semaine ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le titre « Cette semaine » sous la phrase de bienvenue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Titre « Cette semaine » ajouté · images/captures/m02-cette-semaine.png</span>
+              </div>
+            </figure></li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> les flèches haut et bas du clavier te déplacent dans le menu « / ». Tu peux donc ajouter n'importe quel bloc sans toucher à la souris.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Explorer le menu</h3>
+          <ol>
+            <li>Dans ta page « Accueil — Studio Nova », vérifie que le titre « Cette semaine » est bien en place.</li>
+            <li>Sur une ligne vide en dessous, tape « / », puis « liste » : observe les types de listes proposés.</li>
+            <li>Appuie sur Échap pour fermer le menu sans rien ajouter.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> ta page contient la phrase de bienvenue, puis le titre « Cette semaine », plus grand et en gras. Le menu s'est ouvert, filtré sur les listes, puis fermé sans rien ajouter.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Sur une ligne vide, la touche « / » ouvre le menu de tous les blocs.</li>
+            <li>Continue à taper pour filtrer, puis Entrée pour choisir ; Échap pour fermer.</li>
+            <li>Le « + » à gauche d'une ligne ouvre le même menu à la souris.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Tu veux ajouter une case à cocher, mais le menu « / » affiche une très longue liste. Que fais-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Je fais défiler toute la liste jusqu'à la trouver.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Je continue à taper, par exemple « tâche », pour filtrer la liste.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Je ferme le menu et je dessine une case avec des crochets.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le menu se filtre en direct. En tapant quelques lettres du nom du bloc, il ne reste que les blocs utiles. C'est bien plus rapide que de faire défiler la liste.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Dans une phrase, tu écris « entrée/sortie », et le menu ne s'ouvre pas. Pourquoi ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a" data-correct><span class="quiz__option-text">Parce que le menu « / » ne s'ouvre que sur une ligne vide ou après une espace.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b"><span class="quiz__option-text">Parce que ta page est en lecture seule.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Parce que la commande « / » ne fonctionne que sur ordinateur Mac.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Collée à un mot, la barre oblique est lue comme du texte normal. Pour ouvrir le menu, tape « / » au début d'une ligne vide ou après une espace.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

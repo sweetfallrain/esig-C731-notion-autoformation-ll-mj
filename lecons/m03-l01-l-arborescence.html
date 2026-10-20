@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'arborescence — Module 3 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m3-l1" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m3">Organiser et naviguer</a> · Leçon 1 sur 4 · 5 min</p>
+      <h1>L'arborescence</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras ranger tes pages les unes dans les autres et déplacer une page sans rien perdre.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Au module 2, tu as rangé « Accueil », « Projets » et « Ressources » à l'intérieur de « Studio Nova ». Sans le savoir, tu as commencé une <strong>arborescence</strong>.</p>
+        <p>Une arborescence, c'est la façon dont les pages sont rangées les unes dans les autres, comme les branches d'un arbre. Pense aux dossiers de ton ordinateur : un dossier « Clients » contient un dossier par client, qui contient lui-même des documents. Dans Notion, c'est pareil, sauf que chaque « dossier » est aussi une page qu'on peut remplir.</p>
+        <p>Deux mots reviennent souvent :</p>
+        <ul>
+          <li>la <strong>page parente</strong> : celle qui contient d'autres pages. « Studio Nova » est la page parente de « Projets » ;</li>
+          <li>la <strong>sous-page</strong> (ou page enfant) : celle qui est rangée dedans.</li>
+        </ul>
+        <p>Une page peut changer de place à tout moment. Pour la déplacer, tu peux la <strong>glisser</strong> dans la barre latérale sur une autre page, ou ouvrir le menu <strong>···</strong> en haut à droite de la page et choisir <strong>« Déplacer vers »</strong> (<em>Move to</em>). Le contenu suit : rien n'est perdu.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m03-arborescence.svg" alt="Schéma en trois niveaux : « Studio Nova » au niveau 1, relié à quatre pages au niveau 2 (Accueil, Projets, Ressources, Notes et réunions) ; « Notes et réunions », mise en avant, contient deux pages au niveau 3 : « Réunion d'équipe — 3 nov. » et « Réunion client Orion »." width="720" height="320">
+          <figcaption>L'arborescence de Studio Nova à la fin de cette leçon.</figcaption>
+        </figure>
+        <p class="definition">L'arborescence est le rangement des pages les unes dans les autres : une page parente contient des sous-pages.</p>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> vise <strong>trois niveaux au maximum</strong>. Au-delà, on oublie où sont les choses. Si une page est très loin dans l'arbre, c'est souvent qu'il faut simplifier.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Ranger à plat ou en arborescence</h2>
+        <p>Compare deux façons de ranger les mêmes pages de Studio Nova. À gauche, tout est au même niveau ; à droite, les pages sont regroupées.</p>
+
+        <table class="compare">
+          <caption class="sr-only">Rangement à plat comparé à une arborescence</caption>
+          <thead>
+            <tr><th scope="col">Tout au même niveau</th><th scope="col">Rangé en arborescence</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Tout au même niveau"><span class="compare__mark" aria-hidden="true">—</span>12 pages alignées dans la barre latérale.</td><td data-label="Rangé en arborescence"><span class="compare__mark" aria-hidden="true">✓</span>4 grandes pages sous « Studio Nova ».</td></tr>
+            <tr><td data-label="Tout au même niveau"><span class="compare__mark" aria-hidden="true">—</span>Les comptes rendus de réunion se mélangent aux projets.</td><td data-label="Rangé en arborescence"><span class="compare__mark" aria-hidden="true">✓</span>Les comptes rendus sont tous dans « Notes &amp; réunions ».</td></tr>
+            <tr><td data-label="Tout au même niveau"><span class="compare__mark" aria-hidden="true">—</span>Il faut lire chaque titre pour trouver la bonne page.</td><td data-label="Rangé en arborescence"><span class="compare__mark" aria-hidden="true">✓</span>On devine où chercher avant même d'ouvrir.</td></tr>
+            <tr><td data-label="Tout au même niveau"><span class="compare__mark" aria-hidden="true">—</span>Une nouvelle collègue ne sait pas où ranger sa page.</td><td data-label="Rangé en arborescence"><span class="compare__mark" aria-hidden="true">✓</span>La place de chaque nouvelle page est évidente.</td></tr>
+          </tbody>
+        </table>
+        <p>Studio Nova ajoute aujourd'hui une quatrième partie : <strong>« Notes &amp; réunions »</strong>. Chaque réunion y aura sa propre sous-page. Le fil d'Ariane d'un compte rendu devient alors :</p>
+        <pre>Studio Nova / Notes &amp; réunions / Réunion d'équipe — 3 novembre</pre>
+        <p>En le lisant, tu sais exactement où tu es, et comment remonter.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Créer « Notes & réunions » et déplacer une page</h2>
+        <ol class="tutorial">
+          <li>Ouvre ta page « Studio Nova ». En bas de la page, tape « /page » et appuie sur Entrée.</li>
+          <li>Nomme la nouvelle page « Notes &amp; réunions » et donne-lui une icône de ton choix.</li>
+          <li>Dans « Notes &amp; réunions », crée une sous-page « Réunion d'équipe — 3 novembre ». Écris-y une ligne : « Ordre du jour : point sur le site Orion ».</li>
+          <li>Revenue dans la barre latérale, déplie « Studio Nova » puis « Notes &amp; réunions » : ta réunion apparaît au troisième niveau.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la barre latérale avec « Studio Nova » déplié, puis « Notes & réunions » déplié, montrant « Réunion d'équipe — 3 novembre » au troisième niveau">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Barre latérale sur trois niveaux · images/captures/m03-arborescence-barre-laterale.png</span>
+              </div>
+            </figure></li>
+          <li>Pour t'entraîner à déplacer : crée une page « Brouillon » directement dans « Privé ». Ouvre-la, clique sur ··· en haut à droite, puis sur « Déplacer vers » (<em>Move to</em>).</li>
+          <li>Tape « Notes » et choisis « Notes &amp; réunions ». La page « Brouillon » s'y range.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la fenêtre « Déplacer vers » avec le champ de recherche et la page « Notes & réunions » proposée">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Fenêtre « Déplacer vers » · images/captures/m03-deplacer-vers.png</span>
+              </div>
+            </figure></li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> dans la barre latérale, quand tu glisses une page, regarde bien le repère bleu. Une <strong>ligne</strong> bleue range la page <em>entre</em> deux pages ; une page <strong>surlignée</strong> en bleu la range <em>dedans</em>. Si tu te trompes, Ctrl + Z (Cmd + Z sur Mac) annule.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>La partie « Notes & réunions »</h3>
+          <ol>
+            <li>Crée la sous-page « Notes &amp; réunions » dans « Studio Nova ».</li>
+            <li>Ajoute-y une sous-page « Réunion d'équipe — 3 novembre ».</li>
+            <li>Crée une page « Brouillon » dans « Privé », puis déplace-la dans « Notes &amp; réunions » avec « Déplacer vers ».</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> sous « Studio Nova », la barre latérale montre quatre pages : Accueil, Projets, Ressources et Notes &amp; réunions. « Notes &amp; réunions » contient deux pages : la réunion du 3 novembre et « Brouillon ». Tu peux supprimer « Brouillon » ensuite.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>L'arborescence range les pages les unes dans les autres : page parente, sous-pages.</li>
+            <li>On déplace une page en la glissant dans la barre latérale ou avec ··· puis « Déplacer vers » ; son contenu la suit.</li>
+            <li>Trois niveaux au maximum : au-delà, on se perd.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Lucas ne retrouve jamais les comptes rendus de réunion, mélangés aux projets dans la barre latérale. Que lui conseilles-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a" data-correct><span class="quiz__option-text">Les regrouper dans une page « Notes & réunions ».</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b"><span class="quiz__option-text">Mettre tous les comptes rendus dans une seule très longue page.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Ajouter « IMPORTANT » au début de chaque titre.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une page parente qui regroupe toutes les réunions rend leur place évidente. Une seule longue page deviendrait illisible, et les majuscules n'aident pas à ranger.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Tu déplaces la page « Réunion client Orion » dans une autre page parente. Que devient son contenu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Il est effacé : il faut le recopier.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">Il suit la page, sans aucune perte.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Il reste à l'ancien endroit, dans une copie.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Déplacer une page change seulement sa place dans l'arborescence. Son titre, son contenu et ses sous-pages la suivent.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

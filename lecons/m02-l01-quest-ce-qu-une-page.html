@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qu'est-ce qu'une page — Module 2 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m2-l1" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m2">Pages et blocs</a> · Leçon 1 sur 8 · 4 min</p>
+      <h1>Qu'est-ce qu'une page</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras ce qu'est une page dans Notion et reconnaître ses quatre parties : l'icône, la couverture, le titre et le contenu.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Au module 1, tu as créé ta page « Studio Nova ». Dans Notion, tout commence par une page : tes notes, tes projets, ta page d'accueil. Avant de les remplir, il faut savoir de quoi une page est faite.</p>
+        <p>Une <strong>page</strong>, c'est une feuille blanche dans laquelle tu écris et ranges du contenu. Elle ressemble à un document Word, avec deux différences importantes :</p>
+        <ul>
+          <li>elle n'a pas de longueur fixe ni de mise en page à régler : elle s'allonge au fur et à mesure que tu écris ;</li>
+          <li>elle peut contenir <strong>d'autres pages</strong>, comme un dossier contient des fichiers. Une page rangée dans une autre s'appelle une <strong>sous-page</strong> (leçon 2.8).</li>
+        </ul>
+        <p>Une page a quatre parties :</p>
+        <ol>
+          <li><strong>L'icône</strong> (facultative) : un petit symbole devant le titre, qui aide à repérer la page d'un coup d'œil.</li>
+          <li><strong>La couverture</strong> (facultative) : une image en bandeau tout en haut de la page.</li>
+          <li><strong>Le titre</strong> : le nom de la page. C'est lui qui s'affiche dans la barre latérale et dans la recherche.</li>
+          <li><strong>Le contenu</strong> : tout ce qui se trouve sous le titre, c'est-à-dire le texte, les listes, les images…</li>
+        </ol>
+        <figure class="illustration">
+          <img src="../images/illustrations/m02-anatomie-page.svg" alt="Schéma d'une page Notion : en haut une couverture (1), une icône de maison (2), le titre « Accueil — Studio Nova » (3) et, en dessous, des lignes de contenu (4)." width="720" height="320">
+          <figcaption>Les quatre parties d'une page.</figcaption>
+        </figure>
+        <p class="definition">Une page est un document sans limite de longueur, qui peut contenir du contenu et d'autres pages.</p>
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> dans Notion, il n'y a pas de dossiers. Pour ranger des pages ensemble, on les place dans une autre page. Si tu cherches un bouton « Nouveau dossier », c'est normal de ne pas le trouver.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">La page d'accueil de Studio Nova, partie par partie</h2>
+        <p>Clique sur chaque numéro, ou atteins-le avec la touche Tab puis Entrée, pour découvrir chaque partie. C'est la page que tu auras construite à la fin du module 2.</p>
+        <div data-ui-sim>
+          <div class="notion-page">
+            <div class="notion-page__bar">Studio Nova / <strong>Accueil — Studio Nova</strong><span class="notion-page__tag">Simulation</span></div>
+            <div class="notion-page__body">
+              <div class="np-cover">Emplacement de la couverture <button type="button" class="hotspot" data-hotspot data-title="Couverture" data-info="Une image en bandeau. Studio Nova n'en met pas sur sa page d'accueil : c'est facultatif. Ici, on voit seulement l'emplacement.">1</button></div>
+              <div class="ui-sim__row"><span class="np-icon" aria-hidden="true">⌂</span><button type="button" class="hotspot" data-hotspot data-title="Icône" data-info="La maison indique tout de suite que c'est la page d'accueil. Elle s'affiche aussi devant le titre, dans la barre latérale.">2</button></div>
+              <div class="ui-sim__row"><p class="np-title">Accueil — Studio Nova</p><button type="button" class="hotspot" data-hotspot data-title="Titre" data-info="« Accueil — Studio Nova » : un nom clair, qui dit ce que contient la page.">3</button></div>
+              <div class="ui-sim__row"><p class="np-h1">Studio Nova</p><button type="button" class="hotspot" data-hotspot data-title="Contenu" data-info="Tout le reste : le texte de bienvenue, les tâches de la semaine, les liens utiles. Tu vas le construire pendant ce module.">4</button></div>
+              <p class="np-text">Bienvenue dans l'espace de travail de Studio Nova.</p>
+              <p class="np-h2">Cette semaine</p>
+              <p class="np-text">☐ Finaliser la maquette du site Orion</p>
+              <p class="np-text">☐ Préparer la réunion client</p>
+              <p class="np-text">☐ Mettre à jour les ressources</p>
+            </div>
+          </div>
+          <p class="notion-info" data-ui-info aria-live="polite"><strong>Choisis un numéro.</strong> Il y a 4 parties à découvrir.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Observer ta page « Studio Nova »</h2>
+        <ol class="tutorial">
+          <li>Dans la barre latérale, clique sur ta page « Studio Nova », dans la section « Privé ».</li>
+          <li>Passe ta souris juste au-dessus du titre, sans cliquer. Des options apparaissent : « Ajouter une icône » et « Ajouter une couverture ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : les options « Ajouter une icône » et « Ajouter une couverture » qui apparaissent au survol, au-dessus du titre">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Options au survol, au-dessus du titre · images/captures/m02-options-titre.png</span>
+              </div>
+            </figure></li>
+          <li>Ne clique pas encore : tu ajouteras une icône dans la leçon suivante.</li>
+          <li>Clique juste sous le titre. Un texte gris apparaît, qui t'invite à écrire : c'est le début du contenu de la page.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la ligne vide sous le titre, avec son texte d'invitation en gris">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Ligne vide sous le titre · images/captures/m02-ligne-vide.png</span>
+              </div>
+            </figure></li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> le texte gris qui apparaît sur une ligne vide n'est qu'une aide. Il disparaît dès que tu commences à écrire : tu n'as pas besoin de l'effacer.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Ta première phrase</h3>
+          <ol>
+            <li>Ouvre ta page « Studio Nova ».</li>
+            <li>Clique sous le titre et écris : « Espace de travail de l'agence Studio Nova. »</li>
+            <li>Regarde la barre latérale : le titre de la page n'a pas changé.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> ta page « Studio Nova » a un titre et une première ligne de contenu. Le titre reste « Studio Nova » dans la barre latérale, car la phrase fait partie du contenu, pas du titre.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Une page est un document sans limite de longueur, qui peut contenir du contenu et d'autres pages.</li>
+            <li>Elle a quatre parties : l'icône et la couverture (facultatives), le titre et le contenu.</li>
+            <li>Notion n'a pas de dossiers : on range des pages dans d'autres pages.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Tu veux regrouper toutes les notes de réunion de Studio Nova. Que fais-tu dans Notion ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Je crée un dossier « Réunions ».</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Je crée une page « Notes &amp; réunions » et je range les notes dedans.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">J'écris toutes les notes à la suite dans le titre d'une page.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Notion n'a pas de dossiers. Une page peut contenir d'autres pages : c'est elle qui joue le rôle de dossier. Le titre, lui, ne sert qu'à nommer la page.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Quelle partie d'une page s'affiche dans la barre latérale ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">La couverture.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b"><span class="quiz__option-text">La première phrase du contenu.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c" data-correct><span class="quiz__option-text">Le titre, avec l'icône s'il y en a une.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La barre latérale affiche le titre de chaque page, précédé de son icône. C'est pour ça qu'un titre clair est si important : c'est lui que tu lis pour retrouver la page.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

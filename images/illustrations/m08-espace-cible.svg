@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="340" rx="16" fill="#eee6d9"/>
+  <g font-size="13" fill="#33281f">
+    <rect x="24" y="24" width="300" height="292" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="44" y="54" font-weight="700" font-size="15">L'espace attendu</text>
+    <text x="44" y="88" font-weight="600">Studio Nova</text>
+    <text x="44" y="114">├─ Accueil — Studio Nova</text>
+    <text x="44" y="140">├─ Projets <tspan fill="#7a5a45" font-size="11">base · 3 vues</tspan></text>
+    <text x="44" y="166">├─ Tâches <tspan fill="#7a5a45" font-size="11">base · 2 vues</tspan></text>
+    <text x="44" y="192">├─ Ressources</text>
+    <text x="44" y="218">│   └─ Procédure — Accueil des stagiaires</text>
+    <text x="44" y="244">└─ Notes &amp; réunions</text>
+    <text x="44" y="270">    └─ Réunion de lancement Vega — 24 nov.</text>
+    <rect x="356" y="24" width="340" height="292" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="376" y="54" font-weight="700" font-size="15">Les exigences du brief</text>
+    <g font-size="12">
+      <text x="376" y="88">1. Nouveau projet « Brochure Vega » dans Projets</text>
+      <text x="376" y="114">2. Trois tâches pour Vega, avec responsables</text>
+      <text x="376" y="140">3. Vues : Suivi (board), Échéances (calendrier)</text>
+      <text x="376" y="166">4. Procédure d'accueil pour Hugo dans Ressources</text>
+      <text x="376" y="192">5. Compte rendu de la réunion de lancement</text>
+      <text x="376" y="218">6. Accueil : accès rapides + tâches de la semaine</text>
+      <text x="376" y="244">7. Partage avec Hugo, au bon niveau d'accès</text>
+      <text x="376" y="270">8. Titres clairs, aucune page en vrac</text>
+    </g>
+  </g>
+</svg>

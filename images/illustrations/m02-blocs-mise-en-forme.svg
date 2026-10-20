@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="330" rx="16" fill="#eee6d9"/>
+  <rect x="40" y="20" width="460" height="290" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+  <g font-size="14" fill="#33281f">
+    <rect x="64" y="40" width="412" height="44" rx="8" fill="#f6f1e8"/>
+    <circle cx="86" cy="62" r="9" fill="none" stroke="#7a5a45" stroke-width="2"/><path d="M83 74 H89" stroke="#7a5a45" stroke-width="2"/>
+    <text x="104" y="67">Réunion d'équipe chaque lundi à 9 h.</text>
+
+    <text x="66" y="118" fill="#7b6f63">▸</text><text x="86" y="118">Règles de l'espace</text>
+    <text x="66" y="150" fill="#7b6f63">▾</text><text x="86" y="150">Règles de l'espace</text>
+    <text x="106" y="176" fill="#7b6f63" font-size="13">Une page = un sujet.</text>
+    <text x="106" y="198" fill="#7b6f63" font-size="13">Un titre clair pour chaque page.</text>
+
+    <rect x="64" y="216" width="3" height="40" fill="#33281f"/>
+    <text x="80" y="232">« Le site doit être prêt pour</text>
+    <text x="80" y="252">notre salon du 20 novembre. »</text>
+
+    <line x1="64" y1="282" x2="476" y2="282" stroke="#e6ddd0" stroke-width="2"/>
+  </g>
+  <g font-size="13" font-weight="600" fill="#33281f">
+    <path d="M500 62 H540" stroke="#7a5a45" stroke-width="2" stroke-dasharray="4 4"/><rect x="544" y="48" width="140" height="28" rx="14" fill="#fffdf8" stroke="#7a5a45"/><text x="614" y="67" text-anchor="middle">Encadré</text>
+    <path d="M500 132 H540" stroke="#7a5a45" stroke-width="2" stroke-dasharray="4 4"/><rect x="544" y="118" width="140" height="28" rx="14" fill="#fffdf8" stroke="#7a5a45"/><text x="614" y="137" text-anchor="middle">Bascule fermée / ouverte</text>
+    <path d="M500 236 H540" stroke="#7a5a45" stroke-width="2" stroke-dasharray="4 4"/><rect x="544" y="222" width="140" height="28" rx="14" fill="#fffdf8" stroke="#7a5a45"/><text x="614" y="241" text-anchor="middle">Citation</text>
+    <path d="M500 282 H540" stroke="#7a5a45" stroke-width="2" stroke-dasharray="4 4"/><rect x="544" y="268" width="140" height="28" rx="14" fill="#fffdf8" stroke="#7a5a45"/><text x="614" y="287" text-anchor="middle">Séparateur</text>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="300" rx="16" fill="#eee6d9"/>
+  <g font-size="13" fill="#33281f">
+    <rect x="40" y="226" width="120" height="50" rx="8" fill="#fffdf8" stroke="#e6ddd0"/><text x="100" y="248" text-anchor="middle" font-weight="700">Peut consulter</text><text x="100" y="266" text-anchor="middle" font-size="11" fill="#7b6f63">voir</text>
+    <rect x="170" y="186" width="120" height="90" rx="8" fill="#fffdf8" stroke="#e6ddd0"/><text x="230" y="208" text-anchor="middle" font-weight="700">Peut</text><text x="230" y="224" text-anchor="middle" font-weight="700">commenter</text><text x="230" y="244" text-anchor="middle" font-size="11" fill="#7b6f63">+ commenter</text>
+    <rect x="300" y="146" width="120" height="130" rx="8" fill="#fffdf8" stroke="#e6ddd0"/><text x="360" y="168" text-anchor="middle" font-weight="700">Peut modifier</text><text x="360" y="184" text-anchor="middle" font-weight="700">le contenu</text><text x="360" y="204" text-anchor="middle" font-size="11" fill="#7b6f63">+ remplir une base</text><text x="360" y="220" text-anchor="middle" font-size="11" fill="#7b6f63">(pas sa structure)</text>
+    <rect x="430" y="106" width="120" height="170" rx="8" fill="#e3d6c8" stroke="#e6ddd0"/><text x="490" y="128" text-anchor="middle" font-weight="700">Peut modifier</text><text x="490" y="148" text-anchor="middle" font-size="11" fill="#7b6f63">+ tout modifier,</text><text x="490" y="164" text-anchor="middle" font-size="11" fill="#7b6f63">structure comprise</text>
+    <rect x="560" y="66" width="120" height="210" rx="8" fill="#47342c"/><text x="620" y="88" text-anchor="middle" font-weight="700" fill="#fdf9f3">Accès complet</text><text x="620" y="108" text-anchor="middle" font-size="11" fill="#fdf9f3">+ partager,</text><text x="620" y="124" text-anchor="middle" font-size="11" fill="#fdf9f3">gérer les accès</text>
+    <path d="M60 40 H660" stroke="#7a5a45" stroke-width="2"/><path d="M650 33 L662 40 L650 47" fill="none" stroke="#7a5a45" stroke-width="2"/>
+    <text x="60" y="30" font-size="12" fill="#7a5a45" font-weight="600">De moins en moins de restrictions</text>
+  </g>
+</svg>

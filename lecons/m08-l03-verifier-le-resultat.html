@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vérifier le résultat — Module 8 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m8-l3" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m8">Cas pratique Studio Nova</a> · Leçon 3 sur 3 · 5 min</p>
+      <h1>Vérifier le résultat</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras contrôler ton travail avec une grille de vérification et le test du nouveau venu.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Construire, c'est la moitié du travail. L'autre moitié, c'est <strong>vérifier</strong> que le résultat répond vraiment au brief, et qu'un nouveau venu s'y retrouve sans aide.</p>
+        <p>Pour ça, deux regards :</p>
+        <ul>
+          <li><strong>Le regard de la cheffe de projet</strong> : chaque demande du brief est-elle remplie ? On reprend la liste et on vérifie point par point.</li>
+          <li><strong>Le regard du nouveau venu</strong> : mets-toi à la place de Hugo, qui ne connaît rien. Depuis l'accueil, trouve-t-il en moins d'une minute la procédure d'accueil, le projet Vega et ses tâches ?</li>
+        </ul>
+        <p>Si tu peux, demande à une vraie personne de faire le test du nouveau venu : on voit toujours moins bien les défauts de ce qu'on a construit soi-même.</p>
+
+        <figure class="screenshot illustration">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran annotée : la page d'accueil de Studio Nova vue par Hugo, avec un parcours fléché vers la procédure d'accueil, puis vers le projet Vega">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran annotée</strong>
+            <span>Le parcours de Hugo depuis l'accueil · images/captures/m08-parcours-hugo.png</span>
+          </div>
+          <figcaption>Le test du nouveau venu : depuis l'accueil, Hugo atteint chaque information en deux clics.</figcaption>
+        </figure>
+        <p class="definition">Un espace est réussi quand il répond au brief et qu'un nouveau venu s'y retrouve seul.</p>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> vérifie aussi la barre latérale : si tu y vois encore « Sans titre », « Brouillon » ou une page en dehors des cinq parties, range-la avant de déclarer le travail terminé.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Le corrigé</h2>
+        <p>Voici le corrigé : l'arborescence attendue, puis la base « Tâches » telle qu'elle doit apparaître.</p>
+        <pre>Studio Nova
+├─ Accueil — Studio Nova         (encadré, accès rapides, vue liée « Cette semaine »)
+├─ Projets                        (4 projets · vues Tous les projets, Suivi, Échéances)
+├─ Tâches                         (6 tâches · vues Toutes les tâches, Suivi, Mes tâches)
+├─ Ressources
+│  └─ Procédure — Accueil des stagiaires
+└─ Notes &amp; réunions
+   ├─ Réunion d'équipe — 3 nov.
+   └─ Réunion de lancement Vega — 24 nov.</pre>
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Base Tâches attendue</caption>
+            <thead><tr><th scope="col">Tâche</th><th scope="col">Statut</th><th scope="col">Responsable</th><th scope="col">Échéance</th></tr></thead>
+            <tbody>
+              <tr><td>Finaliser la maquette du site Orion</td><td>En cours</td><td>Emma</td><td>15 nov.</td></tr>
+              <tr><td>Préparer la réunion client</td><td>À faire</td><td>Lucas</td><td>18 nov.</td></tr>
+              <tr><td>Mettre à jour les ressources</td><td>À faire</td><td>Sarah</td><td>20 nov.</td></tr>
+              <tr><td>Vega — Recevoir les textes du client</td><td>À faire</td><td>Sarah</td><td>26 nov.</td></tr>
+              <tr><td>Vega — Proposer une mise en page</td><td>À faire</td><td>Lucas</td><td>1er déc.</td></tr>
+              <tr><td>Vega — Relire le premier jet</td><td>À faire</td><td>Emma</td><td>3 déc.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Tes dates peuvent être différentes : l'important est que chaque tâche ait un responsable et une échéance avant le 4 décembre.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">La grille de vérification</h2>
+        <p>Fais le contrôle complet de ton espace. Coche chaque point vérifié ; pour chaque point non coché, corrige, puis recommence.</p>
+        <div class="exercise">
+          <p class="exercise__kicker">Grille de vérification · dans Notion</p>
+          <h3>Le brief est-il rempli ?</h3>
+          <ul class="exercise__checklist">
+            <li><label><input type="checkbox"><span>« Brochure Vega » est une entrée de <strong>Projets</strong>, avec ses quatre propriétés remplies.</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Trois tâches Vega</strong> existent dans Tâches, chacune avec un responsable et une échéance.</span></label></li>
+            <li><label><input type="checkbox"><span>Vega apparaît dans la vue <strong>Suivi</strong> (colonne À faire) et dans <strong>Échéances</strong> (4 décembre).</span></label></li>
+            <li><label><input type="checkbox"><span>La <strong>procédure d'accueil</strong> est dans Ressources, avec un titre clair.</span></label></li>
+            <li><label><input type="checkbox"><span>Le <strong>compte rendu de lancement</strong> est dans Notes &amp; réunions et mentionne le projet.</span></label></li>
+            <li><label><input type="checkbox"><span>L'<strong>accueil</strong> montre les accès rapides et les tâches de la semaine.</span></label></li>
+            <li><label><input type="checkbox"><span>Hugo est (ou serait) invité en <strong>Peut consulter</strong> ; l'accès général est « Seules les personnes invitées ».</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Aucune page</strong> au titre flou ni en dehors des cinq parties.</span></label></li>
+          </ul>
+          <h4>Le test du nouveau venu</h4>
+          <p class="exercise__result">Depuis l'accueil, chronomètre-toi (ou un collègue) : trouver la procédure d'accueil, puis la tâche « Vega — Proposer une mise en page ». Moins d'une minute : ton espace est prêt pour Hugo.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>On vérifie avec deux regards : le brief point par point, et le nouveau venu.</li>
+            <li>Une grille de vérification transforme le brief en liste de contrôle.</li>
+            <li>Si quelqu'un trouve seul ce qu'il cherche en moins d'une minute, l'espace est réussi.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 1</span><span class="quiz__question">Tu as tout construit, mais une page « Brouillon » traîne dans Privé. Le travail est-il terminé ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Oui, ce n'est qu'un brouillon.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Pas encore : on range ou supprime les pages en vrac avant de livrer.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Oui, Hugo ne la verra pas.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Un espace livré est un espace rangé. Supprime ou range la page avant de déclarer le travail terminé.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="module-end">
+          <h2>Fin du module 8</h2>
+        </div>
+
+        <h2 class="module-quiz-title">Quiz du module 8</h2>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 3</span><span class="quiz__question">Emma demande d'ajouter un nouveau client. Que crées-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="mq1" value="a"><span class="quiz__option-text">Une nouvelle base pour ce client.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq1" value="b" data-correct><span class="quiz__option-text">Une nouvelle entrée dans la base Projets.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq1" value="c"><span class="quiz__option-text">Une nouvelle section dans la barre latérale.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Un client de plus, c'est une entrée de plus. La structure existante absorbe la nouveauté.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 3</span><span class="quiz__question">Dans quel ordre construire ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="mq2" value="a"><span class="quiz__option-text">Partage, pages, vues, données.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq2" value="b" data-correct><span class="quiz__option-text">Données, vues, pages, accueil, partage.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq2" value="c"><span class="quiz__option-text">L'ordre n'a pas d'importance.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Les vues ont besoin de données, l'accueil a besoin des vues, et le partage vient quand tout est prêt.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 3 sur 3</span><span class="quiz__question">Comment savoir si l'espace est vraiment prêt pour Hugo ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="mq3" value="a"><span class="quiz__option-text">S'il contient beaucoup de pages.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq3" value="b" data-correct><span class="quiz__option-text">Si un nouveau venu trouve seul, depuis l'accueil, ce qu'il cherche en moins d'une minute.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq3" value="c"><span class="quiz__option-text">Si toutes les pages ont une couverture.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le test du nouveau venu est le meilleur indicateur d'un espace clair.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

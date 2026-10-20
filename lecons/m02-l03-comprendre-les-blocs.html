@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprendre les blocs — Module 2 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m2-l3" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m2">Pages et blocs</a> · Leçon 3 sur 8 · 6 min</p>
+      <h1>Comprendre les blocs</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras reconnaître les blocs d'une page et expliquer pourquoi presque tout ce que tu écris dans Notion est un bloc.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Dans la leçon précédente, tu as créé ta première page. Une page vide ne sert pas à grand-chose : il faut la remplir. Dans Notion, on la remplit avec des <strong>blocs</strong>. Comprendre cette idée, c'est comprendre comment fonctionne presque tout le reste de l'outil.</p>
+
+        <p class="definition">Un bloc, c'est un morceau de contenu.</p>
+        <p>Un paragraphe, un titre, une case à cocher, une image : chacun est un bloc. Une page Notion, c'est une pile de blocs posés les uns sous les autres.</p>
+
+        <h2>Pense à des briques</h2>
+        <p>Chaque brique a sa forme, mais toutes s'emboîtent de la même façon. Tu peux en ajouter une, en retirer une ou en déplacer une sans faire tomber le reste. Dans un traitement de texte, ta page est un long texte continu. Dans Notion, chaque ligne est une pièce séparée.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m02-pile-de-blocs.svg" alt="Schéma comparatif : à gauche, un document classique fait d'un seul texte continu ; à droite, une page Notion découpée en cinq blocs séparés (un titre, un paragraphe et trois cases à cocher), chacun avec sa poignée." width="720" height="320">
+          <figcaption>Dans Notion, chaque ligne est une brique séparée.</figcaption>
+        </figure>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> si un paragraphe ne « descend » pas avec le reste quand tu ajoutes du texte au-dessus, c'est normal. C'est un bloc séparé : tu le déplaces avec sa poignée.</p>
+        </div>
+      </section>
+
+      <!-- ======================== Étape 2 : Voir ======================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">La page d'accueil de Studio Nova</h2>
+        <p>Voici la page qui sert de point de départ à l'équipe de Studio Nova. Survole chaque ligne, ou parcours-les avec la touche Tab, pour voir de quel bloc il s'agit.</p>
+
+        <div data-notion-sim>
+          <div class="notion-page" role="group" aria-label="Simulation d'une page Notion : Accueil — Studio Nova">
+            <div class="notion-page__bar">Studio Nova / <strong>Accueil — Studio Nova</strong><span class="notion-page__tag">Simulation</span></div>
+            <div class="notion-page__body">
+              <div class="notion-block notion-block--title" data-block-info="C'est le nom de la page. Il apparaît aussi dans la barre latérale. Ce n'est pas un bloc : on ne peut pas le déplacer dans la page.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span>Accueil — Studio Nova</button>
+                <span class="notion-block__label" aria-hidden="true">Titre de la page</span>
+              </div>
+              <div class="notion-block notion-block--h1" data-block-info="Le plus grand titre à l'intérieur de la page. Il annonce le sujet principal.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span>Studio Nova</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc titre 1</span>
+              </div>
+              <div class="notion-block notion-block--text" data-block-info="Un simple paragraphe. Chaque nouveau paragraphe est un nouveau bloc texte.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span>Bienvenue dans l'espace de travail de Studio Nova.</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc texte</span>
+              </div>
+              <div class="notion-block notion-block--h2" data-block-info="Un titre de section, plus petit que le titre 1. Il découpe la page en parties faciles à repérer.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span>Cette semaine</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc titre 2</span>
+              </div>
+              <div class="notion-block notion-block--todo" data-block-info="Une case à cocher suivie d'un texte. Chaque tâche est un bloc séparé : ici, il y a trois blocs checklist.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span><span class="notion-block__check" aria-hidden="true"></span>Finaliser la maquette du site Orion</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc checklist</span>
+              </div>
+              <div class="notion-block notion-block--todo" data-block-info="Deuxième bloc checklist. Tu pourrais le monter au-dessus du premier sans toucher au reste de la page.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span><span class="notion-block__check" aria-hidden="true"></span>Préparer la réunion client</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc checklist</span>
+              </div>
+              <div class="notion-block notion-block--todo" data-block-info="Troisième bloc checklist. Une fois cochée dans Notion, la tâche apparaît barrée.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span><span class="notion-block__check" aria-hidden="true"></span>Mettre à jour les ressources</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc checklist</span>
+              </div>
+              <div class="notion-block notion-block--h2" data-block-info="Un second titre de section. On peut en avoir autant que nécessaire.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span>Liens utiles</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc titre 2</span>
+              </div>
+              <div class="notion-block notion-block--link" data-block-info="Un lien vers une autre page de l'espace. Un clic, et tu arrives sur la page Projets.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span>Projets</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc lien de page</span>
+              </div>
+              <div class="notion-block notion-block--link" data-block-info="Un autre lien de page. Tu verras au module 3 comment relier tes pages entre elles.">
+                <button type="button" class="notion-block__btn" aria-describedby="bloc-info"><span class="notion-block__handle" aria-hidden="true">⋮⋮</span>Ressources</button>
+                <span class="notion-block__label" aria-hidden="true">Bloc lien de page</span>
+              </div>
+            </div>
+          </div>
+          <p class="notion-info" id="bloc-info" data-notion-info aria-live="polite"><strong>Survole une ligne. </strong>La page contient 9 blocs. Le titre de la page, tout en haut, n'en fait pas partie.</p>
+        </div>
+      </section>
+
+      <!-- ======================== Étape 3 : Faire ======================= -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Repérer les blocs dans ta page</h2>
+        <ol class="tutorial">
+          <li>Ouvre ta page « Accueil — Studio Nova » dans la barre latérale.</li>
+          <li>Passe ta souris sur une ligne de texte. Une poignée à six points (⋮⋮) apparaît à gauche : elle marque le début d'un bloc.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la poignée à six points qui apparaît à gauche d'un bloc au survol">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Survol d'une ligne, poignée ⋮⋮ entourée · images/captures/m02-poignee-bloc.png</span>
+              </div>
+            </figure>
+          </li>
+          <li>Clique sur cette poignée. Un menu s'ouvre avec les actions possibles : c'est la preuve qu'il s'agit d'un bloc indépendant.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu du bloc ouvert après un clic sur la poignée">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Menu du bloc ouvert après un clic · images/captures/m02-menu-bloc.png</span>
+              </div>
+            </figure>
+          </li>
+          <li>Appuie sur Échap pour fermer le menu, puis survole les autres lignes : chacune a sa propre poignée.</li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> à la fin d'un bloc, appuie sur Entrée. Notion crée un nouveau bloc juste en dessous ; dans une liste, il reprend le même type.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Ajoute ton premier bloc</h3>
+          <ol>
+            <li>Ouvre ta page « Accueil — Studio Nova ».</li>
+            <li>Clique sur la ligne vide sous le titre et écris : « Bienvenue dans l'espace de travail de Studio Nova. »</li>
+            <li>Survole cette phrase et vérifie qu'une poignée ⋮⋮ apparaît à gauche.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> ta phrase s'affiche sous le titre, et une poignée apparaît quand tu la survoles. Tu viens de créer un bloc texte.</p>
+        </div>
+      </section>
+
+      <!-- ====================== Étape 4 : Vérifier ====================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <div class="key-points">
+          <h2 id="etape-4">À retenir</h2>
+          <ul>
+            <li>Une page Notion est composée de blocs posés les uns sous les autres.</li>
+            <li>Chaque bloc est indépendant : tu peux le déplacer ou le supprimer sans toucher aux autres.</li>
+            <li>La poignée ⋮⋮ qui apparaît au survol signale le début d'un bloc.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">De quoi est composée une page Notion ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">D'un seul grand texte, comme un document Word.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">De blocs indépendants posés les uns sous les autres.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">De cellules organisées en lignes et en colonnes, comme un tableur.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une page Notion est une pile de blocs indépendants : un titre, un paragraphe, une case à cocher… Ce n'est ni un long texte continu comme dans un traitement de texte, ni une grille de cellules comme dans un tableur.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Pourquoi peux-tu monter la tâche « Préparer la réunion client » au-dessus des autres sans toucher au reste de la page ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Parce que Notion enregistre la page automatiquement.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b"><span class="quiz__option-text">Parce que la page est un tableau et que les tâches sont des lignes.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c" data-correct><span class="quiz__option-text">Parce que chaque tâche est un bloc séparé, que l'on peut déplacer seul.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Chaque case à cocher est son propre bloc. C'est pour ça que tu peux la déplacer avec sa poignée sans réécrire ni décaler le reste. L'enregistrement automatique existe bien, mais il n'a rien à voir avec le déplacement.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

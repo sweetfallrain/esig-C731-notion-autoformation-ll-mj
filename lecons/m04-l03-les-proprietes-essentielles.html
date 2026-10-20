@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les propriétés essentielles — Module 4 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m4-l3" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m4">Bases de données</a> · Leçon 3 sur 6 · 6 min</p>
+      <h1>Les propriétés essentielles</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras ce qu'est une propriété et choisir le bon type pour une information : texte, nombre, date, case à cocher ou URL.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Une <strong>propriété</strong>, c'est une information que toutes les entrées de la base partagent : une colonne du tableau. Pour chaque propriété, tu choisis un <strong>type</strong>. Le type dit à Notion quel genre d'information il attend : un texte, un nombre, une date…</p>
+        <p>Pourquoi c'est important ? Parce que le type décide de ce que Notion sait faire avec l'information. Une échéance de type <em>Date</em> s'affiche dans un calendrier et se trie dans l'ordre chronologique. La même échéance écrite en <em>Texte</em> (« le 15 ») n'est qu'une suite de lettres.</p>
+        <p>Voici les six types de base. Tu verras les quatre types « à choix » dans la leçon suivante.</p>
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Les types de propriétés de base</caption>
+            <thead><tr><th scope="col">Type</th><th scope="col">Ce qu'il contient</th><th scope="col">Exemple chez Studio Nova</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Titre</strong> (<em>Title</em>)</td><td>Le nom de l'entrée. Chaque base en a exactement un, toujours en première colonne.</td><td>« Site Orion »</td></tr>
+              <tr><td><strong>Texte</strong> (<em>Text</em>)</td><td>Une phrase courte, libre.</td><td>Client : « Orion SA »</td></tr>
+              <tr><td><strong>Nombre</strong> (<em>Number</em>)</td><td>Une valeur chiffrée, qu'on peut additionner ou afficher en francs.</td><td>Budget : 12 000 CHF</td></tr>
+              <tr><td><strong>Date</strong> (<em>Date</em>)</td><td>Un jour, avec ou sans heure, ou une période.</td><td>Échéance : 15 novembre</td></tr>
+              <tr><td><strong>Case à cocher</strong> (<em>Checkbox</em>)</td><td>Oui ou non.</td><td>Facturé : ☑</td></tr>
+              <tr><td><strong>URL</strong> (<em>URL</em>)</td><td>Une adresse web cliquable.</td><td>Maquette : lien vers le fichier</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="definition">Une propriété est une information commune à toutes les entrées ; son type dit à Notion comment la traiter.</p>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> pour ajouter une propriété, clique sur le <strong>+</strong> à droite de la dernière colonne, nomme-la, puis choisis son type. Tu peux changer le type plus tard en cliquant sur le nom de la colonne.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Les propriétés du projet Orion</h2>
+        <p>Voici la base « Projets » avec toutes ses propriétés. Fais défiler le tableau horizontalement, puis ouvre un projet : chaque colonne réapparaît en haut de la page.</p>
+        <div data-db data-views="table" data-columns="full"></div>
+        <p>Regarde le type de chaque colonne : « Client » est du texte, « Budget » un nombre affiché en francs, « Échéance » une date, « Facturé » une case à cocher. Les couleurs de « Statut » et des tags, elles, viennent des types à choix de la leçon suivante.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Le bon type pour chaque information</h2>
+        <p>Studio Nova veut ajouter ces informations à la base « Projets ». Choisis le type le plus adapté à chacune.</p>
+        <div class="sort-ex" data-sort-ex role="group" aria-label="Choisir le type de propriété">
+          <div class="sort-ex__row" data-answer="nombre" data-explain="Un nombre permet d'additionner les heures de tous les projets.">
+            <label class="sort-ex__label" for="q43a">Le nombre d'heures prévues pour le projet.</label>
+            <select id="q43a"><option value="">Choisis…</option><option value="texte">Texte</option><option value="nombre">Nombre</option><option value="date">Date</option><option value="case">Case à cocher</option><option value="url">URL</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="date" data-explain="Une date s'affiche dans un calendrier et se trie dans l'ordre chronologique.">
+            <label class="sort-ex__label" for="q43b">Le jour de la présentation au client.</label>
+            <select id="q43b"><option value="">Choisis…</option><option value="texte">Texte</option><option value="nombre">Nombre</option><option value="date">Date</option><option value="case">Case à cocher</option><option value="url">URL</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="case" data-explain="Une réponse oui ou non : c'est une case à cocher.">
+            <label class="sort-ex__label" for="q43c">Le contrat a-t-il été signé ?</label>
+            <select id="q43c"><option value="">Choisis…</option><option value="texte">Texte</option><option value="nombre">Nombre</option><option value="date">Date</option><option value="case">Case à cocher</option><option value="url">URL</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="url" data-explain="Le type URL rend l'adresse cliquable.">
+            <label class="sort-ex__label" for="q43d">Le lien vers le dossier partagé du projet.</label>
+            <select id="q43d"><option value="">Choisis…</option><option value="texte">Texte</option><option value="nombre">Nombre</option><option value="date">Date</option><option value="case">Case à cocher</option><option value="url">URL</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__row" data-answer="texte" data-explain="Une information courte et libre : du texte. (Si cette personne utilisait Notion avec toi, ce serait une propriété Personne : leçon suivante.)">
+            <label class="sort-ex__label" for="q43e">Le nom de la personne de contact chez le client.</label>
+            <select id="q43e"><option value="">Choisis…</option><option value="texte">Texte</option><option value="nombre">Nombre</option><option value="date">Date</option><option value="case">Case à cocher</option><option value="url">URL</option></select>
+            <p class="sort-ex__feedback" hidden></p>
+          </div>
+          <div class="sort-ex__actions">
+            <button type="button" class="btn btn-primary" data-sort-check>Vérifier mes réponses</button>
+            <button type="button" class="btn btn-outline" data-sort-reset>Recommencer</button>
+          </div>
+          <p class="sort-ex__score" data-sort-score role="status"></p>
+        </div>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> évite de tout mettre en « Texte » par facilité. Une date ou un montant écrits en texte ne pourront ni être triés, ni filtrés, ni affichés dans un calendrier.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Prépare les propriétés de ta base</h3>
+          <ol>
+            <li>Reprends une des trois listes notées à la leçon 4.1.</li>
+            <li>Pour chaque information récurrente, choisis un type parmi : Texte, Nombre, Date, Case à cocher, URL.</li>
+            <li>Note-les sous la forme « Nom de la propriété — type ».</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> une liste comme : « Client — Texte ; Date de la demande — Date ; Montant — Nombre ; Traité — Case à cocher ». Le titre de chaque entrée est en plus, toujours en première colonne.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Une propriété est une colonne : une information commune à toutes les entrées.</li>
+            <li>Le type (Texte, Nombre, Date, Case à cocher, URL…) décide de ce que Notion peut faire avec l'information.</li>
+            <li>Chaque base a un seul Titre, toujours en première colonne.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Emma écrit les échéances en texte : « mi-novembre », « le 28 ». Que ne pourra-t-elle pas faire ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Lire les échéances.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Trier les projets par date ou les voir dans un calendrier.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Ouvrir les pages des projets.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Seule une propriété de type Date permet de trier chronologiquement et d'afficher les entrées dans un calendrier.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Quel type choisir pour « Budget » ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a" data-correct><span class="quiz__option-text">Nombre</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b"><span class="quiz__option-text">Texte</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Case à cocher</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Un nombre peut s'afficher en francs et s'additionner. En texte, « 12000 » ne serait qu'une suite de caractères.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

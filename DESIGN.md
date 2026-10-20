@@ -1,320 +1,362 @@
 # DESIGN.md — Notion pour l'entreprise
-> Spec Google Stitch — https://stitch.withgoogle.com/docs/design-md/specification/
-> **v2 — réadapté à la nouvelle maquette (accueil, sept. 2026).** Remplace la v1
-> (carnet d'apprentissage / LMS à 5 modules cloisonnés). Voir `CLAUDE.md`
-> section « Notes de migration » pour le détail de ce qui change.
+
+> **v4 — plateforme de formation (oct. 2026).** Remplace la v2 (hub de
+> ressources éditorial). Le site redevient un parcours de formation en
+> 9 modules, avec une mise en page épurée validée sur maquette : le fond
+> beige porte la navigation, le contenu vit sur un panneau clair, et un seul
+> élément foncé ressort par page. Voir `CLAUDE.md` § « Notes de migration »
+> pour l'historique (v1 → v2 → v3 → v4).
 
 ---
 
 ## 1. Visual Theme & Atmosphere
 
-« Notion pour l'entreprise » devient un **guide de référence éditorial**,
-plutôt qu'un parcours de formation cloisonné en modules avec quiz noté. On
-garde l'ambiance chaleureuse (crème, brun café, serif élégant), mais la mise
-en page emprunte davantage au site vitrine / hub de ressources qu'au LMS :
-cards foncées mises en avant, bandeau plein écran inversé, cards « modèle »
-avec badge, cards « ressource » listant tutoriels/vidéos/documents, cards
-« article » pour aller plus loin, et un aperçu produit illustré en hero
-(mockup d'interface, mini-Kanban) plutôt qu'un simple visuel statique.
+Une **plateforme d'autoformation calme et lisible**, entre un cours en ligne
+et un guide interactif, avec l'esthétique claire et minimaliste associée à
+Notion. L'apprenant doit toujours savoir où il se trouve (module, leçon,
+étape) et ce qu'on attend de lui.
 
-Mots-clés : chaleureux · éditorial · posé · professionnel · pédagogique ·
-**orienté ressources** (nouveau)
+Principe de lecture en deux plans :
+
+- **Plan « navigation »** : fond `--color-bg` (beige). Il porte l'en-tête,
+  le sommaire latéral et la progression.
+- **Plan « contenu »** : panneau `--color-surface` (blanc cassé), coins
+  arrondis, ombre douce. Il porte tout ce qui est à lire ou à faire.
+
+Mots-clés : chaleureux · posé · pédagogique · épuré · rythmé par étapes.
 
 ---
 
 ## 2. Color Palette & Roles
 
+*(palette inchangée depuis la v2 — seuls les usages évoluent)*
+
 ```
---color-bg:              #f6f1e8   /* fond principal — crème chaud */
---color-bg-soft:         #fbf8f3   /* fond des sections alternées — presque blanc cassé */
---color-surface:         #fffdf8   /* cards claires — cards modèle, card "éléments clés", card "et maintenant ?" */
---color-surface-2:       #eee6d9   /* pistes de progress bar, séparateurs marqués, fond du mockup produit */
---color-surface-inverse: #47342c   /* cards foncées — concept cards, cards ressource, bandeau plein écran */
---color-accent:          #7a5a45   /* brun café — CTA, liens actifs, eyebrows, icônes */
---color-accent-hover:    #614433   /* brun plus foncé — hover sur CTA */
---color-accent-soft:     #e3d6c8   /* beige — badge "Nouveau", avatars pastel (variante 1) */
---color-accent-soft-2:   #dee3d3   /* vert sauge pastel — badge "Essentiel", avatars pastel (variante 2), coche validée */
---color-text:            #33281f   /* texte principal — titres, corps fort */
+--color-bg:              #f6f1e8   /* plan navigation : fond de page, sommaire, en-tête de fausse page Notion */
+--color-bg-soft:         #fbf8f3   /* survol / sélection dans un panneau clair */
+--color-surface:         #fffdf8   /* plan contenu : panneau de leçon, cartes claires, fausses pages Notion */
+--color-surface-2:       #eee6d9   /* pistes de progression, emplacements de capture, cases du board */
+--color-surface-inverse: #47342c   /* LE bloc foncé de la page (exercice, ou bandeau final de l'accueil) */
+--color-accent:          #7a5a45   /* brun café — bouton primaire, numéros, liens actifs */
+--color-accent-hover:    #614433   /* hover du bouton primaire */
+--color-accent-soft:     #e3d6c8   /* bandeau « Attention », leçon courante, statut « En cours » */
+--color-accent-soft-2:   #dee3d3   /* bandeau « Astuce », statut « Terminé », bonne réponse */
+--color-text:            #33281f   /* texte principal */
 --color-text-inverse:    #fdf9f3   /* texte sur --color-surface-inverse */
---color-text-muted:      #7b6f63   /* texte secondaire, légendes, nav inactive */
---color-border:          #e6ddd0   /* séparateurs, bordures de listes internes aux cards */
---color-success:         #6b7a5c   /* vert sauge — coches, encarts validés */
---color-error:           #b8493f   /* erreurs de formulaire (non illustré en maquette) */
+--color-text-muted:      #7b6f63   /* texte secondaire, légendes, métadonnées */
+--color-border:          #e6ddd0   /* séparateurs, contours de fausse page, options de quiz */
+--color-success:         #6b7a5c   /* coches, pastille « Astuce », bonne réponse */
+--color-error:           #b8493f   /* pastille « Attention », message d'erreur de quiz */
+```
+
+Valeurs dérivées (déclarées dans `variables.css`, jamais réécrites ailleurs) :
+
+```
+--color-text-inverse-muted: rgba(253, 249, 243, 0.8)    /* texte secondaire sur fond foncé */
+--color-inverse-line:       rgba(253, 249, 243, 0.15)   /* séparateurs sur fond foncé */
+--focus-ring:               0 0 0 3px rgba(122, 90, 69, 0.35)
+--shadow-1:                 0 4px 24px rgba(51, 29, 25, 0.05)
 ```
 
 Règles d'usage :
-- `--color-accent` : un seul élément interactif dominant par zone (bouton
-  primaire, lien actif, icône de card).
-- `--color-surface-inverse` s'utilise maintenant à **deux échelles** :
-  - en card (concept card, card ressource) → `border-radius` grand, contenue
-    dans la grille de section ;
-  - en **bandeau plein écran** (section « bons réflexes ») → pas de
-    `border-radius`, la couleur va bord à bord, contenu recentré dans un
-    `.container` interne.
-- `--color-bg` / `--color-bg-soft` alternent d'une section à l'autre sur
-  chaque page (bandes horizontales), cf. section 5.
-- `--color-accent-soft` / `--color-accent-soft-2` : badges de card modèle
-  (« Nouveau », « Essentiel »), avatars/initiales, et petits indicateurs —
-  jamais deux badges identiques consécutifs dans une même grille.
-- Jamais de blanc pur (#ffffff) : toujours `--color-surface`, `--color-bg-soft`
-  ou `--color-text-inverse`.
-- Jamais de couleur hors palette sans validation explicite.
+
+- **Un seul élément `--color-surface-inverse` par page.** Dans une leçon,
+  c'est l'exercice. Sur l'accueil, c'est le bandeau final. Ni la définition,
+  ni le sommaire, ni le module actif ne sont foncés.
+- `--color-accent` : un seul bouton primaire visible par zone.
+- Jamais de blanc pur `#ffffff`, y compris dans les fausses pages Notion
+  (elles utilisent `--color-surface` + contour `--color-border`).
+- Aucune couleur hors palette. Le rouge `--color-error` ne sert qu'en petite
+  pastille ou en texte d'erreur, jamais en fond.
 
 ---
 
 ## 3. Typography Rules
-
-*(inchangé depuis la v1 — la nouvelle maquette conserve le même système
-typographique)*
 
 ```
 --font-display: 'Playfair Display', Georgia, serif
 --font-body:    'Inter', system-ui, sans-serif
 ```
 
-```css
-@font-face {
-  font-family: 'Playfair Display';
-  src: url('fonts/PlayfairDisplay-Regular.woff2') format('woff2');
-  font-weight: 400 700; font-style: normal; font-display: swap;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  src: url('fonts/PlayfairDisplay-Italic.woff2') format('woff2');
-  font-weight: 400 700; font-style: italic; font-display: swap;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('fonts/Inter-variable.woff2') format('woff2');
-  font-weight: 100 900; font-style: normal; font-display: swap;
-}
-```
+Polices auto-hébergées dans `fonts/` (`@font-face` dans `variables.css`),
+jamais via un CDN.
 
-| Rôle              | Famille          | Taille   | Graisse | Line-height |
-|--------------------|------------------|----------|---------|-------------|
-| H1 hero            | Playfair Display | 2.75rem  | 500     | 1.15        |
-| H1 page            | Playfair Display | 2.25rem  | 500     | 1.2         |
-| H2 section         | Playfair Display | 1.75rem  | 500     | 1.25        |
-| H3 card            | Playfair Display | 1.25rem  | 500     | 1.3         |
-| Numéro (concept card) | Playfair Display italic | 1.4rem | 400 | 1 — color-text-inverse |
-| Eyebrow            | Inter            | 0.7rem   | 700     | 1.4 — majuscules, letter-spacing 0.1em, couleur accent |
-| Body               | Inter            | 1rem     | 400     | 1.6 — color-text |
-| Body muted         | Inter            | 0.9rem   | 400     | 1.5 — color-text-muted |
-| Meta (durée, tags) | Inter            | 0.8rem   | 400     | 1.4 — color-text-muted |
-| Nav link           | Inter            | 0.85rem  | 500     | 1 — color-text-muted, actif en color-accent |
-| Bouton             | Inter            | 0.85rem  | 600     | 1 |
-| Citation (quote)   | Playfair Display italic | 1.25rem | 400 | 1.4 — color-text |
-| Badge              | Inter            | 0.7rem   | 700     | 1 — majuscules, letter-spacing 0.05em |
+| Rôle                         | Famille                  | Taille   | Graisse | Line-height |
+|------------------------------|--------------------------|----------|---------|-------------|
+| H1 accueil                   | Playfair Display         | 3.1rem   | 500     | 1.12        |
+| H1 leçon / page              | Playfair Display         | 2.5rem   | 500     | 1.15        |
+| H2 de section                | Playfair Display         | 1.5rem   | 500     | 1.25        |
+| H3 (exercice, carte)         | Playfair Display         | 1.375rem | 500     | 1.3         |
+| Phrase de définition         | Playfair Display         | 1.75rem  | 400     | 1.3         |
+| Numéro (programme, étapes)   | Playfair Display italic  | 1.05rem  | 400     | 1 — color-accent |
+| Chapô (objectif de leçon)    | Inter                    | 1.06rem  | 400     | 1.6 — color-text-muted |
+| Corps de leçon               | Inter                    | 1.03rem  | 400     | 1.75 |
+| Body muted                   | Inter                    | 0.9rem   | 400     | 1.55 — color-text-muted |
+| Meta (fil d'Ariane, durée)   | Inter                    | 0.8rem   | 400     | 1.4 — color-text-muted |
+| Bouton                       | Inter                    | 0.85rem  | 600     | 1 |
+| Statut (pill)                | Inter                    | 0.8rem   | 600     | 1 |
 
-Règle typographique signature (inchangée) : chaque page/section démarre par
-un triptyque **Eyebrow → Titre (Playfair Display) → Sous-titre (Inter
-muted)**, dans cet ordre, gap `12px`.
+Règles :
+- Playfair Display uniquement pour les titres, la phrase de définition et
+  les numéros. Jamais pour le corps de texte ni les libellés d'interface.
+- **Plus d'eyebrows en majuscules** dans les leçons (retour utilisatrice :
+  trop de petits labels = bruit visuel). Le contexte est porté par le fil
+  d'Ariane (`Module · Leçon x sur y · durée`).
+- Les seuls libellés « encadré » qui restent sont **Astuce**, **Attention**,
+  **Exercice** et **Résultat attendu**, en gras Inter dans le texte.
 
 ---
 
 ## 4. Component Stylings
 
-### Nav globale + CTA
+### En-tête global (`.site-header`)
 ```
-position: fixed; top: 0; width: 100%; z-index: 100
-background: var(--color-bg)
-border-bottom: 1px solid var(--color-border)
-Logo: carré 32px, border-radius 8px, background var(--color-accent) + wordmark
-  "Notion pour l'entreprise" en Playfair Display 1.05rem 500
-Liens (Accueil, Méthode, Ressources, À propos) : Inter 0.85rem 500,
-  color: var(--color-text-muted) ; actif → color: var(--color-accent)
-CTA à droite : "Mon parcours" — bouton primaire plein (pill), plus compact
-  que le bouton hero (padding 10px 20px)
-```
-> Changement vs v1 : plus de barre de progression globale dans le nav (elle
-> était liée aux modules). La progression, si on la garde, vit uniquement
-> sur `mon-parcours.html`.
-
-### Hero — aperçu produit (nouveau, remplace le visuel statique v1)
-```
-Grille 2 colonnes ≥ 1024px (texte ~55% / illustration ~45%), gap 64px ;
-empilé en mobile.
-Colonne texte : Eyebrow ("ACCUEIL · Guide débutant") → H1 hero → sous-titre.
-Illustration : card --color-surface, border-radius 28px, padding 24px,
-  box-shadow niveau 1, contenant :
-    - une "barre de titre" factice (3 points, --color-text-muted, en haut)
-    - un panneau gauche --color-surface-2 simulant une sidebar d'app
-      (liste d'items courts, une icône générique par ligne)
-    - un panneau droit --color-surface avec un titre H3, un sous-texte muted,
-      et une rangée de 2 mini "stat cards" (--color-bg-soft, border-radius 16px,
-      label muted + nombre en Playfair Display italic accent)
-    - un bloc vide --color-surface-2 en bas, décoratif (simule du contenu)
-Toujours un mockup d'interface, jamais une vraie capture d'écran Notion.
+background: var(--color-surface); border-bottom: 1px solid var(--color-border)
+Contenu : logo carré 36px --color-surface-inverse avec « N » Playfair italic
+  + wordmark « Notion pour l'entreprise » (Playfair 1.2rem 500).
+Liens : « La formation » · « Studio Nova » · « La méthode » (Inter 0.875rem,
+  muted ; actif en --color-accent 600, aria-current="page").
+CTA « Mon parcours → » : bouton primaire compact.
+< 768px : liens repliés derrière un bouton « Menu » (menu déroulant sous
+  l'en-tête, pas d'overlay plein écran).
 ```
 
-### Card concept — numérotée, foncée (nouveau, remplace la "ligne de module")
+### Layout de leçon (`.course-layout`)
 ```
-background: var(--color-surface-inverse)
-color: var(--color-text-inverse)
-border-radius: 20px
-padding: 28px
-Numéro (01–04) : Playfair Display italic 1.4rem, color: var(--color-text-inverse)
-  légèrement atténué (opacity .8), margin-bottom 24px
-Titre : Playfair Display 1.15rem 500, color: var(--color-text-inverse)
-Description : Inter 0.85rem, color: rgba(253,249,243,0.7), margin-top 6px
-Disposition : grille 4 colonnes ≥ 1024px, 2 colonnes ≥ 640px, 1 colonne en
-  dessous — gap 16-20px (grille, pas de liste à séparateurs : ce sont des
-  items parallèles/comparables, pas une séquence à parcourir dans l'ordre).
+Conteneur max-width 1240px, padding 40px, flex wrap, gap 40px.
+Gauche  : .course-toc — sommaire latéral, sur le fond beige, 240–260px.
+Droite  : .course-panel — panneau --color-surface, border-radius 24px,
+          padding 48px 56px 40px, --shadow-1, max-width 860px.
+< 1024px : le sommaire passe au-dessus du panneau, replié dans un
+          <details> « Sommaire du cours ».
+< 768px  : padding du panneau 28px 20px.
 ```
 
-### Card "éléments clés" (nouveau)
+### Sommaire latéral (`.course-toc`)
 ```
-background: var(--color-surface); border-radius: 24px; padding: 32px
-Titre H3 en tête de card.
-Liste interne numérotée (01/02/03…) : chaque ligne padding 14px 0, séparateur
-  --color-border (dernier élément sans bordure) ; numéro en Playfair Display
-  italic color-accent devant le texte Inter 0.9rem color-text.
-Encart de validation en pied de card : background var(--color-accent-soft-2)
-  (ou bg-soft), border-radius 14px, padding 14px 16px, icône "✓" dans un
-  cercle --color-success + color-text-inverse, texte Inter 0.85rem color-text.
-```
-
-### Mini-Kanban — aperçu produit (nouveau)
-```
-Card --color-surface-2, border-radius 20px, padding 20px, sur fond de section.
-3 colonnes (À faire / En cours / Terminé) :
-  en-tête colonne : Inter 0.75rem 600 color-text-muted + compteur
-  tâche : card --color-surface, border-radius 12px, padding 10px 12px,
-    puce ronde --color-accent + titre Inter 0.85rem + sous-texte muted 0.75rem
-Colonnes empilées verticalement < 768px.
+Progression globale : libellé muted + « x / 37 leçons », barre 4px.
+Modules terminés : « ✓ Titre » muted. Module courant : titre 600 + « x / y ».
+Leçons du module courant : liste indentée ; leçon courante en pill
+  --color-accent-soft, 600, aria-current="page".
+Leçons sans page (pas encore rédigées) : texte muted, non cliquable,
+  mention « bientôt » lue par les lecteurs d'écran.
+Aucune carte, aucun fond : texte posé sur le beige.
 ```
 
-### Bandeau plein écran inversé — "bons réflexes" (nouveau)
+### Repère d'étapes (`.lesson-steps`)
 ```
-background: var(--color-surface-inverse)   /* bord à bord, pas de border-radius */
-color: var(--color-text-inverse)
-padding: 64px 0 (48px mobile)
-Contenu recentré dans .container.
-Titre H2 Playfair Display, color-text-inverse, margin-bottom 32px.
-3 colonnes (empilées < 768px) : titre Inter 0.95rem 600 + description Inter
-  0.85rem rgba(253,249,243,0.7), pas de card — juste du texte, séparé par un
-  gap généreux (32-40px) plutôt que des bordures.
+4 boutons en grille 4 colonnes : Comprendre · Voir · Faire · Vérifier.
+Chaque bouton : barre 4px en haut (--color-accent si étape atteinte, sinon
+  --color-border) + numéro Playfair italic + libellé.
+Étape courante : texte --color-text 600, aria-current="step".
+Le contenu des étapes est dans 4 <section data-step>. Sans JavaScript, les
+  4 sections s'affichent à la suite (amélioration progressive).
 ```
 
-### Card modèle — avec badge, sans icône (remplace la "ligne Dupliquer" v1)
+### Définition (`.definition`)
 ```
-background: var(--color-surface); border-radius: 20px; padding: 24px
-position: relative (pour le badge)
-Badge (haut-gauche, en tête de card, pas absolute) : pill, Inter 0.7rem 700
-  uppercase, padding 4px 10px, border-radius 999px —
-    "Populaire" → background var(--color-surface-inverse), color-text-inverse
-    "Essentiel" → background var(--color-accent-soft-2), color-text
-    "Nouveau"   → background var(--color-accent-soft), color-text
-Titre : Playfair Display 1.1rem 500, margin-top 16px
-Description : Inter 0.85rem color-text-muted, margin-top 6px
-Lien "Utiliser ce modèle →" : Inter 0.8rem 600, color-accent, margin-top 16px
-Disposition : grille 3 colonnes ≥ 1024px, 1 colonne < 768px.
-Bouton pill outline "Voir tous les templates →" centré sous la grille :
-  border 1px solid var(--color-border), background transparent,
-  color-text, border-radius 999px, padding 12px 22px.
-```
-> Changement (retour utilisateur sur la maquette) : la card modèle n'a **plus
-> d'icône/emoji carré** au-dessus du titre — seulement le badge, le titre, la
-> description et le lien. Ne pas réintroduire d'icône ici.
-
-### Card ressource — foncée, avec liste interne (nouveau)
-```
-background: var(--color-surface-inverse); color: var(--color-text-inverse)
-border-radius: 20px; padding: 28px
-Icône : carré 40px, border-radius 10px, background rgba(253,249,243,0.12)
-Titre : Playfair Display 1.2rem 500, margin-top 16px
-Description : Inter 0.85rem rgba(253,249,243,0.7), margin-top 6px
-Liste interne (tutoriels / vidéos / documents) : margin-top 20px,
-  chaque ligne padding 8px 0, séparateur rgba(253,249,243,0.12) ;
-  affiche selon le type :
-    tutoriel  → libellé + durée alignée à droite (Inter 0.8rem)
-    vidéo     → miniature 32×32 --color-surface-2 + libellé + timecode
-    document  → libellé + tag fichier ("PDF") en petit pill translucide
-Disposition : grille 3 colonnes ≥ 1024px, 1 colonne < 768px.
+Pas d'encadré. Une phrase Playfair 1.75rem, suivie d'un paragraphe normal.
 ```
 
-### Card article — "aller plus loin" (nouveau)
+### Bandeaux Astuce / Attention (`.callout`)
 ```
-background: transparent (pas de card container, juste l'image + texte)
-Image : ratio 4:3, border-radius 16px, object-fit cover, margin-bottom 16px
-Eyebrow catégorie : Inter 0.7rem 700 uppercase color-accent
-Titre : Playfair Display 1.05rem 500, margin-top 6px, color-text
-Lien "X min de lecture →" : Inter 0.8rem color-text-muted, margin-top 8px,
-  devient color-accent au hover
-Disposition : grille 3 colonnes ≥ 1024px, 1 colonne < 768px.
-```
-
-### Section de clôture — "fin du guide" (remplace la card score/quiz v1)
-```
-Grille 2 colonnes ≥ 1024px (texte / card), empilée en dessous.
-Colonne texte : Eyebrow "FIN DU GUIDE" + H2 + paragraphe muted.
-Card --color-surface, border-radius 24px, padding 28px :
-  Titre H3 "Et maintenant ?"
-  Paragraphe Inter 0.85rem color-text-muted
-  Bouton primaire (foncé) pleine largeur "Télécharger le lexique →"
-```
-> Le test noté (quiz 15 questions, score conseillé 80 %) de la v1 n'apparaît
-> plus dans cette maquette — remplacé par un lead magnet (téléchargement du
-> lexique). Voir `CLAUDE.md` pour la décision sur `mon-parcours.html`.
-
-### Badge / tag pill (générique)
-```
-display: inline-flex; padding: 4px 10px; border-radius: 999px
-font: 700 0.7rem/1 var(--font-body); text-transform: uppercase;
-letter-spacing: 0.05em;
-Variantes de fond : voir "Card modèle" ci-dessus (3 variantes, jamais deux
-identiques consécutives dans une grille).
+display flex, gap 14px, border-radius 14px, padding 16px 20px.
+Pastille ronde 22px à gauche (icône SVG inline, aria-hidden).
+.callout--tip     : fond --color-accent-soft-2, pastille --color-success (ampoule)
+.callout--warning : fond --color-accent-soft,   pastille --color-error (« ! »)
+Texte : « Astuce : » / « Attention : » en gras, puis la phrase.
+Ce sont les DEUX SEULS types de bandeau du site.
 ```
 
-### Bouton primaire (inchangé)
+### Tutoriel pas à pas (`.tutorial`)
 ```
-background: var(--color-accent); color: var(--color-text-inverse)
-border-radius: 999px; padding: 13px 24px
-font: Inter 0.85rem 600; icône flèche "→" à droite, gap 8px
-transition: background 150ms ease; hover → var(--color-accent-hover)
-```
-
-### Bouton sur panneau inversé (inchangé)
-```
-Même forme que le bouton primaire, mais utilisé sur fond
---color-surface-inverse :
-background: transparent
-color: var(--color-text-inverse)
-soulignement au hover uniquement, pas de fond
+<ol> sans puces : numéro « 1. » Inter 600 --color-accent + texte 1rem.
+Une capture d'écran peut s'intercaler sous l'étape qu'elle illustre
+  (indentée au niveau du texte).
 ```
 
-### Footer (simplifié — plus de contenu que la simple mention v1)
+### Capture d'écran (`.screenshot`)
 ```
-padding: 40px 0
-border-top: 1px solid var(--color-border)
-Ligne : wordmark à gauche (Playfair Display 0.95rem) ;
-  liste de liens à droite, séparés par " · " —
-  "Guides · Ressources · À propos · Contact" — Inter 0.8rem color-text-muted
-Empilé (wordmark au-dessus des liens) < 640px.
+<figure> ; image border-radius 14px, --shadow-1, contour --color-border.
+Légende optionnelle <figcaption> Inter 0.85rem muted.
+Tant que la capture n'existe pas : .screenshot__placeholder — ratio 16:9,
+  fond --color-surface-2, icône image + « Capture d'écran Notion » + sujet
+  à capturer. role="img" + aria-label décrivant la capture attendue.
+Fichiers : images/captures/<module>-<sujet>.png
+```
+
+### Fausse page Notion (`.notion-page`)
+```
+Contour 1px --color-border, border-radius 16px, fond --color-surface.
+Barre du haut : fond --color-bg, fil « Studio Nova / Nom de la page »,
+  mention « Simulation » à droite (on ne prétend jamais être l'application).
+Blocs : <button> pleine largeur (survol, focus clavier et clic affichent le
+  type de bloc). Bloc actif : fond --color-bg-soft, contour --color-accent,
+  poignée « ⋮⋮ » visible, étiquette pill --color-accent à droite.
+Le titre de la page n'est PAS un bloc : étiquette --color-surface-2.
+Zone d'explication sous la page, aria-live="polite".
+```
+
+### Simulation de base de données (`.db-sim`)
+```
+Même cadre que la fausse page Notion. Sélecteur de vue (boutons pill,
+  aria-pressed) : Table · Board · Calendrier.
+Toujours les MÊMES données (base Projets de Studio Nova) quelle que soit
+  la vue — c'est le message pédagogique.
+Cliquer un nom de projet ouvre sa page (propriétés en <dl> + contenu).
+Table : overflow-x auto sur mobile. Calendrier : grille 7 colonnes.
+Script js/db-sim.js. Attributs :
+  data-db                       active la simulation
+  data-views="table,list,board,calendar,gallery,timeline"  (1re = départ)
+  data-columns="basic|full"     basic = Nom, Statut, Responsable, Priorité,
+                                Échéance ; full = + Client, Budget, Tags, Facturé
+  data-tools="true"             menus Filtre / Tri / Regrouper (table, liste,
+                                galerie) + compteur « n projets affichés sur 3 »
+  data-open="orion"             page ouverte au départ
+```
+
+### Exercice de classement (`.sort-ex`)
+```
+Script js/sort-ex.js. Une ligne par élément : libellé + <select>.
+  .sort-ex__row[data-answer][data-explain] ; boutons data-sort-check et
+  data-sort-reset ; score en role="status".
+Correction ligne par ligne : bordure success / error, explication sous la
+  ligne. Utilisé dans les étapes Voir ou Faire (modules 4 à 8).
+```
+
+### Autres éléments de simulation
+```
+.space-compare : deux fausses barres latérales côte à côte (espace A / B).
+.search-sim__field / .search-sim__results : fenêtre de recherche statique.
+.prose > pre : chemin ou arborescence en texte, pre-wrap (fond --color-bg).
+```
+
+### À retenir (`.key-points`)
+```
+H2 « À retenir » + liste à puces simple (pas de carte, pas de numérotation).
+2 à 4 idées.
+```
+
+### Exercice (`.exercise`) — le bloc foncé de la leçon
+```
+background --color-surface-inverse ; color --color-text-inverse ;
+border-radius 20px ; padding 28px 30px.
+Mention « Exercice · dans Notion » (Inter 0.8rem 600, inverse-muted),
+  titre H3 Playfair, étapes en <ol>, puis séparateur --color-inverse-line
+  et « Résultat attendu : » en gras.
+```
+
+### Quiz (`.quiz`)
+```
+<fieldset> + <legend> ; question en Playfair 1.375rem.
+Options : <label> contenant un <input type="radio">, contour --color-border,
+  border-radius 14px. Option cochée : contour --color-accent.
+Après validation : bonne réponse fond --color-accent-soft-2 + « Bonne
+  réponse » ; réponse fausse choisie fond --color-accent-soft + « Ta réponse ».
+  L'information n'est jamais portée par la couleur seule (libellé texte).
+Sans réponse : message --color-error « Choisis une réponse avant de valider. »
+Correction : paragraphe role="status" sous les options.
+```
+
+### Barre de progression (`.progress`)
+```
+Piste 4px --color-surface-2, remplissage --color-accent, border-radius 999px.
+Toujours accompagnée d'un libellé texte (« 5 / 37 leçons »).
+```
+
+### Accordéon de module (`.module-list`) — page Mon parcours
+```
+Liste à séparateurs --color-border dans le panneau clair.
+En-tête = <button aria-expanded> : numéro, titre Playfair 1.25rem, nombre de
+  leçons, statut (pill : À venir --color-surface-2 / En cours
+  --color-accent-soft / Terminé ✓ --color-accent-soft-2), signe + / −.
+Contenu : description, barre de progression du module, leçons (pastille
+  ronde : ✓ --color-success si terminée, pleine --color-accent si en cours,
+  contour sinon) et bouton outline.
+```
+
+### Boutons
+```
+.btn-primary  : fond --color-accent, texte --color-text-inverse, pill,
+                padding 13px 24px, Inter 0.85rem 600, hover --color-accent-hover.
+.btn-outline  : fond transparent, contour --color-border, texte --color-text.
+.btn-light    : (sur fond foncé uniquement) fond --color-text-inverse, texte --color-text.
+Hauteur minimale 44px pour tous les boutons cliquables.
+```
+
+### Image explicative (`.illustration`) — étape « Comprendre »
+```
+Chaque étape « Comprendre » contient au moins une image explicative, placée
+  juste après l'explication : schéma SVG (images/illustrations/) ou capture
+  annotée (images/captures/). <figure> + <figcaption> Inter 0.85rem muted.
+Schémas SVG : fond --color-surface-2, uniquement les couleurs de la palette,
+  texte en Inter / Playfair, alt décrivant ce que montre le schéma.
+```
+
+### Comparatif Avant / Après (`.compare`)
+```
+<table> à 2 colonnes : « Avant » (texte muted, marque « — ») et « Après »
+  (fond --color-bg, marque « ✓ » --color-success). Titres en Playfair.
+< 640px : une carte par ligne, libellé « Avant » / « Après » affiché
+  au-dessus de chaque cellule (data-label).
+```
+
+### Interface simulée (`.ui-sim`)
+```
+Fausse fenêtre Notion (cadre .notion-page) : barre latérale --color-bg à
+  gauche (au-dessus < 640px), barre du haut, page avec lignes grisées.
+Points numérotés .hotspot : rond 26px --color-accent, chiffre blanc ;
+  actif = --color-surface-inverse + halo --color-accent-soft, aria-pressed.
+Explication sous la fenêtre (aria-live). Toujours marquée « Simulation ».
+```
+
+### Carte de l'espace (`.space-map`)
+```
+Liste à séparateurs : branche ├─ / └─ muted, nom en gras, description muted,
+  pill d'état : « Module X » (--color-surface-2) ou « Créée ✓ »
+  (--color-accent-soft-2) quand la leçon data-built-by est terminée.
+```
+
+### Simulations de manipulation (`js/block-sims.js`)
+```
+Menu « / » (.slash-sim) : champ combobox + liste filtrée (listbox), flèches
+  et Entrée ; le bloc choisi s'affiche dans la fausse page.
+Menu de la poignée (.block-sim) : poignée ⋮⋮ = bouton, menu Monter /
+  Descendre / Dupliquer / Supprimer / Transformer + Annuler / Réinitialiser.
+  Monter / Descendre remplacent le glisser-déposer (utilisable au clavier).
+Sous-pages (.subpage-sim) : fausse barre latérale + page ; un bloc page
+  ouvre la sous-page, bouton « Retour ».
+Éléments statiques de fausse page : .np-cover, .np-icon, .np-title, .np-h1,
+  .np-h2, .np-text, .np-callout, .np-quote, .np-divider, .np-file,
+  .np-todo (case réellement cochable), .np-toggle (<details> natif).
+Seule exception à la règle « pas d'emoji » : l'icône d'un encadré ou d'un
+  fichier À L'INTÉRIEUR d'une simulation, parce que Notion les affiche ainsi.
+```
+
+### Icônes
+```
+SVG inline au trait (stroke 1.5–2.5, currentColor), aria-hidden="true".
+Plus d'emojis comme pictogrammes (v4) : rendu inégal selon les systèmes et
+  ton trop décoratif pour la nouvelle direction épurée.
 ```
 
 ---
 
 ## 5. Layout Principles
 
-- **Largeur max du contenu** : 1120px, centré avec `margin: 0 auto`.
-- **Padding latéral** : `64px` desktop → `24px` mobile.
-- **Bandes de section alternées** (nouveau) : chaque `<section>` pleine
-  largeur alterne `--color-bg` / `--color-bg-soft` comme fond, à l'exception
-  du bandeau "bons réflexes" qui est toujours `--color-surface-inverse` quel
-  que soit son ordre. Pas de `border-top`/`border-bottom` entre les bandes —
-  la rupture de couleur suffit (fini les séparateurs `--color-border` entre
-  sections de la v1).
-- **Grilles vs listes** (règle révisée, voir section 7) : les items
-  *parallèles/comparables* (concepts, modèles, ressources, articles) vont en
-  **grille de cards**. Seules les listes *internes à une card* (éléments
-  clés, tutoriels/vidéos/documents dans une card ressource) gardent des
-  séparateurs `--color-border`.
-- **Grille hero** : texte (~55%) / illustration produit (~45%), gap `64px` ;
-  empilée en mobile.
-- **Eyebrow → Titre → Sous-titre** : toujours dans cet ordre, gap `12px`.
-- **Sections** : `padding: 80px 0` (`48px` mobile) — sauf le bandeau inversé,
-  cf. section 4.
+- **Deux plans** : beige = navigation, panneau clair = contenu. On ne pose
+  jamais une carte dans une carte : à l'intérieur du panneau, le texte est
+  posé directement, seuls les bandeaux, l'exercice, les fausses pages et
+  les captures ont un fond.
+- **Colonne de lecture** : le panneau ne dépasse pas 860px (≈ 70 caractères
+  par ligne au corps 1.03rem).
+- **Une leçon = 4 étapes** affichées une à la fois (Comprendre · Voir ·
+  Faire · Vérifier). Une étape doit tenir sans défilement excessif.
+- **Images par étape** : Comprendre = une image explicative (schéma ou
+  capture annotée) ; Voir = l'exemple Studio Nova, idéalement interactif ;
+  Faire = une capture sous chaque geste important ; Vérifier = aucune image.
+- Accueil : sections en panneaux clairs sur le beige, espacées de 40px.
+- Espacements : 8 / 12 / 16 / 20 / 28 / 40 / 48px.
 
 ---
 
@@ -322,47 +364,31 @@ Empilé (wordmark au-dessus des liens) < 640px.
 
 | Niveau | Usage | Valeur |
 |--------|-------|--------|
-| 0 | Fond de section | `--color-bg` / `--color-bg-soft` (alternance) |
-| 1 | Cards claires (hero, éléments clés, modèle, et-maintenant) | `--color-surface` + `box-shadow: 0 4px 24px rgba(51,29,25,0.05)` |
-| 2 | Piste de progress bar, mockup sidebar, kanban background | `--color-surface-2` |
-| 3 | Nav fixe | `box-shadow: 0 1px 0 var(--color-border)` |
-| 4 | Cards / bandeau inversés (concept, ressource, bons réflexes) | `--color-surface-inverse`, sans ombre |
-| 5 | Bouton au hover | `background: var(--color-accent-hover)` |
-
-Aucun overlay sombre sur les images d'articles — netteté conservée.
+| 0 | Fond de page (navigation) | `--color-bg` |
+| 1 | Panneau de contenu, cartes claires | `--color-surface` + `--shadow-1` |
+| 2 | Pistes, emplacements de capture, colonnes du board | `--color-surface-2` |
+| 3 | Bloc foncé unique (exercice / bandeau final) | `--color-surface-inverse`, sans ombre |
 
 ---
 
 ## 7. Do's and Don'ts
 
-**✅ Do**
-- Utiliser exclusivement les couleurs de la palette définie en section 2.
-- Garder un seul bouton primaire visible par section.
-- Faire alterner les fonds de section `--color-bg` / `--color-bg-soft`.
-- Utiliser une **grille de cards** pour les ensembles d'items comparables :
-  concepts, modèles, ressources, articles (**changement vs v1**).
-- Garder des **listes à séparateurs** uniquement pour le contenu interne
-  d'une card (éléments clés, sous-listes tutoriels/vidéos/documents).
-- Faire alterner `--color-accent-soft` et `--color-accent-soft-2` sur les
-  badges et avatars, jamais deux identiques consécutifs.
-- Utiliser Playfair Display uniquement pour titres, citations, nombres et
-  numéros de card (jamais pour le corps de texte ou les libellés d'UI).
-- Garder les emojis comme pictogrammes uniquement là où la maquette les
-  montre réellement (icônes des cards ressource : 📖 🎬 📄) — **pas** sur les
-  cards modèle, qui n'en ont plus (voir composant "Card modèle" section 4).
+**Do**
+- Un seul bloc foncé par page.
+- Texte posé directement dans le panneau clair.
+- Bandeaux limités à Astuce et Attention.
+- Une capture d'écran par manipulation importante, placée sous l'étape.
+- Toujours un libellé texte en plus de la couleur (statuts, quiz, progression).
+- Tutoiement partout, phrases courtes.
 
-**❌ Don't**
-- Ne jamais utiliser `#ffffff` pur comme fond ou comme texte.
-- Ne jamais ajouter de couleur hors palette.
-- ~~Ne jamais utiliser de grille de cards pour les modules/sidebar/FAQ~~ —
-  **règle supprimée en v2** : la nouvelle maquette généralise la grille de
-  cards pour les ensembles comparables (voir Do's ci-dessus). Ne conserver
-  une liste à séparateurs que pour le contenu *interne* d'une card.
-- Ne jamais utiliser un `border-radius` < 6px sur les composants interactifs.
-- Ne jamais utiliser un `outline` navigateur par défaut sur focus — le
-  remplacer par un `box-shadow` visible en `--color-accent`.
-- Ne jamais déclencher de `<form action>` — toute soumission reste gérée en JS.
-- Ne jamais utiliser d'animation > 250ms.
+**Don't**
+- Pas de carte dans une carte.
+- Pas d'eyebrow en majuscules dans les leçons.
+- Pas d'emoji comme pictogramme.
+- Pas de `#ffffff`, pas de couleur hors palette.
+- Pas d'`outline: none` sans `box-shadow: var(--focus-ring)`.
+- Pas d'animation > 250ms.
+- Pas de `<form action>` : tout est géré en JavaScript.
 
 ---
 
@@ -370,40 +396,24 @@ Aucun overlay sombre sur les images d'articles — netteté conservée.
 
 | Breakpoint | Comportement |
 |------------|-------------|
-| ≥ 1024px | Grilles à 3-4 colonnes (concepts, modèles, ressources, articles), hero 2 colonnes, padding latéral 64px |
-| 768px–1023px | Grilles à 2 colonnes (concepts) ou 1 colonne (modèles/ressources/articles restent lisibles empilés dès cette largeur si le contenu est dense), padding 40px |
-| < 768px | Une seule colonne partout, nav hamburger, padding 24px, H1 hero 2rem, bandeau "bons réflexes" en colonnes empilées |
+| ≥ 1024px | Sommaire à gauche + panneau à droite ; accueil en 2 colonnes |
+| 768px–1023px | Sommaire au-dessus du panneau, replié dans un `<details>` |
+| < 768px | Menu de l'en-tête replié, padding du panneau 28px 20px, H1 2rem, tables de simulation en défilement horizontal |
 
-**Nav mobile** : bouton hamburger (☰) remplace les liens ; le CTA "Mon
-parcours" reste visible, compacté. Clic → menu overlay `--color-surface`
-plein écran, liens verticaux + CTA en bas, fermeture par ✕.
-
-**Bandeau "bons réflexes"** : 3 colonnes → empilées avec un `gap` généreux
-(32px) sur mobile, pas de séparateur visuel entre elles.
+Vérifier au minimum : 360px, 414px, 768px, 1280px, 1600px.
 
 ---
 
 ## 9. Agent Prompt Guide
 
-**Instruction obligatoire pour Claude** : lire ce fichier (`DESIGN.md`) en
-entier avant tout travail sur le style, les composants, ou le CSS. Ne jamais
-dériver de la palette de la section 2. Ne jamais inventer une couleur, une
-taille ou un radius absent de ce fichier. Ce fichier est en v2 : si un ancien
-composant de la v1 (barre de progression du nav, ligne de module, ligne
-"Dupliquer", card score/quiz) est encore référencé ailleurs dans le projet,
-il est obsolète — se référer à la section correspondante ci-dessus.
+Lire ce fichier en entier avant tout travail CSS. Ordre de priorité en cas de
+conflit : `DESIGN.md` > maquette validée (canevas « Maquette formation
+Notion ») > intuition de l'agent.
 
 Checklist avant chaque commit CSS :
-- [ ] Toutes les couleurs sont des variables CSS `var(--color-*)`.
-- [ ] Aucune couleur hardcodée hors des déclarations `:root {}`.
-- [ ] Les titres utilisent `--font-display`, jamais le corps de texte.
-- [ ] Les ensembles d'items comparables utilisent une **grille de cards**,
-      pas une liste à séparateurs (sauf contenu interne d'une card).
-- [ ] Les sections alternent `--color-bg` / `--color-bg-soft`.
-- [ ] Le bandeau "bons réflexes" va bord à bord (pas de `border-radius`,
-      pas de `.container` en dehors du contenu).
-- [ ] Les hover states utilisent `transition` (jamais de changement brutal).
-- [ ] Le responsive suit les breakpoints de la section 8.
-- [ ] Aucun `outline: none` seul — toujours un `box-shadow` focus visible.
-
-Ordre de priorité en cas de conflit : `DESIGN.md` > maquette PNG > intuition de Claude.
+- [ ] Toutes les couleurs sont des `var(--color-*)` (ou valeurs dérivées de `variables.css`).
+- [ ] Un seul bloc `--color-surface-inverse` par page.
+- [ ] Aucune carte imbriquée dans le panneau de contenu.
+- [ ] Focus visible partout (`--focus-ring`).
+- [ ] Information jamais portée par la couleur seule.
+- [ ] Rendu vérifié aux breakpoints de la section 8.

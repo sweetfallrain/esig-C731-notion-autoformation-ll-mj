@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" font-family="Inter, system-ui, sans-serif">
+  <rect width="720" height="280" rx="16" fill="#eee6d9"/>
+  <g font-size="14" fill="#33281f">
+    <rect x="24" y="24" width="208" height="232" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="44" y="56" font-weight="700" font-size="15">Liste à puces</text>
+    <circle cx="50" cy="91" r="3.5" fill="#33281f"/><text x="62" y="96">Orion</text>
+    <circle cx="50" cy="123" r="3.5" fill="#33281f"/><text x="62" y="128">Luna</text>
+    <circle cx="50" cy="155" r="3.5" fill="#33281f"/><text x="62" y="160">Atlas</text>
+    <rect x="44" y="204" width="110" height="28" rx="14" fill="#e3d6c8"/><text x="99" y="223" text-anchor="middle" font-size="12" font-weight="600">Pas d'ordre</text>
+
+    <rect x="256" y="24" width="208" height="232" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="276" y="56" font-weight="700" font-size="15">Liste numérotée</text>
+    <text x="276" y="96">1.  Sauvegarder</text>
+    <text x="276" y="128">2.  Envoyer le lien</text>
+    <text x="276" y="160">3.  Attendre la validation</text>
+    <rect x="276" y="204" width="140" height="28" rx="14" fill="#e3d6c8"/><text x="346" y="223" text-anchor="middle" font-size="12" font-weight="600">Un ordre à suivre</text>
+
+    <rect x="488" y="24" width="208" height="232" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
+    <text x="508" y="56" font-weight="700" font-size="15">Checklist</text>
+    <rect x="508" y="84" width="14" height="14" rx="3" fill="#6b7a5c"/><path d="M511 91 L514 94 L519 87" fill="none" stroke="#fdf9f3" stroke-width="2"/>
+    <text x="532" y="96" fill="#7b6f63">Maquette Orion</text><line x1="532" y1="91" x2="636" y2="91" stroke="#7b6f63" stroke-width="1.2"/>
+    <rect x="508" y="116" width="14" height="14" rx="3" fill="none" stroke="#7b6f63" stroke-width="1.5"/><text x="532" y="128">Réunion client</text>
+    <rect x="508" y="148" width="14" height="14" rx="3" fill="none" stroke="#7b6f63" stroke-width="1.5"/><text x="532" y="160">Ressources</text>
+    <rect x="508" y="204" width="146" height="28" rx="14" fill="#dee3d3"/><text x="581" y="223" text-anchor="middle" font-size="12" font-weight="600">Des choses à faire</text>
+  </g>
+</svg>

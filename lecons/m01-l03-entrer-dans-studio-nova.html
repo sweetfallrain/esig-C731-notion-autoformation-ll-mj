@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrer dans Studio Nova — Module 1 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m1-l3" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m1">Découvrir Notion</a> · Leçon 3 sur 3 · 4 min</p>
+      <h1>Entrer dans Studio Nova</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras qui est Studio Nova, ce que tu vas construire pour l'agence, et tu auras créé la page « Studio Nova » qui accueillera tout ton travail.</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>On apprend mieux un outil en s'en servant pour un vrai besoin. Pendant toute la formation, tu vas donc construire l'espace Notion d'une agence fictive : Studio Nova. Chaque nouvelle notion ajoutera une pièce à cet espace.</p>
+        <p>Studio Nova est une petite agence créative. En ce moment, elle travaille sur trois projets pour ses clients :</p>
+
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Les trois projets de Studio Nova</caption>
+            <thead><tr><th scope="col">Projet</th><th scope="col">Ce que c'est</th><th scope="col">Responsable</th><th scope="col">Statut</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Site Orion</strong></td><td>Refonte du site web du client Orion</td><td>Emma</td><td><span class="status status--doing">En cours</span></td></tr>
+              <tr><td><strong>Identité Luna</strong></td><td>Création du logo et de la charte graphique de la marque Luna</td><td>Lucas</td><td><span class="status">À faire</span></td></tr>
+              <tr><td><strong>Campagne Atlas</strong></td><td>Campagne de lancement sur les réseaux sociaux</td><td>Emma</td><td><span class="status status--done">Terminé</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Tu croiseras aussi quatre personnes : <strong>Emma</strong>, responsable de projet ; <strong>Lucas</strong>, membre de l'équipe ; <strong>Sarah</strong>, une cliente ; et <strong>Hugo</strong>, un collègue qui ne travaille pas sur ces projets.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m01-equipe-studio-nova.svg" alt="Illustration de l'équipe : Emma, responsable de projet, reliée aux projets Site Orion et Campagne Atlas ; Lucas, membre de l'équipe, relié au projet Identité Luna ; Sarah, cliente ; Hugo, hors des projets." width="720" height="320">
+          <figcaption>Les personnes que tu vas croiser pendant la formation.</figcaption>
+        </figure>
+
+        <p>Tout l'espace sera rangé dans une seule page, nommée « Studio Nova ». Elle contiendra toutes les autres, comme la couverture d'un classeur contient tous ses intercalaires.</p>
+
+        <p class="definition">Ton espace d'entraînement, c'est une page « Studio Nova », rangée dans « Privé », où tu peux tout essayer sans risque.</p>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> ne construis pas Studio Nova dans une page que tes collègues utilisent déjà. Range-la dans « Privé » : tu pourras te tromper, recommencer et supprimer sans déranger personne.</p>
+        </div>
+      </section>
+
+      <!-- ======================== Étape 2 : Voir ======================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">La carte de l'espace Studio Nova</h2>
+        <p>Voici tout ce que tu vas construire, et à quel moment. Quand tu termines la leçon qui construit une partie, elle passe à « Créée ✓ ».</p>
+
+        <ul class="space-map" data-space-map>
+          <li class="is-root" data-built-by="m1-l3"><span class="space-map__name">Studio Nova</span><span class="space-map__desc">La page qui contient tout l’espace</span><span class="pill" data-built-state data-todo="Cette leçon">Cette leçon</span></li>
+          <li data-built-by="m2-l2"><span class="space-map__name"><span class="space-map__branch" aria-hidden="true">├─</span>Accueil</span><span class="space-map__desc">Les priorités de la semaine</span><span class="pill" data-built-state data-todo="Module 2">Module 2</span></li>
+          <li data-built-by="m4-l5"><span class="space-map__name"><span class="space-map__branch" aria-hidden="true">├─</span>Projets</span><span class="space-map__desc">La base des projets</span><span class="pill" data-built-state data-todo="Module 4">Module 4</span></li>
+          <li data-built-by="m6-l1"><span class="space-map__name"><span class="space-map__branch" aria-hidden="true">├─</span>Tâches</span><span class="space-map__desc">Qui fait quoi</span><span class="pill" data-built-state data-todo="Module 6">Module 6</span></li>
+          <li data-built-by="m6-l1"><span class="space-map__name"><span class="space-map__branch" aria-hidden="true">├─</span>Ressources</span><span class="space-map__desc">Les liens et fichiers utiles</span><span class="pill" data-built-state data-todo="Module 6">Module 6</span></li>
+          <li data-built-by="m3-l1"><span class="space-map__name"><span class="space-map__branch" aria-hidden="true">└─</span>Notes &amp; réunions</span><span class="space-map__desc">Une page par réunion</span><span class="pill" data-built-state data-todo="Module 3">Module 3</span></li>
+        </ul>
+
+        <p>Aujourd'hui, tu poses seulement la première pierre : la page « Studio Nova », encore vide.</p>
+      </section>
+
+      <!-- ======================== Étape 3 : Faire ======================= -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Créer la page Studio Nova</h2>
+        <p>Tu verras la création de pages en détail au module 2. Ici, il suffit de suivre ces quatre gestes :</p>
+        <ol class="tutorial">
+          <li>Dans la barre latérale, survole le mot « Privé ». Un petit « + » apparaît à sa droite.</li>
+          <li>Clique sur ce « + ». Une nouvelle page vide s'ouvre, avec « Nouvelle page » écrit en gris à la place du titre.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le « + » à côté de « Privé » dans la barre latérale, et la page vide qui s'ouvre">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Le « + » à côté de « Privé » et la page vide · images/captures/m01-nouvelle-page.png</span>
+              </div>
+            </figure>
+          </li>
+          <li>Clique sur ce texte gris et tape « Studio Nova ».</li>
+          <li>Regarde la barre latérale : la page « Studio Nova » apparaît dans la section « Privé ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page « Studio Nova » visible dans la section « Privé » de la barre latérale">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>La page « Studio Nova » dans la barre latérale · images/captures/m01-page-studio-nova.png</span>
+              </div>
+            </figure>
+          </li>
+        </ol>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> tu n'as pas besoin d'enregistrer. Notion sauvegarde automatiquement tout ce que tu écris, au fur et à mesure.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Ton espace d'entraînement</h3>
+          <ol>
+            <li>Crée la page « Studio Nova » dans la section « Privé », comme dans le tutoriel.</li>
+            <li>Ferme Notion, puis rouvre-le.</li>
+            <li>Vérifie que ta page est toujours là.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> dans la barre latérale, la section « Privé » contient une page nommée « Studio Nova », toujours présente après réouverture. Elle est vide : c'est normal, tu la rempliras dès le module 2.</p>
+        </div>
+      </section>
+
+      <!-- ====================== Étape 4 : Vérifier ====================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <div class="key-points">
+          <h2 id="etape-4">À retenir</h2>
+          <ul>
+            <li>Pendant la formation, tu construis l'espace de Studio Nova, une petite agence créative avec trois projets : Site Orion, Identité Luna et Campagne Atlas.</li>
+            <li>Tout l'espace est rangé dans une seule page, « Studio Nova », qui contiendra les autres.</li>
+            <li>Cette page est dans « Privé » : tu peux t'entraîner sans déranger personne, et Notion enregistre tout automatiquement.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Pourquoi créer la page « Studio Nova » dans la section « Privé » ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Parce que c'est la seule section où l'on peut créer des pages.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Pour s'entraîner librement, sans que les collègues voient ou subissent ses essais.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Parce que les pages privées sont plus rapides à charger.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>« Privé » est ton espace personnel. Tes essais et tes erreurs n'apparaissent chez personne. Tu peux créer des pages ailleurs aussi, mais pas pour un entraînement.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Tu viens d'écrire le titre « Studio Nova » et tu cherches le bouton « Enregistrer ». Que se passe-t-il ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a" data-correct><span class="quiz__option-text">Il n'y en a pas : Notion enregistre automatiquement.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b"><span class="quiz__option-text">Il faut appuyer sur Ctrl + S, sinon la page sera perdue.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Il faut fermer la page pour qu'elle soit enregistrée.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Notion sauvegarde chaque modification dès que tu l'écris. Tu peux fermer l'onglet ou l'application sans rien perdre.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

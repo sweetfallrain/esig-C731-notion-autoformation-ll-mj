@@ -1,1079 +1,2142 @@
 /* ===================================================================
-   Nav globale + CTA — cf. DESIGN.md section 4 "Nav globale + CTA"
+   Texte de leçon
    =================================================================== */
-.site-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+.prose p {
+  margin: 0 0 20px;
+  font-size: 1.03rem;
+  line-height: 1.75;
 }
 
-.site-nav__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  height: 64px;
+.prose h2 {
+  margin: 32px 0 10px;
+  font-size: 1.5rem;
+  line-height: 1.25;
 }
 
-.site-nav__brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--color-text);
+.prose > :first-child {
+  margin-top: 0;
 }
 
-.site-nav__logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--color-accent);
-  flex-shrink: 0;
-}
-
-.site-nav__wordmark {
-  font: 500 1.05rem var(--font-display);
-  white-space: nowrap;
-}
-
-.site-nav__links {
-  display: none;
-  align-items: center;
-  gap: 28px;
-  margin-left: auto;
-}
-
-.site-nav__links a {
-  font: 500 0.85rem var(--font-body);
-  color: var(--color-text-muted);
-  text-decoration: none;
-}
-
-.site-nav__links a[aria-current="page"] {
-  color: var(--color-accent);
-}
-
-.btn-primary--compact {
-  padding: 10px 20px;
-}
-
-.site-nav__cta {
-  display: none;
-}
-
-.site-nav__inner .btn-primary:focus-visible,
-.site-nav__links a:focus-visible,
-.site-nav__brand:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-  border-radius: 4px;
-}
-
-/* ---- Bascule desktop / mobile : bases ici, media queries dans responsive.css ---- */
-.site-nav__toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
-}
-
-.site-nav__toggle span:not(.sr-only) {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--color-accent);
-  border-radius: 2px;
-}
-
-.site-nav__toggle:focus-visible,
-.site-nav__close:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-  border-radius: 6px;
+.prose ul {
+  margin: 0 0 20px;
+  padding-left: 22px;
+  font-size: 1.03rem;
+  line-height: 1.8;
 }
 
 /* ===================================================================
-   Menu mobile — overlay plein écran
+   Repère d'étapes — DESIGN.md §4 « Repère d'étapes »
    =================================================================== */
-.site-nav__mobile {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: var(--color-surface);
-  display: none;
-  flex-direction: column;
-  padding: 24px;
+.lesson-steps {
+  margin: 0 0 36px;
 }
 
-.site-nav__mobile.is-open {
-  display: flex;
+.lesson-steps__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
 }
 
-.site-nav__mobile-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.site-nav__close {
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  color: var(--color-text);
-  font-size: 1.1rem;
+.lesson-steps__btn {
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
   cursor: pointer;
+  color: var(--color-text-muted);
 }
 
-.site-nav__mobile nav {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.lesson-steps__btn::before {
+  content: "";
+  display: block;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+  margin-bottom: 10px;
+  transition: background-color 150ms ease;
+}
+
+.lesson-steps__btn.is-reached::before {
+  background: var(--color-accent);
+}
+
+.lesson-steps__btn[aria-current="step"] {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.lesson-steps__num {
+  font: italic 400 1rem/1 var(--font-display);
+  margin-right: 4px;
+}
+
+.lesson-steps__label {
+  font-size: 0.85rem;
+}
+
+.lesson-step + .lesson-step {
   margin-top: 40px;
 }
 
-.site-nav__mobile nav a {
-  font: 500 1rem var(--font-body);
-  color: var(--color-text);
-  text-decoration: none;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--color-border);
+.js .lesson-step + .lesson-step {
+  margin-top: 0;
 }
 
-.site-nav__mobile nav a[aria-current="page"] {
-  color: var(--color-accent);
-}
-
-.site-nav__mobile .btn-primary {
-  margin-top: auto;
-  justify-content: center;
+.js .lesson-step[hidden] {
+  display: none;
 }
 
 /* ===================================================================
-   En-tête de section — titre + note/lien à droite
+   Définition — DESIGN.md §4
    =================================================================== */
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-bottom: 32px;
+.prose .definition,
+.definition {
+  margin: 8px 0 12px;
+  font: 400 1.5rem/1.3 var(--font-display);
 }
 
-.section-head__note {
-  max-width: 320px;
+/* ===================================================================
+   Bandeaux Astuce / Attention — DESIGN.md §4 « Bandeaux »
+   =================================================================== */
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 0 0 28px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.callout p {
+  margin: 0;
+}
+
+.callout__icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-inverse);
+}
+
+.callout__icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.callout--tip {
+  background: var(--color-accent-soft-2);
+}
+
+.callout--tip .callout__icon {
+  background: var(--color-success);
+}
+
+.callout--warning {
+  background: var(--color-accent-soft);
+}
+
+.callout--warning .callout__icon {
+  background: var(--color-error);
+}
+
+/* ===================================================================
+   Tutoriel pas à pas — DESIGN.md §4
+   =================================================================== */
+.tutorial {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  counter-reset: step;
+}
+
+.tutorial > li {
+  counter-increment: step;
+  position: relative;
+  padding: 12px 0 12px 38px;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.tutorial > li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.tutorial .screenshot {
+  margin-top: 14px;
+}
+
+/* ===================================================================
+   Capture d'écran — DESIGN.md §4 « Capture d'écran »
+   =================================================================== */
+.screenshot img {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-1);
+}
+
+.screenshot figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
+}
+
+.screenshot__placeholder {
+  aspect-ratio: 16 / 9;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.screenshot__placeholder svg {
+  width: 28px;
+  height: 28px;
+}
+
+.screenshot__placeholder strong {
+  font-size: 0.8rem;
+}
+
+.screenshot__placeholder span {
+  font-size: 0.75rem;
+}
+
+/* ===================================================================
+   Fausse page Notion — DESIGN.md §4 « Fausse page Notion »
+   =================================================================== */
+.notion-page {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.notion-page__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.notion-page__bar strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.notion-page__tag {
+  margin-left: auto;
+}
+
+.notion-page__body {
+  padding: 20px 16px 24px;
+}
+
+.notion-block {
+  position: relative;
+}
+
+.notion-block__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 2px 0;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  text-align: left;
+  line-height: 1.3;
+  cursor: default;
+}
+
+.notion-block__handle {
+  width: 14px;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  opacity: 0;
+}
+
+.notion-block__check {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  border: 1.5px solid var(--color-text-muted);
+  border-radius: 4px;
+}
+
+.notion-block__label {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-size: 0.75rem;
+  font-weight: 600;
+  pointer-events: none;
+  display: none;
+}
+
+.notion-block.is-active .notion-block__btn {
+  background: var(--color-bg-soft);
+  border-color: var(--color-accent);
+}
+
+.notion-block.is-active .notion-block__handle {
+  opacity: 1;
+}
+
+.notion-block.is-active .notion-block__label {
+  display: block;
+}
+
+.notion-block--title .notion-block__btn { font: 500 1.6rem/1.2 var(--font-display); padding-bottom: 12px; }
+.notion-block--title.is-active .notion-block__btn { border-color: var(--color-border); }
+.notion-block--title .notion-block__label { background: var(--color-surface-2); color: var(--color-text); }
+.notion-block--h1 .notion-block__btn { font-size: 1.35rem; font-weight: 700; }
+.notion-block--h2 .notion-block__btn { font-size: 1.07rem; font-weight: 600; padding-top: 12px; }
+.notion-block--text .notion-block__btn,
+.notion-block--todo .notion-block__btn { font-size: 0.95rem; }
+.notion-block--link .notion-block__btn { font-size: 0.95rem; font-weight: 500; text-decoration: underline; }
+
+.notion-info {
+  margin: 16px 0 0;
+  min-height: 52px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===================================================================
+   À retenir — DESIGN.md §4
+   =================================================================== */
+.key-points {
+  margin: 0 0 40px;
+}
+
+.key-points h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+.key-points ul {
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* ===================================================================
+   Exercice — DESIGN.md §4 « Exercice » (le bloc foncé de la leçon)
+   =================================================================== */
+.exercise {
+  background: var(--color-surface-inverse);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+}
+
+.exercise__kicker {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-inverse-muted);
+}
+
+.exercise h3 {
+  margin: 0 0 14px;
+  font-size: 1.375rem;
+  color: var(--color-text-inverse);
+}
+
+.exercise ol {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.exercise__result {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-inverse-line);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-inverse-muted);
+}
+
+.exercise__result strong {
+  color: var(--color-text-inverse);
+}
+
+.exercise a {
+  color: var(--color-text-inverse);
+}
+
+.exercise :focus-visible {
+  box-shadow: var(--focus-ring-inverse);
+}
+
+/* ===================================================================
+   Quiz — DESIGN.md §4 « Quiz »
+   =================================================================== */
+.quiz + .quiz {
+  margin-top: 36px;
+}
+
+.quiz__count {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.quiz__question {
+  margin: 0 0 16px;
+  font: 500 1.3rem/1.3 var(--font-display);
+}
+
+.quiz__options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quiz__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  cursor: pointer;
+  accent-color: var(--color-accent);
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.quiz__option:has(input:checked) {
+  border-color: var(--color-accent);
+  background: var(--color-bg-soft);
+}
+
+.quiz__option:has(input:focus-visible) {
+  box-shadow: var(--focus-ring);
+}
+
+.quiz__option input:focus-visible {
+  box-shadow: none;
+}
+
+.quiz__option-text {
+  flex: 1;
+}
+
+.quiz__tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.quiz__option.is-correct,
+.quiz__option.is-correct:has(input:checked) {
+  border-color: var(--color-success);
+  background: var(--color-accent-soft-2);
+}
+
+.quiz__option.is-wrong,
+.quiz__option.is-wrong:has(input:checked) {
+  border-color: var(--color-error);
+  background: var(--color-accent-soft);
+}
+
+.quiz__error {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: var(--color-error);
+}
+
+.quiz__feedback {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.quiz__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* ===================================================================
+   Pied de leçon (terminer + précédent / suivant)
+   =================================================================== */
+.lesson-done {
+  margin-top: 36px;
+}
+
+.lesson-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* ===================================================================
+   Simulation de base de données — DESIGN.md §4 « Simulation de base »
+   =================================================================== */
+.db-sim__views {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.db-sim__view {
+  min-height: 36px;
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.db-sim__view[aria-pressed="true"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.db-sim__scroll {
+  overflow-x: auto;
+}
+
+.db-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
   font-size: 0.9rem;
 }
 
-.section-head__link {
-  font: 600 0.85rem var(--font-body);
-  color: var(--color-accent);
-  text-decoration: none;
-  white-space: nowrap;
+.db-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.section-head__link:hover {
+.db-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.db-open {
+  padding: 4px 0;
+  border: 0;
+  background: none;
+  font-weight: 600;
   text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  background: var(--color-surface-2);
+}
+
+.status--doing { background: var(--color-accent-soft); }
+.status--done  { background: var(--color-accent-soft-2); }
+
+.db-board {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 16px;
+}
+
+.db-board__col {
+  background: var(--color-bg);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.db-board__head {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.db-card {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  text-align: left;
+  cursor: pointer;
+}
+
+.db-card strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.db-card span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.db-cal {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(64px, 1fr));
+  min-width: 480px;
+}
+
+.db-cal__month {
+  padding: 12px 16px 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.db-cal__dow {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.db-cal__day {
+  min-height: 64px;
+  padding: 6px 8px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.db-cal__day--empty {
+  background: var(--color-bg-soft);
+}
+
+.db-cal__event {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 4px 6px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-accent-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.db-page__body {
+  padding: 24px 22px;
+}
+
+.db-page__title {
+  margin: 0 0 16px;
+  font: 700 1.4rem/1.2 var(--font-body);
+}
+
+.db-props {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 8px 16px;
+  margin: 0 0 20px;
+  font-size: 0.9rem;
+}
+
+.db-props dt {
+  color: var(--color-text-muted);
+}
+
+.db-close {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  cursor: pointer;
 }
 
 /* ===================================================================
-   Hero — aperçu produit
+   Mon parcours — accordéon de modules — DESIGN.md §4
    =================================================================== */
-.hero {
+.module-list {
+  list-style: none;
+  padding: 0;
+}
+
+.module-list__item {
+  border-top: 1px solid var(--color-border);
+}
+
+.module-list__head {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 20px 4px;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.module-list__num {
+  flex: 0 0 28px;
+  font: italic 400 1.05rem/1 var(--font-display);
+  color: var(--color-accent);
+}
+
+.module-list__title {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.module-list__title strong {
+  display: block;
+  font: 500 1.2rem/1.3 var(--font-display);
+}
+
+.module-list__title span {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.module-list__sign {
+  width: 18px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--color-surface-2);
+}
+
+.pill--doing { background: var(--color-accent-soft); }
+.pill--done  { background: var(--color-accent-soft-2); }
+
+.module-list__body {
+  padding: 0 4px 24px 48px;
+}
+
+.module-list__body > p {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.module-list__body .progress {
+  max-width: 320px;
+  margin-bottom: 16px;
+}
+
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.lesson-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.lesson-list li.is-current {
+  background: var(--color-bg);
+  font-weight: 600;
+}
+
+.lesson-list a {
+  color: var(--color-text);
+}
+
+.lesson-list__dot {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: var(--color-text-inverse);
+}
+
+.lesson-list li.is-done .lesson-list__dot {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.lesson-list li.is-current .lesson-list__dot {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.lesson-list__state {
+  margin-left: auto;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* ===================================================================
+   Accueil
+   =================================================================== */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.home-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  padding: 24px 0 0;
+}
+
+.home-hero__copy,
+.home-hero__visual {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.home-hero h1 {
+  margin: 0 0 18px;
+  font-size: 2.2rem;
+  line-height: 1.12;
+}
+
+.home-hero__lead {
+  margin: 0 0 28px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  max-width: 520px;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-hero__facts {
+  margin-top: 24px;
+}
+
+.home-hero__visual figcaption {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.panel {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-1);
+  padding: 28px 20px;
+}
+
+.panel h2,
+.home-split h2 {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.panel__lead {
+  margin: 0 0 28px;
+  color: var(--color-text-muted);
+  max-width: 640px;
+}
+
+.program {
+  list-style: none;
+  padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  column-gap: 40px;
+}
+
+.program li {
+  border-top: 1px solid var(--color-border);
+  padding: 20px 0 24px;
+}
+
+.program__num {
+  display: block;
+  margin-bottom: 6px;
+  font: italic 400 1.05rem/1 var(--font-display);
+  color: var(--color-accent);
+}
+
+.program__title {
+  display: block;
+  margin-bottom: 4px;
+  font: 500 1.2rem/1.3 var(--font-display);
+}
+
+.program__desc {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.home-split {
+  display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   align-items: center;
 }
 
-.hero__subtitle {
-  color: var(--color-text-muted);
-  margin-top: 16px;
-  max-width: 480px;
+.home-split > * {
+  flex: 1 1 380px;
+  min-width: 0;
 }
 
-.hero__mockup {
-  background: var(--color-surface);
-  border-radius: 28px;
-  padding: 24px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
+.home-split p {
+  margin: 0 0 14px;
+  line-height: 1.7;
 }
 
-.hero__mockup-bar {
+.tree {
+  list-style: none;
+  padding: 0;
+}
+
+.tree li {
   display: flex;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-
-.hero__mockup-bar span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-text-muted);
-  opacity: 0.5;
-}
-
-.hero__mockup-body {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 16px;
-}
-
-.hero__mockup-sidebar {
-  background: var(--color-surface-2);
-  border-radius: 16px;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.hero__mockup-sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-}
-
-.hero__mockup-sidebar-item span {
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  background: var(--color-accent-soft);
-  flex-shrink: 0;
-}
-
-.hero__mockup-main {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 16px;
-}
-
-.hero__mockup-main h3 {
-  font-size: 1rem;
-}
-
-.hero__mockup-main p {
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
-  margin-top: 6px;
-}
-
-.hero__stats {
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.hero__stat {
-  background: var(--color-bg-soft);
-  border-radius: 16px;
-  padding: 10px 14px;
-  flex: 1;
-}
-
-.hero__stat-label {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--color-text-muted);
-}
-
-.hero__stat-value {
-  font: 400 1.1rem/1 var(--font-display);
-  font-style: italic;
-  color: var(--color-accent);
-}
-
-.hero__mockup-block {
-  background: var(--color-surface-2);
-  border-radius: 16px;
-  margin-top: 16px;
-  height: 32px;
-}
-
-/* ===================================================================
-   Card concept — numérotée, foncée
-   =================================================================== */
-.concept-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.concept-card {
-  background: var(--color-surface-inverse);
-  color: var(--color-text-inverse);
-  border-radius: 20px;
-  padding: 28px;
-}
-
-.concept-card .num {
-  display: block;
-  font: 400 1.4rem/1 var(--font-display);
-  font-style: italic;
-  color: var(--color-text-inverse);
-  opacity: 0.8;
-  margin-bottom: 24px;
-}
-
-.concept-card h3 {
-  font-size: 1.15rem;
-  color: var(--color-text-inverse);
-}
-
-.concept-card p {
-  font: 400 0.85rem/1.5 var(--font-body);
-  color: rgba(253, 249, 243, 0.7);
-  margin-top: 6px;
-}
-
-/* ===================================================================
-   Card "éléments clés"
-   =================================================================== */
-.key-points-card {
-  background: var(--color-surface);
-  border-radius: 24px;
-  padding: 32px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
-  margin-top: 32px;
-  max-width: 560px;
-}
-
-.key-points-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 8px;
-}
-
-.key-points-list li {
-  display: flex;
+  justify-content: space-between;
   gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: 0.9rem;
+  padding: 11px 0 11px 6px;
+  border-top: 1px solid var(--color-border);
 }
 
-.key-points-list li:last-child {
-  border-bottom: none;
-}
-
-.key-points-list .num {
-  font: 400 1rem/1 var(--font-display);
-  font-style: italic;
-  color: var(--color-accent);
-  flex-shrink: 0;
-}
-
-.key-points-check {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--color-accent-soft-2);
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin-top: 16px;
-  font-size: 0.85rem;
-}
-
-.key-points-check .mark {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background: var(--color-success);
-  color: var(--color-text-inverse);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-}
-
-/* ===================================================================
-   Méthode (aperçu) — mini-Kanban + texte
-   =================================================================== */
-.methode-preview {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  align-items: center;
-  margin-top: 48px;
-}
-
-.kanban {
-  background: var(--color-surface-2);
-  border-radius: 20px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.kanban-col-head {
-  font: 600 0.75rem/1 var(--font-body);
+.tree__branch {
   color: var(--color-text-muted);
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+  font-family: ui-monospace, monospace;
 }
 
-.kanban-task {
-  background: var(--color-surface);
-  border-radius: 12px;
-  padding: 10px 12px;
-  margin-bottom: 8px;
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
+.method {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 28px;
 }
 
-.kanban-task .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  margin-top: 5px;
-  flex-shrink: 0;
-}
-
-.kanban-task .title {
-  font-size: 0.85rem;
+.method li::before {
+  content: "";
   display: block;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  margin-bottom: 14px;
 }
 
-.kanban-task .sub {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-}
-
-/* ===================================================================
-   Bandeau plein écran inversé — "bons réflexes"
-   =================================================================== */
-.inverse-banner {
-  background: var(--color-surface-inverse);
-  color: var(--color-text-inverse);
-  padding: 48px 0;
-}
-
-.inverse-banner h2 {
-  color: var(--color-text-inverse);
-  margin-bottom: 32px;
-}
-
-.inverse-banner-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-}
-
-.inverse-banner-grid h3 {
-  font: 600 0.95rem/1.3 var(--font-body);
-  margin: 0 0 6px;
-  color: var(--color-text-inverse);
-}
-
-.inverse-banner-grid p {
-  font: 400 0.85rem/1.5 var(--font-body);
-  color: rgba(253, 249, 243, 0.7);
-  margin: 0;
-}
-
-/* ===================================================================
-   Card modèle — avec badge, sans icône
-   =================================================================== */
-.template-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 32px;
-}
-
-.template-card {
-  position: relative;
-  background: var(--color-surface);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
-}
-
-.template-badge {
-  display: inline-block;
-  font: 700 0.7rem/1 var(--font-body);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-
-.template-badge.populaire {
-  background: var(--color-surface-inverse);
-  color: var(--color-text-inverse);
-}
-
-.template-badge.essentiel {
-  background: var(--color-accent-soft-2);
-  color: var(--color-text);
-}
-
-.template-badge.nouveau {
-  background: var(--color-accent-soft);
-  color: var(--color-text);
-}
-
-.template-card h3 {
-  font-size: 1.1rem;
-  margin-top: 16px;
-}
-
-.template-card p {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  margin-top: 6px;
-}
-
-.template-card__link {
-  display: inline-block;
-  margin-top: 16px;
-  font: 600 0.8rem var(--font-body);
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-.template-actions {
-  text-align: center;
-  margin-top: 32px;
-}
-
-.template-card__mark {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.template-card__mark[aria-pressed="true"] {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.template-card__mark:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-}
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  border-radius: 999px;
-  padding: 12px 22px;
-  font: 600 0.85rem var(--font-body);
-  cursor: pointer;
-  text-decoration: none;
-}
-
-/* ===================================================================
-   Card ressource — foncée, avec liste interne
-   =================================================================== */
-.resource-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 32px;
-}
-
-.resource-card {
-  background: var(--color-surface-inverse);
-  color: var(--color-text-inverse);
-  border-radius: 20px;
-  padding: 28px;
-}
-
-.resource-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(253, 249, 243, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-}
-
-.resource-card h3 {
-  font-size: 1.2rem;
-  margin-top: 16px;
-  color: var(--color-text-inverse);
-}
-
-.resource-card > p {
-  font-size: 0.85rem;
-  color: rgba(253, 249, 243, 0.7);
-  margin-top: 6px;
-}
-
-.resource-list {
-  margin-top: 20px;
-}
-
-.resource-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(253, 249, 243, 0.12);
-  font-size: 0.8rem;
-}
-
-.resource-list li:last-child {
-  border-bottom: none;
-}
-
-.resource-tag {
-  font-size: 0.7rem;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: rgba(253, 249, 243, 0.12);
-  color: var(--color-text-inverse);
-}
-
-/* ===================================================================
-   Card article — "aller plus loin"
-   =================================================================== */
-.article-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-.article-card .thumb {
-  aspect-ratio: 4 / 3;
-  border-radius: 16px;
-  background: var(--color-surface-2);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
-}
-
-.article-card .eyebrow {
+.method strong {
+  display: block;
   margin-bottom: 6px;
 }
 
-.article-card h3 {
-  font-size: 1.05rem;
-}
-
-.article-card__link {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 0.8rem;
+.method span {
+  font-size: 0.9rem;
+  line-height: 1.55;
   color: var(--color-text-muted);
-  text-decoration: none;
-  transition: color 150ms ease;
 }
 
-.article-card__link:hover {
-  color: var(--color-accent);
-}
-
-/* ===================================================================
-   Section de clôture — "fin du guide"
-   =================================================================== */
-.closing {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+.cta-band {
+  background: var(--color-surface-inverse);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-xl);
+  padding: 32px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   align-items: center;
+  justify-content: space-between;
 }
 
-.closing__card {
-  background: var(--color-surface);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
+.cta-band h2 {
+  margin: 0 0 6px;
+  font-size: 1.75rem;
+  color: var(--color-text-inverse);
 }
 
-.closing__card h3 {
-  font-size: 1.25rem;
+.cta-band p {
+  margin: 0;
+  color: var(--color-text-inverse-muted);
 }
 
-.closing__card p {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  margin-top: 8px;
-}
-
-.closing__card .btn-primary {
+.db-page {
   margin-top: 20px;
-  width: 100%;
-  justify-content: center;
 }
 
-/* ===================================================================
-   Grille "cards courtes" — réutilisée sur a-propos.html et methode.html
-   =================================================================== */
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 32px;
+.db-page__content {
+  border-top: 1px solid var(--color-border);
+  padding-top: 18px;
 }
 
-.info-grid--3 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 32px;
+.db-page__content > p {
+  margin: 0 0 14px;
+  line-height: 1.65;
 }
 
-.kanban--intro {
-  margin-top: 32px;
+.db-page__content > .db-page__subtitle {
+  margin: 0 0 6px;
+  font-weight: 600;
 }
 
-.info-card {
-  background: var(--color-surface);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
+.db-todos {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
 }
 
-.info-card h3 {
-  font-size: 1.1rem;
-}
-
-.info-card p {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  margin-top: 6px;
-}
-
-.info-card ul {
-  margin-top: 10px;
-}
-
-.info-card li {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
+.db-todos li {
   padding: 3px 0;
 }
 
-/* ===================================================================
-   Sommaire (table des matières) — methode.html
-   =================================================================== */
-.toc {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 24px;
+.db-todos li.is-done {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
 }
 
-.toc__link {
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  padding: 8px 16px;
-  font: 500 0.85rem var(--font-body);
-  color: var(--color-text);
-  text-decoration: none;
-  transition: border-color 150ms ease, color 150ms ease;
-}
-
-.toc__link:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.toc__link:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-  border-color: var(--color-accent);
-}
-
-/* Ancres de section : ne pas passer sous la nav fixe */
-section[id] {
-  scroll-margin-top: 80px;
-}
-
-/* ===================================================================
-   Citation — cf. DESIGN.md section 3 "Citation"
-   =================================================================== */
-.quote {
-  border-left: 3px solid var(--color-accent);
-  padding-left: 20px;
-  font: 400 1.25rem/1.4 var(--font-display);
-  font-style: italic;
-  color: var(--color-text);
-  margin: 24px 0 0;
-}
-
-/* ===================================================================
-   Bloc Avant / Après — conservé de la v1
-   =================================================================== */
-.before-after {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: stretch;
-  margin-top: 32px;
-}
-
-.before-after__panel {
-  background: var(--color-surface);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
-}
-
-.before-after__panel h3 {
-  font-size: 1.2rem;
-}
-
-.before-after__panel ul {
-  margin-top: 16px;
-}
-
-.before-after__panel li {
-  padding: 6px 0;
+/* Contenu statique d'une fausse page (accueil) */
+.notion-page__body > p {
+  margin: 0 0 12px;
   font-size: 0.95rem;
 }
 
-.before-after__panel--after {
-  background: var(--color-surface-inverse);
-  color: var(--color-text-inverse);
+.notion-page__body > .db-page__title {
+  margin-bottom: 6px;
 }
 
-.before-after__panel--after h3 {
-  color: var(--color-text-inverse);
+.notion-page__body > .db-todos {
+  margin-bottom: 14px;
 }
 
-.before-after__panel--after .eyebrow {
-  color: rgba(253, 249, 243, 0.7);
+.fake-link {
+  text-decoration: underline;
 }
 
-.before-after__arrow {
+/* ===================================================================
+   Mon parcours — colonne de gauche
+   =================================================================== */
+.parcours-count {
+  margin: 4px 0 8px;
+  font: 400 1.9rem/1.1 var(--font-display);
+}
+
+.parcours-count__total {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.parcours-next {
+  margin: 4px 0 14px;
+  font-weight: 600;
+}
+
+.parcours-help {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.quiz__question {
+  display: block;
+}
+
+.lesson-nav + .lesson-nav {
+  margin-top: 16px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+html:not(.js) .lesson-steps,
+html:not(.js) .lesson-nav--steps {
   display: none;
+}
+
+/* ===================================================================
+   Image explicative (schéma, illustration, capture annotée)
+   DESIGN.md §4 « Capture d'écran » — même cadre pour les illustrations
+   =================================================================== */
+.illustration {
+  margin: 4px 0 28px;
+}
+
+.illustration img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.illustration figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
 }
 
 /* ===================================================================
-   Accordéon FAQ — conservé de la v1
+   Comparatif Avant / Après — DESIGN.md §4 « Comparatif »
    =================================================================== */
-.faq-list {
-  margin-top: 24px;
+.compare {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
-.accordion-item {
+.compare th {
+  padding: 12px 16px;
+  text-align: left;
+  font: 500 1.15rem/1.3 var(--font-display);
+}
+
+.compare td {
+  padding: 14px 16px;
+  vertical-align: top;
+  border-top: 1px solid var(--color-border);
+}
+
+.compare td:first-child {
+  color: var(--color-text-muted);
+}
+
+.compare th:last-child,
+.compare td:last-child {
+  background: var(--color-bg);
+}
+
+.compare th:last-child {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.compare tr:last-child td:last-child {
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.compare__mark {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.compare td:last-child .compare__mark {
+  color: var(--color-success);
+}
+
+/* ===================================================================
+   Interface Notion simulée avec points numérotés — DESIGN.md §4
+   =================================================================== */
+.ui-sim__window {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-sim__sidebar {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 14px 12px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.ui-sim__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.ui-sim__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.ui-sim__top-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ui-sim__share {
+  padding: 3px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
+}
+
+.ui-sim__page {
+  padding: 20px 20px 24px;
+}
+
+.ui-sim__page-title {
+  margin: 0 0 10px;
+  font: 700 1.3rem/1.2 var(--font-body);
+  color: var(--color-text);
+}
+
+.ui-sim__line {
+  height: 9px;
+  margin: 10px 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-2);
+}
+
+.ui-sim__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.ui-sim__row--workspace {
+  color: var(--color-text);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ui-sim__row--current {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.ui-sim__row--indent {
+  padding-left: 22px;
+}
+
+.ui-sim__logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--color-surface-inverse);
+  color: var(--color-text-inverse);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.ui-sim__section {
+  margin: 14px 6px 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ui-sim__bottom {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+}
+
+.hotspot {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font: 600 0.8rem/1 var(--font-body);
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.hotspot:hover {
+  background: var(--color-accent-hover);
+}
+
+.hotspot[aria-pressed="true"] {
+  background: var(--color-surface-inverse);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+/* ===================================================================
+   Carte de l'espace Studio Nova — DESIGN.md §4
+   =================================================================== */
+.space-map {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+}
+
+.space-map li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 12px 4px;
+  border-top: 1px solid var(--color-border);
+}
+
+.space-map li:last-child {
   border-bottom: 1px solid var(--color-border);
 }
 
-.accordion-trigger {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: none;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  padding: 20px 0;
-  font: 500 0.95rem var(--font-body);
-  color: var(--color-text);
+.space-map__name {
+  flex: 1 1 200px;
+  font-weight: 600;
 }
 
-.accordion-trigger .plus {
-  color: var(--color-accent);
-  transition: transform 150ms ease;
-  font-size: 1.1rem;
+.space-map__branch {
+  font-family: ui-monospace, monospace;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-right: 6px;
 }
 
-.accordion-item[data-open="true"] .plus {
-  transform: rotate(45deg);
-}
-
-.accordion-trigger:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-  border-radius: 4px;
-}
-
-.accordion-panel {
-  display: none;
-  padding: 0 0 20px;
+.space-map__desc {
+  flex: 2 1 240px;
   color: var(--color-text-muted);
   font-size: 0.9rem;
 }
 
-.accordion-item[data-open="true"] .accordion-panel {
-  display: block;
+.space-map li.is-root .space-map__name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+
+.ui-sim__line--80 { width: 80%; }
+.ui-sim__line--70 { width: 70%; }
+.ui-sim__line--60 { width: 60%; }
+.ui-sim__line--45 { width: 45%; }
+
+/* Corrections de spécificité : composants placés dans .prose */
+.prose .ui-sim__section {
+  margin: 14px 6px 4px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.prose .ui-sim__page-title {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.prose .notion-info {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+}
+
+.prose .db-sim__scroll {
+  margin-bottom: 20px;
+}
+
+.status {
+  white-space: nowrap;
 }
 
 /* ===================================================================
-   Progression avec label — conservé de la v1, mon-parcours.html
+   Module 2 — éléments de fausse page Notion (DESIGN.md §4 « Fausse page »)
    =================================================================== */
-.progress-card {
-  background: var(--color-surface);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
-  max-width: 480px;
-}
-
-.progress-labeled-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.progress-labeled-head span:first-child {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-}
-
-.progress-labeled-head span:last-child {
-  font: 400 1.1rem/1 var(--font-display);
-  font-style: italic;
-  color: var(--color-accent);
-}
-
-.progress-labeled-track {
-  width: 100%;
-  height: 6px;
-  border-radius: 999px;
+.np-cover {
+  height: 72px;
+  margin: -20px -16px 0;
   background: var(--color-surface-2);
-  overflow: hidden;
-  margin-top: 8px;
-}
-
-.progress-labeled-fill {
-  height: 100%;
-  background: var(--color-accent);
-  border-radius: 999px;
-}
-
-/* ===================================================================
-   Checklist — conservé de la v1, affichage seul sur mon-parcours.html
-   =================================================================== */
-.checklist {
-  max-width: 480px;
-  margin-top: 20px;
-}
-
-.checklist li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
-  font-size: 0.9rem;
-}
-
-.check-box {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid var(--color-border);
-  font-size: 0.75rem;
-  color: var(--color-text-inverse);
-  flex-shrink: 0;
-}
-
-.check-box.checked {
-  background: var(--color-success);
-  border-color: var(--color-success);
-}
-
-.checklist a {
-  color: var(--color-text-muted);
-  text-decoration: none;
-  margin-left: auto;
+  gap: 8px;
   font-size: 0.8rem;
+  color: var(--color-text-muted);
 }
 
-.checklist a:hover {
-  color: var(--color-accent);
+.np-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 6px 8px;
+  border-radius: 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.np-title {
+  margin: 0 0 12px 8px;
+  font: 700 1.35rem/1.2 var(--font-body);
+}
+
+.np-h1 { font: 700 1.25rem/1.3 var(--font-body); margin: 6px 8px; }
+.np-h2 { font: 600 1.05rem/1.3 var(--font-body); margin: 14px 8px 6px; }
+.np-text { margin: 4px 8px; font-size: 0.95rem; }
+
+.np-callout {
+  display: flex;
+  gap: 10px;
+  margin: 10px 8px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  font-size: 0.95rem;
+}
+
+.np-quote {
+  margin: 10px 8px;
+  padding-left: 14px;
+  border-left: 3px solid var(--color-text);
+  font-size: 0.95rem;
+}
+
+.np-divider {
+  margin: 14px 8px;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.np-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 8px;
+  font-size: 0.9rem;
+}
+
+/* Bascule : <details> natif, accessible au clavier */
+.np-toggle {
+  margin: 6px 8px;
+  font-size: 0.95rem;
+}
+
+.np-toggle > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  border-radius: 6px;
+}
+
+.np-toggle > summary::-webkit-details-marker {
+  display: none;
+}
+
+.np-toggle > summary::before {
+  content: "▸";
+  color: var(--color-text-muted);
+  transition: transform 150ms ease;
+}
+
+.np-toggle[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.np-toggle > div {
+  padding: 4px 0 4px 22px;
+}
+
+.np-toggle > div p {
+  margin: 4px 0;
+}
+
+/* Checklist cliquable */
+.np-todo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 8px;
+  padding: 4px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  accent-color: var(--color-accent);
+}
+
+.np-todo input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.np-todo:has(input:checked) span {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.np-tag {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
 }
 
 /* ===================================================================
-   Bouton "Marquer comme lu" — index.html / methode.html
+   Menu « / » simulé
    =================================================================== */
-.mark-read-btn {
-  display: inline-block;
-  margin-top: 20px;
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  padding: 8px 16px;
-  font: 600 0.8rem var(--font-body);
+.slash-sim__row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+}
+
+.slash-sim__slash {
+  font-weight: 600;
+}
+
+.slash-sim__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
   background: transparent;
+  font: inherit;
   color: var(--color-text);
+  padding: 4px 0;
+}
+
+.slash-sim__input:focus-visible {
+  box-shadow: none;
+}
+
+.slash-sim__row:focus-within {
+  box-shadow: var(--focus-ring);
+}
+
+.slash-sim__menu {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 6px;
+  max-width: 300px;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+  font-size: 0.9rem;
+}
+
+.slash-sim__option,
+.slash-sim__empty {
+  padding: 6px 10px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.mark-read-btn[aria-pressed="true"] {
-  border-color: var(--color-success);
-  color: var(--color-success);
+.slash-sim__empty {
   cursor: default;
+  color: var(--color-text-muted);
 }
 
-.mark-read-btn:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
+.slash-sim__option.is-active {
+  background: var(--color-accent-soft);
+  font-weight: 600;
+}
+
+.slash-sim__result {
+  margin-top: 12px;
+  min-height: 8px;
+}
+
+.slash-sim__preview {
+  padding: 6px 8px;
+  border-left: 3px solid transparent;
+}
+
+.slash-sim__preview--titre-1 { font: 700 1.25rem/1.3 var(--font-body); }
+.slash-sim__preview--titre-2 { font: 600 1.05rem/1.3 var(--font-body); }
+.slash-sim__preview--titre-3 { font: 600 0.95rem/1.3 var(--font-body); }
+.slash-sim__preview--encadre { background: var(--color-bg); border-radius: var(--radius-sm); }
+.slash-sim__preview--citation { border-left-color: var(--color-text); }
+.slash-sim__preview--separateur { border-top: 1px solid var(--color-border); padding: 0; margin: 12px 0; }
+.slash-sim__preview--image { height: 64px; background: var(--color-surface-2); border-radius: var(--radius-sm); color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; }
+.slash-sim__preview--page { text-decoration: underline; }
+
+/* ===================================================================
+   Menu de la poignée simulé
+   =================================================================== */
+.block-sim__heading {
+  margin: 0 0 6px 4px;
+  font: 600 1.05rem/1.3 var(--font-body);
+}
+
+.block-sim__list {
+  list-style: none;
+  padding: 0;
+}
+
+.block-sim__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.95rem;
+}
+
+.block-sim__handle {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.block-sim__handle[aria-expanded="true"] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.block-sim__marker {
+  width: 16px;
+  text-align: center;
+}
+
+.block-sim__menu {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 8px 36px;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+}
+
+.block-sim__action {
+  min-height: 36px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.block-sim__action:hover {
+  background: var(--color-accent-soft);
+}
+
+.block-sim__empty {
+  padding: 8px 4px;
+  color: var(--color-text-muted);
+}
+
+.block-sim__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 /* ===================================================================
-   Capture d'écran Notion — cf. CLAUDE.md règle 13
+   Sous-pages simulées
    =================================================================== */
-.capture img {
+.ui-sim__nav {
   width: 100%;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(51, 29, 25, 0.05);
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
-.capture figcaption {
-  margin-top: 8px;
-  font: 400 0.8rem var(--font-body);
+.ui-sim__nav:hover {
+  background: var(--color-bg-soft);
+}
+
+.subpage-sim__back {
+  margin-bottom: 12px;
+}
+
+.subpage-sim__doc {
+  width: 18px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.subpage-sim__link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.subpage-sim__block--page .notion-block__btn {
+  cursor: pointer;
+}
+
+/* Checklist d'un exercice (sur fond foncé) */
+.exercise__checklist {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.exercise__checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-inverse-line);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  cursor: pointer;
+  accent-color: var(--color-accent-soft-2);
+}
+
+.exercise__checklist input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.exercise__checklist input:focus-visible {
+  box-shadow: var(--focus-ring-inverse);
+}
+
+.exercise__checklist label:has(input:checked) span {
+  color: var(--color-text-inverse-muted);
+  text-decoration: line-through;
+}
+
+.exercise pre {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--color-inverse-line);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: var(--color-text-inverse);
+}
+
+.exercise h4 {
+  margin: 20px 0 8px;
+  font: 600 1rem/1.3 var(--font-body);
+  color: var(--color-text-inverse);
+}
+
+.prose .result-page {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-soft);
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.module-end {
+  margin: 48px 0 20px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+.module-end h2,
+.module-quiz-title {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+.module-quiz-title {
+  margin-top: 40px;
+}
+
+/* Fausses pages Notion placées dans .prose : neutralise les marges du texte de leçon */
+.prose .notion-page p {
+  margin: 4px 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.prose .notion-page .np-title { margin: 0 0 12px 8px; font-size: 1.35rem; line-height: 1.2; }
+.prose .notion-page .np-h1 { margin: 6px 8px; font-size: 1.25rem; line-height: 1.3; }
+.prose .notion-page .np-h2 { margin: 14px 8px 6px; font-size: 1.05rem; line-height: 1.3; }
+.prose .notion-page .block-sim__heading { margin: 0 0 6px 4px; font-size: 1.05rem; }
+.prose .notion-page .ui-sim__page-title { margin: 0 0 10px; font-size: 1.3rem; }
+.prose .notion-page .ui-sim__section { margin: 14px 6px 4px; font-size: 0.75rem; }
+.prose .notion-page .np-tag { font-size: 0.75rem; }
+.prose .np-quote { margin: 10px 8px; }
+
+/* ===================================================================
+   Base « Projets » — vues supplémentaires et outils (js/db-sim.js)
+   =================================================================== */
+.db-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-soft);
+  font-size: 0.8rem;
+}
+
+.db-tools__field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.db-tools select {
+  min-height: 36px;
+  padding: 4px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font: inherit;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.db-table__group td {
+  padding: 10px 16px 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
+}
+
+.db-num {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.db-tag {
+  display: inline-block;
+  margin: 2px 4px 2px 0;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-soft);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.db-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px;
+}
+
+.db-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.db-list li:last-child {
+  border-bottom: 0;
+}
+
+.db-list__meta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.db-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  padding: 16px;
+}
+
+.db-gallery__card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--color-surface);
+  text-align: left;
+  cursor: pointer;
+}
+
+.db-gallery__card strong,
+.db-gallery__card > span:last-child {
+  padding: 0 12px;
+}
+
+.db-gallery__card > span:last-child {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.db-gallery__cover {
+  height: 70px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px 12px;
+  background: var(--color-surface-2);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.db-timeline {
+  padding: 12px 16px 16px;
+  font-size: 0.85rem;
+}
+
+.db-timeline__axis {
+  display: grid;
+  grid-template-columns: 19fr 30fr;
+  margin-left: 130px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.db-timeline__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.db-timeline__label {
+  flex: 0 0 120px;
+  font-weight: 600;
+}
+
+.db-timeline__track {
+  flex: 1;
+  min-width: 0;
+}
+
+.db-timeline__bar {
+  display: block;
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-accent-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.db-page__note {
+  margin: 16px 0 0;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
 }
 
 /* ===================================================================
-   Focus visible — liens texte (jamais d'outline supprimé sans remplacement)
+   Exercice de classement (js/sort-ex.js)
    =================================================================== */
-.section-head__link:focus-visible,
-.template-card__link:focus-visible,
-.article-card__link:focus-visible,
-.btn-outline:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(122, 90, 69, 0.35);
-  border-radius: 4px;
+.sort-ex {
+  margin: 0 0 28px;
 }
+
+.sort-ex__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+}
+
+.sort-ex__label {
+  flex: 1 1 220px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.sort-ex select {
+  flex: 0 1 240px;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.sort-ex__row.is-correct {
+  border-color: var(--color-success);
+  background: var(--color-accent-soft-2);
+}
+
+.sort-ex__row.is-wrong {
+  border-color: var(--color-error);
+  background: var(--color-accent-soft);
+}
+
+.prose .sort-ex__feedback,
+.sort-ex__feedback {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.sort-ex__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.prose .sort-ex__score,
+.sort-ex__score {
+  margin: 12px 0 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Comparatif d'espaces (module 6) */
+.space-compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
+.space-compare .notion-page ul {
+  list-style: none;
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+/* ---------- Recherche simulée (module 3) ---------- */
+.prose .search-sim__field {
+  margin: 0 0 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 8px);
+  background: var(--color-surface);
+  font-weight: 600;
+}
+.prose .search-sim__results { list-style: none; margin: 12px 0 0; padding: 0; }
+.prose .search-sim__results li {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--color-border);
+}
+.prose .search-sim__results li:first-child { background: var(--color-bg); border-radius: 6px; border-top: 0; }
+.prose .search-sim__results mark { background: var(--color-surface-2); color: inherit; padding: 0 2px; }
+
+/* Chemin ou extrait affiché tel quel dans le texte d'une leçon */
+.prose > pre {
+  margin: 0 0 1em;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm, 8px);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Espace sous une base simulée, avant le paragraphe suivant */
+.prose [data-db] { margin-bottom: 1.25em; }
+.prose > .notion-page { margin-bottom: 1.25em; }

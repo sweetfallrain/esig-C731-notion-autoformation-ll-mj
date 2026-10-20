@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les 5 parties de Studio Nova — Module 6 — Notion pour l'entreprise</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+<script src="../js/notion-sim.js" defer></script>
+<script src="../js/block-sims.js" defer></script>
+<script src="../js/db-sim.js" defer></script>
+<script src="../js/sort-ex.js" defer></script>
+</head>
+<body data-lesson="m6-l1" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <span class="brand__logo" aria-hidden="true">N</span>
+        <span class="brand__name">Notion pour l'entreprise</span>
+      </a>
+      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li><a href="../index.html#programme">La formation</a></li>
+            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
+            <li><a href="../index.html#methode">La méthode</a></li>
+          </ul>
+          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du cours</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m6">Construire un espace pro</a> · Leçon 1 sur 4 · 6 min</p>
+      <h1>Les 5 parties de Studio Nova</h1>
+      <p class="course-panel__lead">À la fin de cette leçon, tu sauras organiser un espace en quelques grandes parties, chacune avec un rôle clair, et tu auras créé la base « Tâches ».</p>
+
+      <nav class="lesson-steps" aria-label="Étapes de la leçon">
+        <ol class="lesson-steps__list">
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+        </ol>
+      </nav>
+
+      <!-- ===================== Étape 1 : Comprendre ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+        <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
+        <p>Tu connais maintenant toutes les briques : pages, blocs, sous-pages, liens, bases et vues. Ce module t'apprend à les <strong>assembler</strong> en un espace où toute l'équipe s'y retrouve.</p>
+        <p>Un bon espace n'est pas le plus rempli : c'est celui où chacun trouve vite ce qu'il cherche. Pour Studio Nova, cinq parties suffisent, chacune avec un rôle précis :</p>
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Les cinq parties de Studio Nova</caption>
+            <thead><tr><th scope="col">Partie</th><th scope="col">Forme</th><th scope="col">Rôle</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Accueil</strong></td><td>Page</td><td>Le point de départ : un mot d'accueil, des liens, les tâches de la semaine.</td></tr>
+              <tr><td><strong>Projets</strong></td><td>Base de données</td><td>Un projet par entrée : client, statut, responsable, échéance.</td></tr>
+              <tr><td><strong>Tâches</strong></td><td>Base de données</td><td>Les actions concrètes : qui fait quoi, pour quand.</td></tr>
+              <tr><td><strong>Ressources</strong></td><td>Page</td><td>Les documents utiles à tous : modèles, logos, procédures.</td></tr>
+              <tr><td><strong>Notes &amp; réunions</strong></td><td>Page</td><td>Un compte rendu par réunion, rangé en sous-pages.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La règle d'or : <strong>chaque information a une seule place</strong>. Une tâche va dans « Tâches », pas dans un compte rendu de réunion et dans l'accueil en même temps. Si elle doit apparaître ailleurs, on fait un lien ou une vue, pas une copie.</p>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m06-cinq-parties.svg" alt="Schéma : la page « Studio Nova » se divise en cinq parties : Accueil (page, le point de départ de chacun), Projets (base de données, les mandats des clients), Tâches (base de données, qui fait quoi pour quand), Ressources (page, modèles, logos, procédures) et Notes et réunions (page, un compte rendu par réunion)." width="720" height="320">
+          <figcaption>L'espace Studio Nova en cinq parties.</figcaption>
+        </figure>
+        <p class="definition">Un espace clair a peu de parties, chacune avec un rôle unique ; chaque information n'a qu'une seule place.</p>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Astuce :</strong> cinq à sept grandes parties, c'est le bon ordre de grandeur pour une petite équipe. Au-delà, on commence à hésiter sur l'endroit où ranger une page.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 2 : Voir ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
+        <h2 id="etape-2">Espace A ou espace B ?</h2>
+        <p>Voici deux espaces avec à peu près le même contenu. Lequel donnerais-tu à un nouveau collègue ?</p>
+        <div class="space-compare">
+          <div class="notion-page" role="group" aria-label="Espace A, non organisé">
+            <div class="notion-page__bar"><strong>Espace A</strong><span class="notion-page__tag">Simulation</span></div>
+            <ul>
+              <li>Nouvelle page</li><li>notes 3</li><li>Projets 2026 (copie)</li><li>Projets</li><li>Logo Luna final FINAL</li><li>réunion</li><li>À faire Emma</li><li>À faire Lucas</li><li>Sans titre</li><li>Procédure facture</li>
+            </ul>
+          </div>
+          <div class="notion-page" role="group" aria-label="Espace B, organisé">
+            <div class="notion-page__bar"><strong>Espace B</strong><span class="notion-page__tag">Simulation</span></div>
+            <ul>
+              <li>Studio Nova</li><li>├─ Accueil — Studio Nova</li><li>├─ Projets</li><li>├─ Tâches</li><li>├─ Ressources</li><li>└─ Notes &amp; réunions</li>
+            </ul>
+          </div>
+        </div>
+        <p>Dans l'espace A, dix pages au même niveau, des doublons (« Projets » et sa copie), des titres qui ne disent rien et une liste de tâches par personne. Dans l'espace B, cinq parties : les tâches d'Emma et de Lucas sont dans la même base « Tâches », avec un filtre par responsable. Tu sais où aller avant même de cliquer.</p>
+      </section>
+
+      <!-- ===================== Étape 3 : Faire ===================== -->
+      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+        <h2 id="etape-3">Compléter l'espace avec « Tâches »</h2>
+        <p>Il manque une partie à ton espace Studio Nova : la base « Tâches ». Crée-la, puis vérifie que les cinq parties sont en place.</p>
+        <ol class="tutorial">
+          <li>Dans « Studio Nova », crée une sous-page « Tâches ».</li>
+          <li>Transforme-la en base pleine page avec un Tableau, comme pour « Projets » au module 4.</li>
+          <li>Crée les propriétés : Statut (Statut), Responsable (Personne), Échéance (Date).</li>
+          <li>Ajoute trois tâches : « Finaliser la maquette du site Orion », « Préparer la réunion client », « Mettre à jour les ressources ».</li>
+          <li>Ajoute une vue Board « Suivi » et une vue Tableau « Mes tâches » filtrée sur « Responsable est moi ».
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Tâches » avec ses trois tâches et les onglets de vues « Toutes les tâches », « Suivi » et « Mes tâches »">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Base Tâches et ses vues · images/captures/m06-base-taches.png</span>
+              </div>
+            </figure></li>
+          <li>Dans la barre latérale, déplie « Studio Nova » et vérifie les cinq parties.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la barre latérale avec « Studio Nova » déplié et ses cinq parties">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Les cinq parties dans la barre latérale · images/captures/m06-cinq-parties-barre-laterale.png</span>
+              </div>
+            </figure></li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> si tu avais déjà des listes de tâches éparpillées dans plusieurs pages (comme « À faire Emma » dans l'espace A), ne garde pas les deux systèmes. Recopie les tâches dans la base, puis supprime les anciennes listes.</p>
+        </div>
+
+        <div class="exercise">
+          <p class="exercise__kicker">Exercice · dans Notion</p>
+          <h3>Les cinq parties de Studio Nova</h3>
+          <ol>
+            <li>Crée la base « Tâches » avec ses trois propriétés et ses trois tâches.</li>
+            <li>Ajoute les vues « Suivi » et « Mes tâches ».</li>
+            <li>Vérifie que « Studio Nova » contient exactement : Accueil, Projets, Tâches, Ressources, Notes &amp; réunions.</li>
+          </ol>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> dans la barre latérale, « Studio Nova » se déplie sur cinq parties et rien d'autre. « Tâches » affiche trois tâches et trois vues. Aucune page en vrac ne traîne à côté.</p>
+        </div>
+      </section>
+
+      <!-- ===================== Étape 4 : Vérifier ===================== -->
+      <section class="lesson-step" data-step aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+        <div class="key-points">
+          <h2 id="etape-4-titre">À retenir</h2>
+          <ul>
+            <li>Un bon espace a peu de grandes parties, chacune avec un rôle unique.</li>
+            <li>Chaque information n'a qu'une seule place ; ailleurs, on fait un lien ou une vue.</li>
+            <li>Studio Nova : Accueil, Projets, Tâches, Ressources, Notes & réunions.</li>
+          </ul>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Emma et Lucas ont chacun leur page « À faire ». Que leur conseilles-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Garder deux pages, c'est plus personnel.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Une seule base « Tâches », avec une vue filtrée par responsable.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Copier les tâches de l'un chez l'autre.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une base unique évite les doublons ; chacun voit ses tâches grâce à une vue filtrée.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="quiz" data-quiz>
+          <fieldset>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Une information doit apparaître dans l'accueil et dans les projets. Que fais-tu ?</span></legend>
+            <div class="quiz__options">
+              <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Je l'écris aux deux endroits.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">Je la range à une seule place et je fais un lien ou une vue ailleurs.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Je la mets en gras pour qu'on la remarque.</span><span class="quiz__tag"></span></label>
+            </div>
+          </fieldset>
+          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une seule place, des liens ailleurs : sinon les deux versions finissent par se contredire.</p>
+          <div class="quiz__actions">
+            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
+            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
+          </div>
+        </div>
+
+        <div class="lesson-done">
+          <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+        </div>
+      </section>
+
+      <div class="lesson-nav lesson-nav--steps">
+        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
+        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
+        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion pour l'entreprise · Formation interne</span>
+      <span>Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>
