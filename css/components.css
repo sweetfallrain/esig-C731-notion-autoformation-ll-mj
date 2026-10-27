@@ -2100,6 +2100,12 @@ html:not(.js) .lesson-nav__prev {
   hyphens: auto;
 }
 
+/* « Étape 2 sur 4 · Voir », sous la ligne du module */
+.lesson-step-indicator {
+  margin: 4px 0 0;
+  color: var(--color-accent);
+}
+
 /* Boutons du bas : précédent à gauche, suivant à droite */
 .lesson-nav__next {
   margin-left: auto;

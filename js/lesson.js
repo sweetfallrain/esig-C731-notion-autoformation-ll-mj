@@ -6,6 +6,9 @@
    - Chaque étape a une adresse : lecon.html#comprendre, #voir, #faire,
      #verifier. Un lien vers ces adresses ouvre l'étape correspondante.
    - Chaque changement d'étape ramène en haut de la page.
+   - Sous le module, « Étape 2 sur 4 · Voir » indique l'étape en cours.
+   - Cliquer sur « Chapitre suivant » / « Module suivant » / « Retour aux
+     modules » (dernière étape) marque la leçon comme terminée.
    - Les étapes sont listées dans le sommaire latéral (course-toc.js) ;
      la carte de leçon n'affiche plus d'onglets.
    - Événement émis : « lesson:step » { index, slug } (lu par le sommaire).
@@ -61,6 +64,21 @@
     const finalTarget = nextTarget(lesson);
     let current = 0;
 
+    // Indicateur d'étape, placé juste sous la ligne du module
+    const indicator = document.createElement('p');
+    indicator.className = 'meta lesson-step-indicator';
+    indicator.setAttribute('aria-live', 'polite');
+    const meta = document.querySelector('[data-lesson-meta]');
+    if (meta) {
+      meta.insertAdjacentElement('afterend', indicator);
+    }
+
+    if (next) {
+      next.addEventListener('click', function () {
+        if (current === last) { Progress.setDone(lesson.id, true); }
+      });
+    }
+
     function indexFromHash() {
       const slug = decodeURIComponent((window.location.hash || '').replace('#', ''));
       return slugs.indexOf(slug);
@@ -91,6 +109,7 @@
       steps.forEach(function (step, i) { step.hidden = i !== current; });
 
       updateNav();
+      indicator.textContent = 'Étape ' + (current + 1) + ' sur ' + steps.length + ' · ' + labels[current];
 
       if (moveFocus) {
         const heading = steps[current].querySelector('h2');
