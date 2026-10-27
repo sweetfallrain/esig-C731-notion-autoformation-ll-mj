@@ -2119,6 +2119,18 @@ html:not(.js) .lesson-nav__prev {
   text-align: right;
 }
 
+/* Titre de leçon séparé du contenu par une barre (l'objectif est à l'étape Vérifier) */
+body[data-lesson] .course-panel h1 {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Objectif de la leçon, en tête de « À retenir » */
+.key-points__goal {
+  margin: 0 0 12px;
+}
+
 /* Boutons du bas : précédent à gauche, suivant à droite */
 .lesson-nav__next {
   margin-left: auto;

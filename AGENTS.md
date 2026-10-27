@@ -165,13 +165,14 @@ Fichier `lecons/mXX-lYY-slug.html`, copié depuis la leçon gabarit. Le
 `<body>` porte `data-lesson="mX-lY"` ; le sommaire, la progression et les
 boutons précédent/suivant se génèrent depuis `course-data.js`.
 
-En tête : fil d'Ariane (module · leçon x sur y · durée), H1, objectif
-(« À la fin de cette leçon, tu sauras… »), repère d'étapes. Puis 4 étapes :
+En tête : ligne du module (module · durée) avec « Étape x sur 4 » à droite,
+puis H1 séparé du contenu par une barre. Puis 4 étapes :
 
 1. **Comprendre** — introduction (2-4 phrases), explication, **image explicative** (schéma SVG ou capture annotée), définition, erreur fréquente (bandeau Attention).
 2. **Voir** — exemple Studio Nova, idéalement une simulation interactive.
 3. **Faire** — tutoriel pas à pas avec captures, astuce (bandeau Astuce), mini-exercice + résultat attendu.
-4. **Vérifier** — À retenir (2-4 idées), mini-quiz (1-3 questions, correction expliquée), bouton « Marquer comme terminée ».
+4. **Vérifier** — À retenir, précédé de l'objectif de la leçon (« Objectif de
+   la leçon : tu sais maintenant… »), 2-4 idées, mini-quiz (1-3 questions, correction expliquée), bouton « Marquer comme terminée ».
 
 ## Règles impératives
 
@@ -247,6 +248,8 @@ Retours de relecture de l'utilisatrice (branche `corrections-accueil-module1`).
   « Chapitre suivant » (ou « Module suivant », ou « Retour aux modules ») à la
   dernière étape ; ce clic marque aussi la leçon comme terminée. À droite de la
   ligne du module, « Étape 2 sur 4 · Voir » indique l'étape en cours. **[confirmé]**
+- **Objectif de la leçon** : retiré du haut de la carte (remplacé par une barre
+  sous le titre) et placé en tête de « À retenir », à l'étape Vérifier. **[confirmé]**
 - **Quiz** : réponses sauvegardées dans le navigateur
   (`notion-formation:quiz:<leçon>:<n>`), effacées par « Recommencer ». Le site
   reste statique : la sauvegarde est propre à un appareil et un navigateur.
