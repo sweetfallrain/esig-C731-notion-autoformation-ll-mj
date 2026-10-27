@@ -264,6 +264,15 @@ Retours de relecture de l'utilisatrice (branche `corrections-accueil-module1`).
   Corbeille, des Paramètres et des Modèles (en bas de la barre latérale selon
   l'aide Notion, mais absents de la capture), « + » au survol de « Pages
   privées », filtres de la recherche (m03-l04).
+- **Modules 2 à 9 relus avec l'aide officielle Notion (oct. 2026)**, sans captures :
+  « + Nouveau » pour ajouter une entrée, création de base par « /base de données »
+  ou « Tableau » sous le titre d'une page vide, filtres / tris / regroupement et
+  « Visibilité des propriétés » dans le menu des réglages de la vue,
+  « Enregistrer pour tous », « Nouvelle vue » sur écran étroit, icône de lien en
+  haut à droite. Libellés français déduits de l'anglais, **à vérifier** pendant la
+  réalisation des captures, ainsi que : commande « /vue liée » (m06-l03),
+  colonnes par défaut « Nom » / « Étiquettes » (m04-l02), options par défaut du
+  type Statut (m04-l05), vues Graphique et Formulaire non présentées (m05).
 
 ### v4 — plateforme de formation (oct. 2026)
 
