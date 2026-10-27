@@ -2100,10 +2100,23 @@ html:not(.js) .lesson-nav__prev {
   hyphens: auto;
 }
 
-/* « Étape 2 sur 4 · Voir », sous la ligne du module */
+/* Ligne du module (à gauche) et « Étape 2 sur 4 · Voir » (à droite) */
+.lesson-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.lesson-topline .meta {
+  margin: 0;
+}
+
 .lesson-step-indicator {
-  margin: 4px 0 0;
+  margin-left: auto;
   color: var(--color-accent);
+  text-align: right;
 }
 
 /* Boutons du bas : précédent à gauche, suivant à droite */

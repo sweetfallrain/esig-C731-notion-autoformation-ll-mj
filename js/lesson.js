@@ -6,7 +6,7 @@
    - Chaque étape a une adresse : lecon.html#comprendre, #voir, #faire,
      #verifier. Un lien vers ces adresses ouvre l'étape correspondante.
    - Chaque changement d'étape ramène en haut de la page.
-   - Sous le module, « Étape 2 sur 4 · Voir » indique l'étape en cours.
+   - À droite de la ligne du module, « Étape 2 sur 4 · Voir » indique l'étape en cours.
    - Cliquer sur « Chapitre suivant » / « Module suivant » / « Retour aux
      modules » (dernière étape) marque la leçon comme terminée.
    - Les étapes sont listées dans le sommaire latéral (course-toc.js) ;
@@ -64,13 +64,17 @@
     const finalTarget = nextTarget(lesson);
     let current = 0;
 
-    // Indicateur d'étape, placé juste sous la ligne du module
+    // Indicateur d'étape, sur la même ligne que le module, aligné à droite
     const indicator = document.createElement('p');
     indicator.className = 'meta lesson-step-indicator';
     indicator.setAttribute('aria-live', 'polite');
     const meta = document.querySelector('[data-lesson-meta]');
     if (meta) {
-      meta.insertAdjacentElement('afterend', indicator);
+      const row = document.createElement('div');
+      row.className = 'lesson-topline';
+      meta.parentNode.insertBefore(row, meta);
+      row.appendChild(meta);
+      row.appendChild(indicator);
     }
 
     if (next) {

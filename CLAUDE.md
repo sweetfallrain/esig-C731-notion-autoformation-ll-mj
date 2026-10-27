@@ -245,8 +245,8 @@ Retours de relecture de l'utilisatrice (branche `corrections-accueil-module1`).
   leçon ouverte et un bouton « Les modules ». Boutons du bas : « Étape
   précédente » à gauche (absent à l'étape 1), « Étape suivante » à droite, puis
   « Chapitre suivant » (ou « Module suivant », ou « Retour aux modules ») à la
-  dernière étape ; ce clic marque aussi la leçon comme terminée. Sous la ligne
-  du module, « Étape 2 sur 4 · Voir » indique l'étape en cours. **[confirmé]**
+  dernière étape ; ce clic marque aussi la leçon comme terminée. À droite de la
+  ligne du module, « Étape 2 sur 4 · Voir » indique l'étape en cours. **[confirmé]**
 - **Quiz** : réponses sauvegardées dans le navigateur
   (`notion-formation:quiz:<leçon>:<n>`), effacées par « Recommencer ». Le site
   reste statique : la sauvegarde est propre à un appareil et un navigateur.
