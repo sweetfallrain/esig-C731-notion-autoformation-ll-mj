@@ -24,60 +24,6 @@
   line-height: 1.8;
 }
 
-/* ===================================================================
-   Repère d'étapes — DESIGN.md §4 « Repère d'étapes »
-   =================================================================== */
-.lesson-steps {
-  margin: 0 0 36px;
-}
-
-.lesson-steps__list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.lesson-steps__btn {
-  width: 100%;
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-  color: var(--color-text-muted);
-}
-
-.lesson-steps__btn::before {
-  content: "";
-  display: block;
-  height: 4px;
-  border-radius: var(--radius-pill);
-  background: var(--color-border);
-  margin-bottom: 10px;
-  transition: background-color 150ms ease;
-}
-
-.lesson-steps__btn.is-reached::before {
-  background: var(--color-accent);
-}
-
-.lesson-steps__btn[aria-current="step"] {
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-.lesson-steps__num {
-  font: italic 400 1rem/1 var(--font-display);
-  margin-right: 4px;
-}
-
-.lesson-steps__label {
-  font-size: 0.85rem;
-}
-
 .lesson-step + .lesson-step {
   margin-top: 40px;
 }
@@ -914,7 +860,6 @@
 .panel__lead {
   margin: 0 0 28px;
   color: var(--color-text-muted);
-  max-width: 640px;
 }
 
 .program {
@@ -1119,7 +1064,6 @@
   display: block;
 }
 
-html:not(.js) .lesson-steps,
 html:not(.js) .lesson-nav__prev {
   display: none;
 }
@@ -2140,78 +2084,20 @@ html:not(.js) .lesson-nav__prev {
    v5 — corrections (oct. 2026)
    =================================================================== */
 
-/* Texte justifié partout, avec césure française (lang="fr") */
-p,
-li,
-dd,
-.compare td,
-.quiz__option-text {
+/* Texte justifié dans les leçons (colonne large), avec césure française.
+   L'accueil reste aligné à gauche : ses colonnes étroites créeraient de grands espaces. */
+.course-panel__lead,
+.prose p,
+.prose li,
+.callout p,
+.exercise p,
+.exercise li,
+.key-points li,
+.quiz__feedback,
+.module-list__body > p {
   text-align: justify;
   -webkit-hyphens: auto;
   hyphens: auto;
-}
-
-/* Haut de la carte de leçon : module à gauche, onglets d'étapes à droite */
-.course-panel__top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px 24px;
-}
-
-.course-panel__top .meta {
-  margin: 0;
-}
-
-.course-panel__top .lesson-steps {
-  margin: 0 0 0 auto;
-  max-width: 100%;
-}
-
-.course-panel__top .lesson-steps__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 4px;
-  background: var(--color-surface-2);
-  border-radius: var(--radius-pill);
-}
-
-.course-panel__top .lesson-steps__btn {
-  width: auto;
-  min-height: 36px;
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  text-align: center;
-  white-space: nowrap;
-  transition: background-color 150ms ease, color 150ms ease;
-}
-
-.course-panel__top .lesson-steps__btn::before {
-  display: none;
-}
-
-.course-panel__top .lesson-steps__btn:hover {
-  color: var(--color-text);
-}
-
-.course-panel__top .lesson-steps__btn[aria-current="step"] {
-  background: var(--color-surface);
-  box-shadow: var(--shadow-1);
-}
-
-.course-panel__top .lesson-steps__num {
-  margin-right: 6px;
-  font-size: 0.8rem;
-  color: var(--color-accent);
-}
-
-/* Numéro de la leçon devant le titre (1.1, 1.2…) */
-.lesson-number {
-  margin-right: 10px;
-  font-style: italic;
-  color: var(--color-accent);
 }
 
 /* Boutons du bas : précédent à gauche, suivant à droite */
@@ -2232,25 +2118,6 @@ dd,
 
 .course-layout--single .course-panel {
   max-width: 860px;
-}
-
-@media (max-width: 599px) {
-  .course-panel__top .lesson-steps,
-  .course-panel__top .lesson-steps__list {
-    width: 100%;
-  }
-
-  .course-panel__top .lesson-steps__list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    border-radius: var(--radius-md);
-  }
-
-  .course-panel__top .lesson-steps__btn {
-    width: 100%;
-    padding: 6px 4px;
-    border-radius: 10px;
-  }
 }
 
 @media (min-width: 1024px) {

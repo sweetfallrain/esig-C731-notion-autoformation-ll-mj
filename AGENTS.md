@@ -237,8 +237,9 @@ Retours de relecture de l'utilisatrice (branche `corrections-accueil-module1`).
   `images/captures/accueil-espace-finalise.png` (espace Notion finalisé) ;
   bouton « Voir le programme » supprimé ; descriptions du programme allongées
   pour remplir les cartes. **[confirmé]**
-- **Leçons** : numérotation partout (module 1 → leçon 1.1 → étapes 1.1.1 à
-  1.1.4) ; onglets d'étapes en haut à droite de la carte ; chaque étape a son
+- **Leçons** : numérotation dans le sommaire latéral (module 1 → leçon 1.1 →
+  étapes 1.1.1 à 1.1.4), pas devant le titre ; plus d'onglets d'étapes sur la
+  carte (les étapes se choisissent dans le sommaire) ; chaque étape a son
   adresse (`#comprendre`, `#voir`, `#faire`, `#verifier`) et s'ouvre en haut de
   page ; le sommaire latéral ne montre que le module en cours, les étapes de la
   leçon ouverte et un bouton « Les modules ». Boutons du bas : « Étape
@@ -249,7 +250,8 @@ Retours de relecture de l'utilisatrice (branche `corrections-accueil-module1`).
   (`notion-formation:quiz:<leçon>:<n>`), effacées par « Recommencer ». Le site
   reste statique : la sauvegarde est propre à un appareil et un navigateur.
   **[confirmé]**
-- **Texte justifié** partout, avec césure automatique. **[confirmé]**
+- **Texte justifié** dans les leçons, avec césure automatique ; l'accueil reste
+  aligné à gauche (colonnes trop étroites, mots trop espacés). **[confirmé]**
 - **Interface Notion 2026** : leçon 1.2 réécrite d'après une capture de
   l'interface actuelle (icônes Boîte de réception / Nouvel élément en haut,
   « Chercher ou demander », onglets, « Pages partagées » / « Pages privées »,

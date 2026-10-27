@@ -80,14 +80,6 @@
 }
 
 @media (max-width: 479px) {
-  .lesson-steps__num {
-    display: none;
-  }
-
-  .lesson-steps__label {
-    font-size: 0.75rem;
-  }
-
   .module-list__body {
     padding-left: 4px;
   }

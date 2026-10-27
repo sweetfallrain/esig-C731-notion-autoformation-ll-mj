@@ -35,10 +35,10 @@
       .replace(/^-|-$/g, '');
   }
 
-  /** Libellés des étapes de la leçon ouverte, lus dans le repère d'étapes. */
+  /** Libellés des étapes de la leçon ouverte (une section [data-step] par étape). */
   function stepLabels() {
-    return Array.from(document.querySelectorAll('[data-step-target]'))
-      .map(function (button) { return button.dataset.stepLabel; });
+    const labels = ['Comprendre', 'Voir', 'Faire', 'Vérifier'];
+    return labels.slice(0, document.querySelectorAll('[data-step]').length);
   }
 
   function render(container) {

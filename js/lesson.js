@@ -6,6 +6,8 @@
    - Chaque étape a une adresse : lecon.html#comprendre, #voir, #faire,
      #verifier. Un lien vers ces adresses ouvre l'étape correspondante.
    - Chaque changement d'étape ramène en haut de la page.
+   - Les étapes sont listées dans le sommaire latéral (course-toc.js) ;
+     la carte de leçon n'affiche plus d'onglets.
    - Événement émis : « lesson:step » { index, slug } (lu par le sommaire).
    =================================================================== */
 (function () {
@@ -13,6 +15,7 @@
 
   const Course = window.NotionCourse;
   const Progress = window.NotionProgress;
+  const STEP_LABELS = ['Comprendre', 'Voir', 'Faire', 'Vérifier'];
 
   if ('scrollRestoration' in window.history) {
     window.history.scrollRestoration = 'manual';
@@ -47,22 +50,16 @@
   }
 
   function setupSteps(lesson) {
-    const buttons = Array.from(document.querySelectorAll('[data-step-target]'));
     const steps = Array.from(document.querySelectorAll('[data-step]'));
     const prev = document.querySelector('[data-nav-prev]');
     const next = document.querySelector('[data-nav-next]');
     if (steps.length === 0) { return; }
 
-    const labels = buttons.map(function (button) { return button.dataset.stepLabel; });
+    const labels = STEP_LABELS.slice(0, steps.length);
     const slugs = labels.map(slugify);
     const last = steps.length - 1;
     const finalTarget = nextTarget(lesson);
     let current = 0;
-
-    buttons.forEach(function (button, i) {
-      const num = button.querySelector('.lesson-steps__num');
-      if (num) { num.textContent = lesson.number + '.' + (i + 1); }
-    });
 
     function indexFromHash() {
       const slug = decodeURIComponent((window.location.hash || '').replace('#', ''));
@@ -92,14 +89,6 @@
       current = Math.max(0, Math.min(index, last));
 
       steps.forEach(function (step, i) { step.hidden = i !== current; });
-      buttons.forEach(function (button, i) {
-        button.classList.toggle('is-reached', i <= current);
-        if (i === current) {
-          button.setAttribute('aria-current', 'step');
-        } else {
-          button.removeAttribute('aria-current');
-        }
-      });
 
       updateNav();
 
@@ -124,10 +113,6 @@
       }
       show(index, true);
     }
-
-    buttons.forEach(function (button, i) {
-      button.addEventListener('click', function () { go(i); });
-    });
 
     // Tout lien vers « #voir », « #faire »… (boutons du bas, sommaire latéral) ouvre l'étape.
     document.addEventListener('click', function (event) {
@@ -175,15 +160,6 @@
       link.textContent = 'Module ' + lesson.moduleNumber + ' · ' + lesson.moduleTitle;
       meta.appendChild(link);
       meta.appendChild(document.createTextNode(' · ' + lesson.minutes + ' min'));
-    }
-
-    const title = document.querySelector('.course-panel h1');
-    if (title && !title.querySelector('.lesson-number')) {
-      const num = document.createElement('span');
-      num.className = 'lesson-number';
-      num.textContent = lesson.number;
-      title.insertBefore(document.createTextNode(' '), title.firstChild);
-      title.insertBefore(num, title.firstChild);
     }
   }
 
