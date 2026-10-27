@@ -1119,14 +1119,8 @@
   display: block;
 }
 
-.lesson-nav + .lesson-nav {
-  margin-top: 16px;
-  padding-top: 0;
-  border-top: 0;
-}
-
 html:not(.js) .lesson-steps,
-html:not(.js) .lesson-nav--steps {
+html:not(.js) .lesson-nav__prev {
   display: none;
 }
 
@@ -2140,3 +2134,127 @@ html:not(.js) .lesson-nav--steps {
 /* Espace sous une base simulée, avant le paragraphe suivant */
 .prose [data-db] { margin-bottom: 1.25em; }
 .prose > .notion-page { margin-bottom: 1.25em; }
+
+
+/* ===================================================================
+   v5 — corrections (oct. 2026)
+   =================================================================== */
+
+/* Texte justifié partout, avec césure française (lang="fr") */
+p,
+li,
+dd,
+.compare td,
+.quiz__option-text {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Haut de la carte de leçon : module à gauche, onglets d'étapes à droite */
+.course-panel__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.course-panel__top .meta {
+  margin: 0;
+}
+
+.course-panel__top .lesson-steps {
+  margin: 0 0 0 auto;
+  max-width: 100%;
+}
+
+.course-panel__top .lesson-steps__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-pill);
+}
+
+.course-panel__top .lesson-steps__btn {
+  width: auto;
+  min-height: 36px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.course-panel__top .lesson-steps__btn::before {
+  display: none;
+}
+
+.course-panel__top .lesson-steps__btn:hover {
+  color: var(--color-text);
+}
+
+.course-panel__top .lesson-steps__btn[aria-current="step"] {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-1);
+}
+
+.course-panel__top .lesson-steps__num {
+  margin-right: 6px;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+}
+
+/* Numéro de la leçon devant le titre (1.1, 1.2…) */
+.lesson-number {
+  margin-right: 10px;
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* Boutons du bas : précédent à gauche, suivant à droite */
+.lesson-nav__next {
+  margin-left: auto;
+}
+
+/* Accueil : emplacement de l'image d'un espace Notion finalisé */
+.home-hero__visual.screenshot .screenshot__placeholder {
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow-1);
+}
+
+/* Page Les modules : une seule colonne centrée */
+.course-layout--single {
+  align-items: center;
+}
+
+.course-layout--single .course-panel {
+  max-width: 860px;
+}
+
+@media (max-width: 599px) {
+  .course-panel__top .lesson-steps,
+  .course-panel__top .lesson-steps__list {
+    width: 100%;
+  }
+
+  .course-panel__top .lesson-steps__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-radius: var(--radius-md);
+  }
+
+  .course-panel__top .lesson-steps__btn {
+    width: 100%;
+    padding: 6px 4px;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .course-layout--single {
+    justify-content: center;
+  }
+}

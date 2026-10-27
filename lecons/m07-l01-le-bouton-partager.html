@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le bouton Partager — Module 7 — Notion pour l'entreprise</title>
+<title>Le bouton Partager — Module 7 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/layout.css">
@@ -27,19 +27,11 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="brand">
-        <span class="brand__logo" aria-hidden="true">N</span>
-        <span class="brand__name">Notion pour l'entreprise</span>
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
       </a>
-      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
-        <div class="site-nav__inner">
-          <ul class="site-nav__list">
-            <li><a href="../index.html#programme">La formation</a></li>
-            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
-            <li><a href="../index.html#methode">La méthode</a></li>
-          </ul>
-          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
-        </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
       </nav>
     </div>
   </header>
@@ -48,31 +40,32 @@
 
     <aside class="course-toc" aria-label="Modules et leçons">
       <details class="course-toc__details" open>
-        <summary>Sommaire du cours</summary>
+        <summary>Sommaire du module</summary>
         <div class="course-toc__body" data-course-toc>
-          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
         </div>
       </details>
     </aside>
 
     <main id="contenu" class="course-panel">
-      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m7">Partager et collaborer</a> · Leçon 1 sur 4 · 4 min</p>
+      <div class="course-panel__top">
+        <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m7">Partager et collaborer</a> · Leçon 1 sur 4 · 4 min</p>
+        <nav class="lesson-steps" aria-label="Étapes de la leçon">
+          <ol class="lesson-steps__list">
+            <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
+            <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
+            <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
+            <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
+          </ol>
+        </nav>
+      </div>
       <h1>Le bouton Partager</h1>
       <p class="course-panel__lead">À la fin de cette leçon, tu sauras te repérer dans le menu Partager et faire la différence entre partager et publier.</p>
-
-      <nav class="lesson-steps" aria-label="Étapes de la leçon">
-        <ol class="lesson-steps__list">
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
-        </ol>
-      </nav>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
       <section class="lesson-step prose" data-step aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Jusqu'ici, ton espace Studio Nova était dans « Privé » : toi seul le voyais. Pour travailler en équipe, il faut <strong>partager</strong>. Tout se passe dans un seul bouton : <strong>« Partager »</strong> (<em>Share</em>), en haut à droite de chaque page.</p>
+        <p>Jusqu'ici, ton espace Studio Nova était dans « Pages privées » : toi seul le voyais. Pour travailler en équipe, il faut <strong>partager</strong>. Tout se passe dans un seul bouton : <strong>« Partager »</strong> (<em>Share</em>), en haut à droite de chaque page.</p>
         <p>Le menu qui s'ouvre a deux onglets : <strong>« Partager »</strong> pour inviter des personnes, et <strong>« Publier »</strong> (<em>Publish</em>) pour mettre la page en ligne sur le web, visible par n'importe qui. Pour travailler en équipe, tu n'utiliseras que le premier.</p>
         <p>Dans l'onglet « Partager », tu trouves quatre éléments :</p>
         <ol>
@@ -102,7 +95,7 @@
             <div class="notion-page__bar">Studio Nova / Projets / <strong>Site Orion</strong> · menu Partager<span class="notion-page__tag">Simulation</span></div>
             <div class="ui-sim__page">
                 <p class="ui-sim__section">Partager · Publier <button type="button" class="hotspot" data-hotspot data-title="Les deux onglets" data-info="« Partager » invite des personnes précises. « Publier » met la page sur le web, visible par n'importe qui : à réserver aux contenus publics.">1</button></p>
-                <div class="ui-sim__row">E-mail ou nom… <span class="ui-sim__share">Inviter</span> <button type="button" class="hotspot" data-hotspot data-title="Inviter" data-info="Tape l'e-mail de Lucas, choisis son niveau d'accès, puis « Inviter ». Il reçoit un e-mail et la page apparaît dans sa section « Partagé ».">2</button></div>
+                <div class="ui-sim__row">E-mail ou nom… <span class="ui-sim__share">Inviter</span> <button type="button" class="hotspot" data-hotspot data-title="Inviter" data-info="Tape l'e-mail de Lucas, choisis son niveau d'accès, puis « Inviter ». Il reçoit un e-mail et la page apparaît dans sa section « Pages partagées ».">2</button></div>
                 <div class="ui-sim__row">Emma (toi) — Accès complet</div>
                 <div class="ui-sim__row">Lucas — Peut modifier ▾ <button type="button" class="hotspot" data-hotspot data-title="Niveau d'accès" data-info="Le menu ▾ permet de changer le niveau de Lucas, ou de lui retirer l'accès. Les niveaux sont expliqués à la leçon suivante.">3</button></div>
                 <div class="ui-sim__row">Accès général : Seules les personnes invitées ▾ <button type="button" class="hotspot" data-hotspot data-title="Accès général" data-info="Règle qui, en plus des personnes invitées, peut ouvrir la page. « Seules les personnes invitées » est le réglage le plus sûr.">4</button></div>
@@ -200,14 +193,9 @@
         </div>
       </section>
 
-      <div class="lesson-nav lesson-nav--steps">
-        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
-        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
-      </div>
-
-      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      <nav class="lesson-nav" aria-label="Étapes et chapitres">
+        <a class="btn btn-outline lesson-nav__prev" href="../mon-parcours.html" data-nav-prev hidden>← Étape précédente</a>
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
       </nav>
     </main>
 
@@ -215,8 +203,8 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>Notion pour l'entreprise · Formation interne</span>
-      <span>Travail pratique ESIG · C731</span>
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
     </div>
   </footer>
 

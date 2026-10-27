@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon parcours — Notion pour l'entreprise</title>
+<title>Les modules — Formation Notion</title>
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
@@ -21,40 +21,21 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="index.html" class="brand">
-        <span class="brand__logo" aria-hidden="true">N</span>
-        <span class="brand__name">Notion pour l'entreprise</span>
+        <img class="brand__logo" src="images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
       </a>
-      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
-        <div class="site-nav__inner">
-          <ul class="site-nav__list">
-            <li><a href="index.html#programme">La formation</a></li>
-            <li><a href="index.html#studio-nova">Studio Nova</a></li>
-            <li><a href="index.html#methode">La méthode</a></li>
-          </ul>
-          <a href="mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta" aria-current="page">Mon parcours →</a>
-        </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta" aria-current="page">Les modules</a>
       </nav>
     </div>
   </header>
 
-  <div class="page course-layout">
+  <div class="page course-layout course-layout--single">
 
-    <aside class="course-toc" aria-label="Ta progression">
-      <p class="course-toc__progress-label"><span>Progression globale</span></p>
-      <p class="parcours-count"><span data-overall-count>0</span> <span class="parcours-count__total">/ <span data-overall-total>39</span> leçons</span></p>
-      <div class="progress course-toc__progress" data-overall-bar role="img" aria-label="0 leçon terminée sur 38">
-        <div class="progress__fill" data-overall-fill></div>
-      </div>
-      <p class="meta">Prochaine leçon</p>
-      <p class="parcours-next" data-resume-title>À quoi sert Notion</p>
-      <a class="btn btn-primary btn--compact" href="lecons/m01-l01-a-quoi-sert-notion.html" data-resume-link>Commencer →</a>
-      <p class="parcours-help">Suis les modules dans l'ordre : chacun s'appuie sur le précédent. Ta progression est enregistrée sur cet appareil.</p>
-    </aside>
 
     <main id="contenu" class="course-panel">
-      <p class="meta"><a href="index.html">Accueil</a> · Mon parcours</p>
-      <h1>Mon parcours</h1>
+      <p class="meta"><a href="index.html">Accueil</a> · Les modules</p>
+      <h1>Les modules</h1>
       <p class="course-panel__lead">Neuf modules pour devenir autonome sur Notion. Ouvre un module pour voir ses leçons.</p>
 
       <ol class="module-list" data-module-list>
@@ -66,8 +47,8 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>Notion pour l'entreprise · Formation interne</span>
-      <span>Travail pratique ESIG · C731</span>
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
     </div>
   </footer>
 

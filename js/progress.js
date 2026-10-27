@@ -72,6 +72,8 @@
     overall: overall,
     forModule: forModule,
     nextLesson: nextLesson,
-    percent: percent
+    percent: percent,
+    /** Accès protégé au localStorage, réutilisé par quiz.js. */
+    storage: { get: read, set: write }
   };
 })();

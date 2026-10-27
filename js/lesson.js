@@ -1,6 +1,12 @@
 /* ===================================================================
-   Leçon : étapes (Comprendre · Voir · Faire · Vérifier),
-   bouton « Marquer comme terminée », liens précédent / suivant.
+   Leçon : étapes (Comprendre · Voir · Faire · Vérifier) affichées
+   comme des pages, numérotation (1.1.1, 1.1.2…), bouton « Marquer comme
+   terminée », boutons Étape précédente / Étape suivante / Chapitre
+   suivant / Module suivant.
+   - Chaque étape a une adresse : lecon.html#comprendre, #voir, #faire,
+     #verifier. Un lien vers ces adresses ouvre l'étape correspondante.
+   - Chaque changement d'étape ramène en haut de la page.
+   - Événement émis : « lesson:step » { index, slug } (lu par le sommaire).
    =================================================================== */
 (function () {
   'use strict';
@@ -8,17 +14,82 @@
   const Course = window.NotionCourse;
   const Progress = window.NotionProgress;
 
-  function setupSteps() {
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+
+  function slugify(text) {
+    return String(text)
+      .toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
+
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+  /** Cible du bouton de la dernière étape : chapitre suivant, module suivant ou retour aux modules. */
+  function nextTarget(lesson) {
+    const root = document.body.dataset.root || '';
+    const lessons = Course.allLessons();
+    const index = lessons.findIndex(function (item) { return item.id === lesson.id; });
+    const next = lessons[index + 1];
+
+    if (!next || !next.file) {
+      return { href: root + 'mon-parcours.html', text: 'Retour aux modules →' };
+    }
+    if (next.moduleId === lesson.moduleId) {
+      return { href: root + next.file, text: 'Chapitre suivant : ' + next.number + ' ' + next.title + ' →' };
+    }
+    return { href: root + next.file, text: 'Module suivant : ' + next.moduleNumber + ' · ' + next.moduleTitle + ' →' };
+  }
+
+  function setupSteps(lesson) {
     const buttons = Array.from(document.querySelectorAll('[data-step-target]'));
     const steps = Array.from(document.querySelectorAll('[data-step]'));
-    const prev = document.querySelector('[data-step-prev]');
-    const next = document.querySelector('[data-step-next]');
+    const prev = document.querySelector('[data-nav-prev]');
+    const next = document.querySelector('[data-nav-next]');
     if (steps.length === 0) { return; }
 
+    const labels = buttons.map(function (button) { return button.dataset.stepLabel; });
+    const slugs = labels.map(slugify);
+    const last = steps.length - 1;
+    const finalTarget = nextTarget(lesson);
     let current = 0;
 
+    buttons.forEach(function (button, i) {
+      const num = button.querySelector('.lesson-steps__num');
+      if (num) { num.textContent = lesson.number + '.' + (i + 1); }
+    });
+
+    function indexFromHash() {
+      const slug = decodeURIComponent((window.location.hash || '').replace('#', ''));
+      return slugs.indexOf(slug);
+    }
+
+    function updateNav() {
+      if (prev) {
+        prev.hidden = current === 0;
+        if (current > 0) {
+          prev.href = '#' + slugs[current - 1];
+          prev.textContent = '← Étape précédente : ' + labels[current - 1];
+        }
+      }
+      if (next) {
+        if (current < last) {
+          next.href = '#' + slugs[current + 1];
+          next.textContent = 'Étape suivante : ' + labels[current + 1] + ' →';
+        } else {
+          next.href = finalTarget.href;
+          next.textContent = finalTarget.text;
+        }
+      }
+    }
+
     function show(index, moveFocus) {
-      current = Math.max(0, Math.min(index, steps.length - 1));
+      current = Math.max(0, Math.min(index, last));
 
       steps.forEach(function (step, i) { step.hidden = i !== current; });
       buttons.forEach(function (button, i) {
@@ -30,31 +101,51 @@
         }
       });
 
-      if (prev) { prev.hidden = current === 0; }
-      if (next) {
-        const last = current === steps.length - 1;
-        next.hidden = last;
-        if (!last) {
-          next.textContent = 'Étape suivante : ' + buttons[current + 1].dataset.stepLabel + ' →';
-        }
-      }
+      updateNav();
 
       if (moveFocus) {
         const heading = steps[current].querySelector('h2');
         const target = heading || steps[current];
         target.setAttribute('tabindex', '-1');
         target.focus({ preventScroll: true });
-        document.querySelector('.lesson-steps').scrollIntoView({ block: 'start' });
       }
+      scrollToTop();
+
+      document.dispatchEvent(new CustomEvent('lesson:step', {
+        detail: { index: current, slug: slugs[current] }
+      }));
+    }
+
+    function go(index) {
+      try {
+        window.history.replaceState(null, '', '#' + slugs[index]);
+      } catch (error) {
+        // Adresse non modifiable (certains contextes locaux) : l'étape s'affiche quand même.
+      }
+      show(index, true);
     }
 
     buttons.forEach(function (button, i) {
-      button.addEventListener('click', function () { show(i, true); });
+      button.addEventListener('click', function () { go(i); });
     });
-    if (prev) { prev.addEventListener('click', function () { show(current - 1, true); }); }
-    if (next) { next.addEventListener('click', function () { show(current + 1, true); }); }
 
-    show(0, false);
+    // Tout lien vers « #voir », « #faire »… (boutons du bas, sommaire latéral) ouvre l'étape.
+    document.addEventListener('click', function (event) {
+      const link = event.target.closest('a[href^="#"]');
+      if (!link) { return; }
+      const index = slugs.indexOf(link.getAttribute('href').slice(1));
+      if (index === -1) { return; }
+      event.preventDefault();
+      go(index);
+    });
+
+    window.addEventListener('hashchange', function () {
+      const index = indexFromHash();
+      if (index !== -1 && index !== current) { show(index, true); }
+    });
+
+    const start = indexFromHash();
+    show(start === -1 ? 0 : start, false);
   }
 
   function setupDoneButton(lessonId) {
@@ -74,49 +165,38 @@
     update();
   }
 
-  function setupLessonNav(lessonId) {
+  function setupHeading(lesson) {
+    const meta = document.querySelector('[data-lesson-meta]');
     const root = document.body.dataset.root || '';
-    const lessons = Course.allLessons();
-    const index = lessons.findIndex(function (lesson) { return lesson.id === lessonId; });
-    const prevLink = document.querySelector('[data-lesson-prev]');
-    const nextLink = document.querySelector('[data-lesson-next]');
-
-    function fill(link, lesson, arrowFirst) {
-      if (!link) { return; }
-      if (!lesson || !lesson.file) {
-        // Leçon voisine pas encore rédigée : un seul lien « Mon parcours » suffit.
-        link.hidden = !arrowFirst;
-        link.href = root + 'mon-parcours.html';
-        link.textContent = '← Mon parcours';
-        return;
-      }
-      link.href = root + lesson.file;
-      link.textContent = arrowFirst ? '← ' + lesson.title : lesson.title + ' →';
+    if (meta) {
+      meta.innerHTML = '';
+      const link = document.createElement('a');
+      link.href = root + 'mon-parcours.html#' + lesson.moduleId;
+      link.textContent = 'Module ' + lesson.moduleNumber + ' · ' + lesson.moduleTitle;
+      meta.appendChild(link);
+      meta.appendChild(document.createTextNode(' · ' + lesson.minutes + ' min'));
     }
 
-    fill(prevLink, lessons[index - 1], true);
-    fill(nextLink, lessons[index + 1], false);
-  }
-
-  function setupMeta(lessonId) {
-    const meta = document.querySelector('[data-lesson-meta]');
-    const lesson = Course.findLesson(lessonId);
-    if (!meta || !lesson) { return; }
-    const root = document.body.dataset.root || '';
-    meta.innerHTML = '';
-    const link = document.createElement('a');
-    link.href = root + 'mon-parcours.html#' + lesson.moduleId;
-    link.textContent = lesson.moduleTitle;
-    meta.appendChild(link);
-    meta.appendChild(document.createTextNode(' · Leçon ' + lesson.index + ' sur ' + lesson.moduleCount + ' · ' + lesson.minutes + ' min'));
+    const title = document.querySelector('.course-panel h1');
+    if (title && !title.querySelector('.lesson-number')) {
+      const num = document.createElement('span');
+      num.className = 'lesson-number';
+      num.textContent = lesson.number;
+      title.insertBefore(document.createTextNode(' '), title.firstChild);
+      title.insertBefore(num, title.firstChild);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function () {
     const lessonId = document.body.dataset.lesson;
-    if (!lessonId) { return; }
-    setupSteps();
+    const lesson = lessonId ? Course.findLesson(lessonId) : null;
+    if (!lesson) { return; }
+    setupHeading(lesson);
+    setupSteps(lesson);
     setupDoneButton(lessonId);
-    setupLessonNav(lessonId);
-    setupMeta(lessonId);
+  });
+
+  window.addEventListener('load', function () {
+    if (document.body.dataset.lesson) { scrollToTop(); }
   });
 })();

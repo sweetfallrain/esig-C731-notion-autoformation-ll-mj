@@ -115,7 +115,7 @@ pas une histoire.
 ```
 esig-C731-notion-autoformation-ll-mj/
 ├── index.html                 Accueil (présentation, programme, Studio Nova, méthode)
-├── mon-parcours.html          Sommaire des 9 modules + progression
+├── mon-parcours.html          Page « Les modules » : sommaire des 9 modules + progression
 ├── lecons/
 │   ├── m01-l01-a-quoi-sert-notion.html
 │   ├── m01-l02-se-reperer-dans-l-interface.html
@@ -221,6 +221,43 @@ corrections, astuces ou encadrés.
 ---
 
 ## Notes de migration
+
+### v5 — corrections Accueil et module 1 (oct. 2026)
+
+Retours de relecture de l'utilisatrice (branche `corrections-accueil-module1`).
+
+- **Nom affiché** : « Notion » dans l'en-tête et le pied de page (au lieu de
+  « Notion pour l'entreprise »), pied de page signé « Lennie & Jessica ».
+  Titres d'onglet : « … — Formation Notion ». Logo officiel :
+  `images/logo-notion.png`. **[confirmé]**
+- **En-tête** : liens « La formation », « Studio Nova » et « La méthode »
+  supprimés ; un seul bouton « Les modules » (fichier `mon-parcours.html`
+  inchangé, page renommée « Les modules », sans colonne latérale). **[confirmé]**
+- **Accueil** : simulation remplacée par l'emplacement de capture
+  `images/captures/accueil-espace-finalise.png` (espace Notion finalisé) ;
+  bouton « Voir le programme » supprimé ; descriptions du programme allongées
+  pour remplir les cartes. **[confirmé]**
+- **Leçons** : numérotation partout (module 1 → leçon 1.1 → étapes 1.1.1 à
+  1.1.4) ; onglets d'étapes en haut à droite de la carte ; chaque étape a son
+  adresse (`#comprendre`, `#voir`, `#faire`, `#verifier`) et s'ouvre en haut de
+  page ; le sommaire latéral ne montre que le module en cours, les étapes de la
+  leçon ouverte et un bouton « Les modules ». Boutons du bas : « Étape
+  précédente » à gauche (absent à l'étape 1), « Étape suivante » à droite, puis
+  « Chapitre suivant » (ou « Module suivant », ou « Retour aux modules ») à la
+  dernière étape. **[confirmé]**
+- **Quiz** : réponses sauvegardées dans le navigateur
+  (`notion-formation:quiz:<leçon>:<n>`), effacées par « Recommencer ». Le site
+  reste statique : la sauvegarde est propre à un appareil et un navigateur.
+  **[confirmé]**
+- **Texte justifié** partout, avec césure automatique. **[confirmé]**
+- **Interface Notion 2026** : leçon 1.2 réécrite d'après une capture de
+  l'interface actuelle (icônes Boîte de réception / Nouvel élément en haut,
+  « Chercher ou demander », onglets, « Pages partagées » / « Pages privées »,
+  « Personnaliser la barre latérale », nom de l'espace en bas). Sections renommées
+  dans tous les modules. **À vérifier sur l'interface réelle** : emplacement de la
+  Corbeille, des Paramètres et des Modèles (en bas de la barre latérale selon
+  l'aide Notion, mais absents de la capture), « + » au survol de « Pages
+  privées », filtres de la recherche (m03-l04).
 
 ### v4 — plateforme de formation (oct. 2026)
 
