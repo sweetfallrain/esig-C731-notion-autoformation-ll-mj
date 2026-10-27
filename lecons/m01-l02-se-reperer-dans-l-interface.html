@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Se repérer dans l'interface — Module 1 — Notion pour l'entreprise</title>
+<title>Se repérer dans l'interface — Module 1 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/layout.css">
@@ -27,19 +27,11 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="brand">
-        <span class="brand__logo" aria-hidden="true">N</span>
-        <span class="brand__name">Notion pour l'entreprise</span>
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
       </a>
-      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
-        <div class="site-nav__inner">
-          <ul class="site-nav__list">
-            <li><a href="../index.html#programme">La formation</a></li>
-            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
-            <li><a href="../index.html#methode">La méthode</a></li>
-          </ul>
-          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
-        </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
       </nav>
     </div>
   </header>
@@ -48,9 +40,9 @@
 
     <aside class="course-toc" aria-label="Modules et leçons">
       <details class="course-toc__details" open>
-        <summary>Sommaire du cours</summary>
+        <summary>Sommaire du module</summary>
         <div class="course-toc__body" data-course-toc>
-          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
         </div>
       </details>
     </aside>
@@ -58,16 +50,6 @@
     <main id="contenu" class="course-panel">
       <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m1">Découvrir Notion</a> · Leçon 2 sur 3 · 6 min</p>
       <h1>Se repérer dans l'interface</h1>
-      <p class="course-panel__lead">À la fin de cette leçon, tu sauras reconnaître les trois zones de l'écran de Notion et retrouver une page grâce à la barre latérale ou à la recherche.</p>
-
-      <nav class="lesson-steps" aria-label="Étapes de la leçon">
-        <ol class="lesson-steps__list">
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
-        </ol>
-      </nav>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
       <section class="lesson-step prose" data-step aria-labelledby="etape-1">
@@ -91,20 +73,21 @@
 
         <p>Dans la barre latérale, tu trouves de haut en bas :</p>
         <ul>
-          <li><strong>Le nom de ton espace de travail.</strong> Un espace de travail, c'est l'ensemble de toutes les pages d'une personne ou d'une équipe.</li>
-          <li><strong>Rechercher</strong>, pour retrouver une page en tapant quelques mots.</li>
-          <li><strong>Accueil</strong>, une page de départ qui montre tes pages récentes.</li>
-          <li><strong>Boîte de réception</strong>, où arrivent les notifications : quand un collègue te mentionne ou commente une page.</li>
-          <li><strong>Les sections de pages</strong> : « Favoris », « Partagé », « Privé » et, selon l'abonnement de ton entreprise, « Espaces d'équipe ».</li>
-          <li><strong>En bas</strong> : « Paramètres », « Modèles » et « Corbeille », où vont les pages supprimées.</li>
+          <li><strong>Trois petites icônes tout en haut.</strong> À gauche, le bouton pour masquer la barre latérale. À droite, la <strong>Boîte de réception</strong>, où arrivent tes notifications (quand un collègue te mentionne ou commente une page), et le bouton <strong>Nouvel élément</strong>, pour créer une nouvelle page.</li>
+          <li><strong>« Chercher ou demander »</strong>, le champ de recherche. Tu tapes quelques mots pour retrouver une page. Il sert aussi à poser une question à l'assistant IA de Notion, que cette formation n'utilise pas.</li>
+          <li><strong>Les onglets.</strong> « Accueil », ta page de départ, montre tes pages récentes. À côté, deux icônes ouvrent les discussions avec l'IA (la bulle) et les réunions (le calendrier).</li>
+          <li><strong>Les fonctions avancées</strong> : « Nouvelle discussion », « Bibliothèque », « Connections » et « External agents ». Elles servent à discuter avec l'IA, à parcourir tout le contenu de l'espace et à relier Notion à d'autres outils. Tu peux les ignorer pour débuter.</li>
+          <li><strong>Les sections de pages</strong> : « Pages partagées », pour les pages partagées avec quelques personnes, et « Pages privées », pour celles que toi seul vois. Selon l'abonnement de ton entreprise, une section « Espaces d'équipe » peut aussi apparaître, et une section « Favoris » s'ajoute dès que tu épingles une page.</li>
+          <li><strong>Tout en bas</strong> : « Personnaliser la barre latérale », puis le <strong>nom de ton espace de travail</strong>. Un espace de travail, c'est l'ensemble de toutes les pages d'une personne ou d'une équipe. Un clic sur son nom ouvre un menu qui donne accès aux paramètres.</li>
         </ul>
-        <p>La barre du haut contient le <strong>fil d'Ariane</strong> : le chemin de la page ouverte, par exemple « Studio Nova / Projets / Site Orion ». Il te dit où tu te trouves, comme l'adresse d'une maison.</p>
+        <p>La barre du haut contient le <strong>fil d'Ariane</strong> : le chemin de la page ouverte, par exemple « Studio Nova / Projets / Site Orion ». Il te dit où tu te trouves, comme l'adresse d'une maison. Juste à côté, une mention comme « Privée » t'indique qui peut voir la page. À droite, tu trouves « Partager », l'icône pour copier le lien de la page, l'étoile des favoris et le menu « ··· ».</p>
+        <p>Notion fait évoluer son interface régulièrement. Si un bouton n'est pas exactement au même endroit chez toi, cherche-le dans la barre latérale ou tape son nom dans la recherche.</p>
 
         <p class="definition">La barre latérale est le sommaire de ton espace : toutes tes pages y sont rangées.</p>
 
         <div class="callout callout--warning">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> une page rangée dans la section « Privé » n'est visible que par toi. Si tu y crées une page destinée à ton équipe, tes collègues ne la verront pas tant que tu ne l'auras pas partagée ou déplacée. Tu apprendras à partager au module 7.</p>
+          <p><strong>Attention :</strong> une page rangée dans la section « Pages privées » n'est visible que par toi. Si tu y crées une page destinée à ton équipe, tes collègues ne la verront pas tant que tu ne l'auras pas partagée ou déplacée. Tu apprendras à partager au module 7.</p>
         </div>
       </section>
 
@@ -118,27 +101,31 @@
             <div class="notion-page__bar">Fenêtre Notion<span class="notion-page__tag">Simulation</span></div>
             <div class="ui-sim__window">
               <div class="ui-sim__sidebar">
-                <div class="ui-sim__row ui-sim__row--workspace"><span class="ui-sim__logo" aria-hidden="true">S</span>Studio Nova <button type="button" class="hotspot" data-hotspot data-title="Nom de l'espace" data-info="Le nom de ton espace de travail. Un clic dessus permet de changer d'espace si tu en as plusieurs.">1</button></div>
-                <div class="ui-sim__row">Rechercher <button type="button" class="hotspot" data-hotspot data-title="Rechercher" data-info="Ouvre la recherche. Tape quelques mots du titre ou du contenu d'une page pour la retrouver.">2</button></div>
-                <div class="ui-sim__row">Accueil</div>
-                <div class="ui-sim__row">Boîte de réception</div>
-                <p class="ui-sim__section">Privé <button type="button" class="hotspot" data-hotspot data-title="Sections de pages" data-info="Tes pages, rangées par section. La petite flèche devant une page affiche les pages qu'elle contient.">3</button></p>
+                <div class="ui-sim__row">Masquer · Boîte de réception · Nouvel élément <button type="button" class="hotspot" data-hotspot data-title="Les icônes du haut" data-info="À gauche, le bouton qui masque la barre latérale. À droite, la Boîte de réception, où arrivent tes notifications, et Nouvel élément, pour créer une page.">1</button></div>
+                <div class="ui-sim__row">Chercher ou demander · Ctrl+K <button type="button" class="hotspot" data-hotspot data-title="Chercher ou demander" data-info="Ouvre la recherche. Tape quelques mots du titre ou du contenu d'une page pour la retrouver. Raccourci : Ctrl + K (Cmd + K sur Mac).">2</button></div>
+                <div class="ui-sim__row">Accueil · Discussions · Réunions <button type="button" class="hotspot" data-hotspot data-title="Les onglets" data-info="« Accueil » est ta page de départ, avec tes pages récentes. Les deux autres onglets concernent l'IA et les réunions : tu n'en as pas besoin pour débuter.">3</button></div>
+                <div class="ui-sim__row">Nouvelle discussion</div>
+                <div class="ui-sim__row">Bibliothèque</div>
+                <div class="ui-sim__row">Connections</div>
+                <div class="ui-sim__row">External agents <button type="button" class="hotspot" data-hotspot data-title="Les fonctions avancées" data-info="Discuter avec l'IA, parcourir tout le contenu de l'espace, relier Notion à d'autres outils. Utile plus tard ; tu peux les ignorer pendant la formation.">4</button></div>
+                <p class="ui-sim__section">Pages partagées</p>
+                <div class="ui-sim__row">+ Commencer à travailler en équipe</div>
+                <p class="ui-sim__section">Pages privées <button type="button" class="hotspot" data-hotspot data-title="Les sections de pages" data-info="Tes pages, rangées par section. « Pages privées » ne sont visibles que par toi. La petite flèche devant une page affiche les pages qu'elle contient.">5</button></p>
                 <div class="ui-sim__row">› Studio Nova</div>
                 <div class="ui-sim__row ui-sim__row--indent ui-sim__row--current">Accueil — Studio Nova</div>
                 <div class="ui-sim__bottom">
-                  <div class="ui-sim__row">Paramètres</div>
-                  <div class="ui-sim__row">Modèles</div>
-                  <div class="ui-sim__row">Corbeille</div>
+                  <div class="ui-sim__row">Personnaliser la barre latérale</div>
+                  <div class="ui-sim__row ui-sim__row--workspace"><span class="ui-sim__logo" aria-hidden="true">S</span>Studio Nova <button type="button" class="hotspot" data-hotspot data-title="Nom de l'espace" data-info="Le nom de ton espace de travail, tout en bas. Un clic dessus ouvre un menu : changer d'espace si tu en as plusieurs, ouvrir les paramètres.">6</button></div>
                 </div>
               </div>
               <div class="ui-sim__main">
                 <div class="ui-sim__top">
-                  <span>Studio Nova / <strong>Accueil — Studio Nova</strong></span>
-                  <button type="button" class="hotspot" data-hotspot data-title="Fil d'Ariane" data-info="Le chemin de la page ouverte. Clique sur un élément du chemin pour remonter d'un niveau.">4</button>
-                  <span class="ui-sim__top-actions"><span class="ui-sim__share">Partager</span><button type="button" class="hotspot" data-hotspot data-title="Partager" data-info="Permet d'inviter des collègues sur la page. Tu l'utiliseras au module 7.">5</button><span aria-hidden="true">···</span></span>
+                  <span>Studio Nova / <strong>Accueil — Studio Nova</strong> · Privée</span>
+                  <button type="button" class="hotspot" data-hotspot data-title="Fil d'Ariane" data-info="Le chemin de la page ouverte. Clique sur un élément du chemin pour remonter d'un niveau. « Privée » indique que toi seul vois cette page.">7</button>
+                  <span class="ui-sim__top-actions"><span class="ui-sim__share">Partager</span><button type="button" class="hotspot" data-hotspot data-title="Partager" data-info="Permet d'inviter des collègues sur la page. À côté : copier le lien, l'étoile des favoris et le menu ···. Tu utiliseras le partage au module 7.">8</button><span aria-hidden="true">☆ ···</span></span>
                 </div>
                 <div class="ui-sim__page">
-                  <div class="ui-sim__row"><p class="ui-sim__page-title">Accueil — Studio Nova</p><button type="button" class="hotspot" data-hotspot data-title="La page" data-info="La zone où tu lis et écris. C'est ici que tu passeras le plus de temps.">6</button></div>
+                  <div class="ui-sim__row"><p class="ui-sim__page-title">Accueil — Studio Nova</p><button type="button" class="hotspot" data-hotspot data-title="La page" data-info="La zone où tu lis et écris. C'est ici que tu passeras le plus de temps.">9</button></div>
                   <div class="ui-sim__line ui-sim__line--80"></div>
                   <div class="ui-sim__line ui-sim__line--60"></div>
                   <div class="ui-sim__line ui-sim__line--70"></div>
@@ -147,7 +134,7 @@
               </div>
             </div>
           </div>
-          <p class="notion-info" data-ui-info aria-live="polite"><strong>Choisis un numéro.</strong> Il y a 6 points à découvrir dans cette fenêtre.</p>
+          <p class="notion-info" data-ui-info aria-live="polite"><strong>Choisis un numéro.</strong> Il y a 9 points à découvrir dans cette fenêtre.</p>
         </div>
       </section>
 
@@ -155,16 +142,16 @@
       <section class="lesson-step prose" data-step aria-labelledby="etape-3">
         <h2 id="etape-3">Faire le tour de l'interface</h2>
         <ol class="tutorial">
-          <li>Ouvre Notion et regarde la barre latérale, à gauche. Repère le nom de ton espace tout en haut.
+          <li>Ouvre Notion et regarde la barre latérale, à gauche. Repère le nom de ton espace, tout en bas.
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la barre latérale de Notion, avec le nom de l'espace de travail entouré">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la barre latérale de Notion, avec le nom de l'espace de travail entouré en bas">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
                 <strong>Capture d'écran Notion</strong>
                 <span>La barre latérale, nom de l'espace entouré · images/captures/m01-barre-laterale.png</span>
               </div>
             </figure>
           </li>
-          <li>Clique sur « Rechercher ». Une fenêtre de recherche s'ouvre au centre de l'écran.
+          <li>En haut de la barre latérale, clique sur « Chercher ou demander ». Une fenêtre de recherche s'ouvre au centre de l'écran.
             <figure class="screenshot">
               <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la fenêtre de recherche ouverte au centre de l'écran">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
@@ -174,9 +161,9 @@
             </figure>
           </li>
           <li>Appuie sur la touche Échap pour la fermer.</li>
-          <li>Descends dans la barre latérale jusqu'à la section « Privé ». C'est là que se rangent les pages que toi seul vois.</li>
-          <li>Tout en bas de la barre latérale, repère « Paramètres » et « Corbeille ». Tu n'en as pas besoin maintenant, mais tu sauras où les trouver.</li>
-          <li>Masque la barre latérale avec le petit bouton « « » qui apparaît en haut de celle-ci quand tu la survoles. Pour la réafficher, clique sur l'icône à trois traits en haut à gauche.</li>
+          <li>Tout en haut à droite de la barre latérale, repère l'icône de la Boîte de réception. C'est là que tu verras quand un collègue te mentionne.</li>
+          <li>Descends dans la barre latérale jusqu'à la section « Pages privées ». C'est là que se rangent les pages que toi seul vois.</li>
+          <li>Masque la barre latérale avec le bouton tout en haut à gauche de celle-ci. Pour la réafficher, clique sur le bouton qui reste visible en haut à gauche de l'écran.</li>
         </ol>
 
         <div class="callout callout--tip">
@@ -200,10 +187,11 @@
       <section class="lesson-step" data-step aria-labelledby="etape-4">
         <div class="key-points">
           <h2 id="etape-4">À retenir</h2>
+          <p class="key-points__goal"><strong>Objectif de la leçon :</strong> tu sais maintenant reconnaître les trois zones de l'écran de Notion et retrouver une page grâce à la barre latérale ou à la recherche.</p>
           <ul>
             <li>L'écran de Notion a trois zones : la barre latérale à gauche, la page au centre, la barre du haut au-dessus.</li>
             <li>La barre latérale est le sommaire de ton espace ; la recherche (Ctrl + K) retrouve une page en quelques mots.</li>
-            <li>Une page dans « Privé » n'est visible que par toi.</li>
+            <li>Une page dans « Pages privées » n'est visible que par toi.</li>
           </ul>
         </div>
 
@@ -217,7 +205,7 @@
             </div>
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La recherche retrouve une page à partir de quelques mots de son titre ou de son contenu. C'est plus rapide que de parcourir la barre latérale. La Corbeille ne contient que les pages supprimées, et les Paramètres servent à régler ton compte.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La recherche retrouve une page à partir de quelques mots de son titre ou de son contenu. C'est plus rapide que de parcourir la barre latérale. La Corbeille ne contient que les pages supprimées, et les Paramètres, accessibles depuis le nom de ton espace, servent à régler ton compte.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
@@ -226,7 +214,7 @@
 
         <div class="quiz" data-quiz>
           <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 2 sur 3</span><span class="quiz__question">Tu crées dans la section « Privé » une page de planning pour toute ton équipe. Que se passe-t-il ?</span></legend>
+            <legend><span class="quiz__count">Mini-quiz · question 2 sur 3</span><span class="quiz__question">Tu crées dans la section « Pages privées » une page de planning pour toute ton équipe. Que se passe-t-il ?</span></legend>
             <div class="quiz__options">
               <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Toute l'équipe la voit automatiquement.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">Toi seul la vois, tant que tu ne la partages pas ou ne la déplaces pas.</span><span class="quiz__tag"></span></label>
@@ -234,7 +222,7 @@
             </div>
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>« Privé » porte bien son nom : ce qui s'y trouve n'est visible que par toi. Pour une page d'équipe, il faudra la partager ou la ranger dans un endroit partagé.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>« Pages privées » porte bien son nom : ce qui s'y trouve n'est visible que par toi. Pour une page d'équipe, il faudra la partager ou la ranger dans un endroit partagé.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
@@ -263,14 +251,9 @@
         </div>
       </section>
 
-      <div class="lesson-nav lesson-nav--steps">
-        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
-        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
-      </div>
-
-      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      <nav class="lesson-nav" aria-label="Étapes et chapitres">
+        <a class="btn btn-outline lesson-nav__prev" href="../mon-parcours.html" data-nav-prev hidden>← Étape précédente</a>
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
       </nav>
     </main>
 
@@ -278,8 +261,8 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>Notion pour l'entreprise · Formation interne</span>
-      <span>Travail pratique ESIG · C731</span>
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
     </div>
   </footer>
 

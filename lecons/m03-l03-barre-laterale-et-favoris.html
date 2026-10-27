@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barre latérale et favoris — Module 3 — Notion pour l'entreprise</title>
+<title>Barre latérale et favoris — Module 3 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/layout.css">
@@ -27,19 +27,11 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="brand">
-        <span class="brand__logo" aria-hidden="true">N</span>
-        <span class="brand__name">Notion pour l'entreprise</span>
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
       </a>
-      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
-        <div class="site-nav__inner">
-          <ul class="site-nav__list">
-            <li><a href="../index.html#programme">La formation</a></li>
-            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
-            <li><a href="../index.html#methode">La méthode</a></li>
-          </ul>
-          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
-        </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
       </nav>
     </div>
   </header>
@@ -48,9 +40,9 @@
 
     <aside class="course-toc" aria-label="Modules et leçons">
       <details class="course-toc__details" open>
-        <summary>Sommaire du cours</summary>
+        <summary>Sommaire du module</summary>
         <div class="course-toc__body" data-course-toc>
-          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
         </div>
       </details>
     </aside>
@@ -58,16 +50,6 @@
     <main id="contenu" class="course-panel">
       <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m3">Organiser et naviguer</a> · Leçon 3 sur 4 · 4 min</p>
       <h1>Barre latérale et favoris</h1>
-      <p class="course-panel__lead">À la fin de cette leçon, tu sauras organiser ta barre latérale et épingler tes pages les plus utiles en favoris.</p>
-
-      <nav class="lesson-steps" aria-label="Étapes de la leçon">
-        <ol class="lesson-steps__list">
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
-        </ol>
-      </nav>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
       <section class="lesson-step prose" data-step aria-labelledby="etape-1">
@@ -77,8 +59,8 @@
         <ul>
           <li><strong>Favoris</strong> (<em>Favorites</em>) : les pages que tu as épinglées. Cette section n'apparaît qu'à partir du premier favori ;</li>
           <li><strong>Espaces d'équipe</strong> (<em>Teamspaces</em>) : les pages communes à une équipe, selon l'abonnement de l'entreprise ;</li>
-          <li><strong>Partagé</strong> (<em>Shared</em>) : les pages partagées avec quelques personnes précises ;</li>
-          <li><strong>Privé</strong> (<em>Private</em>) : tes pages personnelles, que toi seul vois.</li>
+          <li><strong>Pages partagées</strong> : les pages partagées avec quelques personnes précises ;</li>
+          <li><strong>Pages privées</strong> : tes pages personnelles, que toi seul vois.</li>
         </ul>
         <p>Les <strong>favoris</strong> sont ton raccourci personnel. Ajouter une page aux favoris ne la déplace pas : elle reste à sa place dans l'arborescence, et apparaît <em>en plus</em> en haut de la barre latérale. Tes favoris ne sont visibles que par toi.</p>
         <p>Pour ajouter une page aux favoris, ouvre-la et clique sur l'<strong>étoile ☆</strong> en haut à droite, ou sur ··· puis « Ajouter aux favoris » (<em>Add to Favorites</em>).</p>
@@ -102,16 +84,15 @@
               <div class="ui-sim__sidebar"><p class="ui-sim__section">Favoris <button type="button" class="hotspot" data-hotspot data-title="Favoris" data-info="Les pages que tu as épinglées avec l'étoile. Elles restent rangées à leur place : ce ne sont que des raccourcis, visibles par toi seul.">1</button></p>
                 <div class="ui-sim__row">⌂ Accueil — Studio Nova</div>
                 <div class="ui-sim__row">Projets</div>
-                <p class="ui-sim__section">Privé <button type="button" class="hotspot" data-hotspot data-title="Privé" data-info="Tes pages personnelles, rangées en arborescence. Personne d'autre ne les voit tant que tu ne les partages pas.">2</button></p>
+                <p class="ui-sim__section">Pages privées <button type="button" class="hotspot" data-hotspot data-title="Pages privées" data-info="Tes pages personnelles, rangées en arborescence. Personne d'autre ne les voit tant que tu ne les partages pas.">2</button></p>
                 <div class="ui-sim__row">⌄ Studio Nova <button type="button" class="hotspot" data-hotspot data-title="Flèche de dépliage" data-info="La flèche ⌄ montre que la page est dépliée. Clique dessus pour replier « Studio Nova » et cacher ses sous-pages.">3</button></div>
                 <div class="ui-sim__row ui-sim__row--indent">⌂ Accueil — Studio Nova</div>
                 <div class="ui-sim__row ui-sim__row--indent">Projets</div>
                 <div class="ui-sim__row ui-sim__row--indent">Ressources</div>
                 <div class="ui-sim__row ui-sim__row--indent ui-sim__row--current">› Notes &amp; réunions <button type="button" class="hotspot" data-hotspot data-title="Page repliée" data-info="La flèche › indique que « Notes & réunions » contient des sous-pages, actuellement cachées.">4</button></div>
                 <div class="ui-sim__bottom">
-                <div class="ui-sim__row">Paramètres</div>
-                <div class="ui-sim__row">Modèles</div>
-                <div class="ui-sim__row">Corbeille</div>
+                <div class="ui-sim__row">Personnaliser la barre latérale</div>
+                <div class="ui-sim__row ui-sim__row--workspace"><span class="ui-sim__logo" aria-hidden="true">S</span>Studio Nova</div>
                 </div>
               </div>
               <div class="ui-sim__main">
@@ -145,7 +126,7 @@
             </figure></li>
           <li>Fais de même avec « Projets ».</li>
           <li>Dans la section « Favoris », glisse « Projets » au-dessus de l'accueil, puis remets-le en dessous : l'ordre des favoris t'appartient.</li>
-          <li>Dans « Privé », clique sur la flèche devant « Notes &amp; réunions » pour la replier.
+          <li>Dans « Pages privées », clique sur la flèche devant « Notes &amp; réunions » pour la replier.
             <figure class="screenshot">
               <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la barre latérale avec la section Favoris en haut et « Notes & réunions » repliée">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
@@ -169,7 +150,7 @@
             <li>Replie « Notes &amp; réunions ».</li>
             <li>Retire « Projets » des favoris avec l'étoile, puis remets-le.</li>
           </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> en haut de ta barre latérale, la section « Favoris » contient l'accueil et « Projets ». Dans « Privé », ces deux pages sont toujours rangées sous « Studio Nova » : elles apparaissent simplement deux fois.</p>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> en haut de ta barre latérale, la section « Favoris » contient l'accueil et « Projets ». Dans « Pages privées », ces deux pages sont toujours rangées sous « Studio Nova » : elles apparaissent simplement deux fois.</p>
         </div>
       </section>
 
@@ -178,8 +159,9 @@
         <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
         <div class="key-points">
           <h2 id="etape-4-titre">À retenir</h2>
+          <p class="key-points__goal"><strong>Objectif de la leçon :</strong> tu sais maintenant organiser ta barre latérale et épingler tes pages les plus utiles en favoris.</p>
           <ul>
-            <li>La barre latérale range les pages en sections : Favoris, Espaces d'équipe, Partagé, Privé.</li>
+            <li>La barre latérale range les pages en sections : Favoris, Espaces d'équipe, Pages partagées, Pages privées.</li>
             <li>Un favori est un raccourci personnel : la page ne bouge pas et personne d'autre ne voit tes favoris.</li>
             <li>On replie, réordonne et masque la barre latérale pour ne garder sous les yeux que l'utile.</li>
           </ul>
@@ -224,14 +206,9 @@
         </div>
       </section>
 
-      <div class="lesson-nav lesson-nav--steps">
-        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
-        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
-      </div>
-
-      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      <nav class="lesson-nav" aria-label="Étapes et chapitres">
+        <a class="btn btn-outline lesson-nav__prev" href="../mon-parcours.html" data-nav-prev hidden>← Étape précédente</a>
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
       </nav>
     </main>
 
@@ -239,8 +216,8 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>Notion pour l'entreprise · Formation interne</span>
-      <span>Travail pratique ESIG · C731</span>
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
     </div>
   </footer>
 

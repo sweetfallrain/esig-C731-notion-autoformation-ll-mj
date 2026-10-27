@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La recherche — Module 3 — Notion pour l'entreprise</title>
+<title>La recherche — Module 3 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/layout.css">
@@ -27,19 +27,11 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="brand">
-        <span class="brand__logo" aria-hidden="true">N</span>
-        <span class="brand__name">Notion pour l'entreprise</span>
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
       </a>
-      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
-        <div class="site-nav__inner">
-          <ul class="site-nav__list">
-            <li><a href="../index.html#programme">La formation</a></li>
-            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
-            <li><a href="../index.html#methode">La méthode</a></li>
-          </ul>
-          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
-        </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
       </nav>
     </div>
   </header>
@@ -48,9 +40,9 @@
 
     <aside class="course-toc" aria-label="Modules et leçons">
       <details class="course-toc__details" open>
-        <summary>Sommaire du cours</summary>
+        <summary>Sommaire du module</summary>
         <div class="course-toc__body" data-course-toc>
-          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
         </div>
       </details>
     </aside>
@@ -58,22 +50,12 @@
     <main id="contenu" class="course-panel">
       <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m3">Organiser et naviguer</a> · Leçon 4 sur 4 · 3 min</p>
       <h1>La recherche</h1>
-      <p class="course-panel__lead">À la fin de cette leçon, tu sauras retrouver n'importe quelle page en quelques secondes, même sans connaître son titre.</p>
-
-      <nav class="lesson-steps" aria-label="Étapes de la leçon">
-        <ol class="lesson-steps__list">
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
-        </ol>
-      </nav>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
       <section class="lesson-step prose" data-step aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
         <p>Même bien rangé, un espace finit par contenir des dizaines de pages. Quand tu ne sais plus où se trouve une information, ne fouille pas la barre latérale : <strong>cherche-la</strong>.</p>
-        <p>Ouvre la recherche en cliquant sur <strong>« Rechercher »</strong> (<em>Search</em>) en haut de la barre latérale, ou avec le raccourci <strong>Ctrl + K</strong> (Cmd + K sur Mac). Tape quelques mots : Notion cherche dans les <strong>titres</strong> des pages, mais aussi dans leur <strong>contenu</strong>.</p>
+        <p>Ouvre la recherche en cliquant sur le champ <strong>« Chercher ou demander »</strong> en haut de la barre latérale, ou avec le raccourci <strong>Ctrl + K</strong> (Cmd + K sur Mac). Tape quelques mots : Notion cherche dans les <strong>titres</strong> des pages, mais aussi dans leur <strong>contenu</strong>.</p>
         <p>Avant même que tu tapes, la fenêtre affiche tes pages <strong>récentes</strong> : souvent, celle que tu cherches y est déjà.</p>
         <p>Quand il y a trop de résultats, utilise les <strong>filtres</strong> sous le champ de recherche :</p>
         <ul>
@@ -103,7 +85,7 @@
         <h2 id="etape-2">Sarah cherche « Orion »</h2>
         <p>Sarah cherche « Orion ». Voici ce que Notion lui propose. Remarque le chemin gris sous chaque résultat : il dit où la page est rangée.</p>
         <div class="notion-page" role="group" aria-label="Simulation de la recherche Notion pour le mot Orion">
-          <div class="notion-page__bar">Rechercher<span class="notion-page__tag">Simulation</span></div>
+          <div class="notion-page__bar">Chercher ou demander<span class="notion-page__tag">Simulation</span></div>
           <div class="notion-page__body">
             <p class="search-sim__field"><span aria-hidden="true">⌕</span> Orion</p>
             <p class="meta">Filtres : Titre uniquement · Créé par · Dans · Date</p>
@@ -157,6 +139,7 @@
         <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
         <div class="key-points">
           <h2 id="etape-4-titre">À retenir</h2>
+          <p class="key-points__goal"><strong>Objectif de la leçon :</strong> tu sais maintenant retrouver n'importe quelle page en quelques secondes, même sans connaître son titre.</p>
           <ul>
             <li>Ctrl + K (Cmd + K sur Mac) ouvre la recherche, qui fouille les titres et le contenu des pages.</li>
             <li>Les filtres (Titre uniquement, Créé par, Dans, Date) réduisent les résultats.</li>
@@ -223,7 +206,7 @@
           <fieldset>
             <legend><span class="quiz__count">Mini-quiz · question 2 sur 3</span><span class="quiz__question">Hugo vient d'arriver chez Studio Nova. Que lui conseilles-tu pour accéder vite à l'accueil chaque matin ?</span></legend>
             <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq2" value="a"><span class="quiz__option-text">Recréer une page d'accueil dans sa section Privé.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="mq2" value="a"><span class="quiz__option-text">Recréer une page d'accueil dans ses pages privées.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="mq2" value="b" data-correct><span class="quiz__option-text">Ajouter l'accueil à ses favoris.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="mq2" value="c"><span class="quiz__option-text">Déplacer l'accueil tout en haut de l'espace.</span><span class="quiz__tag"></span></label>
             </div>
@@ -258,14 +241,9 @@
         </div>
       </section>
 
-      <div class="lesson-nav lesson-nav--steps">
-        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
-        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
-      </div>
-
-      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      <nav class="lesson-nav" aria-label="Étapes et chapitres">
+        <a class="btn btn-outline lesson-nav__prev" href="../mon-parcours.html" data-nav-prev hidden>← Étape précédente</a>
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
       </nav>
     </main>
 
@@ -273,8 +251,8 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>Notion pour l'entreprise · Formation interne</span>
-      <span>Travail pratique ESIG · C731</span>
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
     </div>
   </footer>
 

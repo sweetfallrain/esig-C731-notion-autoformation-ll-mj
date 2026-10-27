@@ -1,5 +1,14 @@
 /* ===================================================================
    Sommaire latéral — généré depuis course-data.js.
+   Affiche uniquement le module en cours, numéroté :
+     Module 1 · Découvrir Notion
+       1.1 À quoi sert Notion
+         1.1.1 Comprendre · 1.1.2 Voir · 1.1.3 Faire · 1.1.4 Vérifier
+       1.2 Se repérer dans l'interface
+       1.3 Entrer dans Studio Nova
+     ← Les modules
+   Les étapes ne sont listées que pour la leçon ouverte ; leurs liens
+   (#comprendre, #voir…) sont pris en charge par lesson.js.
    Conteneur : <div data-course-toc></div>
    La page de leçon porte <body data-lesson="m2-l3" data-root="../">.
    =================================================================== */
@@ -9,6 +18,8 @@
   const Course = window.NotionCourse;
   const Progress = window.NotionProgress;
 
+  let currentStep = 0;
+
   function el(tag, className, text) {
     const node = document.createElement(tag);
     if (className) { node.className = className; }
@@ -16,71 +27,107 @@
     return node;
   }
 
+  function slugify(text) {
+    return String(text)
+      .toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
+
+  /** Libellés des étapes de la leçon ouverte (une section [data-step] par étape). */
+  function stepLabels() {
+    const labels = ['Comprendre', 'Voir', 'Faire', 'Vérifier'];
+    return labels.slice(0, document.querySelectorAll('[data-step]').length);
+  }
+
   function render(container) {
     const root = document.body.dataset.root || '';
     const currentId = document.body.dataset.lesson || '';
     const current = Course.findLesson(currentId);
-    const overall = Progress.overall();
+    if (!current) { return; }
+    const module = Course.MODULES.find(function (item) { return item.id === current.moduleId; });
+    const lessons = Course.allLessons().filter(function (item) { return item.moduleId === module.id; });
+    const moduleProgress = Progress.forModule(module);
 
     container.innerHTML = '';
 
+    container.appendChild(el('p', 'toc__kicker', 'Module ' + current.moduleNumber));
+    container.appendChild(el('p', 'toc__module-title', module.title));
+
     const label = el('p', 'course-toc__progress-label');
-    label.appendChild(el('span', '', 'Progression'));
-    label.appendChild(el('span', '', overall.done + ' / ' + overall.total + ' leçons'));
+    label.appendChild(el('span', '', 'Progression du module'));
+    label.appendChild(el('span', '', moduleProgress.done + ' / ' + moduleProgress.total));
     container.appendChild(label);
 
     const bar = el('div', 'progress course-toc__progress');
     bar.setAttribute('role', 'img');
-    bar.setAttribute('aria-label', overall.done + ' leçons terminées sur ' + overall.total);
+    bar.setAttribute('aria-label', moduleProgress.done + ' leçons terminées sur ' + moduleProgress.total + ' dans ce module');
     const fill = el('div', 'progress__fill');
-    fill.style.width = Progress.percent(overall) + '%';
+    fill.style.width = Progress.percent(moduleProgress) + '%';
     bar.appendChild(fill);
     container.appendChild(bar);
 
-    const list = el('ul', 'toc');
+    const list = el('ol', 'toc__lessons');
 
-    Course.MODULES.forEach(function (module) {
-      const item = el('li', 'toc__module');
-      const moduleProgress = Progress.forModule(module);
-      const isCurrentModule = current && current.moduleId === module.id;
-      const isModuleDone = moduleProgress.done === moduleProgress.total;
+    lessons.forEach(function (lesson) {
+      const li = el('li');
+      const done = Progress.isDone(lesson.id);
+      const isCurrent = lesson.id === currentId;
 
-      if (isCurrentModule) {
-        item.classList.add('is-current');
-        const title = el('span', '', module.title + ' ');
-        title.appendChild(el('span', 'toc__count', '· ' + moduleProgress.done + ' / ' + moduleProgress.total));
-        item.appendChild(title);
-
-        const lessons = el('ol', 'toc__lessons');
-        module.lessons.forEach(function (lesson) {
-          const li = el('li');
-          const done = Progress.isDone(lesson.id);
-          const prefix = done ? '✓ ' : '';
-          if (lesson.file) {
-            const link = el('a', '', prefix + lesson.title);
-            link.href = root + lesson.file;
-            if (lesson.id === currentId) { link.setAttribute('aria-current', 'page'); }
-            if (done) { link.appendChild(el('span', 'sr-only', ' (terminée)')); }
-            li.appendChild(link);
-          } else {
-            const span = el('span', '', lesson.title);
-            span.appendChild(el('span', 'toc__soon', '· bientôt'));
-            li.appendChild(span);
-          }
-          lessons.appendChild(li);
-        });
-        item.appendChild(lessons);
+      if (lesson.file) {
+        const link = el('a', 'toc__lesson');
+        link.href = root + lesson.file;
+        link.appendChild(el('span', 'toc__num', lesson.number));
+        link.appendChild(el('span', 'toc__title', lesson.title));
+        if (done) {
+          link.appendChild(el('span', 'toc__done', '✓'));
+          link.lastChild.setAttribute('aria-hidden', 'true');
+          link.appendChild(el('span', 'sr-only', ' (terminée)'));
+        }
+        if (isCurrent) { link.setAttribute('aria-current', 'page'); }
+        li.appendChild(link);
       } else {
-        const link = el('a', '', (isModuleDone ? '✓ ' : '') + module.title);
-        link.href = root + 'mon-parcours.html#' + module.id;
-        if (isModuleDone) { link.appendChild(el('span', 'sr-only', ' (module terminé)')); }
-        item.appendChild(link);
+        const span = el('span', 'toc__lesson');
+        span.appendChild(el('span', 'toc__num', lesson.number));
+        span.appendChild(el('span', 'toc__title', lesson.title));
+        span.appendChild(el('span', 'toc__soon', 'bientôt'));
+        li.appendChild(span);
       }
 
-      list.appendChild(item);
+      if (isCurrent) {
+        const steps = el('ol', 'toc__steps');
+        stepLabels().forEach(function (stepLabel, i) {
+          const stepItem = el('li');
+          const stepLink = el('a', 'toc__step');
+          stepLink.href = '#' + slugify(stepLabel);
+          stepLink.appendChild(el('span', 'toc__num', lesson.number + '.' + (i + 1)));
+          stepLink.appendChild(el('span', 'toc__title', stepLabel));
+          if (i === currentStep) { stepLink.setAttribute('aria-current', 'step'); }
+          stepItem.appendChild(stepLink);
+          steps.appendChild(stepItem);
+        });
+        li.appendChild(steps);
+      }
+
+      list.appendChild(li);
     });
 
     container.appendChild(list);
+
+    const back = el('a', 'btn btn-outline btn--compact toc__back', 'Les modules');
+    back.href = root + 'mon-parcours.html#' + module.id;
+    container.appendChild(back);
+  }
+
+  function markStep(container) {
+    container.querySelectorAll('.toc__step').forEach(function (link, i) {
+      if (i === currentStep) {
+        link.setAttribute('aria-current', 'step');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
   }
 
   function syncDetails() {
@@ -98,5 +145,9 @@
     render(container);
     syncDetails();
     document.addEventListener('progress:change', function () { render(container); });
+    document.addEventListener('lesson:step', function (event) {
+      currentStep = event.detail.index;
+      markStep(container);
+    });
   });
 })();

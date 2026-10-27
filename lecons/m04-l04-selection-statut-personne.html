@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sélection, statut, personne — Module 4 — Notion pour l'entreprise</title>
+<title>Sélection, statut, personne — Module 4 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/layout.css">
@@ -27,19 +27,11 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="../index.html" class="brand">
-        <span class="brand__logo" aria-hidden="true">N</span>
-        <span class="brand__name">Notion pour l'entreprise</span>
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
       </a>
-      <button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
-        <div class="site-nav__inner">
-          <ul class="site-nav__list">
-            <li><a href="../index.html#programme">La formation</a></li>
-            <li><a href="../index.html#studio-nova">Studio Nova</a></li>
-            <li><a href="../index.html#methode">La méthode</a></li>
-          </ul>
-          <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Mon parcours →</a>
-        </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
       </nav>
     </div>
   </header>
@@ -48,9 +40,9 @@
 
     <aside class="course-toc" aria-label="Modules et leçons">
       <details class="course-toc__details" open>
-        <summary>Sommaire du cours</summary>
+        <summary>Sommaire du module</summary>
         <div class="course-toc__body" data-course-toc>
-          <p><a href="../mon-parcours.html">Voir le sommaire complet</a></p>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
         </div>
       </details>
     </aside>
@@ -58,16 +50,6 @@
     <main id="contenu" class="course-panel">
       <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m4">Bases de données</a> · Leçon 4 sur 6 · 6 min</p>
       <h1>Sélection, statut, personne</h1>
-      <p class="course-panel__lead">À la fin de cette leçon, tu sauras utiliser les propriétés à choix : sélection, multi-sélection, statut et personne.</p>
-
-      <nav class="lesson-steps" aria-label="Étapes de la leçon">
-        <ol class="lesson-steps__list">
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Comprendre"><span class="lesson-steps__num">1</span><span class="lesson-steps__label">Comprendre</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Voir"><span class="lesson-steps__num">2</span><span class="lesson-steps__label">Voir</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Faire"><span class="lesson-steps__num">3</span><span class="lesson-steps__label">Faire</span></button></li>
-          <li><button type="button" class="lesson-steps__btn" data-step-target data-step-label="Vérifier"><span class="lesson-steps__num">4</span><span class="lesson-steps__label">Vérifier</span></button></li>
-        </ol>
-      </nav>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
       <section class="lesson-step prose" data-step aria-labelledby="etape-1">
@@ -152,6 +134,7 @@
         <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
         <div class="key-points">
           <h2 id="etape-4-titre">À retenir</h2>
+          <p class="key-points__goal"><strong>Objectif de la leçon :</strong> tu sais maintenant utiliser les propriétés à choix : sélection, multi-sélection, statut et personne.</p>
           <ul>
             <li>Les propriétés à choix évitent les variantes d'écriture et rendent les filtres fiables.</li>
             <li>Sélection : un choix ; multi-sélection : plusieurs ; Statut : l'avancement ; Personne : un membre de l'espace.</li>
@@ -198,14 +181,9 @@
         </div>
       </section>
 
-      <div class="lesson-nav lesson-nav--steps">
-        <button type="button" class="btn btn-outline" data-step-prev hidden>← Étape précédente</button>
-        <button type="button" class="btn btn-primary" data-step-next>Étape suivante →</button>
-      </div>
-
-      <nav class="lesson-nav" aria-label="Leçon précédente et suivante">
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-prev>← Leçon précédente</a>
-        <a class="btn btn-outline" href="../mon-parcours.html" data-lesson-next>Leçon suivante →</a>
+      <nav class="lesson-nav" aria-label="Étapes et chapitres">
+        <a class="btn btn-outline lesson-nav__prev" href="../mon-parcours.html" data-nav-prev hidden>← Étape précédente</a>
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
       </nav>
     </main>
 
@@ -213,8 +191,8 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>Notion pour l'entreprise · Formation interne</span>
-      <span>Travail pratique ESIG · C731</span>
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
     </div>
   </footer>
 

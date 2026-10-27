@@ -24,60 +24,6 @@
   line-height: 1.8;
 }
 
-/* ===================================================================
-   Repère d'étapes — DESIGN.md §4 « Repère d'étapes »
-   =================================================================== */
-.lesson-steps {
-  margin: 0 0 36px;
-}
-
-.lesson-steps__list {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.lesson-steps__btn {
-  width: 100%;
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  background: none;
-  text-align: left;
-  cursor: pointer;
-  color: var(--color-text-muted);
-}
-
-.lesson-steps__btn::before {
-  content: "";
-  display: block;
-  height: 4px;
-  border-radius: var(--radius-pill);
-  background: var(--color-border);
-  margin-bottom: 10px;
-  transition: background-color 150ms ease;
-}
-
-.lesson-steps__btn.is-reached::before {
-  background: var(--color-accent);
-}
-
-.lesson-steps__btn[aria-current="step"] {
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-.lesson-steps__num {
-  font: italic 400 1rem/1 var(--font-display);
-  margin-right: 4px;
-}
-
-.lesson-steps__label {
-  font-size: 0.85rem;
-}
-
 .lesson-step + .lesson-step {
   margin-top: 40px;
 }
@@ -914,7 +860,6 @@
 .panel__lead {
   margin: 0 0 28px;
   color: var(--color-text-muted);
-  max-width: 640px;
 }
 
 .program {
@@ -1119,14 +1064,7 @@
   display: block;
 }
 
-.lesson-nav + .lesson-nav {
-  margin-top: 16px;
-  padding-top: 0;
-  border-top: 0;
-}
-
-html:not(.js) .lesson-steps,
-html:not(.js) .lesson-nav--steps {
+html:not(.js) .lesson-nav__prev {
   display: none;
 }
 
@@ -2140,3 +2078,81 @@ html:not(.js) .lesson-nav--steps {
 /* Espace sous une base simulée, avant le paragraphe suivant */
 .prose [data-db] { margin-bottom: 1.25em; }
 .prose > .notion-page { margin-bottom: 1.25em; }
+
+
+/* ===================================================================
+   v5 — corrections (oct. 2026)
+   =================================================================== */
+
+/* Texte justifié dans les leçons (colonne large), avec césure française.
+   L'accueil reste aligné à gauche : ses colonnes étroites créeraient de grands espaces. */
+.course-panel__lead,
+.prose p,
+.prose li,
+.callout p,
+.exercise p,
+.exercise li,
+.key-points li,
+.quiz__feedback,
+.module-list__body > p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Ligne du module (à gauche) et « Étape 2 sur 4 · Voir » (à droite) */
+.lesson-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.lesson-topline .meta {
+  margin: 0;
+}
+
+.lesson-step-indicator {
+  margin-left: auto;
+  color: var(--color-accent);
+  text-align: right;
+}
+
+/* Titre de leçon séparé du contenu par une barre (l'objectif est à l'étape Vérifier) */
+body[data-lesson] .course-panel h1 {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Objectif de la leçon, en tête de « À retenir » */
+.key-points__goal {
+  margin: 0 0 12px;
+}
+
+/* Boutons du bas : précédent à gauche, suivant à droite */
+.lesson-nav__next {
+  margin-left: auto;
+}
+
+/* Accueil : emplacement de l'image d'un espace Notion finalisé */
+.home-hero__visual.screenshot .screenshot__placeholder {
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow-1);
+}
+
+/* Page Les modules : une seule colonne centrée */
+.course-layout--single {
+  align-items: center;
+}
+
+.course-layout--single .course-panel {
+  max-width: 860px;
+}
+
+@media (min-width: 1024px) {
+  .course-layout--single {
+    justify-content: center;
+  }
+}

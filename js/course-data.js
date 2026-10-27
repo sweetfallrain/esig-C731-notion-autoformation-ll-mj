@@ -4,6 +4,7 @@
    - file  : chemin depuis la racine du site, ou null si la leçon
              n'est pas encore rédigée (affichée « bientôt »)
    - minutes : durée indicative
+   allLessons() ajoute la numérotation : moduleNumber (1) et number (« 1.2 »).
    =================================================================== */
 (function () {
   'use strict';
@@ -112,6 +113,8 @@
         list.push(Object.assign({}, lesson, {
           moduleId: module.id,
           moduleTitle: module.title,
+          moduleNumber: Number(module.num),
+          number: Number(module.num) + '.' + (index + 1),
           index: index + 1,
           moduleCount: module.lessons.length
         }));
