@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../images/logo-notion.png">
 <title>La recherche — Module 3 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
@@ -52,7 +53,7 @@
       <h1>La recherche</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
         <p>Même bien rangé, un espace finit par contenir des dizaines de pages. Quand tu ne sais plus où se trouve une information, ne fouille pas la barre latérale : <strong>cherche-la</strong>.</p>
         <p>Ouvre la recherche en cliquant sur le champ <strong>« Chercher ou demander »</strong> en haut de la barre latérale, ou avec le raccourci <strong>Ctrl + K</strong> (Cmd + K sur Mac). Tape quelques mots : Notion cherche dans les <strong>titres</strong> des pages, mais aussi dans leur <strong>contenu</strong>.</p>
@@ -80,27 +81,8 @@
         </div>
       </section>
 
-      <!-- ===================== Étape 2 : Voir ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
-        <h2 id="etape-2">Sarah cherche « Orion »</h2>
-        <p>Sarah cherche « Orion ». Voici ce que Notion lui propose. Remarque le chemin gris sous chaque résultat : il dit où la page est rangée.</p>
-        <div class="notion-page" role="group" aria-label="Simulation de la recherche Notion pour le mot Orion">
-          <div class="notion-page__bar">Chercher ou demander<span class="notion-page__tag">Simulation</span></div>
-          <div class="notion-page__body">
-            <p class="search-sim__field"><span aria-hidden="true">⌕</span> Orion</p>
-            <p class="meta">Filtres : Titre uniquement · Créé par · Dans · Date</p>
-            <ul class="search-sim__results">
-              <li><strong>Site Orion</strong><span class="meta">Studio Nova / Projets</span></li>
-              <li><strong>Réunion client Orion</strong><span class="meta">Studio Nova / Notes &amp; réunions</span></li>
-              <li><strong>Réunion d'équipe — 3 novembre</strong> <span class="meta">« Point sur le site <mark>Orion</mark> »</span><span class="meta">Studio Nova / Notes &amp; réunions</span></li>
-            </ul>
-          </div>
-        </div>
-        <p>Le troisième résultat ne contient pas « Orion » dans son titre : Notion l'a trouvé <strong>dans le texte</strong> de la page. Si Sarah voulait seulement les comptes rendus, elle ajouterait le filtre « Dans : Notes &amp; réunions ».</p>
-      </section>
-
       <!-- ===================== Étape 3 : Faire ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+      <section class="lesson-step prose" data-step="Faire" aria-labelledby="etape-3">
         <h2 id="etape-3">Chercher et filtrer</h2>
         <ol class="tutorial">
           <li>Appuie sur Ctrl + K (Cmd + K sur Mac). La fenêtre de recherche s'ouvre sur tes pages récentes.</li>
@@ -114,7 +96,7 @@
                 <span>Recherche filtrée · images/captures/m03-recherche-dans.png</span>
               </div>
             </figure></li>
-          <li>Appuie sur Entrée ou clique sur un résultat pour l'ouvrir. Échap ferme la recherche sans rien ouvrir.</li>
+          <li>Appuie sur Enter ou clique sur un résultat pour l'ouvrir. Esc ferme la recherche sans rien ouvrir.</li>
         </ol>
 
         <div class="callout callout--warning">
@@ -128,23 +110,18 @@
           <ol>
             <li>Avec Ctrl + K, retrouve la page qui contient « point sur le site ».</li>
             <li>Cherche « Projets » avec le filtre « Titre uniquement ».</li>
-            <li>Ferme la recherche avec Échap.</li>
+            <li>Ferme la recherche avec Esc.</li>
           </ol>
           <p class="exercise__result"><strong>Résultat attendu :</strong> le premier essai ouvre « Réunion d'équipe — 3 novembre », trouvée grâce à son contenu. Le second ne garde que la page dont le titre contient « Projets ».</p>
         </div>
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->
-      <section class="lesson-step" data-step aria-labelledby="etape-4">
-        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+      <section class="lesson-step" data-step="Vérifier" aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 3 : vérifier</h2>
         <div class="key-points">
-          <h2 id="etape-4-titre">À retenir</h2>
-          <p class="key-points__goal"><strong>Objectif de la leçon :</strong> tu sais maintenant retrouver n'importe quelle page en quelques secondes, même sans connaître son titre.</p>
-          <ul>
-            <li>Ctrl + K (Cmd + K sur Mac) ouvre la recherche, qui fouille les titres et le contenu des pages.</li>
-            <li>Les filtres (Titre uniquement, Créé par, Dans, Date) réduisent les résultats.</li>
-            <li>Des titres clairs rendent la recherche bien plus efficace.</li>
-          </ul>
+          <h2 id="etape-4-titre">Objectif de la leçon</h2>
+          <p class="key-points__goal">Tu sais maintenant retrouver n'importe quelle page en quelques secondes, même sans connaître son titre.</p>
         </div>
 
         <div class="quiz" data-quiz>
@@ -158,78 +135,6 @@
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
           <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La recherche trouve les mots dans le contenu des pages, pas seulement dans leurs titres.</p>
-          <div class="quiz__actions">
-            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
-            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
-          </div>
-        </div>
-
-        <div class="module-end">
-          <h2>Fin du module 3</h2>
-        </div>
-
-        <div class="exercise">
-          <p class="exercise__kicker">Exercice récapitulatif du module · dans Notion</p>
-          <h3>Un espace où tout se retrouve</h3>
-          <p class="exercise__result">Reprends ta page d'équipe du module 2 et organise-la. Coche chaque étape une fois réalisée.</p>
-          <ul class="exercise__checklist">
-            <li><label><input type="checkbox"><span>1. Dans ta page d'équipe, <strong>regroupe</strong> les pages de réunion dans « Notes de réunion ».</span></label></li>
-            <li><label><input type="checkbox"><span>2. Crée deux comptes rendus datés dans « Notes de réunion ».</span></label></li>
-            <li><label><input type="checkbox"><span>3. Dans le premier, <strong>mentionne</strong> le second avec « @ ».</span></label></li>
-            <li><label><input type="checkbox"><span>4. <strong>Ajoute</strong> ta page d'équipe à tes favoris.</span></label></li>
-            <li><label><input type="checkbox"><span>5. <strong>Retrouve</strong> un compte rendu avec Ctrl + K et le filtre « Dans ».</span></label></li>
-          </ul>
-          <h4>Résultat attendu</h4>
-          <p class="exercise__result">Une arborescence sur trois niveaux au plus (ta page, « Notes de réunion », les comptes rendus), un lien entre les deux comptes rendus, ta page en favori, et un compte rendu retrouvé en quelques secondes sans ouvrir la barre latérale.</p>
-        </div>
-
-        <h2 class="module-quiz-title">Quiz du module 3</h2>
-
-        <div class="quiz" data-quiz>
-          <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 1 sur 3</span><span class="quiz__question">Quelle est la différence entre déplacer une page et faire un lien vers elle ?</span></legend>
-            <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq1" value="a" data-correct><span class="quiz__option-text">Déplacer change sa place dans l'arborescence ; un lien y mène sans la bouger.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq1" value="b"><span class="quiz__option-text">Il n'y en a aucune.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq1" value="c"><span class="quiz__option-text">Un lien crée une copie de la page.</span><span class="quiz__tag"></span></label>
-            </div>
-          </fieldset>
-          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une page n'a qu'une place dans l'arborescence. Le lien est un raccourci : la page reste où elle est.</p>
-          <div class="quiz__actions">
-            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
-            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
-          </div>
-        </div>
-
-        <div class="quiz" data-quiz>
-          <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 2 sur 3</span><span class="quiz__question">Hugo vient d'arriver chez Studio Nova. Que lui conseilles-tu pour accéder vite à l'accueil chaque matin ?</span></legend>
-            <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq2" value="a"><span class="quiz__option-text">Recréer une page d'accueil dans ses pages privées.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq2" value="b" data-correct><span class="quiz__option-text">Ajouter l'accueil à ses favoris.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq2" value="c"><span class="quiz__option-text">Déplacer l'accueil tout en haut de l'espace.</span><span class="quiz__tag"></span></label>
-            </div>
-          </fieldset>
-          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le favori est un raccourci personnel : il ne change rien pour les autres et ne duplique rien.</p>
-          <div class="quiz__actions">
-            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
-            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
-          </div>
-        </div>
-
-        <div class="quiz" data-quiz>
-          <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 3 sur 3</span><span class="quiz__question">Sarah se souvient d'un mot écrit dans une page, mais pas de son titre. Que fait-elle ?</span></legend>
-            <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq3" value="a"><span class="quiz__option-text">Elle ouvre chaque page de la barre latérale.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq3" value="b" data-correct><span class="quiz__option-text">Elle utilise Ctrl + K : la recherche fouille aussi le contenu des pages.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq3" value="c"><span class="quiz__option-text">Elle ne peut rien faire sans le titre.</span><span class="quiz__tag"></span></label>
-            </div>
-          </fieldset>
-          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La recherche de Notion trouve les mots dans les titres et dans le contenu des pages.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>

@@ -166,13 +166,12 @@ Fichier `lecons/mXX-lYY-slug.html`, copié depuis la leçon gabarit. Le
 boutons précédent/suivant se génèrent depuis `course-data.js`.
 
 En tête : ligne du module (module · durée) avec « Étape x sur 4 » à droite,
-puis H1 séparé du contenu par une barre. Puis 4 étapes :
+puis H1 séparé du contenu par une barre. Puis 3 étapes, chacune dans une
+`<section data-step="Comprendre|Faire|Vérifier">` :
 
 1. **Comprendre** — introduction (2-4 phrases), explication, **image explicative** (schéma SVG ou capture annotée), définition, erreur fréquente (bandeau Attention).
-2. **Voir** — exemple Studio Nova, idéalement une simulation interactive.
-3. **Faire** — tutoriel pas à pas avec captures, astuce (bandeau Astuce), mini-exercice + résultat attendu.
-4. **Vérifier** — À retenir, précédé de l'objectif de la leçon (« Objectif de
-   la leçon : tu sais maintenant… »), 2-4 idées, mini-quiz (1-3 questions, correction expliquée), bouton « Marquer comme terminée ».
+2. **Faire** — tutoriel pas à pas avec captures, astuce (bandeau Astuce), mini-exercice + résultat attendu.
+3. **Vérifier** — objectif de la leçon (« Tu sais maintenant… »), mini-quiz (1-3 questions, correction expliquée), bouton « Marquer comme terminée ».
 
 ## Règles impératives
 
@@ -222,6 +221,30 @@ corrections, astuces ou encadrés.
 ---
 
 ## Notes de migration
+
+### v6 — allègement et captures des modules 1-2 (nov. 2026)
+
+Retours de relecture de l'utilisatrice (branche `corrections-modules-1-2`).
+
+- **Leçons en 3 étapes** : Comprendre · Faire · Vérifier. L'étape Voir est
+  supprimée (elle répétait Comprendre et Faire) ; ses simulations interactives,
+  ainsi que les contenus propres aux modules 8-9, sont placés à la fin de
+  Comprendre (le corrigé de m08-l03 est au début de Vérifier). « À retenir » est
+  supprimé : Vérifier = objectif + quiz. Les noms d'étapes sont lus sur
+  `data-step`. **[confirmé]**
+- **Exercice récapitulatif et quiz de fin de module** supprimés (modules 2 à 8).
+  **[confirmé]**
+- **Touches** : « Enter » et « Esc » (plus « Entrée » ni « Échap »). **[confirmé]**
+- **« Bascule » → « menu dépliant »** (libellé réel de Notion) ; leçon 2.6
+  renommée « Menus dépliants, encadrés, liens et médias » (fichier inchangé).
+  Dans un menu dépliant, Shift + Enter passe à la ligne. **[confirmé]**
+- **Ctrl + \** retiré partout (ne fonctionne pas) ; on masque la barre latérale
+  avec le bouton en haut à gauche. **[confirmé]**
+- **Captures des modules 1 et 2** intégrées (`images/captures/`), paires
+  côte à côte (`-1` / `-2`, classe `.screenshot__pair`). Favicon = logo Notion.
+- Corrections ponctuelles : « home » pour l'icône (2.2), « /liste » puis « Liste
+  de tâches » (2.5, astuce « # » supprimée), « un espace », « Ajouter une image
+  de couverture » (2.1).
 
 ### v5 — corrections Accueil et module 1 (oct. 2026)
 

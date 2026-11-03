@@ -1,12 +1,13 @@
 /* ===================================================================
-   Leçon : étapes (Comprendre · Voir · Faire · Vérifier) affichées
-   comme des pages, numérotation (1.1.1, 1.1.2…), bouton « Marquer comme
+   Leçon : étapes (Comprendre · Faire · Vérifier) affichées
+   comme des pages, numérotation (1.1.1, 1.1.2, 1.1.3), bouton « Marquer comme
    terminée », boutons Étape précédente / Étape suivante / Chapitre
    suivant / Module suivant.
-   - Chaque étape a une adresse : lecon.html#comprendre, #voir, #faire,
-     #verifier. Un lien vers ces adresses ouvre l'étape correspondante.
+   - Chaque section porte son nom : <section data-step="Faire">. Chaque
+     étape a une adresse (lecon.html#comprendre, #faire, #verifier) ; un lien
+     vers ces adresses ouvre l'étape correspondante.
    - Chaque changement d'étape ramène en haut de la page.
-   - À droite de la ligne du module, « Étape 2 sur 4 · Voir » indique l'étape en cours.
+   - À droite de la ligne du module, « Étape 2 sur 3 · Faire » indique l'étape en cours.
    - Cliquer sur « Chapitre suivant » / « Module suivant » / « Retour aux
      modules » (dernière étape) marque la leçon comme terminée.
    - Les étapes sont listées dans le sommaire latéral (course-toc.js) ;
@@ -18,7 +19,7 @@
 
   const Course = window.NotionCourse;
   const Progress = window.NotionProgress;
-  const STEP_LABELS = ['Comprendre', 'Voir', 'Faire', 'Vérifier'];
+  const DEFAULT_LABELS = ['Comprendre', 'Faire', 'Vérifier'];
 
   if ('scrollRestoration' in window.history) {
     window.history.scrollRestoration = 'manual';
@@ -58,7 +59,9 @@
     const next = document.querySelector('[data-nav-next]');
     if (steps.length === 0) { return; }
 
-    const labels = STEP_LABELS.slice(0, steps.length);
+    const labels = steps.map(function (step, i) {
+      return step.dataset.step || DEFAULT_LABELS[i] || 'Étape ' + (i + 1);
+    });
     const slugs = labels.map(slugify);
     const last = steps.length - 1;
     const finalTarget = nextTarget(lesson);

@@ -28,7 +28,7 @@
         { id: 'm2-l3', title: 'Comprendre les blocs', file: 'lecons/m02-l03-comprendre-les-blocs.html', minutes: 6 },
         { id: 'm2-l4', title: 'La commande « / »', file: 'lecons/m02-l04-la-commande-slash.html', minutes: 5 },
         { id: 'm2-l5', title: 'Titres et listes', file: 'lecons/m02-l05-titres-et-listes.html', minutes: 7 },
-        { id: 'm2-l6', title: 'Bascules, encadrés, liens et médias', file: 'lecons/m02-l06-bascules-encadres-liens-medias.html', minutes: 7 },
+        { id: 'm2-l6', title: 'Menus dépliants, encadrés, liens et médias', file: 'lecons/m02-l06-bascules-encadres-liens-medias.html', minutes: 7 },
         { id: 'm2-l7', title: 'Déplacer, dupliquer, supprimer, transformer', file: 'lecons/m02-l07-deplacer-dupliquer-supprimer-transformer.html', minutes: 6 },
         { id: 'm2-l8', title: 'Créer une sous-page', file: 'lecons/m02-l08-creer-une-sous-page.html', minutes: 6 }
       ]
