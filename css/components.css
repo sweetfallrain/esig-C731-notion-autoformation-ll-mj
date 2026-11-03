@@ -2131,6 +2131,40 @@ body[data-lesson] .course-panel h1 {
   margin: 0 0 12px;
 }
 
+/* Captures d'écran réelles : jamais plus hautes que l'écran, centrées */
+.screenshot img {
+  width: auto;
+  max-width: 100%;
+  max-height: 720px;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* Deux captures côte à côte (ce que l'apprenant voit à l'écran, en deux temps).
+   flex-grow = largeur / hauteur de chaque image : les deux ont la même hauteur. */
+.screenshot__pair {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.screenshot__pair img {
+  flex-basis: 0;
+  min-width: 0;
+  width: 100%;
+  max-height: none;
+}
+
+@media (max-width: 599px) {
+  .screenshot__pair {
+    flex-direction: column;
+  }
+
+  .screenshot__pair img {
+    flex-basis: auto;
+  }
+}
+
 /* Boutons du bas : précédent à gauche, suivant à droite */
 .lesson-nav__next {
   margin-left: auto;
@@ -2154,5 +2188,12 @@ body[data-lesson] .course-panel h1 {
 @media (min-width: 1024px) {
   .course-layout--single {
     justify-content: center;
+  }
+}
+
+/* Accueil sur grand écran : programme en 3 × 3 */
+@media (min-width: 1024px) {
+  .program {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

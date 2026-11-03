@@ -3,12 +3,12 @@
    Affiche uniquement le module en cours, numéroté :
      Module 1 · Découvrir Notion
        1.1 À quoi sert Notion
-         1.1.1 Comprendre · 1.1.2 Voir · 1.1.3 Faire · 1.1.4 Vérifier
+         1.1.1 Comprendre · 1.1.2 Faire · 1.1.3 Vérifier
        1.2 Se repérer dans l'interface
        1.3 Entrer dans Studio Nova
      ← Les modules
    Les étapes ne sont listées que pour la leçon ouverte ; leurs liens
-   (#comprendre, #voir…) sont pris en charge par lesson.js.
+   (#comprendre, #faire…) sont pris en charge par lesson.js.
    Conteneur : <div data-course-toc></div>
    La page de leçon porte <body data-lesson="m2-l3" data-root="../">.
    =================================================================== */
@@ -35,10 +35,12 @@
       .replace(/^-|-$/g, '');
   }
 
-  /** Libellés des étapes de la leçon ouverte (une section [data-step] par étape). */
+  /** Libellés des étapes de la leçon ouverte, lus sur <section data-step="…">. */
   function stepLabels() {
-    const labels = ['Comprendre', 'Voir', 'Faire', 'Vérifier'];
-    return labels.slice(0, document.querySelectorAll('[data-step]').length);
+    const defaults = ['Comprendre', 'Faire', 'Vérifier'];
+    return Array.from(document.querySelectorAll('[data-step]')).map(function (step, i) {
+      return step.dataset.step || defaults[i] || 'Étape ' + (i + 1);
+    });
   }
 
   function render(container) {

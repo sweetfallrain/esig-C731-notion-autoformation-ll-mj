@@ -9,7 +9,7 @@
 }
 
 .site-header__inner {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 14px 20px;
   display: flex;
@@ -50,7 +50,7 @@
    Conteneur de page
    =================================================================== */
 .page {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 24px 16px 64px;
 }
@@ -246,7 +246,7 @@ a.toc__lesson:hover,
 }
 
 .site-footer__inner {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 28px 20px 40px;
   display: flex;

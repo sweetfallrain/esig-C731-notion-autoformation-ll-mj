@@ -45,7 +45,7 @@
     { name: 'Liste à puces', keys: 'liste puces', info: 'Une liste sans ordre particulier.', preview: '• Un élément de liste' },
     { name: 'Liste numérotée', keys: 'liste numerotee numero', info: 'Une liste d’étapes dans l’ordre.', preview: '1. Première étape' },
     { name: 'Liste de tâches', keys: 'liste taches checklist case', info: 'Des cases à cocher pour les choses à faire.', preview: '☐ Une tâche à faire' },
-    { name: 'Bascule', keys: 'bascule replier toggle', info: 'Un contenu repliable, qui se déplie d’un clic.', preview: '▸ Une ligne repliable' },
+    { name: 'Menu dépliant', keys: 'menu dépliant replier bascule toggle', info: 'Un contenu repliable, qui se déplie d’un clic.', preview: '▸ Une ligne repliable' },
     { name: 'Encadré', keys: 'encadre callout', info: 'Un message mis en avant avec une icône.', preview: 'Information importante' },
     { name: 'Citation', keys: 'citation quote', info: 'Une phrase mise en valeur par une barre verticale.', preview: '« Une phrase à retenir. »' },
     { name: 'Séparateur', keys: 'separateur ligne', info: 'Une ligne horizontale entre deux parties.', preview: '' },
@@ -89,7 +89,7 @@
 
     const info = el('p', 'notion-info');
     info.setAttribute('aria-live', 'polite');
-    sayIn(info, 'Tape quelques lettres.', 'La liste se réduit au fur et à mesure. Flèches haut et bas pour choisir, Entrée pour valider.');
+    sayIn(info, 'Tape quelques lettres.', 'La liste se réduit au fur et à mesure. Flèches haut et bas pour choisir, Enter pour valider.');
 
     sim.appendChild(f.page);
     sim.appendChild(info);
@@ -262,7 +262,7 @@
   const PAGES = {
     root: { title: 'Studio Nova', icon: '', blocks: [
       { kind: 'text', text: 'Espace de travail de l’agence Studio Nova.', label: 'Bloc texte', info: 'Il vit dans la page : c’est du contenu que tu lis directement.' },
-      { kind: 'toggle', text: 'Règles de l’espace', label: 'Bloc bascule', info: 'Un bloc de contenu replié. Il fait partie de la page « Studio Nova ».' },
+      { kind: 'toggle', text: 'Règles de l’espace', label: 'Bloc menu dépliant', info: 'Un bloc de contenu replié. Il fait partie de la page « Studio Nova ».' },
       { kind: 'page', target: 'accueil', label: 'Bloc page', info: 'Une porte vers la sous-page « Accueil — Studio Nova ». Clique pour l’ouvrir.' },
       { kind: 'page', target: 'projets', label: 'Bloc page', info: 'Une porte vers la sous-page « Projets », vide pour l’instant.' },
       { kind: 'page', target: 'ressources', label: 'Bloc page', info: 'Une porte vers la sous-page « Ressources », vide pour l’instant.' }

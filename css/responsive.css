@@ -74,7 +74,7 @@
 
   .course-panel {
     flex: 1 1 auto;
-    max-width: 860px;
+    max-width: 980px;
     padding: 48px 56px 40px;
   }
 }

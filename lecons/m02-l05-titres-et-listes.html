@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../images/logo-notion.png">
 <title>Titres et listes — Module 2 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
@@ -52,7 +53,7 @@
       <h1>Titres et listes</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
         <p>Une page bien structurée se lit en quelques secondes : on voit tout de suite les grandes parties et ce qu'il y a à faire. Pour ça, tu n'as besoin que de deux familles de blocs : les titres et les listes.</p>
         <h2>Les titres</h2>
@@ -68,7 +69,7 @@
           <li><strong>Liste numérotée</strong> : des étapes à suivre dans l'ordre. Notion numérote tout seul et met à jour les numéros si tu déplaces une ligne.</li>
           <li><strong>Checklist</strong> (« Liste de tâches » dans le menu) : des choses à faire, chacune avec une case à cocher. Une tâche cochée apparaît barrée.</li>
         </ul>
-        <p>Chaque ligne d'une liste est un bloc. Quand tu appuies sur Entrée à la fin d'une ligne, Notion crée une nouvelle ligne du même type. Appuie deux fois sur Entrée pour sortir de la liste.</p>
+        <p>Chaque ligne d'une liste est un bloc. Quand tu appuies sur Enter à la fin d'une ligne, Notion crée une nouvelle ligne du même type. Appuie deux fois sur Enter pour sortir de la liste.</p>
 
         <figure class="illustration">
           <img src="../images/illustrations/m02-trois-listes.svg" alt="Schéma comparant trois listes : une liste à puces (Orion, Luna, Atlas) étiquetée « Pas d'ordre » ; une liste numérotée (Sauvegarder, Envoyer le lien, Attendre la validation) étiquetée « Un ordre à suivre » ; une checklist avec une tâche cochée et barrée, étiquetée « Des choses à faire »." width="720" height="320">
@@ -81,56 +82,26 @@
         </div>
       </section>
 
-      <!-- ===================== Étape 2 : Voir ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
-        <h2 id="etape-2">La page d'accueil prend forme</h2>
-        <p>Coche une tâche pour voir ce qui se passe. Dans Notion, c'est exactement pareil : un clic sur la case, et la tâche est barrée.</p>
-        <div class="notion-page" role="group" aria-label="Simulation d'une page Notion : Accueil — Studio Nova">
-          <div class="notion-page__bar">Studio Nova / <strong>Accueil — Studio Nova</strong><span class="notion-page__tag">Simulation</span></div>
-          <div class="notion-page__body">
-            <p class="np-h1">Studio Nova <span class="np-tag">Titre 1</span></p>
-            <p class="np-text">Bienvenue dans l'espace de travail de Studio Nova. <span class="np-tag">Texte</span></p>
-            <p class="np-h2">Cette semaine <span class="np-tag">Titre 2</span></p>
-            <label class="np-todo"><input type="checkbox"><span>Finaliser la maquette du site Orion</span><span class="np-tag">Checklist</span></label>
-            <label class="np-todo"><input type="checkbox"><span>Préparer la réunion client</span><span class="np-tag">Checklist</span></label>
-            <label class="np-todo"><input type="checkbox"><span>Mettre à jour les ressources</span><span class="np-tag">Checklist</span></label>
-          </div>
-        </div>
-        <p>Chaque ligne porte le nom de son type de bloc, à droite. Les trois tâches sont trois blocs checklist distincts.</p>
-      </section>
-
       <!-- ===================== Étape 3 : Faire ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+      <section class="lesson-step prose" data-step="Faire" aria-labelledby="etape-3">
         <h2 id="etape-3">Ajouter le titre principal et les tâches de la semaine</h2>
         <ol class="tutorial">
           <li>Ouvre ta page « Accueil — Studio Nova ».</li>
-          <li>Clique tout au début de la phrase de bienvenue, avant le « B » de « Bienvenue », et appuie sur Entrée. Une ligne vide apparaît au-dessus de la phrase.</li>
-          <li>Remonte sur cette ligne vide, tape « /titre 1 », appuie sur Entrée, puis écris « Studio Nova ».
+          <li>Clique tout au début de la phrase de bienvenue, avant le « B » de « Bienvenue », et appuie sur Enter. Une ligne vide apparaît au-dessus de la phrase.</li>
+          <li>Remonte sur cette ligne vide, tape « /titre 1 », appuie sur Enter, puis écris « Studio Nova ».
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le titre 1 « Studio Nova » au-dessus de la phrase de bienvenue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Titre 1 « Studio Nova » · images/captures/m02-titre-1.png</span>
-              </div>
+              <img src="../images/captures/m02-titre-1.png" alt="Le titre 1 « Studio Nova » au-dessus de la phrase de bienvenue" width="1422" height="688" loading="lazy">
             </figure></li>
-          <li>Clique à la fin du titre « Cette semaine » et appuie sur Entrée.</li>
-          <li>Tape « /tâches » et choisis « Liste de tâches ». Une case à cocher apparaît.</li>
-          <li>Écris « Finaliser la maquette du site Orion », puis appuie sur Entrée : une nouvelle case apparaît.</li>
+          <li>Clique à la fin du titre « Cette semaine » et appuie sur Enter.</li>
+          <li>Tape « /liste » et choisis « Liste de tâches ». Une case à cocher apparaît.</li>
+          <li>Écris « Finaliser la maquette du site Orion », puis appuie sur Enter : une nouvelle case apparaît.</li>
           <li>Ajoute « Préparer la réunion client » et « Mettre à jour les ressources » de la même façon.</li>
-          <li>Appuie deux fois sur Entrée pour sortir de la liste.
+          <li>Appuie deux fois sur Enter pour sortir de la liste.
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la section « Cette semaine » avec ses trois tâches en checklist">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Section « Cette semaine » avec trois tâches · images/captures/m02-checklist.png</span>
-              </div>
+              <img src="../images/captures/m02-checklist.png" alt="La section « Cette semaine » avec ses trois tâches en checklist" width="1434" height="852" loading="lazy">
             </figure></li>
         </ol>
 
-        <div class="callout callout--tip">
-          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> Notion comprend aussi des raccourcis tapés en début de ligne, suivis d'une espace : « # » pour un titre 1, « ## » pour un titre 2, « ### » pour un titre 3, « - » pour une liste à puces, « 1. » pour une liste numérotée et « [] » pour une case à cocher.</p>
-        </div>
 
         <div class="exercise">
           <p class="exercise__kicker">Exercice · dans Notion</p>
@@ -145,16 +116,11 @@
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->
-      <section class="lesson-step" data-step aria-labelledby="etape-4">
-        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+      <section class="lesson-step" data-step="Vérifier" aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 3 : vérifier</h2>
         <div class="key-points">
-          <h2 id="etape-4-titre">À retenir</h2>
-          <p class="key-points__goal"><strong>Objectif de la leçon :</strong> tu sais maintenant structurer une page avec trois niveaux de titres et choisir le bon type de liste : à puces, numérotée ou checklist.</p>
-          <ul>
-            <li>Titre 1, 2 et 3 découpent la page comme les chapitres et les parties d'un livre.</li>
-            <li>Liste à puces : sans ordre. Liste numérotée : un ordre à suivre. Checklist : des choses à faire.</li>
-            <li>Entrée crée une ligne du même type ; deux fois Entrée pour sortir de la liste.</li>
-          </ul>
+          <h2 id="etape-4-titre">Objectif de la leçon</h2>
+          <p class="key-points__goal">Tu sais maintenant structurer une page avec trois niveaux de titres et choisir le bon type de liste : à puces, numérotée ou checklist.</p>
         </div>
 
         <div class="quiz" data-quiz>
@@ -193,7 +159,7 @@
 
         <div class="quiz" data-quiz>
           <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 3 sur 3</span><span class="quiz__question">Dans une checklist, tu écris une tâche et tu appuies sur Entrée. Que se passe-t-il ?</span></legend>
+            <legend><span class="quiz__count">Mini-quiz · question 3 sur 3</span><span class="quiz__question">Dans une checklist, tu écris une tâche et tu appuies sur Enter. Que se passe-t-il ?</span></legend>
             <div class="quiz__options">
               <label class="quiz__option"><input type="radio" name="q3" value="a"><span class="quiz__option-text">La liste se termine et tu reviens à du texte normal.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q3" value="b" data-correct><span class="quiz__option-text">Une nouvelle case à cocher apparaît en dessous.</span><span class="quiz__tag"></span></label>
@@ -201,7 +167,7 @@
             </div>
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Entrée crée une nouvelle ligne du même type, ici une nouvelle case. Pour sortir de la liste, il faut appuyer une seconde fois sur Entrée sur la ligne vide.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Enter crée une nouvelle ligne du même type, ici une nouvelle case. Pour sortir de la liste, il faut appuyer une seconde fois sur Enter sur la ligne vide.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>

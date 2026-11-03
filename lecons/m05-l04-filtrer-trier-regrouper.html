@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../images/logo-notion.png">
 <title>Filtrer, trier, regrouper — Module 5 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
@@ -52,7 +53,7 @@
       <h1>Filtrer, trier, regrouper</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-1">
+      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
         <p>À trois projets, tout tient à l'écran. À cinquante, il faut pouvoir répondre vite à des questions comme « qu'est-ce qui est en cours ? » ou « qu'est-ce qui arrive en premier ? ». Trois outils servent à ça, dans le menu des réglages de la vue, en haut à droite de la base :</p>
         <ul>
@@ -68,18 +69,14 @@
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
           <p><strong>Attention :</strong> un filtre oublié trompe facilement. Si un projet « a disparu », vérifie d'abord si la vue a un filtre actif : Notion affiche les filtres actifs juste au-dessus de la base. Avant de modifier le filtre d'une vue partagée, pense que toute l'équipe la voit.</p>
         </div>
-      </section>
 
-      <!-- ===================== Étape 2 : Voir ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-2">
-        <h2 id="etape-2">Les outils au-dessus de la base</h2>
+        <h2>Les outils au-dessus de la base</h2>
         <p>Utilise les trois menus au-dessus de la base. Filtre sur « En cours », puis sur « Responsable = Emma ». Trie par échéance, puis regroupe par statut. Observe le compteur sous la base.</p>
         <div data-db data-views="table,list" data-columns="basic" data-tools="true"></div>
-        <p>Quel que soit le réglage, la base contient toujours trois projets. Seul l'affichage change. Remets le filtre sur « Tous les projets » : tout revient.</p>
       </section>
 
       <!-- ===================== Étape 3 : Faire ===================== -->
-      <section class="lesson-step prose" data-step aria-labelledby="etape-3">
+      <section class="lesson-step prose" data-step="Faire" aria-labelledby="etape-3">
         <h2 id="etape-3">Créer la vue « En cours »</h2>
         <p>Pour chaque situation, quel outil utiliserais-tu ?</p>
         <div class="sort-ex" data-sort-ex role="group" aria-label="Filtrer, trier ou regrouper">
@@ -133,16 +130,11 @@
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->
-      <section class="lesson-step" data-step aria-labelledby="etape-4">
-        <h2 id="etape-4" class="sr-only">Étape 4 : vérifier</h2>
+      <section class="lesson-step" data-step="Vérifier" aria-labelledby="etape-4">
+        <h2 id="etape-4" class="sr-only">Étape 3 : vérifier</h2>
         <div class="key-points">
-          <h2 id="etape-4-titre">À retenir</h2>
-          <p class="key-points__goal"><strong>Objectif de la leçon :</strong> tu sais maintenant filtrer, trier et regrouper les entrées d'une vue pour répondre à une question précise.</p>
-          <ul>
-            <li>Filtrer cache, trier ordonne, regrouper range en paquets : rien n'est jamais supprimé.</li>
-            <li>Les filtres, tris et regroupements appartiennent à une vue, pas à la base.</li>
-            <li>Une vue par question : « En cours », « Mes projets », « Cette semaine ».</li>
-          </ul>
+          <h2 id="etape-4-titre">Objectif de la leçon</h2>
+          <p class="key-points__goal">Tu sais maintenant filtrer, trier et regrouper les entrées d'une vue pour répondre à une question précise.</p>
         </div>
 
         <div class="quiz" data-quiz>
@@ -156,95 +148,6 @@
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
           <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La cause la plus fréquente est un filtre. Il cache le projet sans le supprimer.</p>
-          <div class="quiz__actions">
-            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
-            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
-          </div>
-        </div>
-
-        <div class="module-end">
-          <h2>Fin du module 5</h2>
-        </div>
-
-        <div class="exercise">
-          <p class="exercise__kicker">Exercice récapitulatif du module · dans Notion</p>
-          <h3>Des vues qui répondent à des questions</h3>
-          <p class="exercise__result">Reprends ta base « Mes projets » du module 4. Coche chaque étape une fois réalisée.</p>
-          <ul class="exercise__checklist">
-            <li><label><input type="checkbox"><span>1. Ajoute une vue <strong>Board</strong> « Avancement », rangée par statut.</span></label></li>
-            <li><label><input type="checkbox"><span>2. Ajoute une vue <strong>Calendrier</strong> « Échéances ».</span></label></li>
-            <li><label><input type="checkbox"><span>3. Ajoute une vue <strong>Tableau</strong> « À traiter » avec le filtre « Statut n'est pas Terminé ».</span></label></li>
-            <li><label><input type="checkbox"><span>4. Dans « À traiter », <strong>trie</strong> par échéance croissante.</span></label></li>
-            <li><label><input type="checkbox"><span>5. Dans la vue de départ, <strong>regroupe</strong> par catégorie.</span></label></li>
-          </ul>
-          <h4>Résultat attendu</h4>
-          <p class="exercise__result">Quatre onglets en haut de « Mes projets ». « À traiter » ne montre plus les projets terminés et commence par le plus urgent. Aucun projet n'a été supprimé ni dupliqué : ta base contient toujours les mêmes entrées.</p>
-        </div>
-
-        <h2 class="module-quiz-title">Quiz du module 5</h2>
-
-        <div class="quiz" data-quiz>
-          <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 1 sur 4</span><span class="quiz__question">Hugo arrive chez Studio Nova et ne voit que deux projets sur cinq dans la vue « En cours ». Que lui expliques-tu ?</span></legend>
-            <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq1" value="a"><span class="quiz__option-text">Les trois autres ont été supprimés.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq1" value="b" data-correct><span class="quiz__option-text">La vue a un filtre : les autres projets sont cachés, pas supprimés.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq1" value="c"><span class="quiz__option-text">La base est limitée à deux projets.</span><span class="quiz__tag"></span></label>
-            </div>
-          </fieldset>
-          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Un filtre cache les entrées qui ne correspondent pas. Elles restent dans la base et apparaissent dans les autres vues.</p>
-          <div class="quiz__actions">
-            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
-            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
-          </div>
-        </div>
-
-        <div class="quiz" data-quiz>
-          <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 2 sur 4</span><span class="quiz__question">Emma veut une vue de ses projets, du plus urgent au moins urgent. Que règle-t-elle ?</span></legend>
-            <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq2" value="a" data-correct><span class="quiz__option-text">Un filtre Responsable = Emma et un tri par échéance croissante.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq2" value="b"><span class="quiz__option-text">Un regroupement par priorité uniquement.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq2" value="c"><span class="quiz__option-text">Une nouvelle base « Projets d'Emma ».</span><span class="quiz__tag"></span></label>
-            </div>
-          </fieldset>
-          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le filtre garde ses projets, le tri les met dans l'ordre d'urgence. Une nouvelle base dupliquerait les données.</p>
-          <div class="quiz__actions">
-            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
-            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
-          </div>
-        </div>
-
-        <div class="quiz" data-quiz>
-          <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 3 sur 4</span><span class="quiz__question">Quelle vue permet de déplacer un projet d'une colonne « À faire » à une colonne « En cours » ?</span></legend>
-            <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq3" value="a"><span class="quiz__option-text">Calendrier</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq3" value="b" data-correct><span class="quiz__option-text">Board</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq3" value="c"><span class="quiz__option-text">Galerie</span><span class="quiz__tag"></span></label>
-            </div>
-          </fieldset>
-          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le board range les entrées en colonnes ; glisser une carte change son statut.</p>
-          <div class="quiz__actions">
-            <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
-            <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
-          </div>
-        </div>
-
-        <div class="quiz" data-quiz>
-          <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 4 sur 4</span><span class="quiz__question">Lucas veut voir les échéances du mois sur un calendrier. De quoi la base a-t-elle besoin ?</span></legend>
-            <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="mq4" value="a" data-correct><span class="quiz__option-text">D'une propriété Date.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq4" value="b"><span class="quiz__option-text">D'une image par projet.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="mq4" value="c"><span class="quiz__option-text">D'un regroupement par statut.</span><span class="quiz__tag"></span></label>
-            </div>
-          </fieldset>
-          <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La vue Calendrier place chaque entrée selon une propriété Date.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
