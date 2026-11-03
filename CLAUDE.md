@@ -240,6 +240,8 @@ Retours de relecture de l'utilisatrice (branche `corrections-modules-1-2`).
   Dans un menu dépliant, Shift + Enter passe à la ligne. **[confirmé]**
 - **Ctrl + \** retiré partout (ne fonctionne pas) ; on masque la barre latérale
   avec le bouton en haut à gauche. **[confirmé]**
+- **Grand écran** : conteneur 1440 px, carte de leçon jusqu'à 980 px ; texte,
+  encadrés et visuels alignés sur toute la largeur de la carte. **[confirmé]**
 - **Captures des modules 1 et 2** intégrées (`images/captures/`), paires
   côte à côte (`-1` / `-2`, classe `.screenshot__pair`). Favicon = logo Notion.
 - Corrections ponctuelles : « home » pour l'icône (2.2), « /liste » puis « Liste

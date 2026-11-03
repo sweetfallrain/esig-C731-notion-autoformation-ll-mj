@@ -2165,28 +2165,6 @@ body[data-lesson] .course-panel h1 {
   }
 }
 
-/* Grand écran : la carte de leçon s'élargit, mais le texte garde une largeur
-   de lecture confortable (--measure). Captures, simulations et tableaux
-   utilisent toute la largeur de la carte. */
-:root {
-  --measure: 760px;
-}
-
-.lesson-step > :is(p, ul, ol, h2, h3, .callout, .exercise, .quiz, .key-points, .lesson-done),
-.tutorial > li {
-  max-width: var(--measure);
-}
-
-.lesson-step > ol.tutorial {
-  max-width: none;
-}
-
-/* Les captures d'un tutoriel débordent de la colonne de texte jusqu'au bord
-   de la carte (38px = retrait du numéro d'étape). */
-.tutorial .screenshot {
-  width: calc(100cqi - 38px);
-}
-
 /* Boutons du bas : précédent à gauche, suivant à droite */
 .lesson-nav__next {
   margin-left: auto;

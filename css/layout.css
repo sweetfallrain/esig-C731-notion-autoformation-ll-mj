@@ -65,7 +65,6 @@
 }
 
 .course-panel {
-  container-type: inline-size;
   min-width: 0;
   width: 100%;
   background: var(--color-surface);
