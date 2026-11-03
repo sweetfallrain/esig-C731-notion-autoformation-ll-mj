@@ -232,6 +232,10 @@ Retours de relecture de l'utilisatrice (branche `corrections-modules-1-2`).
   Comprendre (le corrigé de m08-l03 est au début de Vérifier). « À retenir » est
   supprimé : Vérifier = objectif + quiz. Les noms d'étapes sont lus sur
   `data-step`. **[confirmé]**
+- **Pas de doublon texte / simulation** : quand une simulation répète le texte,
+  on garde le plus clair des deux (souvent le texte). Simulations retirées en
+  1.2, 2.1, 3.3, 4.5 et 7.1 ; paragraphes redondants retirés en 4.3, 4.4, 4.6,
+  5.1, 5.2 et 5.4. **[confirmé]**
 - **Exercice récapitulatif et quiz de fin de module** supprimés (modules 2 à 8).
   **[confirmé]**
 - **Touches** : « Enter » et « Esc » (plus « Entrée » ni « Échap »). **[confirmé]**
