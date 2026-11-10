@@ -62,7 +62,7 @@
           <li><strong>Le bloc « Lien vers une page »</strong> (<em>Link to page</em>), sur une ligne à part. Tape « /lien » et choisis la page. Il ressemble à un bloc page, avec une petite flèche en plus sur l'icône.</li>
           <li><strong>Le lien copié</strong>. L'icône de lien en haut à droite d'une page, ou « Copier le lien » (<em>Copy link</em>) dans le menu ···, donne une adresse que tu peux coller dans Notion, dans un e-mail ou un message.</li>
         </ul>
-        <p>Bonus : quand une page est citée ailleurs, Notion l'affiche sous son titre, dans les <strong>rétroliens</strong> (<em>Backlinks</em>). Tu vois ainsi d'où on vient vers cette page.</p>
+        <p>Bonus : quand une page est citée ailleurs, Notion l'indique juste au-dessus de son titre, par exemple « 1 lien entrant » (<em>Backlinks</em>). Un clic dessus montre d'où l'on vient vers cette page.</p>
 
         <figure class="illustration">
           <img src="../images/illustrations/m03-lien-ou-sous-page.svg" alt="Comparaison en deux panneaux. À gauche, « Sous-page (/page) » : depuis « Notes & réunions », une flèche pleine crée une nouvelle page « Réunion d'équipe » rangée à cet endroit. À droite, « Lien (@ ou /lien) » : depuis « Réunion d'équipe », une flèche pointillée pointe vers la page existante « Accueil — Studio Nova », qui reste où elle est." width="720" height="320">
@@ -82,21 +82,13 @@
           <li>Ouvre « Réunion d'équipe — 3 novembre ». Sous l'ordre du jour, écris : « Les détails sont dans ».</li>
           <li>Tape « @Proj » : une liste de pages apparaît. Choisis « Projets ». Le lien s'insère dans ta phrase.
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la liste qui apparaît après « @Proj », avec la page « Projets » en surbrillance">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Mention @ en cours · images/captures/m03-mention-projets.png</span>
-              </div>
+              <img src="../images/captures/m03-mention-projets.png" alt="« @Proj » tapé dans la page « Réunion d'équipe - 3 novembre » : la liste propose la page « Projets » sous « Lien vers la page »" width="1283" height="843" loading="lazy">
             </figure></li>
           <li>Va à la ligne, tape « /lien » et choisis « Lien vers une page » (<em>Link to page</em>). Cherche « Ressources » et valide.</li>
           <li>Ouvre maintenant « Accueil — Studio Nova ». Dans « Liens utiles », ajoute « @Notes &amp; réunions ».</li>
-          <li>Retourne dans « Notes &amp; réunions » : sous le titre, Notion indique un rétrolien depuis l'accueil.
+          <li>Retourne dans « Notes &amp; réunions » : au-dessus du titre, Notion indique « 1 lien entrant » : c'est le lien depuis l'accueil.
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le haut de la page « Notes & réunions » avec la mention des rétroliens sous le titre">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Rétroliens sous le titre · images/captures/m03-retroliens.png</span>
-              </div>
+              <img src="../images/captures/m03-retroliens.png" alt="Le haut de la page « Notes & réunions », avec la mention « 1 lien entrant » juste au-dessus du titre" width="1286" height="537" loading="lazy">
             </figure></li>
           <li>Enfin, ouvre le menu ··· de « Projets » et clique sur « Copier le lien ». Colle-le dans un e-mail ou un message de test pour voir l'adresse obtenue.</li>
         </ol>
@@ -165,12 +157,12 @@
             <legend><span class="quiz__count">Mini-quiz · question 3 sur 3</span><span class="quiz__question">Où vois-tu quelles pages font un lien vers la page ouverte ?</span></legend>
             <div class="quiz__options">
               <label class="quiz__option"><input type="radio" name="q3" value="a"><span class="quiz__option-text">Dans la Corbeille.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="q3" value="b" data-correct><span class="quiz__option-text">Dans les rétroliens, sous le titre de la page.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q3" value="b" data-correct><span class="quiz__option-text">Dans les liens entrants, au-dessus du titre de la page.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q3" value="c"><span class="quiz__option-text">Dans les Paramètres.</span><span class="quiz__tag"></span></label>
             </div>
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Les rétroliens (Backlinks) listent, sous le titre, les pages qui mentionnent celle-ci.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Les liens entrants (<em>Backlinks</em>), affichés au-dessus du titre, listent les pages qui mentionnent celle-ci.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
