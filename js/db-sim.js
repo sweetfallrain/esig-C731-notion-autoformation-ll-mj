@@ -36,7 +36,7 @@
 
   const STATUSES = ['Pas commencé', 'En cours', 'Terminé'];
   const STATUS_CLASS = { 'Pas commencé': 'status', 'En cours': 'status status--doing', 'Terminé': 'status status--done' };
-  const VIEW_NAMES = { table: 'Table', list: 'Liste', board: 'Board', calendar: 'Calendrier', gallery: 'Galerie', timeline: 'Timeline' };
+  const VIEW_NAMES = { table: 'Table', list: 'Liste', board: 'Kanban', calendar: 'Calendrier', gallery: 'Galerie', timeline: 'Chronologie' };
   const FILTERS = {
     none: { label: 'Tous les projets', test: function () { return true; } },
     doing: { label: 'Statut = En cours', test: function (p) { return p.status === 'En cours'; } },
