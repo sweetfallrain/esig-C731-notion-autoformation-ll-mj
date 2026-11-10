@@ -86,7 +86,7 @@ Données à réutiliser **à l'identique** partout :
 | Projet          | Statut   | Responsable | Priorité | Échéance    |
 |-----------------|----------|-------------|----------|-------------|
 | Site Orion      | En cours | Emma        | Haute    | 15 novembre |
-| Identité Luna   | À faire  | Lucas       | Moyenne  | 28 novembre |
+| Identité Luna   | Pas commencé | Lucas   | Moyenne  | 28 novembre |
 | Campagne Atlas  | Terminé  | Emma        | Basse    | 5 novembre  |
 
 Personnes : **Emma** (responsable de projet), **Lucas** (membre de l'équipe),
@@ -221,6 +221,22 @@ corrections, astuces ou encadrés.
 ---
 
 ## Notes de migration
+
+### v7 — captures des modules 3 et 4 (nov. 2026)
+
+- Captures des modules 3 et 4 intégrées ; captures des modules 1-2 refaites.
+- **Libellés Notion actuels (vérifiés sur captures)** : « liens entrants »
+  (plus « rétroliens »), filtres de recherche « Titres uniquement », « Créée
+  par », « Dans », « + Filtrer » ; barre latérale avec « Nouvelle page » et
+  « + Ajouter » ; menu dépliant créé avec « /liste ».
+- **Bases** : création avec « /database » puis « Vue Table » (« Vue Tableau » =
+  board) ; types « État » (options Pas commencé / En cours / Terminé),
+  « Sélectionner », « Sélection multiple », « Personne », « Date » ; options
+  d'une sélection via « Modifier la propriété » → Options → + ; la base de la
+  page « Projets » s'appelle « 2026 ». Valeur de statut « À faire » remplacée
+  par « Pas commencé » partout (données Studio Nova). **[confirmé]**
+- **À vérifier au module 5** : noms des vues dans Notion en français (« Vue
+  Table », « Vue Tableau » pour le board, « Vue Chronologie » pour la timeline).
 
 ### v6 — allègement et captures des modules 1-2 (nov. 2026)
 
