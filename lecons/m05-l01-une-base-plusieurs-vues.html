@@ -58,10 +58,10 @@
         <p>Ta base « Projets » s'affiche en tableau. C'est pratique pour tout voir d'un coup, mais pas toujours : Emma veut voir l'avancement en colonnes, Lucas veut savoir ce qui tombe cette semaine. Faut-il créer une base pour chacun ? Non.</p>
         <p>Une <strong>vue</strong> est une façon d'afficher une base. Une même base peut avoir autant de vues que tu veux : un tableau, des colonnes de suivi, un calendrier… Les projets, eux, ne sont enregistrés <strong>qu'une seule fois</strong>.</p>
         <p>Compare avec des lunettes : tu peux regarder la même pièce avec des lunettes de lecture ou des lunettes de soleil. La pièce ne change pas ; seule ta façon de la voir change. Si tu changes le statut d'un projet dans le tableau, il change aussi dans le calendrier, puisque c'est le même projet.</p>
-        <p>Les vues apparaissent sous forme d'<strong>onglets</strong> en haut de la base. Pour en ajouter une, clique sur <strong>« + »</strong> à droite des onglets (sur un écran étroit : clique sur le nom de la vue, puis « Nouvelle vue », <em>New view</em>), choisis le type, puis donne-lui un nom.</p>
+        <p>Les vues apparaissent sous forme d'<strong>onglets</strong> en haut de la base. Pour en ajouter une, clique sur le <strong>« + »</strong> à droite du nom de la base, choisis le type, puis donne-lui un nom dans les réglages de la vue.</p>
 
         <figure class="illustration">
-          <img src="../images/illustrations/m05-une-base-plusieurs-vues.svg" alt="Schéma : la base « Projets », enregistrée une seule fois, est reliée par trois flèches à trois vues : un tableau avec les trois projets, un board en trois colonnes Pas commencé, En cours et Terminé, et un calendrier où les projets sont placés à leur date." width="720" height="320">
+          <img src="../images/illustrations/m05-une-base-plusieurs-vues.svg" alt="Schéma : la base « Projets », enregistrée une seule fois, est reliée par trois flèches à trois vues : une table avec les trois projets, un Kanban en trois colonnes Pas commencé, En cours et Terminé, et un calendrier où les projets sont placés à leur date." width="720" height="320">
           <figcaption>Une seule base, trois façons de la regarder.</figcaption>
         </figure>
         <p class="definition">Une vue est une façon d'afficher une base ; les données, elles, ne sont jamais dupliquées.</p>
@@ -79,24 +79,23 @@
       <section class="lesson-step prose" data-step="Faire" aria-labelledby="etape-3">
         <h2 id="etape-3">Ajouter une vue « Suivi »</h2>
         <ol class="tutorial">
-          <li>Ouvre ta base « Projets ». En haut, un onglet porte le nom de la vue actuelle, souvent « Tableau » (<em>Table</em>).</li>
-          <li>Double-clique sur cet onglet (ou clic droit, puis « Renommer ») et nomme-le « Tous les projets ».</li>
-          <li>Clique sur le <strong>+</strong> à droite de l'onglet. La liste des types de vues apparaît.
+          <li>Ouvre la page « Projets » : ta base « 2026 » s'affiche en table. Au départ, sa vue n'a pas de nom, et aucun onglet n'apparaît encore au-dessus du tableau.</li>
+          <li>Pour nommer la vue, clique sur l'icône des réglages (les petits curseurs), juste à gauche du bouton bleu « Nouveau ». Tout en haut du menu, dans le champ <strong>« Nom de la vue »</strong>, tape « Tous les projets ».
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la liste des types de vues proposée après un clic sur « + » : Tableau, Board, Liste, Calendrier, Galerie, Timeline…">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Ajouter une vue · images/captures/m05-ajouter-vue.png</span>
-              </div>
+              <img src="../images/captures/m05-nom-vue.png" alt="La base « 2026 » : l'icône des réglages de la vue est entourée, et le menu ouvert montre le champ « Nom de la vue » encadré, tout en haut" width="1285" height="962" loading="lazy">
             </figure></li>
-          <li>Choisis <strong>Board</strong>. Notion range les projets en colonnes selon leur statut.</li>
-          <li>Renomme la nouvelle vue « Suivi ». Tu as maintenant deux onglets.</li>
+          <li>Clique sur le <strong>+</strong> qui apparaît à droite du nom de la base « 2026 ». Le menu « Ajouter une nouvelle vue » s'ouvre.
+            <figure class="screenshot">
+              <img src="../images/captures/m05-ajouter-vue.png" alt="Le « + » à droite de « 2026 » est entouré : le menu « Ajouter une nouvelle vue » propose Table, Kanban, Galerie, Liste, Graphique, Dashboard, Chronologie, Fil d'actualité, Carte, Calendrier et Formulaire" width="1453" height="747" loading="lazy">
+            </figure></li>
+          <li>Choisis <strong>Kanban</strong>. Notion range les projets en colonnes selon leur statut.</li>
+          <li>Nomme la nouvelle vue « Suivi », avec le champ « Nom de la vue » comme à l'étape 2. Tu as maintenant deux onglets au-dessus de la base : « Tous les projets » et « Suivi ».</li>
           <li>Dans « Suivi », passe « Identité Luna » en « En cours ». Reviens sur « Tous les projets » : le statut a changé là aussi.</li>
         </ol>
 
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> donne à chaque vue un nom qui dit à quoi elle sert (« Suivi », « Cette semaine », « Mes projets ») plutôt que son type (« Board 2 »).</p>
+          <p><strong>Astuce :</strong> donne à chaque vue un nom qui dit à quoi elle sert (« Suivi », « Cette semaine », « Mes projets ») plutôt que son type (« Kanban 2 »).</p>
         </div>
 
         <div class="exercise">
@@ -104,7 +103,7 @@
           <h3>Deux vues pour la base Projets</h3>
           <ol>
             <li>Renomme la vue de départ « Tous les projets ».</li>
-            <li>Ajoute une vue Board nommée « Suivi ».</li>
+            <li>Ajoute une vue Kanban nommée « Suivi ».</li>
             <li>Modifie un statut dans « Suivi » et vérifie le changement dans « Tous les projets ».</li>
           </ol>
           <p class="exercise__result"><strong>Résultat attendu :</strong> deux onglets en haut de la base. Le changement de statut apparaît dans les deux vues, parce qu'il n'y a qu'un seul projet. Aucun projet n'a été dupliqué.</p>
@@ -121,7 +120,7 @@
 
         <div class="quiz" data-quiz>
           <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Lucas change l'échéance de « Site Orion » dans la vue Calendrier. Que voit Emma dans la vue Tableau ?</span></legend>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Lucas change l'échéance de « Site Orion » dans la vue Calendrier. Que voit Emma dans la vue Table ?</span></legend>
             <div class="quiz__options">
               <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">L'ancienne date : chaque vue a ses propres données.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">La nouvelle date : c'est le même projet.</span><span class="quiz__tag"></span></label>

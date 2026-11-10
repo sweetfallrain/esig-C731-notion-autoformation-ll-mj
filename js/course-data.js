@@ -60,8 +60,8 @@
       desc: 'Une même base, plusieurs présentations. Les données ne sont jamais dupliquées.',
       lessons: [
         { id: 'm5-l1', title: 'Une base, plusieurs vues', file: 'lecons/m05-l01-une-base-plusieurs-vues.html', minutes: 5 },
-        { id: 'm5-l2', title: 'Table, liste et board', file: 'lecons/m05-l02-table-liste-board.html', minutes: 6 },
-        { id: 'm5-l3', title: 'Calendrier, galerie, timeline', file: 'lecons/m05-l03-calendrier-galerie-timeline.html', minutes: 6 },
+        { id: 'm5-l2', title: 'Table, liste et Kanban', file: 'lecons/m05-l02-table-liste-board.html', minutes: 6 },
+        { id: 'm5-l3', title: 'Calendrier, galerie, chronologie', file: 'lecons/m05-l03-calendrier-galerie-timeline.html', minutes: 6 },
         { id: 'm5-l4', title: 'Filtrer, trier, regrouper', file: 'lecons/m05-l04-filtrer-trier-regrouper.html', minutes: 8 }
       ]
     },

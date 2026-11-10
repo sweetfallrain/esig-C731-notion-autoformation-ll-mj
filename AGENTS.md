@@ -235,8 +235,12 @@ corrections, astuces ou encadrés.
   d'une sélection via « Modifier la propriété » → Options → + ; la base de la
   page « Projets » s'appelle « 2026 ». Valeur de statut « À faire » remplacée
   par « Pas commencé » partout (données Studio Nova). **[confirmé]**
-- **À vérifier au module 5** : noms des vues dans Notion en français (« Vue
-  Table », « Vue Tableau » pour le board, « Vue Chronologie » pour la timeline).
+- **Noms des vues (vérifiés sur capture)** : Table, Kanban, Galerie, Liste,
+  Graphique, Dashboard, Chronologie, Fil d'actualité, Carte, Calendrier,
+  Formulaire. « Board » → « Kanban » et « Timeline » → « Chronologie » dans toute
+  la formation ; seule la commande « / » affiche « Vue Tableau » pour le Kanban.
+  Une vue se nomme dans ses réglages (icône des curseurs → « Nom de la vue ») ;
+  on ajoute une vue avec le « + » à droite du nom de la base. **[confirmé]**
 
 ### v6 — allègement et captures des modules 1-2 (nov. 2026)
 

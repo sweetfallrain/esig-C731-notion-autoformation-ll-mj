@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="../images/logo-notion.png">
-<title>Table, liste et board — Module 5 — Formation Notion</title>
+<title>Table, liste et Kanban — Module 5 — Formation Notion</title>
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/layout.css">
@@ -50,33 +50,33 @@
 
     <main id="contenu" class="course-panel">
       <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m5">Vues, filtres et tris</a> · Leçon 2 sur 4 · 6 min</p>
-      <h1>Table, liste et board</h1>
+      <h1>Table, liste et Kanban</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
       <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Les trois vues les plus utilisées au quotidien sont le tableau, la liste et le board. Chacune répond à une question différente.</p>
+        <p>Les trois vues les plus utilisées au quotidien sont la table, la liste et le Kanban. Chacune répond à une question différente.</p>
         <div class="db-sim__scroll">
           <table class="db-table">
-            <caption class="sr-only">Table, liste et board</caption>
+            <caption class="sr-only">Table, liste et Kanban</caption>
             <thead><tr><th scope="col">Vue</th><th scope="col">À quoi elle ressemble</th><th scope="col">Idéale pour…</th></tr></thead>
             <tbody>
-              <tr><td><strong>Tableau</strong> (<em>Table</em>)</td><td>Des lignes et des colonnes, comme un tableur.</td><td>Voir et modifier toutes les propriétés d'un coup.</td></tr>
+              <tr><td><strong>Table</strong> (<em>Table</em>)</td><td>Des lignes et des colonnes, comme un tableur.</td><td>Voir et modifier toutes les propriétés d'un coup.</td></tr>
               <tr><td><strong>Liste</strong> (<em>List</em>)</td><td>Une ligne épurée par entrée, peu de propriétés.</td><td>Une liste de lecture rapide : comptes rendus, ressources.</td></tr>
-              <tr><td><strong>Board</strong> (<em>Board</em>)</td><td>Des cartes rangées en colonnes, une colonne par option.</td><td>Suivre un avancement : à faire, en cours, terminé.</td></tr>
+              <tr><td><strong>Kanban</strong> (<em>Board</em>)</td><td>Des cartes rangées en colonnes, une colonne par option.</td><td>Suivre un avancement : à faire, en cours, terminé.</td></tr>
             </tbody>
           </table>
         </div>
-        <p>Le <strong>board</strong> mérite une explication. Il range les cartes selon une propriété à choix, le plus souvent le <strong>Statut</strong>. Faire glisser une carte d'une colonne à l'autre <strong>change la propriété</strong> : déplacer « Identité Luna » dans « En cours » passe son statut à « En cours ». C'est la méthode Kanban, utilisée par beaucoup d'équipes.</p>
+        <p>Le <strong>Kanban</strong> mérite une explication. Il range les cartes selon une propriété à choix, le plus souvent le <strong>Statut</strong>. Faire glisser une carte d'une colonne à l'autre <strong>change la propriété</strong> : déplacer « Identité Luna » dans « En cours » passe son statut à « En cours ». C'est la méthode Kanban, utilisée par beaucoup d'équipes.</p>
         <p>Dans chaque vue, tu choisis quelles propriétés afficher : <strong>menu des réglages</strong> de la vue (en haut à droite de la base), puis « Visibilité des propriétés ». Une liste montre souvent seulement le nom et la date ; le tableau montre tout.</p>
-        <p class="definition">Tableau pour tout voir, liste pour lire vite, board pour suivre l'avancement.</p>
+        <p class="definition">Table pour tout voir, liste pour lire vite, Kanban pour suivre l'avancement.</p>
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> sur un board, tu peux aussi ranger les cartes par Responsable ou par Priorité : ouvre le menu des réglages de la vue, puis « Regrouper » (<em>Group</em>) et change la propriété.</p>
+          <p><strong>Astuce :</strong> sur un Kanban, tu peux aussi ranger les cartes par Responsable ou par Priorité : ouvre le menu des réglages de la vue, puis « Regrouper » (<em>Group</em>) et change la propriété.</p>
         </div>
 
         <h2>Trois vues du quotidien</h2>
-        <p>Passe de la vue Table à la vue Liste, puis à la vue Board. Ouvre un projet depuis n'importe quelle vue.</p>
+        <p>Passe de la vue Table à la vue Liste, puis à la vue Kanban. Ouvre un projet depuis n'importe quelle vue.</p>
         <div data-db data-views="table,list,board" data-columns="basic"></div>
       </section>
 
@@ -87,17 +87,17 @@
         <div class="sort-ex" data-sort-ex role="group" aria-label="Choisir la vue adaptée">
           <div class="sort-ex__row" data-answer="board" data-explain="Les colonnes par statut montrent l'avancement en un coup d'œil.">
             <label class="sort-ex__label" for="q52a">Lors du point d'équipe, voir quels projets avancent et lesquels bloquent.</label>
-            <select id="q52a"><option value="">Choisis…</option><option value="table">Tableau</option><option value="list">Liste</option><option value="board">Board</option></select>
+            <select id="q52a"><option value="">Choisis…</option><option value="table">Table</option><option value="list">Liste</option><option value="board">Kanban</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
           <div class="sort-ex__row" data-answer="table" data-explain="Le tableau affiche toutes les propriétés côte à côte, prêtes à être modifiées.">
             <label class="sort-ex__label" for="q52b">Vérifier et corriger le budget, le client et l'échéance de tous les projets.</label>
-            <select id="q52b"><option value="">Choisis…</option><option value="table">Tableau</option><option value="list">Liste</option><option value="board">Board</option></select>
+            <select id="q52b"><option value="">Choisis…</option><option value="table">Table</option><option value="list">Liste</option><option value="board">Kanban</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
           <div class="sort-ex__row" data-answer="list" data-explain="Une liste épurée suffit pour lire des titres.">
             <label class="sort-ex__label" for="q52c">Parcourir rapidement les titres des comptes rendus de réunion.</label>
-            <select id="q52c"><option value="">Choisis…</option><option value="table">Tableau</option><option value="list">Liste</option><option value="board">Board</option></select>
+            <select id="q52c"><option value="">Choisis…</option><option value="table">Table</option><option value="list">Liste</option><option value="board">Kanban</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
           <div class="sort-ex__actions">
@@ -110,10 +110,10 @@
           <li>Dans ta base « Projets », ouvre la vue « Suivi » créée à la leçon précédente.</li>
           <li>Fais glisser la carte « Campagne Atlas » dans la colonne « En cours », puis remets-la dans « Terminé ».
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le board « Suivi » avec une carte en cours de déplacement d'une colonne à l'autre">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le Kanban « Suivi » avec une carte en cours de déplacement d'une colonne à l'autre">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
                 <strong>Capture d'écran Notion</strong>
-                <span>Déplacer une carte sur le board · images/captures/m05-board-glisser.png</span>
+                <span>Déplacer une carte sur le Kanban · images/captures/m05-board-glisser.png</span>
               </div>
             </figure></li>
           <li>Ajoute une vue <strong>Liste</strong> nommée « Coup d'œil ».</li>
@@ -124,11 +124,11 @@
           <p class="exercise__kicker">Exercice · dans Notion</p>
           <h3>Trois vues, trois usages</h3>
           <ol>
-            <li>Vérifie que ta base « Projets » a les vues « Tous les projets » (Tableau) et « Suivi » (Board).</li>
+            <li>Vérifie que ta base « Projets » a les vues « Tous les projets » (Table) et « Suivi » (Kanban).</li>
             <li>Ajoute la vue « Coup d'œil » (Liste) avec seulement l'échéance visible.</li>
-            <li>Sur le board, déplace un projet d'une colonne à l'autre et vérifie son statut dans le tableau.</li>
+            <li>Sur le Kanban, déplace un projet d'une colonne à l'autre et vérifie son statut dans le tableau.</li>
           </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> trois onglets en haut de la base. Le projet déplacé sur le board a changé de statut dans les trois vues. « Coup d'œil » n'affiche que les noms et les échéances.</p>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> trois onglets en haut de la base. Le projet déplacé sur le Kanban a changé de statut dans les trois vues. « Coup d'œil » n'affiche que les noms et les échéances.</p>
         </div>
       </section>
 
@@ -137,15 +137,15 @@
         <h2 id="etape-4" class="sr-only">Étape 3 : vérifier</h2>
         <div class="key-points">
           <h2 id="etape-4-titre">Objectif de la leçon</h2>
-          <p class="key-points__goal">Tu sais maintenant choisir entre les vues Tableau, Liste et Board, et utiliser un board pour suivre l'avancement.</p>
+          <p class="key-points__goal">Tu sais maintenant choisir entre les vues Table, Liste et Kanban, et utiliser un Kanban pour suivre l'avancement.</p>
         </div>
 
         <div class="quiz" data-quiz>
           <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Sur le board « Suivi », Emma glisse « Site Orion » de « En cours » à « Terminé ». Que s'est-il passé ?</span></legend>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Sur le Kanban « Suivi », Emma glisse « Site Orion » de « En cours » à « Terminé ». Que s'est-il passé ?</span></legend>
             <div class="quiz__options">
               <label class="quiz__option"><input type="radio" name="q1" value="a" data-correct><span class="quiz__option-text">Le statut de Site Orion est maintenant « Terminé », dans toutes les vues.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="q1" value="b"><span class="quiz__option-text">Rien : le board est seulement décoratif.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b"><span class="quiz__option-text">Rien : le Kanban est seulement décoratif.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Une copie de Site Orion a été créée.</span><span class="quiz__tag"></span></label>
             </div>
           </fieldset>
@@ -162,12 +162,12 @@
             <legend><span class="quiz__count">Mini-quiz · question 2 sur 2</span><span class="quiz__question">Quelle vue choisir pour un point d'équipe sur l'avancement des projets ?</span></legend>
             <div class="quiz__options">
               <label class="quiz__option"><input type="radio" name="q2" value="a"><span class="quiz__option-text">Liste</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">Board</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Tableau</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="b" data-correct><span class="quiz__option-text">Kanban</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q2" value="c"><span class="quiz__option-text">Table</span><span class="quiz__tag"></span></label>
             </div>
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le board range les projets par statut : on voit tout de suite ce qui avance.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Le Kanban range les projets par statut : on voit tout de suite ce qui avance.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
