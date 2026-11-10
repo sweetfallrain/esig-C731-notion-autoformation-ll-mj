@@ -21,7 +21,7 @@
       todos: [['Valider l’arborescence avec le client', true], ['Finaliser la maquette du site Orion', false], ['Intégrer les retours de la réunion client', false]]
     },
     {
-      id: 'luna', name: 'Identité Luna', status: 'À faire', owner: 'Lucas', priority: 'Moyenne',
+      id: 'luna', name: 'Identité Luna', status: 'Pas commencé', owner: 'Lucas', priority: 'Moyenne',
       start: 10, startMonth: 11, day: 28, client: 'Luna Cosmétiques', budget: 6500, tags: ['Design'], billed: false,
       summary: 'Création du logo et de la charte graphique de la marque Luna.',
       todos: [['Recueillir les inspirations du client', false], ['Proposer trois pistes de logo', false], ['Rédiger la charte graphique', false]]
@@ -34,8 +34,8 @@
     }
   ];
 
-  const STATUSES = ['À faire', 'En cours', 'Terminé'];
-  const STATUS_CLASS = { 'À faire': 'status', 'En cours': 'status status--doing', 'Terminé': 'status status--done' };
+  const STATUSES = ['Pas commencé', 'En cours', 'Terminé'];
+  const STATUS_CLASS = { 'Pas commencé': 'status', 'En cours': 'status status--doing', 'Terminé': 'status status--done' };
   const VIEW_NAMES = { table: 'Table', list: 'Liste', board: 'Board', calendar: 'Calendrier', gallery: 'Galerie', timeline: 'Timeline' };
   const FILTERS = {
     none: { label: 'Tous les projets', test: function () { return true; } },

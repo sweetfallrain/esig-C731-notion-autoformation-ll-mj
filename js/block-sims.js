@@ -45,7 +45,7 @@
     { name: 'Liste à puces', keys: 'liste puces', info: 'Une liste sans ordre particulier.', preview: '• Un élément de liste' },
     { name: 'Liste numérotée', keys: 'liste numerotee numero', info: 'Une liste d’étapes dans l’ordre.', preview: '1. Première étape' },
     { name: 'Liste de tâches', keys: 'liste taches checklist case', info: 'Des cases à cocher pour les choses à faire.', preview: '☐ Une tâche à faire' },
-    { name: 'Menu dépliant', keys: 'menu dépliant replier bascule toggle', info: 'Un contenu repliable, qui se déplie d’un clic.', preview: '▸ Une ligne repliable' },
+    { name: 'Menu dépliant', keys: 'menu dépliant liste replier bascule toggle', info: 'Un contenu repliable, qui se déplie d’un clic.', preview: '▸ Une ligne repliable' },
     { name: 'Encadré', keys: 'encadre callout', info: 'Un message mis en avant avec une icône.', preview: 'Information importante' },
     { name: 'Citation', keys: 'citation quote', info: 'Une phrase mise en valeur par une barre verticale.', preview: '« Une phrase à retenir. »' },
     { name: 'Séparateur', keys: 'separateur ligne', info: 'Une ligne horizontale entre deux parties.', preview: '' },
