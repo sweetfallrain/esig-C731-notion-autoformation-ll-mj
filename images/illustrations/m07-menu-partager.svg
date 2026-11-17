@@ -7,10 +7,10 @@
     <rect x="222" y="76" width="236" height="32" rx="6" fill="#fffdf8" stroke="#e6ddd0"/><text x="232" y="97" fill="#7b6f63">E-mail ou nom…</text>
     <rect x="468" y="76" width="74" height="32" rx="6" fill="#7a5a45"/><text x="505" y="97" text-anchor="middle" fill="#fdf9f3" font-weight="600">Inviter</text>
     <text x="222" y="140">Emma (toi)</text><text x="542" y="140" text-anchor="end" fill="#7b6f63">Accès complet</text>
-    <text x="222" y="168">Lucas</text><text x="542" y="168" text-anchor="end" fill="#7b6f63">Peut modifier ▾</text>
+    <text x="222" y="168">Lucas</text><text x="542" y="168" text-anchor="end" fill="#7b6f63">Modifications autorisées ▾</text>
     <path d="M212 186 H548" stroke="#e6ddd0"/>
     <text x="222" y="212" font-weight="600">Accès général</text>
-    <text x="222" y="236">Seules les personnes invitées ▾</text>
+    <text x="222" y="236">Uniquement les personnes invitées ▾</text>
     <path d="M212 256 H548" stroke="#e6ddd0"/>
     <text x="222" y="282" fill="#7a5a45" font-weight="600">Copier le lien</text>
   </g>

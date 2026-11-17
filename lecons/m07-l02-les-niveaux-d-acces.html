@@ -63,16 +63,16 @@
             <thead><tr><th scope="col">Niveau</th><th scope="col">Ce que la personne peut faire</th><th scope="col">Pour qui ?</th></tr></thead>
             <tbody>
               <tr><td><strong>Accès complet</strong> (<em>Full access</em>)</td><td>Tout faire, y compris partager la page avec d'autres et modifier les accès.</td><td>La responsable de la page.</td></tr>
-              <tr><td><strong>Peut modifier</strong> (<em>Can edit</em>)</td><td>Modifier tout le contenu, et la structure des bases (propriétés, vues).</td><td>Les personnes qui construisent la page avec toi.</td></tr>
-              <tr><td><strong>Peut modifier le contenu</strong> (<em>Can edit content</em>)</td><td>Pour une base : ajouter et modifier des entrées, sans toucher aux propriétés ni aux vues.</td><td>Les personnes qui remplissent une base sans la reconfigurer.</td></tr>
-              <tr><td><strong>Peut commenter</strong> (<em>Can comment</em>)</td><td>Lire et laisser des commentaires, sans rien modifier.</td><td>Une personne qui relit et donne son avis.</td></tr>
-              <tr><td><strong>Peut consulter</strong> (<em>Can view</em>)</td><td>Lire seulement.</td><td>Une personne qui doit être informée.</td></tr>
+              <tr><td><strong>Modifications autorisées</strong> (<em>Can edit</em>)</td><td>Modifier tout le contenu, et la structure des bases (propriétés, vues). Dans un espace gratuit, Notion le marque « Plus » : ce niveau est réservé aux offres payantes.</td><td>Les personnes qui construisent la page avec toi.</td></tr>
+              <tr><td><strong>Modifications de contenu autorisées</strong> (<em>Can edit content</em>)</td><td>Pour une base : ajouter et modifier des entrées, sans toucher aux propriétés ni aux vues.</td><td>Les personnes qui remplissent une base sans la reconfigurer.</td></tr>
+              <tr><td><strong>Commentaires autorisés</strong> (<em>Can comment</em>)</td><td>Lire et laisser des commentaires, sans rien modifier.</td><td>Une personne qui relit et donne son avis.</td></tr>
+              <tr><td><strong>Lecture seule</strong> (<em>Can view</em>)</td><td>Lire seulement.</td><td>Une personne qui doit être informée.</td></tr>
             </tbody>
           </table>
         </div>
 
         <figure class="illustration">
-          <img src="../images/illustrations/m07-niveaux-acces.svg" alt="Escalier de cinq marches, de gauche à droite : Peut consulter (voir), Peut commenter (+ commenter), Peut modifier le contenu (+ remplir une base, pas sa structure), Peut modifier (+ tout modifier, structure comprise), Accès complet (+ partager, gérer les accès). Une flèche indique : de moins en moins de restrictions." width="720" height="320">
+          <img src="../images/illustrations/m07-niveaux-acces.svg" alt="Escalier de cinq marches, de gauche à droite : Lecture seule (voir), Commentaires autorisés (+ commenter), Modifications de contenu autorisées (+ remplir une base, pas sa structure), Modifications autorisées (+ tout modifier, structure comprise), Accès complet (+ partager, gérer les accès). Une flèche indique : de moins en moins de restrictions." width="720" height="320">
           <figcaption>Chaque niveau ajoute un droit au précédent.</figcaption>
         </figure>
         <p class="definition">Le bon niveau d'accès est le plus bas qui permet à la personne de faire son travail.</p>
@@ -89,22 +89,22 @@
         <div class="sort-ex" data-sort-ex role="group" aria-label="Choisir le niveau d'accès de chaque personne">
           <div class="sort-ex__row" data-answer="complet" data-explain="Emma gère l'espace et décide qui y a accès : c'est la seule à avoir besoin de l'accès complet.">
             <label class="sort-ex__label" for="q72a"><strong>Emma</strong>, responsable de projet : elle gère l'espace et décide qui y a accès.</label>
-            <select id="q72a"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Peut modifier</option><option value="commenter">Peut commenter</option><option value="consulter">Peut consulter</option></select>
+            <select id="q72a"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Modifications autorisées</option><option value="commenter">Commentaires autorisés</option><option value="consulter">Lecture seule</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
-          <div class="sort-ex__row" data-answer="modifier" data-explain="Lucas modifie le contenu et la structure de la base, sans gérer les accès : Peut modifier.">
+          <div class="sort-ex__row" data-answer="modifier" data-explain="Lucas modifie le contenu et la structure de la base, sans gérer les accès : Modifications autorisées.">
             <label class="sort-ex__label" for="q72b"><strong>Lucas</strong>, graphiste : il crée des projets, met à jour les statuts et ajoute des colonnes.</label>
-            <select id="q72b"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Peut modifier</option><option value="commenter">Peut commenter</option><option value="consulter">Peut consulter</option></select>
+            <select id="q72b"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Modifications autorisées</option><option value="commenter">Commentaires autorisés</option><option value="consulter">Lecture seule</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
-          <div class="sort-ex__row" data-answer="commenter" data-explain="Sarah donne son avis sans modifier : Peut commenter.">
+          <div class="sort-ex__row" data-answer="commenter" data-explain="Sarah donne son avis sans modifier : Commentaires autorisés.">
             <label class="sort-ex__label" for="q72c"><strong>Sarah</strong>, chargée de clientèle : elle relit les projets et laisse ses remarques, sans rien changer.</label>
-            <select id="q72c"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Peut modifier</option><option value="commenter">Peut commenter</option><option value="consulter">Peut consulter</option></select>
+            <select id="q72c"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Modifications autorisées</option><option value="commenter">Commentaires autorisés</option><option value="consulter">Lecture seule</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
-          <div class="sort-ex__row" data-answer="consulter" data-explain="Hugo a besoin d'être informé, pas de modifier : Peut consulter. Emma augmentera son accès plus tard si nécessaire.">
+          <div class="sort-ex__row" data-answer="consulter" data-explain="Hugo a besoin d'être informé, pas de modifier : Lecture seule. Emma augmentera son accès plus tard si nécessaire.">
             <label class="sort-ex__label" for="q72d"><strong>Hugo</strong>, futur stagiaire : il doit seulement connaître les projets en cours.</label>
-            <select id="q72d"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Peut modifier</option><option value="commenter">Peut commenter</option><option value="consulter">Peut consulter</option></select>
+            <select id="q72d"><option value="">Choisis…</option><option value="complet">Accès complet</option><option value="modifier">Modifications autorisées</option><option value="commenter">Commentaires autorisés</option><option value="consulter">Lecture seule</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
           <div class="sort-ex__actions">
@@ -117,14 +117,10 @@
           <li>Ouvre une page que tu as partagée (ou ta base « Projets » si tu as invité un collègue à la leçon précédente). Si tu n'as invité personne, lis simplement les étapes en t'aidant de la capture.</li>
           <li>Clique sur « Partager ». À droite du nom de la personne, ouvre le menu du niveau d'accès.
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu déroulant des niveaux d'accès à côté du nom d'une personne : Accès complet, Peut modifier, Peut modifier le contenu, Peut commenter, Peut consulter, Retirer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Menu des niveaux d'accès · images/captures/m07-niveaux-acces.png</span>
-              </div>
+              <img src="../images/captures/m07-niveaux-acces.png" alt="Le menu Partager de « Projets » avec une collègue invitée : le menu de son niveau d'accès est ouvert et propose Accès complet, Modifications autorisées (marqué Plus), Modifications de contenu autorisées, Commentaires autorisés, Lecture seule et Supprimer" width="1448" height="908" loading="lazy">
             </figure></li>
           <li>Choisis le niveau adapté à son rôle. Le changement est immédiat.</li>
-          <li>Pour retirer l'accès, choisis « Retirer » (<em>Remove</em>) en bas du même menu.</li>
+          <li>Pour retirer l'accès, choisis « Supprimer » (<em>Remove</em>) en bas du même menu.</li>
         </ol>
 
         <div class="exercise">
@@ -151,13 +147,13 @@
           <fieldset>
             <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Le client Orion doit relire la maquette et donner son avis, sans rien modifier. Quel niveau choisir ?</span></legend>
             <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Peut modifier</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Peut commenter</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Modifications autorisées</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Commentaires autorisés</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Accès complet</span><span class="quiz__tag"></span></label>
             </div>
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Peut commenter permet de lire et de laisser des remarques, sans risque pour le contenu.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>« Commentaires autorisés » permet de lire et de laisser des remarques, sans risque pour le contenu.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>

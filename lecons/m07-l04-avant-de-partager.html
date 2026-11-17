@@ -60,7 +60,7 @@
           <li><strong>Le contenu</strong> : la page contient-elle des informations sensibles (salaires, données personnelles, budget, mots de passe) ? Si oui, la personne doit-elle vraiment les voir ?</li>
           <li><strong>Les sous-pages</strong> : partager une page partage aussi <strong>toutes ses sous-pages</strong>. Une page confidentielle rangée dedans devient visible.</li>
           <li><strong>Le niveau d'accès</strong> : le plus bas qui suffit (leçon 7.2).</li>
-          <li><strong>L'accès général</strong> : « Seules les personnes invitées », sauf raison précise.</li>
+          <li><strong>L'accès général</strong> : « Uniquement les personnes invitées », sauf raison précise.</li>
         </ol>
         <p>Et après le partage, pense à <strong>retirer les accès</strong> qui ne servent plus : un stagiaire qui a fini son stage, un client dont le projet est terminé.</p>
 
@@ -78,7 +78,7 @@
         <p>Emma s'apprête à partager plusieurs pages. Pour chaque situation, est-ce que le partage peut se faire tel quel ?</p>
         <div class="sort-ex" data-sort-ex role="group" aria-label="Partager tel quel ou corriger d'abord">
           <div class="sort-ex__row" data-answer="ok" data-explain="Contenu utile à tous, niveau minimal, rien de sensible : le partage peut se faire.">
-            <label class="sort-ex__label" for="q74a">Partager la page « Logos Studio Nova » avec Hugo en « Peut consulter ». Elle contient seulement les logos de l'agence.</label>
+            <label class="sort-ex__label" for="q74a">Partager la page « Logos Studio Nova » avec Hugo en « Lecture seule ». Elle contient seulement les logos de l'agence.</label>
             <select id="q74a"><option value="">Choisis…</option><option value="ok">Oui, je partage</option><option value="attention">Pas tel quel : je corrige d'abord</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
@@ -87,8 +87,8 @@
             <select id="q74b"><option value="">Choisis…</option><option value="ok">Oui, je partage</option><option value="attention">Pas tel quel : je corrige d'abord</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
-          <div class="sort-ex__row" data-answer="attention" data-explain="Pour être lue, « Peut consulter » suffit. Avec « Peut modifier », n'importe qui pourrait effacer un compte rendu.">
-            <label class="sort-ex__label" for="q74c">Partager « Notes &amp; réunions » avec toute l'agence en « Peut modifier », pour qu'elle soit lue.</label>
+          <div class="sort-ex__row" data-answer="attention" data-explain="Pour être lue, « Lecture seule » suffit. Avec « Modifications autorisées », n'importe qui pourrait effacer un compte rendu.">
+            <label class="sort-ex__label" for="q74c">Partager « Notes &amp; réunions » avec toute l'agence en « Modifications autorisées », pour qu'elle soit lue.</label>
             <select id="q74c"><option value="">Choisis…</option><option value="ok">Oui, je partage</option><option value="attention">Pas tel quel : je corrige d'abord</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
@@ -98,7 +98,7 @@
             <p class="sort-ex__feedback" hidden></p>
           </div>
           <div class="sort-ex__row" data-answer="ok" data-explain="Lucas a besoin de modifier, et la page ne contient que le projet : c'est le bon réglage.">
-            <label class="sort-ex__label" for="q74e">Partager « Site Orion » avec Lucas en « Peut modifier » : il travaille sur ce projet.</label>
+            <label class="sort-ex__label" for="q74e">Partager « Site Orion » avec Lucas en « Modifications autorisées » : il travaille sur ce projet.</label>
             <select id="q74e"><option value="">Choisis…</option><option value="ok">Oui, je partage</option><option value="attention">Pas tel quel : je corrige d'abord</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
@@ -117,15 +117,11 @@
           <li>Ouvre la page « Studio Nova » et clique sur « Partager ». Note qui a accès : tes réglages s'appliquent aussi aux cinq parties qu'elle contient.</li>
           <li>Déplie « Studio Nova » dans la barre latérale et parcours ses sous-pages. Y a-t-il une page qu'une personne invitée ne devrait pas voir ?
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu Partager d'une sous-page indiquant que l'accès est hérité de la page parente « Studio Nova »">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Accès hérité de la page parente · images/captures/m07-acces-herite.png</span>
-              </div>
+              <img src="../images/captures/m07-acces-herite.png" alt="La barre latérale : « Studio Nova » déplié, avec ses cinq parties et la « Réunion d'équipe - 3 novembre » rangée sous « Notes & réunions »" width="343" height="404" loading="lazy">
             </figure></li>
           <li>Si oui, déplace-la hors de « Studio Nova » avec « Déplacer vers ».</li>
           <li>Dans le menu Partager, vérifie chaque niveau d'accès et baisse ceux qui sont trop larges.</li>
-          <li>Retire l'accès aux personnes qui n'en ont plus besoin (menu du niveau, puis « Retirer »).</li>
+          <li>Retire l'accès aux personnes qui n'en ont plus besoin (menu du niveau, puis « Supprimer »).</li>
         </ol>
       </section>
 
