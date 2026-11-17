@@ -63,8 +63,8 @@
             <thead><tr><th scope="col">Partie</th><th scope="col">Forme</th><th scope="col">Rôle</th></tr></thead>
             <tbody>
               <tr><td><strong>Accueil</strong></td><td>Page</td><td>Le point de départ : un mot d'accueil, des liens, les tâches de la semaine.</td></tr>
-              <tr><td><strong>Projets</strong></td><td>Base de données</td><td>Un projet par entrée : client, statut, responsable, échéance.</td></tr>
-              <tr><td><strong>Tâches</strong></td><td>Base de données</td><td>Les actions concrètes : qui fait quoi, pour quand.</td></tr>
+              <tr><td><strong>Projets</strong></td><td>Page avec la base « 2026 »</td><td>Un projet par entrée : client, statut, responsable, échéance.</td></tr>
+              <tr><td><strong>Tâches</strong></td><td>Page avec la base « Tâches 2026 »</td><td>Les actions concrètes : qui fait quoi, pour quand.</td></tr>
               <tr><td><strong>Ressources</strong></td><td>Page</td><td>Les documents utiles à tous : modèles, logos, procédures.</td></tr>
               <tr><td><strong>Notes &amp; réunions</strong></td><td>Page</td><td>Un compte rendu par réunion, rangé en sous-pages.</td></tr>
             </tbody>
@@ -73,7 +73,7 @@
         <p>La règle d'or : <strong>chaque information a une seule place</strong>. Une tâche va dans « Tâches », pas dans un compte rendu de réunion et dans l'accueil en même temps. Si elle doit apparaître ailleurs, on fait un lien ou une vue, pas une copie.</p>
 
         <figure class="illustration">
-          <img src="../images/illustrations/m06-cinq-parties.svg" alt="Schéma : la page « Studio Nova » se divise en cinq parties : Accueil (page, le point de départ de chacun), Projets (base de données, les mandats des clients), Tâches (base de données, qui fait quoi pour quand), Ressources (page, modèles, logos, procédures) et Notes et réunions (page, un compte rendu par réunion)." width="720" height="320">
+          <img src="../images/illustrations/m06-cinq-parties.svg" alt="Schéma : la page « Studio Nova » se divise en cinq parties : Accueil (page, le point de départ de chacun), Projets (page avec une base de données, les mandats des clients), Tâches (page avec une base de données, qui fait quoi pour quand), Ressources (page, modèles, logos, procédures) et Notes et réunions (page, un compte rendu par réunion)." width="720" height="320">
           <figcaption>L'espace Studio Nova en cinq parties.</figcaption>
         </figure>
         <p class="definition">Un espace clair a peu de parties, chacune avec un rôle unique ; chaque information n'a qu'une seule place.</p>
@@ -98,21 +98,21 @@
             </ul>
           </div>
         </div>
-        <p>Dans l'espace A, dix pages au même niveau, des doublons (« Projets » et sa copie), des titres qui ne disent rien et une liste de tâches par personne. Dans l'espace B, cinq parties : les tâches d'Emma et de Lucas sont dans la même base « Tâches », avec un filtre par responsable. Tu sais où aller avant même de cliquer.</p>
+        <p>Dans l'espace A, dix pages au même niveau, des doublons (« Projets » et sa copie), des titres qui ne disent rien et une liste de tâches par personne. Dans l'espace B, cinq parties : les tâches d'Emma et de Lucas sont dans la même base des tâches, avec un filtre par responsable. Tu sais où aller avant même de cliquer.</p>
       </section>
 
       <!-- ===================== Étape 3 : Faire ===================== -->
       <section class="lesson-step prose" data-step="Faire" aria-labelledby="etape-3">
         <h2 id="etape-3">Compléter l'espace avec « Tâches »</h2>
-        <p>Il manque une partie à ton espace Studio Nova : la base « Tâches ». Crée-la, puis vérifie que les cinq parties sont en place.</p>
+        <p>Il manque une partie à ton espace Studio Nova : la page « Tâches » et sa base. Crée-les, puis vérifie que les cinq parties sont en place.</p>
         <ol class="tutorial">
           <li>Dans « Studio Nova », crée une sous-page « Tâches ».</li>
-          <li>Transforme-la en base pleine page avec une vue Table, comme pour « Projets » au module 4.</li>
-          <li>Crée les propriétés : Statut (Statut), Responsable (Personne), Échéance (Date).</li>
+          <li>Clique sous le titre, tape « / » et choisis <strong>« Vue Table »</strong>, comme pour « Projets » au module 4. Nomme la base « Tâches 2026 ».</li>
+          <li>Crée les propriétés : Statut (État), Responsable (Personne), Échéance (Date).</li>
           <li>Ajoute trois tâches : « Finaliser la maquette du site Orion », « Préparer la réunion client », « Mettre à jour les ressources ».</li>
-          <li>Ajoute une vue Kanban « Suivi » et une vue Table « Mes tâches » filtrée sur « Responsable est moi ».
+          <li>Nomme la première vue « Toutes les tâches », puis ajoute une vue Kanban « Suivi » et une vue Table « Mes tâches » filtrée sur « Responsable est moi ».
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Tâches » avec ses trois tâches et les onglets de vues « Toutes les tâches », « Suivi » et « Mes tâches »">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Tâches 2026 » avec ses trois tâches et les onglets de vues « Toutes les tâches », « Suivi » et « Mes tâches »">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
                 <strong>Capture d'écran Notion</strong>
                 <span>Base Tâches et ses vues · images/captures/m06-base-taches.png</span>
@@ -137,7 +137,7 @@
           <p class="exercise__kicker">Exercice · dans Notion</p>
           <h3>Les cinq parties de Studio Nova</h3>
           <ol>
-            <li>Crée la base « Tâches » avec ses trois propriétés et ses trois tâches.</li>
+            <li>Dans la page « Tâches », crée la base « Tâches 2026 » avec ses trois propriétés et ses trois tâches.</li>
             <li>Ajoute les vues « Suivi » et « Mes tâches ».</li>
             <li>Vérifie que « Studio Nova » contient exactement : Accueil, Projets, Tâches, Ressources, Notes &amp; réunions.</li>
           </ol>
@@ -150,7 +150,7 @@
         <h2 id="etape-4" class="sr-only">Étape 3 : vérifier</h2>
         <div class="key-points">
           <h2 id="etape-4-titre">Objectif de la leçon</h2>
-          <p class="key-points__goal">Tu sais maintenant organiser un espace en quelques grandes parties, chacune avec un rôle clair, et tu as créé la base « Tâches ».</p>
+          <p class="key-points__goal">Tu sais maintenant organiser un espace en quelques grandes parties, chacune avec un rôle clair, et tu as créé la base « Tâches 2026 ».</p>
         </div>
 
         <div class="quiz" data-quiz>
@@ -158,7 +158,7 @@
             <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Emma et Lucas ont chacun leur page « À faire ». Que leur conseilles-tu ?</span></legend>
             <div class="quiz__options">
               <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Garder deux pages, c'est plus personnel.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Une seule base « Tâches », avec une vue filtrée par responsable.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Une seule base pour les tâches, avec une vue filtrée par responsable.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Copier les tâches de l'un chez l'autre.</span><span class="quiz__tag"></span></label>
             </div>
           </fieldset>

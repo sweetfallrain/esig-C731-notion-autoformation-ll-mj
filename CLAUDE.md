@@ -75,8 +75,8 @@ modules, chaque partie apparaît quand la notion est enseignée :
 ```
 Studio Nova
 ├── Accueil            (module 2)
-├── Projets            (module 4 — base de données)
-├── Tâches             (module 6)
+├── Projets            (module 4 — page + base intégrée « 2026 »)
+├── Tâches             (module 6 — page + base « Tâches 2026 »)
 ├── Ressources         (module 6)
 └── Notes & réunions   (module 6)
 ```
@@ -221,6 +221,17 @@ corrections, astuces ou encadrés.
 ---
 
 ## Notes de migration
+
+### v8 — cohérence « Projets » (nov. 2026)
+
+- « Projets » et « Tâches » sont des **pages qui contiennent une base intégrée**
+  (« / » → « Vue Table »), et non des bases pleine page : c'est ce que montrent
+  les captures des modules 4 et 5. Bases nommées « 2026 » (page Projets) et
+  « Tâches 2026 » (page Tâches). **[décision de l'utilisatrice]**
+- Théorie et quiz de la 4.5 corrigés ; module 6 aligné (tableau des 5 parties,
+  schéma, étapes de création de « Tâches », statut de type État).
+- Dans le texte : « la base des projets / des tâches » pour parler de la base en
+  général, son vrai nom (« 2026 », « Tâches 2026 ») dans les consignes.
 
 ### v7 — captures des modules 3 et 4 (nov. 2026)
 

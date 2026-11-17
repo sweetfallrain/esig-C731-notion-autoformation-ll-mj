@@ -45,7 +45,7 @@
     },
     {
       id: 'm4', num: '04', title: 'Bases de données',
-      desc: 'Une base est une collection de pages décrites par des propriétés. Tu crées la base « Projets ».',
+      desc: 'Une base est une collection de pages décrites par des propriétés. Tu crées la base des projets.',
       lessons: [
         { id: 'm4-l1', title: 'Pourquoi une base', file: 'lecons/m04-l01-pourquoi-une-base.html', minutes: 5 },
         { id: 'm4-l2', title: 'Une entrée est une page', file: 'lecons/m04-l02-une-entree-est-une-page.html', minutes: 5 },
