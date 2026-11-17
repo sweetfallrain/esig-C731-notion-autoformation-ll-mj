@@ -87,9 +87,9 @@
     },
     {
       id: 'm8', num: '08', title: 'Cas pratique Studio Nova',
-      desc: 'Assembler tout ce que tu as appris dans un espace complet et cohérent.',
+      desc: 'Un nouveau besoin, sans pas-à-pas : organiser le matériel de l’agence, puis comparer avec le corrigé.',
       lessons: [
-        { id: 'm8-l1', title: 'Le cas pratique', file: 'lecons/m08-l01-le-cas-pratique.html', minutes: 30 },
+        { id: 'm8-l1', title: 'Le cas pratique', file: 'lecons/m08-l01-le-cas-pratique.html', minutes: 45 },
         { id: 'm8-l2', title: 'Le corrigé', file: 'lecons/m08-l02-le-corrige.html', minutes: 10 }
       ]
     },

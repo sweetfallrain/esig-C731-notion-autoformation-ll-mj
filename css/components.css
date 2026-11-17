@@ -2238,3 +2238,25 @@ body[data-lesson] .course-panel h1 {
 .final-quiz__result p:last-child {
   margin: 0;
 }
+
+/* Cas pratique : coup de pouce repliable */
+.hint {
+  margin: 24px 0;
+  padding: 14px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.hint > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hint[open] > summary {
+  margin-bottom: 8px;
+}
+
+.hint ul {
+  margin: 0;
+}

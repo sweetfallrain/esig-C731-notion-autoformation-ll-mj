@@ -225,9 +225,11 @@ corrections, astuces ou encadrés.
 ### v9 — modules 8 et 9 en pages simples (nov. 2026)
 
 - **Module 8** : deux pages sans étapes (pas de Comprendre / Faire / Vérifier).
-  8.1 « Le cas pratique » (brief d'Emma, consigne point par point, grille de
-  vérification) ; 8.2 « Le corrigé » (arborescence, tableau des tâches, 8
-  emplacements de captures m08-corrige-*). **[décision de l'utilisatrice]**
+  8.1 « Le cas pratique » : nouveau besoin « le matériel de l'agence », sans
+  pas-à-pas (brief, inventaire, règles, coup de pouce, grille) ; 8.2 « Le
+  corrigé » : une solution expliquée (base Matériel pleine page, propriétés,
+  vues Prêts en cours / Mes emprunts, procédure, vue liée, partage en Lecture
+  seule), 8 emplacements de captures m08-corrige-*. **[décision de l'utilisatrice]**
 - **Module 9** : une seule page « Questionnaire final » : 15 questions corrigées
   toutes à la fin (js/final-quiz.js, score sur 15, leçon à revoir sous chaque
   erreur), puis la fiche mémo et le message de fin. **[décision de l'utilisatrice]**
