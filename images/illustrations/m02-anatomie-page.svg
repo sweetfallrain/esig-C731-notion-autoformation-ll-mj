@@ -5,7 +5,7 @@
   <path d="M80 86 L140 50 L190 74 L250 40 L320 80 L380 56 L440 86" fill="none" stroke="#e3d6c8" stroke-width="3" stroke-linejoin="round"/>
   <rect x="86" y="74" width="48" height="48" rx="10" fill="#fffdf8" stroke="#e6ddd0"/>
   <path d="M98 100 L110 89 L122 100 V112 H98 Z" fill="none" stroke="#7a5a45" stroke-width="2.5" stroke-linejoin="round"/>
-  <text x="88" y="152" font-size="20" font-weight="700" fill="#33281f">Accueil — Studio Nova</text>
+  <text x="88" y="152" font-size="20" font-weight="700" fill="#33281f">Accueil - Studio Nova</text>
   <rect x="88" y="172" width="300" height="10" rx="5" fill="#eee6d9"/>
   <rect x="88" y="194" width="250" height="10" rx="5" fill="#eee6d9"/>
   <rect x="88" y="222" width="140" height="12" rx="6" fill="#e3d6c8"/>

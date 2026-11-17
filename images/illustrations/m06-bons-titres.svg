@@ -8,7 +8,7 @@
     <text x="44" y="222" font-size="12" fill="#7b6f63">Impossible de deviner le contenu.</text>
     <rect x="376" y="24" width="320" height="212" rx="12" fill="#fffdf8" stroke="#6b7a5c" stroke-width="2"/>
     <text x="396" y="56" font-weight="700" font-size="15">Titres clairs</text>
-    <text x="396" y="94">Réunion client Orion — 12 nov.</text><text x="396" y="126">Procédure — Envoyer une facture</text><text x="396" y="158">Modèle — Devis</text><text x="396" y="190">Projet — Identité Luna</text>
+    <text x="396" y="94">Réunion client Orion - 12 nov.</text><text x="396" y="126">Procédure - Envoyer une facture</text><text x="396" y="158">Modèle - Devis</text><text x="396" y="190">Projet - Identité Luna</text>
     <text x="396" y="222" font-size="12" fill="#7b6f63">Type + sujet (+ date) : on sait avant d'ouvrir.</text>
   </g>
 </svg>

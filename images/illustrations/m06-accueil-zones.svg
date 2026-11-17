@@ -2,7 +2,7 @@
   <rect width="720" height="320" rx="16" fill="#eee6d9"/>
   <rect x="150" y="20" width="420" height="280" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
   <g font-size="13" fill="#33281f">
-    <text x="174" y="56" font-weight="700" font-size="18">Accueil — Studio Nova</text>
+    <text x="174" y="56" font-weight="700" font-size="18">Accueil - Studio Nova</text>
     <rect x="170" y="70" width="380" height="34" rx="6" fill="#f6f1e8"/><text x="182" y="92">Bienvenue ! Ici, tout ce qu'il faut pour la semaine.</text>
     <text x="174" y="132" font-weight="700">Accès rapides</text>
     <text x="174" y="154" fill="#7a5a45">Projets · Tâches · Ressources · Notes &amp; réunions</text>
