@@ -18,17 +18,17 @@
     <circle cx="300" cy="82" r="30" fill="#dee3d3" stroke="#6b7a5c" stroke-width="2"/>
     <text x="300" y="90" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#33281f">L</text>
     <text x="300" y="134" font-size="15" font-weight="600" fill="#33281f">Lucas</text>
-    <text x="300" y="152" font-size="12" fill="#7b6f63">Membre de l'équipe</text>
+    <text x="300" y="152" font-size="12" fill="#7b6f63">Graphiste</text>
 
     <circle cx="480" cy="82" r="30" fill="#fffdf8" stroke="#7b6f63" stroke-width="2"/>
     <text x="480" y="90" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#33281f">S</text>
     <text x="480" y="134" font-size="15" font-weight="600" fill="#33281f">Sarah</text>
-    <text x="480" y="152" font-size="12" fill="#7b6f63">Cliente</text>
+    <text x="480" y="152" font-size="12" fill="#7b6f63">Chargée de clientèle</text>
 
     <circle cx="620" cy="82" r="30" fill="#fffdf8" stroke="#7b6f63" stroke-width="2" stroke-dasharray="4 4"/>
     <text x="620" y="90" font-family="Playfair Display, Georgia, serif" font-size="24" fill="#33281f">H</text>
     <text x="620" y="134" font-size="15" font-weight="600" fill="#33281f">Hugo</text>
-    <text x="620" y="152" font-size="12" fill="#7b6f63">Hors des projets</text>
+    <text x="620" y="152" font-size="12" fill="#7b6f63">Futur stagiaire</text>
   </g>
 
   <!-- Projets -->

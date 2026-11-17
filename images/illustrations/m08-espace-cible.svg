@@ -5,8 +5,8 @@
     <text x="44" y="54" font-weight="700" font-size="15">L'espace attendu</text>
     <text x="44" y="88" font-weight="600">Studio Nova</text>
     <text x="44" y="114">├─ Accueil — Studio Nova</text>
-    <text x="44" y="140">├─ Projets <tspan fill="#7a5a45" font-size="11">base · 3 vues</tspan></text>
-    <text x="44" y="166">├─ Tâches <tspan fill="#7a5a45" font-size="11">base · 2 vues</tspan></text>
+    <text x="44" y="140">├─ Projets <tspan fill="#7a5a45" font-size="11">base · 6 vues</tspan></text>
+    <text x="44" y="166">├─ Tâches <tspan fill="#7a5a45" font-size="11">base · 3 vues</tspan></text>
     <text x="44" y="192">├─ Ressources</text>
     <text x="44" y="218">│   └─ Procédure — Accueil des stagiaires</text>
     <text x="44" y="244">└─ Notes &amp; réunions</text>
@@ -14,7 +14,7 @@
     <rect x="356" y="24" width="340" height="292" rx="12" fill="#fffdf8" stroke="#e6ddd0"/>
     <text x="376" y="54" font-weight="700" font-size="15">Les exigences du brief</text>
     <g font-size="12">
-      <text x="376" y="88">1. Nouveau projet « Brochure Vega » dans Projets</text>
+      <text x="376" y="88">1. Projet « Brochure Vega » complété</text>
       <text x="376" y="114">2. Trois tâches pour Vega, avec responsables</text>
       <text x="376" y="140">3. Vues : Suivi (Kanban), Échéances (calendrier)</text>
       <text x="376" y="166">4. Procédure d'accueil pour Hugo dans Ressources</text>
