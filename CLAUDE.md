@@ -75,8 +75,8 @@ modules, chaque partie apparaît quand la notion est enseignée :
 ```
 Studio Nova
 ├── Accueil            (module 2)
-├── Projets            (module 4 — page + base intégrée « 2026 »)
-├── Tâches             (module 6 — page + base « Tâches 2026 »)
+├── Projets            (module 4 — base pleine page)
+├── Tâches             (module 6 — base pleine page)
 ├── Ressources         (module 6)
 └── Notes & réunions   (module 6)
 ```
@@ -222,16 +222,20 @@ corrections, astuces ou encadrés.
 
 ## Notes de migration
 
-### v8 — cohérence « Projets » (nov. 2026)
+### v8 — « Projets » et « Tâches » en bases pleine page (nov. 2026)
 
-- « Projets » et « Tâches » sont des **pages qui contiennent une base intégrée**
-  (« / » → « Vue Table »), et non des bases pleine page : c'est ce que montrent
-  les captures des modules 4 et 5. Bases nommées « 2026 » (page Projets) et
-  « Tâches 2026 » (page Tâches). **[décision de l'utilisatrice]**
-- Théorie et quiz de la 4.5 corrigés ; module 6 aligné (tableau des 5 parties,
-  schéma, étapes de création de « Tâches », statut de type État).
-- Dans le texte : « la base des projets / des tâches » pour parler de la base en
-  général, son vrai nom (« 2026 », « Tâches 2026 ») dans les consignes.
+- « Projets » et « Tâches » sont des **bases pleine page** : la page vide créée
+  au module 2 devient la base (option grise « Base de données » en bas d'une
+  page vide, puis « Nouvelle base de données » en haut à droite). Le titre de la
+  page est le nom de la base : plus de base intégrée « 2026 ». **[décision de
+  l'utilisatrice]** Ne pas utiliser « /base de données » → « Pleine page » dans
+  la page : cela crée une sous-page (Projets → Projets).
+- 4.5 réécrite (théorie, étapes, quiz) ; modules 5 à 7 alignés ; 6.1 : « Tâches »
+  créée avec la même méthode, statut de type État, première vue « Toutes les tâches ».
+- Captures à refaire (emplacements, mêmes noms de fichiers) : m04-projets-option-base,
+  m04-projets-nouvelle-base (nouvelles), m04-projets-remplie, m04-ajout-projet,
+  m05-nom-vue, m05-ajouter-vue, m05-kanban-glisser, m05-vue-calendrier,
+  m05-filtre-statut, m05-regrouper-statut.
 
 ### v7 — captures des modules 3 et 4 (nov. 2026)
 
@@ -243,8 +247,8 @@ corrections, astuces ou encadrés.
 - **Bases** : création avec « /database » puis « Vue Table » (« Vue Tableau » =
   board) ; types « État » (options Pas commencé / En cours / Terminé),
   « Sélectionner », « Sélection multiple », « Personne », « Date » ; options
-  d'une sélection via « Modifier la propriété » → Options → + ; la base de la
-  page « Projets » s'appelle « 2026 ». Valeur de statut « À faire » remplacée
+  d'une sélection via « Modifier la propriété » → Options → + (la base intégrée « 2026 » de
+  la page « Projets » est remplacée en v8 par une base pleine page). Valeur de statut « À faire » remplacée
   par « Pas commencé » partout (données Studio Nova). **[confirmé]**
 - **Noms des vues (vérifiés sur capture)** : Table, Kanban, Galerie, Liste,
   Graphique, Dashboard, Chronologie, Fil d'actualité, Carte, Calendrier,

@@ -55,7 +55,7 @@
       <!-- ===================== Étape 1 : Comprendre ===================== -->
       <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Tu as tout ce qu'il faut : tu sais ce qu'est une base, qu'une ligne est une page, et quels types de propriétés choisir. Place à la construction de la vraie base des projets de Studio Nova.</p>
+        <p>Tu as tout ce qu'il faut : tu sais ce qu'est une base, qu'une ligne est une page, et quels types de propriétés choisir. Place à la construction de la vraie base « Projets » de Studio Nova.</p>
         <p>Avant de cliquer, un bon réflexe : <strong>dessiner la base sur papier</strong>. Quelles informations veut-on voir pour chaque projet ? Emma et Lucas se sont mis d'accord sur cinq propriétés, pas plus :</p>
         <div class="db-sim__scroll">
           <table class="db-table">
@@ -70,8 +70,7 @@
             </tbody>
           </table>
         </div>
-        <p>Deux façons de créer une base existent. Une base <strong>pleine page</strong> occupe toute une page : la page <em>est</em> la base. Une base <strong>intégrée</strong> (<em>inline</em>) est un bloc au milieu d'autres blocs. Pour Studio Nova, on choisit une base intégrée : la page « Projets » garde son titre, et la base s'affiche dedans comme un bloc. On pourra plus tard ajouter du texte au-dessus, ou une deuxième base pour l'année suivante.</p>
-        <p>Une base intégrée a son <strong>propre nom</strong>, distinct du titre de la page et affiché juste au-dessus du tableau. Tant que tu ne le changes pas, Notion écrit « Nouvelle base de données » en gris. Ici, on l'appelle « 2026 » : la base rassemble les projets de l'année.</p>
+        <p>Deux façons de créer une base existent. Une base <strong>pleine page</strong> occupe toute une page : la page <em>est</em> la base. Une base <strong>intégrée</strong> (<em>inline</em>) est un bloc au milieu d'autres blocs. Pour « Projets », on veut une base pleine page : la page « Projets » devient la base elle-même et ne contient que les projets. Son titre, « Projets », est aussi le nom de la base.</p>
         <p class="definition">Une base pleine page est une page entièrement occupée par une base de données ; une base intégrée est un bloc dans une page.</p>
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
@@ -89,11 +88,23 @@
 
         <ol class="tutorial">
           <li>Ouvre la page « Projets », vide depuis le module 2.</li>
-          <li>Clique sous le titre et tape « / ». Dans les suggestions, choisis <strong>« Vue Table »</strong> (Base de données). Si tu ne la vois pas, tape « /database » et choisis « Vue Table ».
+          <li>Sans rien taper dans la page, regarde en bas : Notion propose plusieurs options en gris pour commencer. Choisis <strong>« Base de données »</strong>.
             <figure class="screenshot">
-              <img src="../images/captures/m04-projets-demarrer-tableau.png" alt="La page « Projets » : le menu « / » ouvert sous le titre, avec la suggestion « Vue Table · Base de données » signalée par une flèche" width="1291" height="861" loading="lazy">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page « Projets » vide, avec les options en gris en bas et « Base de données » signalée">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Option « Base de données » d'une page vide · images/captures/m04-projets-option-base.png</span>
+              </div>
             </figure></li>
-          <li>La base apparaît avec une colonne « Nom ». Au-dessus du tableau, clique sur « Nouvelle base de données », écrit en gris, et tape « 2026 » : c'est le nom de ta base. Si d'autres colonnes sont proposées par défaut, supprime-les : clic sur le nom de la colonne, puis « Supprimer la propriété ».</li>
+          <li>En haut à droite, sélectionne <strong>« Nouvelle base de données »</strong>. La page « Projets » devient la base : son titre reste « Projets », et un tableau apparaît dessous.
+            <figure class="screenshot">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le choix « Nouvelle base de données » en haut à droite, signalé">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Créer une nouvelle base · images/captures/m04-projets-nouvelle-base.png</span>
+              </div>
+            </figure></li>
+          <li>La base apparaît avec une colonne « Nom ». Si d'autres colonnes sont proposées par défaut, supprime-les : clic sur le nom de la colonne, puis « Supprimer la propriété ».</li>
           <li>Clique sur le <strong>+</strong> à droite des colonnes. Nomme la propriété « Statut » et choisis le type <strong>« État »</strong>. Les options « Pas commencé », « En cours » et « Terminé » sont déjà créées.</li>
           <li>Ajoute « Responsable », de type « Personne ».</li>
           <li>Ajoute « Échéance », de type « Date ».</li>
@@ -103,16 +114,20 @@
             </figure></li>
           <li>Saisis les trois projets : Site Orion (En cours, Emma, 15 novembre, Haute) ; Identité Luna (Pas commencé, Lucas, 28 novembre, Moyenne) ; Campagne Atlas (Terminé, Emma, 5 novembre, Basse). Comme responsable, choisis-toi toi-même (voir l'encadré au début).
             <figure class="screenshot">
-              <img src="../images/captures/m04-projets-remplie.png" alt="La base « 2026 » de la page « Projets », remplie avec les trois projets : Site Orion, Identité Luna et Campagne Atlas, avec leur statut, leur responsable, leur échéance et leur priorité" width="1339" height="376" loading="lazy">
+              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Projets » remplie avec les trois projets : Site Orion, Identité Luna et Campagne Atlas, avec leur statut, leur responsable, leur échéance et leur priorité">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <strong>Capture d'écran Notion</strong>
+                <span>Base Projets remplie · images/captures/m04-projets-remplie.png</span>
+              </div>
             </figure></li>
         </ol>
 
 
         <div class="exercise">
           <p class="exercise__kicker">Exercice · dans Notion</p>
-          <h3>La base des projets de Studio Nova</h3>
+          <h3>La base « Projets » de Studio Nova</h3>
           <ol>
-            <li>Dans la page « Projets », crée la base avec « Vue Table » et nomme-la « 2026 ».</li>
+            <li>Transforme la page « Projets » en base pleine page : option grise « Base de données », puis « Nouvelle base de données ».</li>
             <li>Crée les cinq propriétés : Nom, Statut, Responsable, Échéance, Priorité.</li>
             <li>Saisis les trois projets de Studio Nova.</li>
           </ol>
@@ -125,20 +140,20 @@
         <h2 id="etape-4" class="sr-only">Étape 3 : vérifier</h2>
         <div class="key-points">
           <h2 id="etape-4-titre">Objectif de la leçon</h2>
-          <p class="key-points__goal">Tu as maintenant créé la base « 2026 » dans la page « Projets », avec ses cinq propriétés et ses trois premiers projets.</p>
+          <p class="key-points__goal">Tu as maintenant transformé la page « Projets » en base, avec ses cinq propriétés et ses trois premiers projets.</p>
         </div>
 
         <div class="quiz" data-quiz>
           <fieldset>
-            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Dans la page « Projets », tu tapes « / » puis « Vue Table ». Quel type de base obtiens-tu ?</span></legend>
+            <legend><span class="quiz__count">Mini-quiz · question 1 sur 2</span><span class="quiz__question">Emma veut une page « Projets » qui ne contienne que la liste des projets. Quel type de base choisit-elle ?</span></legend>
             <div class="quiz__options">
-              <label class="quiz__option"><input type="radio" name="q1" value="a"><span class="quiz__option-text">Une base pleine page, qui remplace la page.</span><span class="quiz__tag"></span></label>
-              <label class="quiz__option"><input type="radio" name="q1" value="b" data-correct><span class="quiz__option-text">Une base intégrée, posée dans la page comme un bloc.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="a" data-correct><span class="quiz__option-text">Une base pleine page.</span><span class="quiz__tag"></span></label>
+              <label class="quiz__option"><input type="radio" name="q1" value="b"><span class="quiz__option-text">Une base intégrée sous un long texte.</span><span class="quiz__tag"></span></label>
               <label class="quiz__option"><input type="radio" name="q1" value="c"><span class="quiz__option-text">Une simple liste à puces.</span><span class="quiz__tag"></span></label>
             </div>
           </fieldset>
           <p class="quiz__error" data-quiz-error hidden>Choisis une réponse avant de valider.</p>
-          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>La base est un bloc dans la page « Projets » : c'est une base intégrée. Elle a son propre nom, « 2026 », au-dessus du tableau.</p>
+          <p class="quiz__feedback" data-quiz-feedback role="status" hidden><strong data-quiz-verdict></strong>Une base pleine page occupe toute la page : la page « Projets » devient la base elle-même.</p>
           <div class="quiz__actions">
             <button type="button" class="btn btn-primary" data-quiz-validate>Valider</button>
             <button type="button" class="btn btn-outline" data-quiz-reset>Recommencer</button>
