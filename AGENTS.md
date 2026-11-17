@@ -226,13 +226,13 @@ corrections, astuces ou encadrés.
 
 - « Projets » et « Tâches » sont des **bases pleine page** : la page vide créée
   au module 2 devient la base (option grise « Base de données » en bas d'une
-  page vide, puis « Nouvelle base de données » en haut à droite). Le titre de la
+  page vide, puis « Base de données vide » en haut à droite de la fenêtre des modèles). Le titre de la
   page est le nom de la base : plus de base intégrée « 2026 ». **[décision de
   l'utilisatrice]** Ne pas utiliser « /base de données » → « Pleine page » dans
   la page : cela crée une sous-page (Projets → Projets).
 - 4.5 réécrite (théorie, étapes, quiz) ; modules 5 à 7 alignés ; 6.1 : « Tâches »
   créée avec la même méthode, statut de type État, première vue « Toutes les tâches ».
-- Captures à refaire (emplacements, mêmes noms de fichiers) : m04-projets-option-base,
+- Captures refaites (v15) : m04-projets-option-base,
   m04-projets-nouvelle-base (nouvelles), m04-projets-remplie, m04-ajout-projet,
   m05-nom-vue, m05-ajouter-vue, m05-kanban-glisser, m05-vue-calendrier,
   m05-filtre-statut, m05-regrouper-statut.

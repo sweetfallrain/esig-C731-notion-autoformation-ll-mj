@@ -58,7 +58,7 @@
         <p>À trois projets, tout tient à l'écran. À cinquante, il faut pouvoir répondre vite à des questions comme « qu'est-ce qui est en cours ? » ou « qu'est-ce qui arrive en premier ? ». Trois outils servent à ça, en haut à droite de la base : Filtrer et Trier ont chacun leur icône, Grouper se trouve dans le menu des réglages de la vue.</p>
         <ul>
           <li><strong>Filtrer</strong> (<em>Filter</em>) : n'afficher que les entrées qui respectent une condition. « Statut est En cours » cache tous les autres projets.</li>
-          <li><strong>Trier</strong> (<em>Sort</em>) : changer l'ordre d'affichage. « Échéance, croissant » met le projet le plus urgent en haut.</li>
+          <li><strong>Trier</strong> (<em>Sort</em>) : changer l'ordre d'affichage. « Échéance, ancien → nouveau » met le projet le plus urgent en haut.</li>
           <li><strong>Grouper</strong> (<em>Group</em>) : ranger les entrées en paquets selon une propriété, avec un titre par paquet : « Pas commencé », « En cours », « Terminé ».</li>
         </ul>
         <p>Ces réglages appartiennent à <strong>la vue</strong>, pas à la base. Un filtre ne supprime rien : il cache. Retire le filtre, et tous les projets reviennent. C'est pourquoi on crée souvent une vue par question : « En cours », « Mes projets », « Cette semaine ».</p>
@@ -85,7 +85,7 @@
             <select id="q54a"><option value="">Choisis…</option><option value="filtre">Filtrer</option><option value="tri">Trier</option><option value="groupe">Grouper</option></select>
             <p class="sort-ex__feedback" hidden></p>
           </div>
-          <div class="sort-ex__row" data-answer="tri" data-explain="Un tri par échéance croissante met la date la plus proche en premier.">
+          <div class="sort-ex__row" data-answer="tri" data-explain="Un tri par échéance, de l'ancienne à la nouvelle date, met la date la plus proche en premier.">
             <label class="sort-ex__label" for="q54b">Emma veut le projet le plus urgent tout en haut.</label>
             <select id="q54b"><option value="">Choisis…</option><option value="filtre">Filtrer</option><option value="tri">Trier</option><option value="groupe">Grouper</option></select>
             <p class="sort-ex__feedback" hidden></p>
@@ -110,20 +110,12 @@
           <li>Dans ta base « Projets », ajoute une vue Table nommée « En cours ».</li>
           <li>En haut à droite de la base, clique sur l'icône <strong>Filtrer</strong> (les trois traits). Choisis la propriété Statut, puis coche « En cours ». Le filtre s'affiche sous les onglets ; Notion peut l'écrire en anglais, « Statut: In progress ».
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la vue « En cours » : l'icône Filtrer entourée, le filtre sur le statut sous les onglets, et seul le projet en cours affiché">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Filtre sur le statut · images/captures/m05-filtre-statut.png</span>
-              </div>
+              <img src="../images/captures/m05-filtre-statut.png" alt="La vue « En cours » : l'icône Filtrer entourée, le filtre « Statut: In progress » sous les onglets, et seul le projet « Identité Luna », en cours, affiché" width="1656" height="448" loading="lazy">
             </figure></li>
-          <li>Clique ensuite sur l'icône <strong>Trier</strong> (les deux flèches), juste à droite, choisis Échéance, ordre croissant.</li>
+          <li>Clique ensuite sur l'icône <strong>Trier</strong> (les deux flèches), juste à droite, choisis Échéance, puis l'ordre « Ancien → Nouveau » : l'échéance la plus proche passe en premier. L'ordre « Nouveau → Ancien » fait l'inverse.</li>
           <li>Dans la vue « Tous les projets », ouvre le menu des réglages (les petits curseurs), puis <strong>« Grouper »</strong>, et choisis Statut dans « Grouper par ».
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la vue « Tous les projets » regroupée par statut, avec le panneau « Grouper » et la ligne « Grouper par : Statut » encadrée">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Vue regroupée par statut · images/captures/m05-regrouper-statut.png</span>
-              </div>
+              <img src="../images/captures/m05-regrouper-statut.png" alt="La vue « Tous les projets » regroupée en Pas commencé, En cours et Terminé ; à droite, le panneau « Grouper » avec « Grouper par : Statut », ouvert depuis l'icône des réglages entourée" width="1653" height="896" loading="lazy">
             </figure></li>
           <li>Compare tes vues : chacune répond à une question, et la base n'a pas changé.</li>
         </ol>
