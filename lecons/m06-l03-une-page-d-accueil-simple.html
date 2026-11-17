@@ -61,10 +61,10 @@
           <li><strong>Où aller ?</strong> Des accès rapides vers les grandes parties de l'espace : Projets, Tâches, Ressources, Notes &amp; réunions.</li>
           <li><strong>Que faire aujourd'hui ?</strong> Les tâches de la semaine, affichées directement.</li>
         </ul>
-        <p>Pour la troisième partie, pas question de recopier les tâches : on insère une <strong>vue liée</strong> de la base « Tâches » (<em>Linked view</em>). C'est une fenêtre sur la base, affichée dans une autre page. Tu tapes « /vue liée » (ou « /linked »), tu choisis la base « Tâches », puis tu filtres sur les tâches de la semaine. Une tâche cochée dans l'accueil est cochée dans la base, puisque c'est la même.</p>
+        <p>Pour la troisième partie, pas question de recopier les tâches : on insère une <strong>vue liée</strong> de la base « Tâches » (<em>Linked view</em>). C'est une fenêtre sur la base, affichée dans une autre page. Tu tapes « /linked », tu choisis « Vue liée de la source de données », puis la base « Tâches », puis tu filtres sur les tâches de la semaine. Une tâche cochée dans l'accueil est cochée dans la base, puisque c'est la même.</p>
 
         <figure class="illustration">
-          <img src="../images/illustrations/m06-accueil-zones.svg" alt="Maquette de la page « Accueil — Studio Nova » en trois zones numérotées : 1, Accueillir : un encadré « Bienvenue ! Ici, tout ce qu'il faut pour la semaine » ; 2, Orienter : des accès rapides vers Projets, Tâches, Ressources, Notes et réunions ; 3, Agir : un tableau, vue « Cette semaine » de la base Tâches." width="720" height="320">
+          <img src="../images/illustrations/m06-accueil-zones.svg" alt="Maquette de la page « Accueil - Studio Nova » en trois zones numérotées : 1, Accueillir : un encadré « Bienvenue ! Ici, tout ce qu'il faut pour la semaine » ; 2, Orienter : des accès rapides vers Projets, Tâches, Ressources, Notes et réunions ; 3, Agir : un tableau, vue « Cette semaine » de la base Tâches." width="720" height="320">
           <figcaption>Une page d'accueil en trois zones : accueillir, orienter, agir.</figcaption>
         </figure>
         <p class="definition">Une vue liée affiche une base existante dans une autre page, sans rien copier.</p>
@@ -78,24 +78,16 @@
       <section class="lesson-step prose" data-step="Faire" aria-labelledby="etape-3">
         <h2 id="etape-3">Refaire ta page d'accueil</h2>
         <ol class="tutorial">
-          <li>Ouvre « Accueil — Studio Nova ». Supprime l'ancienne checklist « Cette semaine » du module 2 : les tâches vivent maintenant dans la base.</li>
+          <li>Ouvre « Accueil - Studio Nova ». Supprime l'ancienne section « Cette semaine » du module 2, avec son titre et sa checklist : les tâches vivent maintenant dans la base.</li>
           <li>En haut, transforme ta phrase d'accueil en encadré (poignée ⋮⋮, puis « Transformer en » et « Encadré »).</li>
-          <li>Sous le titre 2 « Liens utiles », renomme-le « Accès rapides » et vérifie les quatre liens : Projets, Tâches, Ressources, Notes &amp; réunions (« @ » pour ceux qui manquent).</li>
-          <li>En dessous, ajoute un titre 2 « Cette semaine ». Tape « /vue liée » (<em>/linked view</em>) et choisis la base « Tâches ».
+          <li>Renomme le titre 2 « Liens utiles » en « Accès rapides », puis vérifie les quatre liens en dessous : Projets, Tâches, Ressources, Notes &amp; réunions (« @ » pour ceux qui manquent).</li>
+          <li>En dessous, ajoute un titre 2 « Cette semaine ». Tape « /linked », choisis <strong>« Vue liée de la source de données »</strong>, puis la base « Tâches ».
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu « / » avec l'option de vue liée de base de données, puis le choix de la base « Tâches »">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Insérer une vue liée · images/captures/m06-vue-liee.png</span>
-              </div>
+              <img src="../images/captures/m06-vue-liee.png" alt="« /linked » tapé dans l'accueil : le menu propose « Vue liée de la source de données » en premier, signalée par une flèche" width="1518" height="779" loading="lazy">
             </figure></li>
-          <li>Dans la vue liée, choisis la disposition Liste ou Table, puis ajoute un filtre sur l'Échéance : « Cette semaine ».
+          <li>Dans la vue liée, choisis la disposition Liste ou Table, puis ajoute un filtre sur l'Échéance : « Cette semaine » (Notion l'affiche « Échéance : Ce(tte) semaine »). Si aucune tâche n'apparaît, c'est qu'aucune échéance ne tombe cette semaine : change la date d'une tâche pour vérifier.
             <figure class="screenshot">
-              <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page d'accueil terminée avec l'encadré, les accès rapides et la vue liée des tâches de la semaine">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-                <strong>Capture d'écran Notion</strong>
-                <span>Accueil terminé · images/captures/m06-accueil-final.png</span>
-              </div>
+              <img src="../images/captures/m06-accueil-final.png" alt="La page d'accueil terminée : les deux encadrés, les accès rapides vers Projets, Tâches, Ressources et Notes & réunions, puis « Cette semaine » avec la vue liée des tâches et son filtre « Échéance : Ce(tte) semaine » encadré" width="1621" height="953" loading="lazy">
             </figure></li>
         </ol>
 
@@ -112,7 +104,7 @@
             <li>Une section « Accès rapides » avec quatre liens.</li>
             <li>Une section « Cette semaine » avec une vue liée de la base « Tâches », filtrée.</li>
           </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> en ouvrant l'accueil, tu vois en un écran où tu es, où aller et quoi faire. En cochant une tâche ici, puis en ouvrant la base « Tâches », tu la retrouves cochée.</p>
+          <p class="exercise__result"><strong>Résultat attendu :</strong> en ouvrant l'accueil, tu vois en un écran où tu es, où aller et quoi faire. En cochant une tâche ici, puis en ouvrant la page « Tâches », tu la retrouves cochée.</p>
         </div>
       </section>
 
@@ -121,7 +113,7 @@
         <h2 id="etape-4" class="sr-only">Étape 3 : vérifier</h2>
         <div class="key-points">
           <h2 id="etape-4-titre">Objectif de la leçon</h2>
-          <p class="key-points__goal">Tu sais maintenant construire une page d'accueil qui oriente l'équipe en quelques secondes, avec une vue liée de la base des tâches.</p>
+          <p class="key-points__goal">Tu sais maintenant construire une page d'accueil qui oriente l'équipe en quelques secondes, avec une vue liée de la base « Tâches ».</p>
         </div>
 
         <div class="quiz" data-quiz>

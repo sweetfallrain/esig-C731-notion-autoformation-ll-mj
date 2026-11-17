@@ -75,8 +75,8 @@ modules, chaque partie apparaît quand la notion est enseignée :
 ```
 Studio Nova
 ├── Accueil            (module 2)
-├── Projets            (module 4 — base de données)
-├── Tâches             (module 6)
+├── Projets            (module 4 — base pleine page)
+├── Tâches             (module 6 — base pleine page)
 ├── Ressources         (module 6)
 └── Notes & réunions   (module 6)
 ```
@@ -222,6 +222,38 @@ corrections, astuces ou encadrés.
 
 ## Notes de migration
 
+### v9 — modules 8 et 9 en pages simples (nov. 2026)
+
+- **Module 8** : deux pages sans étapes (pas de Comprendre / Faire / Vérifier).
+  8.1 « Le cas pratique » : nouveau besoin « le matériel de l'agence », sans
+  pas-à-pas (brief, inventaire, règles, coup de pouce, grille) ; 8.2 « Le
+  corrigé » : une solution expliquée (base Matériel pleine page, propriétés,
+  vues Prêts en cours / Mes emprunts, procédure, vue liée, partage en Lecture
+  seule), 8 emplacements de captures m08-corrige-*. **[décision de l'utilisatrice]**
+- **Module 9** : une seule page « Questionnaire final » : 15 questions corrigées
+  toutes à la fin (js/final-quiz.js, score sur 15, leçon à revoir sous chaque
+  erreur), puis la fiche mémo et le message de fin. **[décision de l'utilisatrice]**
+- lesson.js : une page sans `data-step` n'affiche qu'un bouton vers la suite ;
+  course-toc.js ne liste pas d'étapes pour ces pages. Parcours : 36 leçons.
+- Module 7 aligné sur les libellés Notion : Modifications autorisées,
+  Modifications de contenu autorisées, Commentaires autorisés, Lecture seule,
+  Supprimer ; accès général « Uniquement les personnes invitées ».
+
+### v8 — « Projets » et « Tâches » en bases pleine page (nov. 2026)
+
+- « Projets » et « Tâches » sont des **bases pleine page** : la page vide créée
+  au module 2 devient la base (option grise « Base de données » en bas d'une
+  page vide, puis « Base de données vide » en haut à droite de la fenêtre des modèles). Le titre de la
+  page est le nom de la base : plus de base intégrée « 2026 ». **[décision de
+  l'utilisatrice]** Ne pas utiliser « /base de données » → « Pleine page » dans
+  la page : cela crée une sous-page (Projets → Projets).
+- 4.5 réécrite (théorie, étapes, quiz) ; modules 5 à 7 alignés ; 6.1 : « Tâches »
+  créée avec la même méthode, statut de type État, première vue « Toutes les tâches ».
+- Captures refaites (v15) : m04-projets-option-base,
+  m04-projets-nouvelle-base (nouvelles), m04-projets-remplie, m04-ajout-projet,
+  m05-nom-vue, m05-ajouter-vue, m05-kanban-glisser, m05-vue-calendrier,
+  m05-filtre-statut, m05-regrouper-statut.
+
 ### v7 — captures des modules 3 et 4 (nov. 2026)
 
 - Captures des modules 3 et 4 intégrées ; captures des modules 1-2 refaites.
@@ -232,8 +264,8 @@ corrections, astuces ou encadrés.
 - **Bases** : création avec « /database » puis « Vue Table » (« Vue Tableau » =
   board) ; types « État » (options Pas commencé / En cours / Terminé),
   « Sélectionner », « Sélection multiple », « Personne », « Date » ; options
-  d'une sélection via « Modifier la propriété » → Options → + ; la base de la
-  page « Projets » s'appelle « 2026 ». Valeur de statut « À faire » remplacée
+  d'une sélection via « Modifier la propriété » → Options → + (la base intégrée « 2026 » de
+  la page « Projets » est remplacée en v8 par une base pleine page). Valeur de statut « À faire » remplacée
   par « Pas commencé » partout (données Studio Nova). **[confirmé]**
 - **Noms des vues (vérifiés sur capture)** : Table, Kanban, Galerie, Liste,
   Graphique, Dashboard, Chronologie, Fil d'actualité, Carte, Calendrier,

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../images/logo-notion.png">
+<title>Le corrigé — Cas pratique — Formation Notion</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+</head>
+<body data-lesson="m8-l2" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du module</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m8">Cas pratique Studio Nova</a></p>
+      <h1>Le corrigé</h1>
+
+      <section class="lesson-page prose">
+        <p>Voici <strong>une</strong> solution, avec la raison de chaque choix. Si la tienne est différente mais répond aux mêmes critères, elle est juste aussi : regarde surtout les explications.</p>
+
+        <h2>1. Où ranger le matériel ?</h2>
+        <p>Le matériel, ce sont des objets du même genre, décrits par les mêmes informations : c'est une <strong>base de données</strong> (leçon 4.1). On crée sous « Studio Nova » une page « Matériel », transformée en base pleine page comme « Projets » (leçon 4.5). L'espace passe à six parties : c'est encore dans la bonne fourchette (leçon 6.1).</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la barre latérale avec « Studio Nova » déplié : Accueil, Projets, Tâches, Matériel, Ressources et Notes & réunions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>La partie Matériel dans la barre latérale · images/captures/m08-corrige-barre-laterale.png</span>
+          </div>
+        </figure>
+        <p><strong>Autre solution acceptable :</strong> ranger la base dans « Ressources ». L'important est qu'il n'existe qu'un seul endroit pour le matériel.</p>
+
+        <h2>2. Les propriétés</h2>
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Propriétés de la base Matériel</caption>
+            <thead><tr><th scope="col">Propriété</th><th scope="col">Type</th><th scope="col">Pourquoi</th></tr></thead>
+            <tbody>
+              <tr><td>Nom</td><td>Titre</td><td>Le nom de l'objet.</td></tr>
+              <tr><td>Type</td><td>Sélectionner</td><td>Un seul type par objet : Ordinateur, Photo, Son, Dessin.</td></tr>
+              <tr><td>État</td><td>Sélectionner</td><td>Disponible, Prêté, En réparation. Le type État conviendrait aussi, mais ce n'est pas un avancement.</td></tr>
+              <tr><td>Emprunté par</td><td>Personne</td><td>Pour filtrer « mes emprunts » et prévenir la personne.</td></tr>
+              <tr><td>Depuis le</td><td>Date</td><td>Une vraie date se trie et s'affiche dans un calendrier.</td></tr>
+              <tr><td>Retour prévu</td><td>Date</td><td>Indispensable pour trier les prêts et filtrer « cette semaine ».</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Matériel » en vue Table avec les cinq objets et leurs propriétés : type, état, emprunté par, depuis le et retour prévu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>La base Matériel remplie · images/captures/m08-corrige-base.png</span>
+          </div>
+        </figure>
+
+        <h2>3. La fiche de chaque objet</h2>
+        <p>Le numéro de série et les accessoires ne servent ni à trier ni à filtrer : ils vont dans le <strong>contenu de la page</strong> de l'objet, sous ses propriétés (leçon 4.2). Une colonne de plus alourdirait le tableau.</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page « Appareil photo » ouverte : ses propriétés en haut, puis le numéro de série et la liste des accessoires dans le contenu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>La fiche de l'appareil photo · images/captures/m08-corrige-fiche-objet.png</span>
+          </div>
+        </figure>
+
+        <h2>4. Les vues</h2>
+        <ul>
+          <li><strong>« Tout le matériel »</strong> (Table) : la vue de départ, renommée.</li>
+          <li><strong>« Prêts en cours »</strong> (Table) : filtre « État est Prêté », tri « Retour prévu, Ancien → Nouveau ». C'est la demande 4 du brief.</li>
+          <li><strong>« Mes emprunts »</strong> (Liste ou Table) : filtre sur « Emprunté par », avec ton nom. C'est la demande 5.</li>
+        </ul>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la vue « Prêts en cours » : seuls les objets prêtés, triés du retour le plus proche au plus lointain, avec le filtre et le tri visibles">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>La vue Prêts en cours · images/captures/m08-corrige-prets-en-cours.png</span>
+          </div>
+        </figure>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la vue « Mes emprunts » filtrée sur « Emprunté par », avec les objets empruntés">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>La vue Mes emprunts · images/captures/m08-corrige-mes-emprunts.png</span>
+          </div>
+        </figure>
+
+        <h2>5. Les règles de prêt</h2>
+        <p>Un texte qui se lit, pas une liste qui se trie : c'est une <strong>page</strong>, rangée dans « Ressources », avec un titre « type + sujet » : « Procédure - Prêt du matériel » (leçon 6.2). Un lien « @Procédure - Prêt du matériel » en haut de la base aide à la trouver.</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page « Procédure - Prêt du matériel » dans Ressources, avec ses règles de prêt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>La procédure de prêt · images/captures/m08-corrige-procedure.png</span>
+          </div>
+        </figure>
+
+        <h2>6. L'accueil</h2>
+        <p>Dans « Accès rapides », un lien « @Matériel ». En dessous, une <strong>vue liée</strong> de la base « Matériel », nommée « Retours cette semaine », avec deux filtres : « État est Prêté » et « Retour prévu : Ce(tte) semaine » (leçon 6.3). On n'y recopie rien.</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page d'accueil : le lien vers Matériel dans les accès rapides et la vue liée « Retours cette semaine » avec ses filtres">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>L'accueil avec les retours de la semaine · images/captures/m08-corrige-accueil.png</span>
+          </div>
+        </figure>
+
+        <h2>7. Le partage</h2>
+        <p>Hugo n'a besoin que de consulter : on partage la base « Matériel » avec lui en <strong>« Lecture seule »</strong>, le niveau le plus bas qui suffit (leçon 7.2). Pas besoin de lui ouvrir tout « Studio Nova ». L'accès général reste « Uniquement les personnes invitées ».</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu Partager de la base « Matériel » : une personne invitée en « Lecture seule » et l'accès général « Uniquement les personnes invitées »">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Le partage de la base Matériel · images/captures/m08-corrige-partage.png</span>
+          </div>
+        </figure>
+
+        <div class="key-points">
+          <h2>Ce qu'il fallait retenir</h2>
+          <ul>
+            <li>Des éléments qui se répètent avec les mêmes informations : une base, à un seul endroit.</li>
+            <li>Ce qu'on trie ou filtre devient une propriété au bon type ; le reste va dans le contenu de la page.</li>
+            <li>Une question = une vue ; l'accueil montre une vue liée, jamais une copie.</li>
+            <li>On partage en dernier, le moins possible, au niveau le plus bas qui suffit.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="lesson-done">
+        <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Chapitres">
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

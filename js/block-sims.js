@@ -58,7 +58,7 @@
   }
 
   function setupSlashSim(sim) {
-    const f = frame('Accueil — Studio Nova');
+    const f = frame('Accueil - Studio Nova');
     const uid = 'slash-' + Math.random().toString(36).slice(2, 7);
     const row = el('div', 'slash-sim__row');
     const label = el('label', 'sr-only', 'Tape le nom d’un bloc après la barre oblique');
@@ -161,7 +161,7 @@
     const history = [];
     let openIndex = null;
 
-    const f = frame('Accueil — Studio Nova');
+    const f = frame('Accueil - Studio Nova');
     f.body.appendChild(el('p', 'block-sim__heading', 'Cette semaine'));
     const list = el('ul', 'block-sim__list');
     f.body.appendChild(list);
@@ -263,11 +263,11 @@
     root: { title: 'Studio Nova', icon: '', blocks: [
       { kind: 'text', text: 'Espace de travail de l’agence Studio Nova.', label: 'Bloc texte', info: 'Il vit dans la page : c’est du contenu que tu lis directement.' },
       { kind: 'toggle', text: 'Règles de l’espace', label: 'Bloc menu dépliant', info: 'Un bloc de contenu replié. Il fait partie de la page « Studio Nova ».' },
-      { kind: 'page', target: 'accueil', label: 'Bloc page', info: 'Une porte vers la sous-page « Accueil — Studio Nova ». Clique pour l’ouvrir.' },
+      { kind: 'page', target: 'accueil', label: 'Bloc page', info: 'Une porte vers la sous-page « Accueil - Studio Nova ». Clique pour l’ouvrir.' },
       { kind: 'page', target: 'projets', label: 'Bloc page', info: 'Une porte vers la sous-page « Projets », vide pour l’instant.' },
       { kind: 'page', target: 'ressources', label: 'Bloc page', info: 'Une porte vers la sous-page « Ressources », vide pour l’instant.' }
     ] },
-    accueil: { title: 'Accueil — Studio Nova', icon: '⌂', blocks: [
+    accueil: { title: 'Accueil - Studio Nova', icon: '⌂', blocks: [
       { kind: 'text', text: 'Bienvenue dans l’espace de travail de Studio Nova.', label: 'Bloc texte', info: 'Le contenu propre à la page d’accueil.' },
       { kind: 'text', text: 'Cette semaine : 3 tâches à faire', label: 'Blocs titre et checklist', info: 'Les blocs que tu as créés aux leçons 2.4 à 2.7.' }
     ] },

@@ -5,7 +5,7 @@
   <g font-size="13" fill="#33281f">
     <rect x="48" y="96" width="298" height="34" rx="8" fill="#f6f1e8"/><text x="60" y="118">Espace de travail de l'agence…</text>
     <rect x="48" y="146" width="298" height="34" rx="8" fill="#fffdf8" stroke="#7a5a45"/>
-    <path d="M62 155 L70 149 L78 155 V168 H62 Z" fill="none" stroke="#7a5a45" stroke-width="1.8"/><text x="88" y="168" text-decoration="underline">Accueil — Studio Nova</text>
+    <path d="M62 155 L70 149 L78 155 V168 H62 Z" fill="none" stroke="#7a5a45" stroke-width="1.8"/><text x="88" y="168" text-decoration="underline">Accueil - Studio Nova</text>
     <rect x="48" y="196" width="298" height="34" rx="8" fill="#fffdf8" stroke="#7a5a45"/>
     <rect x="63" y="203" width="14" height="18" rx="2" fill="none" stroke="#7a5a45" stroke-width="1.8"/><text x="88" y="218">Projets</text>
   </g>
@@ -18,7 +18,7 @@
   </g>
   <g font-size="12" fill="#33281f">
     <rect x="476" y="40" width="216" height="110" rx="10" fill="#fffdf8" stroke="#e6ddd0"/>
-    <text x="492" y="66" font-weight="700" font-size="14">Accueil — Studio Nova</text>
+    <text x="492" y="66" font-weight="700" font-size="14">Accueil - Studio Nova</text>
     <rect x="492" y="80" width="170" height="8" rx="4" fill="#eee6d9"/><rect x="492" y="96" width="140" height="8" rx="4" fill="#eee6d9"/>
     <rect x="492" y="114" width="10" height="10" rx="2" fill="none" stroke="#7b6f63"/><rect x="508" y="116" width="120" height="6" rx="3" fill="#eee6d9"/>
     <rect x="476" y="170" width="216" height="100" rx="10" fill="#fffdf8" stroke="#e6ddd0"/>

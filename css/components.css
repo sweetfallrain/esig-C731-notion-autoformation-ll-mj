@@ -2170,9 +2170,16 @@ body[data-lesson] .course-panel h1 {
   margin-left: auto;
 }
 
-/* Accueil : emplacement de l'image d'un espace Notion finalisé */
-.home-hero__visual.screenshot .screenshot__placeholder {
-  aspect-ratio: 4 / 3;
+/* Accueil : illustration à droite du titre */
+.home-hero__image {
+  margin: 0;
+}
+
+.home-hero__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg, 16px);
   box-shadow: var(--shadow-1);
 }
 
@@ -2196,4 +2203,60 @@ body[data-lesson] .course-panel h1 {
   .program {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+/* ===================================================================
+   Questionnaire final (module 9) : correction de tout le questionnaire
+   =================================================================== */
+.final-quiz__question + .final-quiz__question {
+  margin-top: 28px;
+}
+
+.final-quiz .quiz__actions {
+  margin-top: 28px;
+}
+
+.final-quiz__result {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface, #fffdf8);
+}
+
+.final-quiz__result:focus {
+  outline: 2px solid var(--color-accent, #7a5a45);
+  outline-offset: 3px;
+}
+
+.final-quiz__score {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.final-quiz__result p:last-child {
+  margin: 0;
+}
+
+/* Cas pratique : coup de pouce repliable */
+.hint {
+  margin: 24px 0;
+  padding: 14px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.hint > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hint[open] > summary {
+  margin-bottom: 8px;
+}
+
+.hint ul {
+  margin: 0;
 }

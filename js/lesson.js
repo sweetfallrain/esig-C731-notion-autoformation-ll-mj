@@ -57,7 +57,17 @@
     const steps = Array.from(document.querySelectorAll('[data-step]'));
     const prev = document.querySelector('[data-nav-prev]');
     const next = document.querySelector('[data-nav-next]');
-    if (steps.length === 0) { return; }
+
+    // Page simple, sans étapes (modules 8 et 9) : un seul bouton vers la suite
+    if (steps.length === 0) {
+      if (next) {
+        const target = nextTarget(lesson);
+        next.href = target.href;
+        next.textContent = target.text;
+        next.addEventListener('click', function () { Progress.setDone(lesson.id, true); });
+      }
+      return;
+    }
 
     const labels = steps.map(function (step, i) {
       return step.dataset.step || DEFAULT_LABELS[i] || 'Étape ' + (i + 1);

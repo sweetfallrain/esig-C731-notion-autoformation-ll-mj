@@ -97,7 +97,7 @@
         li.appendChild(span);
       }
 
-      if (isCurrent) {
+      if (isCurrent && stepLabels().length > 0) {
         const steps = el('ol', 'toc__steps');
         stepLabels().forEach(function (stepLabel, i) {
           const stepItem = el('li');
