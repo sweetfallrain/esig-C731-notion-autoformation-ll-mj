@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../images/logo-notion.png">
+<title>Le corrigé — Cas pratique Studio Nova — Formation Notion</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+</head>
+<body data-lesson="m8-l2" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du module</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m8">Cas pratique Studio Nova</a></p>
+      <h1>Le corrigé</h1>
+
+      <section class="lesson-page prose">
+        <p>Compare ton espace avec celui-ci, partie par partie. Tes dates, tes textes ou l'ordre de tes pages peuvent être différents : l'important est que chaque élément soit au bon endroit.</p>
+
+        <h2>L'arborescence attendue</h2>
+        <pre>Studio Nova
+├─ Accueil — Studio Nova         (encadré, accès rapides, vue liée « Cette semaine »)
+├─ Projets                        (4 projets · vues Tous les projets, Suivi, Coup d'œil, Échéances, En cours, Archives)
+├─ Tâches                         (6 tâches · vues Toutes les tâches, Suivi, Mes tâches)
+├─ Ressources
+│  └─ Procédure — Accueil des stagiaires
+└─ Notes &amp; réunions
+   ├─ Réunion d'équipe — 3 nov.
+   └─ Réunion de lancement Vega — 24 nov.</pre>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la barre latérale avec « Studio Nova » entièrement déplié : les cinq parties, la procédure dans Ressources et les deux comptes rendus dans Notes & réunions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Barre latérale de l'espace terminé · images/captures/m08-corrige-barre-laterale.png</span>
+          </div>
+        </figure>
+
+        <h2>1. Les données</h2>
+        <p>« Brochure Vega » a ses quatre propriétés remplies. La base « Tâches » compte six tâches, dont trois pour Vega.</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Projets » sur la vue « Tous les projets », avec « Brochure Vega » complétée : Pas commencé, responsable, 4 décembre et Moyenne">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Base Projets avec Brochure Vega · images/captures/m08-corrige-projets.png</span>
+          </div>
+        </figure>
+        <div class="db-sim__scroll">
+          <table class="db-table">
+            <caption class="sr-only">Base Tâches attendue</caption>
+            <thead><tr><th scope="col">Tâche</th><th scope="col">Statut</th><th scope="col">Responsable (scénario)</th><th scope="col">Échéance</th></tr></thead>
+            <tbody>
+              <tr><td>Finaliser la maquette du site Orion</td><td>En cours</td><td>Emma</td><td>15 nov.</td></tr>
+              <tr><td>Préparer la réunion client</td><td>Pas commencé</td><td>Lucas</td><td>18 nov.</td></tr>
+              <tr><td>Mettre à jour les ressources</td><td>Pas commencé</td><td>Sarah</td><td>20 nov.</td></tr>
+              <tr><td>Vega — Recevoir les textes du client</td><td>Pas commencé</td><td>Sarah</td><td>26 nov.</td></tr>
+              <tr><td>Vega — Proposer une mise en page</td><td>Pas commencé</td><td>Lucas</td><td>1er déc.</td></tr>
+              <tr><td>Vega — Relire le premier jet</td><td>Pas commencé</td><td>Emma</td><td>3 déc.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Dans ton espace, tu es responsable de chaque tâche : les prénoms du tableau sont ceux du scénario.</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la base « Tâches » sur la vue « Toutes les tâches », avec les six tâches, dont les trois tâches Vega">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Base Tâches avec les tâches Vega · images/captures/m08-corrige-taches.png</span>
+          </div>
+        </figure>
+
+        <h2>2. Les vues</h2>
+        <p>Sans rien saisir de plus, « Brochure Vega » apparaît dans toutes les vues de la base : c'est la même entrée.</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la vue Kanban « Suivi » de « Projets », avec « Brochure Vega » dans la colonne « Pas commencé »">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Brochure Vega dans le Kanban · images/captures/m08-corrige-suivi.png</span>
+          </div>
+        </figure>
+
+        <h2>3. Les pages</h2>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page « Procédure — Accueil des stagiaires » : l'encadré de bienvenue, la checklist « À lire la première semaine » et le titre « À qui demander ? »">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Procédure d'accueil des stagiaires · images/captures/m08-corrige-procedure.png</span>
+          </div>
+        </figure>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page « Réunion de lancement Vega — 24 nov. » avec les titres Présents, Décisions et Prochaines étapes, et la mention de « Brochure Vega »">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Compte rendu de lancement Vega · images/captures/m08-corrige-compte-rendu.png</span>
+          </div>
+        </figure>
+
+        <h2>4. L'accueil</h2>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : la page d'accueil avec les accès rapides et la vue liée « Cette semaine » des tâches">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>L'accueil terminé · images/captures/m08-corrige-accueil.png</span>
+          </div>
+        </figure>
+
+        <h2>5. Le partage</h2>
+        <p>Hugo est (ou serait) invité en « Lecture seule » sur « Studio Nova », et l'accès général reste « Uniquement les personnes invitées ».</p>
+        <figure class="screenshot">
+          <div class="screenshot__placeholder" role="img" aria-label="Emplacement pour une capture d'écran : le menu Partager de « Studio Nova » : l'accès général « Uniquement les personnes invitées » et, si un collègue joue Hugo, son accès en « Lecture seule »">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+            <strong>Capture d'écran Notion</strong>
+            <span>Partage de Studio Nova · images/captures/m08-corrige-partage.png</span>
+          </div>
+        </figure>
+
+        <div class="key-points">
+          <h2>Ce qu'il fallait retenir</h2>
+          <ul>
+            <li>Un nouveau client est une nouvelle entrée de la base, pas une nouvelle base : toutes les vues l'affichent.</li>
+            <li>Chaque page va dans la bonne partie, avec un titre clair « type + sujet (+ date) ».</li>
+            <li>On partage en dernier, avec le niveau d'accès le plus bas qui suffit.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="lesson-done">
+        <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Chapitres">
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

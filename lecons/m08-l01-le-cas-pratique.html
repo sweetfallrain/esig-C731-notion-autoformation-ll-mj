@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../images/logo-notion.png">
+<title>Le cas pratique — Cas pratique Studio Nova — Formation Notion</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/nav.js"></script>
+<script src="../js/course-data.js" defer></script>
+<script src="../js/progress.js" defer></script>
+<script src="../js/course-toc.js" defer></script>
+<script src="../js/lesson.js" defer></script>
+<script src="../js/quiz.js" defer></script>
+</head>
+<body data-lesson="m8-l1" data-root="../">
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="../index.html" class="brand">
+        <img class="brand__logo" src="../images/logo-notion.png" alt="" aria-hidden="true">
+        <span class="brand__name">Notion</span>
+      </a>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="../mon-parcours.html" class="btn btn-primary btn--compact site-nav__cta">Les modules</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page course-layout">
+
+    <aside class="course-toc" aria-label="Modules et leçons">
+      <details class="course-toc__details" open>
+        <summary>Sommaire du module</summary>
+        <div class="course-toc__body" data-course-toc>
+          <p><a href="../mon-parcours.html">Voir les modules</a></p>
+        </div>
+      </details>
+    </aside>
+
+    <main id="contenu" class="course-panel">
+      <p class="meta" data-lesson-meta><a href="../mon-parcours.html#m8">Cas pratique Studio Nova</a></p>
+      <h1>Le cas pratique</h1>
+
+      <section class="lesson-page prose">
+        <p>Place à l'exercice final. Tu ne découvres rien de nouveau : tu <strong>assembles</strong> tout ce que tu as appris pour répondre à une vraie demande, comme au travail. Garde Notion ouvert à côté de cette page.</p>
+        <p>La situation : Studio Nova vient de signer un nouveau client, <strong>Vega</strong>, pour une brochure. Et lundi, <strong>Hugo</strong>, un stagiaire, rejoint l'équipe. Emma te confie la mise à jour de l'espace Notion pour que les deux arrivées se passent bien. Voici son brief.</p>
+        <div class="notion-page" role="group" aria-label="Simulation d'une page Notion : Brief — Arrivée de Vega et de Hugo">
+          <div class="notion-page__bar">Studio Nova / Notes &amp; réunions / <strong>Brief — Arrivée de Vega et de Hugo</strong><span class="notion-page__tag">Simulation</span></div>
+          <div class="notion-page__body">
+            <p class="np-h1">Brief — Arrivée de Vega et de Hugo</p>
+            <p class="np-text">Salut ! Deux nouveautés cette semaine, j'ai besoin de toi pour préparer l'espace :</p>
+            <p class="np-text">1. Complète le projet <strong>« Brochure Vega »</strong>, déjà dans la base (client Vega, échéance le 4 décembre, priorité moyenne, responsable : Lucas).</p>
+            <p class="np-text">2. Crée les trois premières tâches : recevoir les textes du client (Sarah), proposer une mise en page (Lucas), relire le premier jet (Emma).</p>
+            <p class="np-text">3. Je veux suivre l'avancement sur un Kanban, et voir les échéances dans un calendrier.</p>
+            <p class="np-text">4. Écris une page pour accueillir Hugo : ce qu'il doit lire, à qui demander.</p>
+            <p class="np-text">5. Prépare le compte rendu de la réunion de lancement Vega du 24 novembre.</p>
+            <p class="np-text">6. L'accueil doit montrer les accès rapides et les tâches de la semaine.</p>
+            <p class="np-text">7. Hugo doit pouvoir tout lire, mais il ne modifie rien pour l'instant.</p>
+            <p class="np-text">Et garde l'espace propre, comme d'habitude ! — Emma</p>
+          </div>
+        </div>
+
+        <figure class="illustration">
+          <img src="../images/illustrations/m08-espace-cible.svg" alt="À gauche, l'espace attendu : Studio Nova contient Accueil, Projets (base, 6 vues), Tâches (base, 3 vues), Ressources avec la sous-page « Procédure — Accueil des stagiaires », et Notes et réunions avec « Réunion de lancement Vega — 24 nov. ». À droite, les huit exigences du brief : projet Brochure Vega complété, trois tâches pour Vega avec responsables, vues Suivi et Échéances, procédure d'accueil pour Hugo, compte rendu de lancement, accueil avec accès rapides et tâches de la semaine, partage avec Hugo au bon niveau, titres clairs sans page en vrac." width="720" height="320">
+          <figcaption>L'espace à obtenir et les exigences du brief.</figcaption>
+        </figure>
+
+        <h2>La consigne, point par point</h2>
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"></span>
+          <p><strong>Rappel :</strong> ton espace d'entraînement n'a pas d'autres membres. Chaque fois qu'il faut choisir un responsable, choisis-toi toi-même ; les prénoms du brief disent qui le ferait dans la vraie équipe.</p>
+        </div>
+
+        <h3>1. Les données</h3>
+        <ol class="tutorial">
+          <li>Dans la base « Projets », ouvre « Brochure Vega », créée au module 4. Vérifie : statut Pas commencé, échéance au 4 décembre, priorité Moyenne. Remplis le responsable.</li>
+          <li>Dans la base « Tâches », ajoute trois tâches, au statut Pas commencé : « Vega — Recevoir les textes du client » (Sarah, le 26 novembre), « Vega — Proposer une mise en page » (Lucas, le 1er décembre) et « Vega — Relire le premier jet » (Emma, le 3 décembre).</li>
+        </ol>
+
+        <h3>2. Les vues</h3>
+        <ol class="tutorial">
+          <li>Dans « Projets », vérifie que les vues « Suivi » (Kanban) et « Échéances » (Calendrier) existent ; crée celles qui manquent.</li>
+          <li>Vérifie que « Brochure Vega » apparaît dans la colonne « Pas commencé » de « Suivi » et au 4 décembre dans « Échéances ».</li>
+        </ol>
+
+        <h3>3. Les pages</h3>
+        <ol class="tutorial">
+          <li>Dans « Ressources », crée la page « Procédure — Accueil des stagiaires » : un encadré de bienvenue, une checklist « À lire la première semaine » (Accueil, Projets, Tâches) et un titre « À qui demander ? » avec une ligne par personne.</li>
+          <li>Dans « Notes &amp; réunions », crée la page « Réunion de lancement Vega — 24 nov. » avec trois titres : Présents, Décisions et Prochaines étapes. Dans le texte, mentionne « @Brochure Vega ».</li>
+        </ol>
+
+        <h3>4. L'accueil</h3>
+        <ol class="tutorial">
+          <li>Vérifie les « Accès rapides » : Projets, Tâches, Ressources et Notes &amp; réunions.</li>
+          <li>Vérifie la vue liée « Cette semaine » : les tâches dont l'échéance tombe cette semaine y apparaissent.</li>
+        </ol>
+
+        <h3>5. Le partage</h3>
+        <ol class="tutorial">
+          <li>Si un collègue joue le rôle de Hugo, invite-le sur « Studio Nova » en « Lecture seule ». Sinon, ouvre seulement le menu Partager et vérifie que l'accès général est « Uniquement les personnes invitées ».</li>
+        </ol>
+
+        <h3>6. Le rangement</h3>
+        <ol class="tutorial">
+          <li>Dans la barre latérale, supprime ou range les pages en vrac : aucun « Sans titre », aucun brouillon, rien en dehors des cinq parties.</li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"></span>
+          <p><strong>Attention :</strong> construis dans l'ordre (données, vues, pages, accueil) et partage en dernier : Hugo reçoit une notification dès l'invitation. Et ne crée pas de base « Projets Vega » à côté de « Projets » : un nouveau client est une nouvelle entrée, pas une nouvelle base.</p>
+        </div>
+
+        <h2>Avant de regarder le corrigé</h2>
+        <div class="exercise">
+          <p class="exercise__kicker">Grille de vérification · dans Notion</p>
+          <h3>Le brief est-il rempli ?</h3>
+          <ul class="exercise__checklist">
+            <li><label><input type="checkbox"><span>« Brochure Vega » est une entrée de <strong>Projets</strong>, avec ses quatre propriétés remplies.</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Trois tâches Vega</strong> existent dans Tâches, chacune avec un responsable et une échéance.</span></label></li>
+            <li><label><input type="checkbox"><span>Vega apparaît dans la vue <strong>Suivi</strong> (colonne Pas commencé) et dans <strong>Échéances</strong> (4 décembre).</span></label></li>
+            <li><label><input type="checkbox"><span>La <strong>procédure d'accueil</strong> est dans Ressources, avec un titre clair.</span></label></li>
+            <li><label><input type="checkbox"><span>Le <strong>compte rendu de lancement</strong> est dans Notes &amp; réunions et mentionne le projet.</span></label></li>
+            <li><label><input type="checkbox"><span>L'<strong>accueil</strong> montre les accès rapides et les tâches de la semaine.</span></label></li>
+            <li><label><input type="checkbox"><span>Hugo est (ou serait) invité en <strong>« Lecture seule »</strong> ; l'accès général est « Uniquement les personnes invitées ».</span></label></li>
+            <li><label><input type="checkbox"><span><strong>Aucune page</strong> au titre flou ni en dehors des cinq parties.</span></label></li>
+          </ul>
+          <h4>Le test du nouveau venu</h4>
+          <p class="exercise__result">Depuis l'accueil, chronomètre-toi (ou un collègue) : trouver la procédure d'accueil, puis la tâche « Vega — Proposer une mise en page ». Moins d'une minute : ton espace est prêt pour Hugo.</p>
+        </div>
+        <p>Tout est coché ? Compare maintenant ton espace avec le corrigé.</p>
+      </section>
+
+      <div class="lesson-done">
+        <button type="button" class="btn btn-outline" data-lesson-done aria-pressed="false">Marquer comme terminée</button>
+      </div>
+
+      <nav class="lesson-nav" aria-label="Chapitres">
+        <a class="btn btn-primary lesson-nav__next" href="../mon-parcours.html" data-nav-next>Les modules →</a>
+      </nav>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>Notion · Formation interne</span>
+      <span>Lennie &amp; Jessica · Travail pratique ESIG · C731</span>
+    </div>
+  </footer>
+
+</body>
+</html>

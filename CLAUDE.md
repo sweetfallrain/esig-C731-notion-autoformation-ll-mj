@@ -222,6 +222,21 @@ corrections, astuces ou encadrés.
 
 ## Notes de migration
 
+### v9 — modules 8 et 9 en pages simples (nov. 2026)
+
+- **Module 8** : deux pages sans étapes (pas de Comprendre / Faire / Vérifier).
+  8.1 « Le cas pratique » (brief d'Emma, consigne point par point, grille de
+  vérification) ; 8.2 « Le corrigé » (arborescence, tableau des tâches, 8
+  emplacements de captures m08-corrige-*). **[décision de l'utilisatrice]**
+- **Module 9** : une seule page « Questionnaire final » : 15 questions corrigées
+  toutes à la fin (js/final-quiz.js, score sur 15, leçon à revoir sous chaque
+  erreur), puis la fiche mémo et le message de fin. **[décision de l'utilisatrice]**
+- lesson.js : une page sans `data-step` n'affiche qu'un bouton vers la suite ;
+  course-toc.js ne liste pas d'étapes pour ces pages. Parcours : 36 leçons.
+- Module 7 aligné sur les libellés Notion : Modifications autorisées,
+  Modifications de contenu autorisées, Commentaires autorisés, Lecture seule,
+  Supprimer ; accès général « Uniquement les personnes invitées ».
+
 ### v8 — « Projets » et « Tâches » en bases pleine page (nov. 2026)
 
 - « Projets » et « Tâches » sont des **bases pleine page** : la page vide créée

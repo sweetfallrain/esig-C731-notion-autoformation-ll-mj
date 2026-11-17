@@ -2204,3 +2204,37 @@ body[data-lesson] .course-panel h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* ===================================================================
+   Questionnaire final (module 9) : correction de tout le questionnaire
+   =================================================================== */
+.final-quiz__question + .final-quiz__question {
+  margin-top: 28px;
+}
+
+.final-quiz .quiz__actions {
+  margin-top: 28px;
+}
+
+.final-quiz__result {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface, #fffdf8);
+}
+
+.final-quiz__result:focus {
+  outline: 2px solid var(--color-accent, #7a5a45);
+  outline-offset: 3px;
+}
+
+.final-quiz__score {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.final-quiz__result p:last-child {
+  margin: 0;
+}
