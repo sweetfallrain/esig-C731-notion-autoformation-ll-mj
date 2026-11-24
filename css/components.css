@@ -2824,6 +2824,14 @@ body[data-lesson] .course-panel h1 {
   }
 }
 
+
+/* Éléments propres au téléphone (js/app.js) : jamais affichés sur grand écran */
+.app-bar,
+.sheet__head,
+.sheet-backdrop {
+  display: none;
+}
+
 /* Faits de l'accueil : séparés par « · » sur ordinateur */
 .home-hero__facts span + span::before {
   content: " · ";
@@ -3018,6 +3026,8 @@ body[data-lesson] .course-panel h1 {
     z-index: 310;
     background: rgba(51, 40, 31, 0.4);
   }
+  .sheet-backdrop:not([hidden]) { display: block; }
+  .course-toc--sheet .sheet__head { display: flex; }
   body.sheet-open { overflow: hidden; }
 
   /* --- Étapes « Faire » : une carte par étape, numéro posé sur le bord --- */
