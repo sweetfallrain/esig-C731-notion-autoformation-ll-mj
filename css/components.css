@@ -2541,3 +2541,777 @@ body[data-lesson] .course-panel h1 {
     text-align: center;
   }
 }
+
+/* ===================================================================
+   Téléphone — refonte compacte (< 600 px)
+   Échelle de texte resserrée, contenu sur toute la largeur, boutons et
+   en-têtes plus discrets, arborescences dessinées en CSS.
+   =================================================================== */
+@media (max-width: 599px) {
+  /* --- En-tête --- */
+  .site-header__inner { padding: 10px 16px; }
+  .brand__logo { width: 28px; height: 28px; }
+  .brand__name { font-size: 1rem; }
+  .site-nav__cta.btn { min-height: 34px; padding: 8px 14px; font-size: 0.8rem; }
+
+  /* --- Boutons --- */
+  .btn { min-height: 40px; padding: 10px 18px; font-size: 0.82rem; }
+
+  /* --- Page et carte de leçon : pleine largeur --- */
+  .page { padding: 0 0 40px; }
+  .course-layout { gap: 0; }
+  .course-panel {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 20px 16px 28px;
+  }
+
+  /* --- Échelle de texte --- */
+  .course-panel h1 { font-size: 1.6rem; line-height: 1.2; margin: 6px 0 10px; }
+  body[data-lesson] .course-panel h1 { margin-bottom: 20px; padding-bottom: 14px; }
+  .prose p, .prose ul, .prose ol { font-size: 0.95rem; line-height: 1.65; }
+  .prose p { margin-bottom: 14px; }
+  .prose h2 { font-size: 1.22rem; margin: 26px 0 8px; }
+  .prose h3 { font-size: 1.05rem; }
+  .prose .definition, .definition {
+    font-size: 1.08rem;
+    line-height: 1.45;
+    padding: 2px 0 2px 14px;
+    border-left: 3px solid var(--color-accent);
+  }
+  .callout { padding: 12px 14px; gap: 10px; margin-bottom: 20px; }
+  .callout p { font-size: 0.9rem; line-height: 1.55; }
+  .quiz__question { font-size: 1.1rem; }
+  .quiz__option { padding: 11px 12px; font-size: 0.9rem; }
+  .meta, .lesson-topline { font-size: 0.78rem; }
+  .screenshot, .illustration { margin-left: 0; margin-right: 0; }
+
+  /* --- Navigation du bas : boutons pleine largeur, empilés --- */
+  .lesson-nav { flex-direction: column-reverse; gap: 10px; margin-top: 32px; padding-top: 18px; }
+  .lesson-nav .btn { width: 100%; }
+  .lesson-nav__next { margin-left: 0; }
+  .lesson-done .btn { width: 100%; }
+
+  /* --- Sommaire du module : barre compacte --- */
+  .course-toc { padding: 0; }
+  .course-toc__details {
+    border-radius: 0;
+    border-left: 0; border-right: 0;
+    background: var(--color-bg-soft);
+  }
+  .course-toc__details > summary { padding: 12px 16px; font-size: 0.85rem; }
+  .course-toc__body { padding: 4px 16px 16px; }
+
+  /* --- Accueil --- */
+  .home-hero { padding-top: 8px; gap: 24px; }
+  .home-hero h1 { font-size: 1.85rem; }
+  .home-hero__lead { font-size: 0.95rem; margin-bottom: 20px; }
+  .home .page, main.home { padding-left: 16px; padding-right: 16px; }
+  .panel { padding: 24px 18px; }
+  .panel h2, .home-split h2, .cta-band h2 { font-size: 1.4rem; }
+  .panel__lead { font-size: 0.92rem; margin-bottom: 18px; }
+  .program li { padding: 14px 0 16px; }
+  .program__title { font-size: 1.05rem; }
+  .program__desc { font-size: 0.85rem; }
+  .method { gap: 18px; }
+  .cta-band { padding: 24px 18px; }
+
+  /* --- Page « Les modules » : lignes compactes --- */
+  .module-list__head {
+    grid-template-columns: 26px minmax(0, 1fr) auto;
+    padding: 14px 2px;
+    align-items: center;
+  }
+  .module-list__title strong { font-size: 1.02rem; }
+  .module-list__title span { font-size: 0.78rem; }
+  .module-list__head > .pill {
+    grid-column: 3; grid-row: 1;
+    font-size: 0.7rem; padding: 3px 9px;
+  }
+  .module-list__sign { display: none; }
+  .module-list__num { padding-top: 0; font-size: 0.95rem; }
+}
+
+/* --- Arborescences dessinées (toutes tailles d'écran) --- */
+.tree__branch,
+.space-map__branch { display: none; }
+
+.tree,
+.space-map {
+  position: relative;
+  margin-left: 4px;
+}
+
+.tree li,
+.space-map li:not(.is-root) {
+  position: relative;
+  padding-left: 22px;
+}
+
+.tree li::before,
+.space-map li:not(.is-root)::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  border-left: 1.5px solid var(--color-accent-soft);
+}
+
+.tree li:last-child::before,
+.space-map li:not(.is-root):last-child::before {
+  bottom: 50%;
+}
+
+.tree li::after,
+.space-map li:not(.is-root)::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  width: 10px;
+  border-top: 1.5px solid var(--color-accent-soft);
+}
+
+.tree .meta,
+.space-map .pill {
+  font-size: 0.72rem;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* Captures : toujours en bloc, donc toujours centrées (toutes tailles d'écran) */
+.screenshot img {
+  display: block;
+}
+
+/* ===================================================================
+   Téléphone — refonte compacte, deuxième passe (< 600 px)
+   =================================================================== */
+@media (max-width: 599px) {
+  /* --- Texte justifié, sans couper les mots --- */
+  .course-panel__lead,
+  .prose > p,
+  .prose > ul > li,
+  .prose > ol > li,
+  .callout p,
+  .key-points__goal,
+  .quiz__feedback,
+  .home-hero__lead,
+  .home-split p,
+  .panel__lead,
+  .program__desc,
+  .module-list__body > p {
+    text-align: justify;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    text-wrap: pretty;
+  }
+
+  /* --- Images : même cadre pour toutes, sur toute la largeur du texte --- */
+  .screenshot:has(img),
+  .illustration:has(img) {
+    margin: 16px 0 22px;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-2);
+  }
+
+  .tutorial > li {
+    padding-left: 28px;
+  }
+
+  .tutorial .screenshot:has(img),
+  .tutorial .illustration:has(img) {
+    margin-left: -28px;
+  }
+
+  .screenshot img,
+  .illustration img,
+  .screenshot__pair img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 58vh;
+    object-fit: contain;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: none;
+    background: var(--color-surface);
+  }
+
+  .screenshot__pair {
+    gap: 10px;
+  }
+
+  .screenshot:has(img)::after,
+  .illustration:has(img) figcaption::after {
+    text-align: center;
+  }
+
+  .screenshot figcaption,
+  .illustration figcaption {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  /* --- Accueil : bandeau en haut, texte aéré --- */
+  .home-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0;
+  }
+
+  .home-hero__copy,
+  .home-hero__visual {
+    flex: none;
+  }
+
+  .home-hero__visual {
+    order: -1;
+    margin: 0 -16px 22px;
+  }
+
+  .home-hero__image img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: 55% 45%;
+    border-radius: 0 0 24px 24px;
+    box-shadow: none;
+  }
+
+  .home-hero__copy {
+    padding: 0 2px;
+  }
+
+  .home-hero__copy > .meta:first-child {
+    margin: 0 0 10px;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .home-hero h1 {
+    margin: 0 0 14px;
+    font-size: 1.75rem;
+    line-height: 1.22;
+  }
+
+  .home-hero__lead {
+    margin-bottom: 22px;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .home-hero .btn-row .btn,
+  .home-hero__copy > .btn {
+    width: 100%;
+  }
+
+  .home-hero__facts {
+    margin-top: 14px;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+}
+
+/* Faits de l'accueil : séparés par « · » sur ordinateur */
+.home-hero__facts span + span::before {
+  content: " · ";
+}
+
+/* ===================================================================
+   Téléphone — affichage « appli » (< 600 px)
+   En-tête masquable, barre fixe en bas des leçons, sommaire en panneau,
+   étapes « Faire » en cartes, programme en cartes à faire glisser.
+   Comportements : js/app.js
+   =================================================================== */
+@media (max-width: 599px) {
+  /* --- En-tête fin, collé en haut, masqué pendant la lecture --- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 253, 248, 0.94);
+    -webkit-backdrop-filter: saturate(1.4) blur(10px);
+    backdrop-filter: saturate(1.4) blur(10px);
+    transition: transform 220ms ease;
+  }
+  .site-header.is-hidden { transform: translateY(-100%); }
+  .site-header__inner { min-height: 52px; padding: 8px 16px; }
+  .brand__logo { width: 26px; height: 26px; }
+  .site-nav__cta.btn {
+    min-height: 32px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    background: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent-soft);
+  }
+
+  /* --- Barre fixe en bas des leçons --- */
+  body.has-app-bar { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  body.has-app-bar .lesson-nav { display: none; }
+  body.has-app-bar .lesson-step-indicator { display: none; }
+  body.has-app-bar .site-footer { padding-bottom: 12px; }
+
+  .app-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255, 253, 248, 0.96);
+    -webkit-backdrop-filter: saturate(1.4) blur(12px);
+    backdrop-filter: saturate(1.4) blur(12px);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -6px 24px rgba(51, 29, 25, 0.06);
+  }
+
+  .app-bar__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 48px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    font-weight: 600;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .app-bar__prev {
+    width: 48px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-accent);
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+  .app-bar__prev span[aria-hidden] { margin-top: -3px; }
+  .app-bar__prev.is-disabled { opacity: 0.35; pointer-events: none; }
+
+  .app-bar__next {
+    padding: 0 18px 0 22px;
+    background: var(--color-accent);
+    color: var(--color-text-inverse);
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+  .app-bar__next:active { background: var(--color-accent-hover); }
+  .app-bar__arrow { font-size: 1.35rem; line-height: 1; margin-top: -2px; }
+
+  .app-bar__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-width: 0;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: var(--color-text);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .app-bar__label {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .app-bar__title { font-weight: 600; font-size: 0.92rem; line-height: 1.2; }
+  .app-bar__title::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 0 2px 6px;
+    border-right: 1.5px solid currentColor;
+    border-top: 1.5px solid currentColor;
+    transform: rotate(-45deg);
+    opacity: 0.6;
+  }
+  .app-bar__dots { display: flex; gap: 4px; margin-top: 3px; }
+  .app-bar__dot {
+    width: 18px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--color-surface-2);
+  }
+  .app-bar__dot.is-done { background: var(--color-accent-soft); }
+  .app-bar__dot.is-current { background: var(--color-accent); }
+
+  /* --- Sommaire du module : panneau qui monte du bas --- */
+  .course-toc--sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 320;
+    max-height: 82vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0 0 calc(20px + env(safe-area-inset-bottom));
+    background: var(--color-surface);
+    border-radius: 22px 22px 0 0;
+    box-shadow: 0 -12px 40px rgba(51, 29, 25, 0.18);
+    transform: translateY(105%);
+    visibility: hidden;
+    transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s 260ms;
+  }
+  .course-toc--sheet.is-open {
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .course-toc--sheet .course-toc__details { border: 0; background: none; }
+  .course-toc--sheet .course-toc__details > summary { display: none; }
+  .course-toc--sheet .course-toc__body { padding: 0 20px; }
+  .sheet__head {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 14px 4px;
+    background: var(--color-surface);
+  }
+  .course-toc:not(.course-toc--sheet) .sheet__head { display: none; }
+  .sheet__grip {
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    width: 40px;
+    height: 4px;
+    margin-left: -20px;
+    border-radius: 2px;
+    background: var(--color-border);
+  }
+  .sheet__close {
+    margin-top: 6px;
+    padding: 6px 12px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface-2);
+    font: 600 0.78rem var(--font-body);
+    color: var(--color-text);
+  }
+  .sheet-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 310;
+    background: rgba(51, 40, 31, 0.4);
+  }
+  body.sheet-open { overflow: hidden; }
+
+  /* --- Étapes « Faire » : une carte par étape, numéro posé sur le bord --- */
+  .tutorial { margin: 4px 0 26px; }
+  .tutorial > li {
+    margin: 0 0 22px;
+    padding: 20px 14px 14px;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .tutorial > li:first-child { margin-top: 18px; }
+  .tutorial > li::before {
+    content: counter(step);
+    position: absolute;
+    top: -13px;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-surface);
+    color: var(--color-text-inverse);
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .tutorial > li > p { margin: 10px 0 0; font-size: inherit; }
+  .tutorial .screenshot:has(img),
+  .tutorial .illustration:has(img),
+  .tutorial .screenshot__pair {
+    margin: 12px 0 0;
+  }
+  .tutorial .screenshot:has(img) { background: var(--color-surface-2); }
+  .tutorial > li > *:last-child { margin-bottom: 0; }
+
+  /* --- Captures : pastille « agrandir » au lieu de la phrase --- */
+  .screenshot:has(img),
+  .illustration:has(img) { position: relative; }
+  .screenshot:has(img)::after,
+  .illustration:has(img) figcaption::after { content: none; }
+  .screenshot:has(img)::before,
+  .illustration:has(img)::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(51, 40, 31, 0.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fdf9f3' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") center / 14px no-repeat;
+    pointer-events: none;
+  }
+  .screenshot.screenshot--cropped::after {
+    content: "Zoom sur la zone utile · touche pour voir l'écran entier.";
+    display: block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+
+  /* --- Accueil : faits en pastilles --- */
+  .home-hero__facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .home-hero__facts span {
+    padding: 5px 11px;
+    border-radius: var(--radius-pill);
+    background: var(--color-surface-2);
+    font-size: 0.74rem;
+    color: var(--color-text);
+  }
+  .home-hero__facts span + span::before { content: none; }
+
+  /* --- Accueil : programme en cartes à faire glisser --- */
+  .program {
+    display: flex;
+    gap: 12px;
+    margin: 0 -18px;
+    padding: 4px 18px 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 18px;
+    scrollbar-width: none;
+  }
+  .program::-webkit-scrollbar { display: none; }
+  .program li {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    padding: 18px 18px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--color-bg-soft);
+  }
+  .program__num { font-size: 1.6rem; margin-bottom: 10px; }
+  .program__desc { text-align: left; }
+  /* --- Taille de texte réduite partout --- */
+  .btn { font-size: 0.8rem; }
+  .meta, .lesson-topline { font-size: 0.74rem; }
+  .course-panel { padding: 22px 22px 28px; }
+  .course-panel h1 { font-size: 1.42rem; }
+  .prose h2 { font-size: 1.1rem; margin: 28px 0 10px; }
+  .prose h3 { font-size: 0.98rem; }
+  .prose p, .prose ul, .prose ol { font-size: 0.9rem; line-height: 1.62; }
+  .prose p { margin-bottom: 16px; }
+  .callout p { font-size: 0.85rem; }
+  .prose .definition, .definition { font-size: 0.98rem; }
+  .key-points__goal { font-size: 0.92rem; }
+  .quiz__count { font-size: 0.72rem; }
+  .quiz__question { font-size: 0.98rem; line-height: 1.4; }
+  .quiz__option { font-size: 0.86rem; padding: 10px 12px; }
+  .quiz__feedback { font-size: 0.86rem; }
+  .course-panel__lead { font-size: 0.92rem; line-height: 1.6; }
+  .module-list__title strong { font-size: 0.98rem; }
+  .module-list__title span { font-size: 0.74rem; }
+  .module-list__body > p { font-size: 0.84rem; line-height: 1.55; }
+  .lesson-list { font-size: 0.86rem; }
+  .lesson-list__state { font-size: 0.72rem; }
+  .home-hero h1 { font-size: 1.6rem; }
+  .home-hero__lead { font-size: 0.92rem; }
+  .panel h2, .home-split h2, .cta-band h2 { font-size: 1.28rem; }
+  .panel__lead, .home-split p { font-size: 0.88rem; }
+  .program__title { font-size: 1rem; }
+  .program__desc { font-size: 0.82rem; }
+
+  /* --- Comprendre : listes découpées en petits blocs --- */
+  .prose > ul:has(> li > strong:first-child) {
+    list-style: none;
+    padding-left: 0;
+  }
+  .prose > ul:has(> li > strong:first-child) > li {
+    margin: 0 0 8px;
+    padding: 10px 12px 10px 14px;
+    background: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent-soft);
+    border-radius: 10px;
+  }
+  .prose > ul:has(> li > strong:first-child) > li > strong:first-child { color: var(--color-accent-hover); }
+  .prose > ol:not(.tutorial) {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: point;
+  }
+  .prose > ol:not(.tutorial) > li {
+    counter-increment: point;
+    position: relative;
+    margin: 0 0 10px;
+    padding-left: 34px;
+  }
+  .prose > ol:not(.tutorial) > li::before {
+    content: counter(point);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .quiz-check { padding: 16px; }
+  .quiz-check__score { font-size: 0.98rem; }
+  .quiz-check__actions .btn { flex: 1 1 auto; }
+
+  .program-hint {
+    display: block;
+    margin: -4px 0 0;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-align: right;
+  }
+}
+
+@media (min-width: 600px) {
+  .program-hint { display: none; }
+}
+
+/* ===================================================================
+   Mini-quiz : un seul bouton pour corriger toutes les questions
+   (js/quiz.js) — toutes tailles d'écran
+   =================================================================== */
+.quiz--grouped .quiz__actions { display: none; }
+
+/* Titre d'étape mis en focus par lesson.js : pas de cadre visible */
+.lesson-step [tabindex="-1"]:focus { outline: none; }
+
+.quiz.is-missing .quiz__option { border-color: var(--color-error); }
+
+.quiz-check {
+  margin-top: 36px;
+  padding: 20px 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-soft);
+}
+
+.quiz-check.is-done { background: var(--color-surface-2); }
+
+.quiz-check__score {
+  margin: 0 0 14px;
+  font: 500 1.05rem/1.45 var(--font-display);
+  color: var(--color-text);
+  text-align: left;
+}
+
+.quiz-check__missing {
+  margin: 0 0 12px;
+  font-size: 0.88rem;
+  color: var(--color-error);
+}
+
+.quiz-check__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ===================================================================
+   Téléphone — encadrés, accueil et pied de page plus discrets (< 600 px)
+   =================================================================== */
+@media (max-width: 599px) {
+  /* --- Encadrés Attention / Astuce : pastille posée sur le bord --- */
+  .callout {
+    display: block;
+    position: relative;
+    margin: 28px 0 22px;
+    padding: 18px 14px 12px;
+    border-radius: 14px;
+  }
+  .callout__icon {
+    position: absolute;
+    top: -12px;
+    left: 14px;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    box-shadow: 0 0 0 4px var(--color-surface);
+  }
+
+  /* --- Accueil : titres et textes resserrés --- */
+  .home .home-hero h1 { font-size: 1.5rem; }
+  .home .home-hero__lead { font-size: 0.9rem; }
+  .home .panel { padding: 22px 18px; }
+  .home .panel h2,
+  .home .home-split h2,
+  .home .cta-band h2 { font-size: 1.2rem; line-height: 1.3; }
+  .home .panel__lead,
+  .home .home-split p,
+  .home .cta-band p { font-size: 0.86rem; line-height: 1.6; }
+  .home .tree li { padding-top: 9px; padding-bottom: 9px; font-size: 0.86rem; }
+  .home .tree .meta { font-size: 0.66rem; }
+  .home .method { gap: 14px; }
+  .home .method strong { font-size: 0.9rem; }
+  .home .method span { font-size: 0.82rem; line-height: 1.55; }
+  .home .resource-memo { padding: 18px 16px; }
+  .home .resource-memo h3 { font-size: 1.02rem; }
+  .home .resource-memo p { font-size: 0.84rem; line-height: 1.55; }
+  .home .resource-group__title { font-size: 1.02rem; }
+  .home .resource-note { font-size: 0.82rem; }
+  .home .resource-link { padding: 12px 14px; }
+  .home .resource-link__kind { font-size: 0.68rem; }
+  .home .resource-link__title { font-size: 0.88rem; line-height: 1.35; }
+  .home .resource-link__desc { font-size: 0.8rem; line-height: 1.5; }
+  .home .program__desc { font-size: 0.8rem; }
+
+  /* --- Pied de page : petite ligne centrée --- */
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 14px 16px 18px;
+    font-size: 0.68rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+  body.has-app-bar .page { padding-bottom: 0; }
+  body.has-app-bar .site-footer { border-top: 0; }
+  body.has-app-bar .site-footer__inner { padding-top: 4px; opacity: 0.8; }
+}

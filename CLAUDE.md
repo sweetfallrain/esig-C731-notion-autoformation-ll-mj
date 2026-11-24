@@ -236,7 +236,7 @@ esig-C731-notion-autoformation-ll-mj/
 │   ├── nav.js                 Menu mobile de l'en-tête
 │   ├── course-toc.js          Sommaire latéral généré depuis course-data.js
 │   ├── lesson.js              Étapes de leçon (ou page simple), bouton « terminée », suite
-│   ├── quiz.js                Mini-quiz à correction immédiate
+│   ├── quiz.js                Mini-quiz : un bouton corrige toutes les questions de l'étape
 │   ├── final-quiz.js          Questionnaire final : correction de tout à la fin, score
 │   ├── sort-ex.js             Exercices « choisis la bonne réponse » (listes déroulantes)
 │   ├── notion-sim.js          Fausses pages Notion
@@ -244,6 +244,7 @@ esig-C731-notion-autoformation-ll-mj/
 │   ├── db-sim.js              Simulation de la base Projets (modules 4 et 5)
 │   ├── parcours.js            Page « Les modules » (accordéon, progression)
 │   ├── mobile.js              Images agrandissables, tableaux en fiches sur téléphone
+│   ├── app.js                 Téléphone : en-tête masquable, barre du bas, sommaire en panneau
 │   └── typographie.js         Espaces insécables françaises (chargé en dernier)
 ├── images/
 │   ├── captures/              Captures Notion de l'utilisatrice (m<module>-<sujet>.png)
@@ -289,7 +290,7 @@ nom » à droite, puis le H1. Ensuite 3 étapes, chacune dans une
 
 1. **Comprendre** — introduction, explication, **image explicative** (schéma SVG), définition, erreur fréquente (bandeau Attention), simulation éventuelle.
 2. **Faire** — l'exercice de la leçon : exercice de tri éventuel, puis étapes pas à pas dans Notion avec captures, astuce (bandeau Astuce). Plus d'encadré « Exercice » ni de « Résultat attendu » à la fin (les captures montrent le résultat).
-3. **Vérifier** — objectif de la leçon (« Tu sais maintenant… »), mini-quiz (1-3 questions, correction expliquée), bouton « Marquer comme terminée ».
+3. **Vérifier** — objectif de la leçon (« Tu sais maintenant… »), mini-quiz (1-3 questions, corrigées ensemble par « Vérifier mes réponses », correction expliquée), bouton « Marquer comme terminée ».
 
 Navigation du bas : « Étape précédente » / « Étape suivante », puis à la
 dernière étape « Chapitre suivant », « Module suivant » ou « Retour aux
@@ -377,6 +378,38 @@ corrections, astuces ou encadrés sans accord.
 ---
 
 ## Notes de migration
+
+### v12 — téléphone en mode « appli » et quiz corrigés en une fois (nov. 2026)
+
+- **Téléphone (< 600 px) uniquement, l'ordinateur ne change pas** : blocs
+  « Téléphone » en fin de `css/components.css` et `js/app.js`.
+  - En-tête fin qui se cache quand on descend et revient quand on remonte.
+  - Leçons : barre fixe en bas (‹ précédent · « Étape 2 sur 3 · Faire » ·
+    Suivant / Leçon suivante / Module suivant). Elle reprend les liens du bas
+    de page (`lesson.js`), qui sont masqués sur téléphone.
+  - Sommaire du module en panneau qui monte du bas (toucher le centre de la
+    barre).
+  - Texte justifié sans césure, taille réduite partout, marges latérales de
+    22 px dans les leçons.
+  - Étapes « Faire » en cartes, numéro posé sur le bord ; encadrés Attention et
+    Astuce : pastille posée sur le bord de la même façon.
+  - Comprendre : listes dont chaque point commence par du gras = petits blocs ;
+    listes numérotées avec pastilles.
+  - Captures : toujours centrées dans le même cadre, hauteur limitée, pastille
+    « agrandir » ; le zoom montre toujours l'écran entier.
+  - Captures recadrées automatiquement autour du cadre rouge dans
+    `images/captures/mobile/` (9 captures, balise `<picture>`, figure
+    `screenshot--cropped`). Une nouvelle capture avec un cadre rouge net peut
+    être recadrée de la même façon.
+  - Accueil : image en bandeau, faits en pastilles, programme en cartes à
+    faire glisser ; pied de page réduit à une petite ligne.
+  **[décision de l'utilisatrice]**
+- **Mini-quiz (toutes tailles d'écran)** : plus de bouton « Valider » par
+  question ; un seul bouton « Vérifier mes réponses » sous la dernière question
+  de l'étape corrige tout, affiche « 2 bonnes réponses sur 3 » et
+  « Recommencer ». Une question sans réponse est signalée. Le HTML des quiz ne
+  change pas (`js/quiz.js` masque les anciens boutons). **[décision de
+  l'utilisatrice]**
 
 ### v11 — accueil, affichage téléphone et exercices (nov. 2026)
 

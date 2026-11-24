@@ -32,7 +32,7 @@
     let opener = null;
     function open(img) {
       opener = img;
-      big.src = img.currentSrc || img.src;
+      big.src = img.src; // toujours l'écran entier, même si une version recadrée est affichée
       big.alt = img.alt;
       const natural = img.naturalWidth || Number(img.getAttribute('width')) || 800;
       big.style.width = Math.max(natural, Math.round(window.innerWidth * 0.9)) + 'px';
