@@ -56,14 +56,19 @@
       <h1>Se repérer dans l'interface</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>La première fois qu'on ouvre Notion, l'écran peut sembler chargé. En réalité, il n'y a que trois zones à connaître. Une fois que tu les as repérées, tu sais toujours où tu es et où aller.</p>
-        <p>L'écran de Notion se divise en trois zones :</p>
-        <ol>
-          <li><strong>La barre latérale</strong>, à gauche. C'est le sommaire de ton espace : elle liste tes pages et te permet d'y accéder.</li>
-          <li><strong>La page</strong>, au centre. C'est là que tu lis et que tu écris.</li>
-          <li><strong>La barre du haut</strong>, au-dessus de la page. Elle indique où tu te trouves et contient quelques actions, comme le bouton « Partager ».</li>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>L'écran de Notion a <strong>3 zones</strong>. La plus importante est la barre latérale : c'est le sommaire de ton espace.</p>
+        </div>
+
+        <h3>Les 3 zones de l'écran</h3>
+        <ol class="zones">
+          <li><span class="zones__nom">La barre latérale</span><span class="zones__ou">À gauche</span><span class="zones__role">Le sommaire de ton espace. Elle liste tes pages.</span></li>
+          <li><span class="zones__nom">La page</span><span class="zones__ou">Au centre</span><span class="zones__role">Là où tu lis et où tu écris.</span></li>
+          <li><span class="zones__nom">La barre du haut</span><span class="zones__ou">Au-dessus de la page</span><span class="zones__role">Elle montre où tu es. Elle contient « Partager ».</span></li>
         </ol>
 
         <figure class="screenshot illustration">
@@ -71,23 +76,50 @@
           <figcaption>La barre latérale (1), la page (2) et la barre du haut (3).</figcaption>
         </figure>
 
-        <p>Dans la barre latérale, tu trouves de haut en bas :</p>
-        <ul>
-          <li><strong>Trois petites icônes tout en haut.</strong> À gauche, le bouton pour masquer la barre latérale. À droite, la <strong>Boîte de réception</strong>, où arrivent tes notifications (quand un collègue te mentionne ou commente une page), et le bouton <strong>Nouvel élément</strong>, pour créer une nouvelle page.</li>
-          <li><strong>« Chercher ou demander »</strong>, le champ de recherche. Tu tapes quelques mots pour retrouver une page. Il sert aussi à poser une question à l'assistant IA de Notion, que cette formation n'utilise pas.</li>
-          <li><strong>Les onglets.</strong> « Accueil », ta page de départ, montre tes pages récentes. À côté, deux icônes ouvrent les discussions avec l'IA (la bulle) et les réunions (le calendrier).</li>
-          <li><strong>« Nouvelle page »</strong>, pour créer une page, puis <strong>« Nouvelle discussion »</strong> et <strong>« Bibliothèque »</strong>, qui servent à discuter avec l'IA et à parcourir tout le contenu de l'espace. Selon ta version de Notion, « Connexions » et « Agents externes » peuvent aussi apparaître. Tu peux les ignorer pour débuter.</li>
-          <li><strong>Les sections de pages</strong> : « Pages partagées », pour les pages partagées avec quelques personnes, et « Pages privées », pour celles que toi seul vois, avec un « + Ajouter » pour y créer une page. Selon l'abonnement de ton entreprise, une section « Espaces d'équipe » peut aussi apparaître, et une section « Favoris » s'ajoute dès que tu épingles une page.</li>
-          <li><strong>Tout en bas</strong> : « Personnaliser la barre latérale », puis le <strong>nom de ton espace de travail</strong>. Un espace de travail, c'est l'ensemble de toutes les pages d'une personne ou d'une équipe. Un clic sur son nom ouvre un menu qui donne accès aux paramètres.</li>
-        </ul>
-        <p>La barre du haut contient le <strong>fil d'Ariane</strong> : le chemin de la page ouverte, par exemple « Studio Nova / Projets / Site Orion ». Il te dit où tu te trouves, comme l'adresse d'une maison. Juste à côté, une mention comme « Privée » t'indique qui peut voir la page. À droite, tu trouves « Partager », l'icône pour copier le lien de la page, l'étoile des favoris et le menu « ··· ».</p>
-        <p>Notion fait évoluer son interface régulièrement. Si un bouton n'est pas exactement au même endroit chez toi, cherche-le dans la barre latérale ou tape son nom dans la recherche.</p>
+        <h3>Dans la barre latérale</h3>
+        <p class="lecture__intro">De haut en bas, voici ce qui sert pour débuter.</p>
+        <dl class="reperes">
+          <div><dt>Les icônes du haut</dt><dd>Masquer la barre, ouvrir la <b>Boîte de réception</b> (tes notifications), créer un <b>Nouvel élément</b>.</dd></div>
+          <div><dt>« Chercher ou demander »</dt><dd>Retrouver une page en tapant quelques mots.</dd></div>
+          <div><dt>« Accueil »</dt><dd>Ta page de départ, avec tes pages récentes.</dd></div>
+          <div><dt>« Nouvelle page »</dt><dd>Créer une page.</dd></div>
+          <div><dt>« Pages partagées »</dt><dd>Les pages partagées avec quelques personnes.</dd></div>
+          <div><dt>« Pages privées »</dt><dd>Les pages que toi seul vois. « + Ajouter » y crée une page.</dd></div>
+          <div><dt>Tout en bas</dt><dd>Le nom de ton espace de travail. Un clic ouvre les paramètres.</dd></div>
+        </dl>
 
-        <p class="definition">La barre latérale est le sommaire de ton espace : toutes tes pages y sont rangées.</p>
+        <details class="plus">
+          <summary>Les autres éléments <span>(tu peux les ignorer pour l'instant)</span></summary>
+          <ul>
+            <li>« Chercher ou demander » sert aussi à poser une question à l'IA de Notion. Cette formation ne l'utilise pas.</li>
+            <li>À côté d'« Accueil » : la bulle ouvre les discussions avec l'IA, le calendrier ouvre les réunions.</li>
+            <li>« Nouvelle discussion » et « Bibliothèque » : discuter avec l'IA et parcourir tout le contenu de l'espace.</li>
+            <li>« Connexions » et « Agents externes » peuvent apparaître selon ta version de Notion.</li>
+            <li>« Espaces d'équipe » peut apparaître selon l'abonnement de ton entreprise.</li>
+            <li>« Favoris » apparaît dès que tu épingles une page.</li>
+            <li>« Personnaliser la barre latérale » se trouve tout en bas, au-dessus du nom de l'espace.</li>
+          </ul>
+        </details>
+
+        <p class="mot-cle"><span class="mot-cle__label">Mot clé</span><span><b>Espace de travail</b> : toutes les pages d'une personne ou d'une équipe.</span></p>
 
         <div class="callout callout--warning">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> une page rangée dans la section « Pages privées » n'est visible que par toi. Si tu y crées une page destinée à ton équipe, tes collègues ne la verront pas tant que tu ne l'auras pas partagée ou déplacée. Tu apprendras à partager au module 7.</p>
+          <p><strong>Attention :</strong> une page dans « Pages privées » n'est visible que par toi.</p>
+          <p>Pour ton équipe, il faudra la partager ou la déplacer. Tu l'apprendras au module 7.</p>
+        </div>
+
+        <h3>Dans la barre du haut</h3>
+        <dl class="reperes">
+          <div><dt>Le fil d'Ariane</dt><dd>Le chemin de la page ouverte, comme une adresse.<br>Exemple : « Studio Nova / Projets / Site Orion ».</dd></div>
+          <div><dt>« Privée »</dt><dd>Qui peut voir la page.</dd></div>
+          <div><dt>À droite</dt><dd>« Partager », copier le lien, l'étoile des favoris, le menu « ··· ».</dd></div>
+        </dl>
+
+        <div class="callout callout--tip">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
+          <p><strong>Un bouton a changé de place ?</strong> Notion modifie parfois son interface.</p>
+          <p>Tape le nom du bouton dans la recherche.</p>
         </div>
       </section>
 
