@@ -34,7 +34,7 @@
     if (count) { count.textContent = String(overall.done); }
     if (total) { total.textContent = String(overall.total); }
     if (fill) { fill.style.width = Progress.percent(overall) + '%'; }
-    if (bar) { bar.setAttribute('aria-label', overall.done + ' leçons terminées sur ' + overall.total); }
+    if (bar) { bar.setAttribute('aria-label', overall.done + (overall.done > 1 ? ' leçons terminées' : ' leçon terminée') + ' sur ' + overall.total); }
 
     const next = Progress.nextLesson();
     if (next && resumeTitle && resumeLink) {
@@ -65,7 +65,8 @@
       head.appendChild(el('span', 'module-list__num', module.num));
       const title = el('span', 'module-list__title');
       title.appendChild(el('strong', '', module.title));
-      title.appendChild(el('span', '', module.lessons.length + ' leçons · ' + p.done + ' terminée' + (p.done > 1 ? 's' : '')));
+      const n = module.lessons.length;
+      title.appendChild(el('span', '', n + (n > 1 ? ' leçons' : ' leçon') + ' · ' + p.done + ' terminée' + (p.done > 1 ? 's' : '')));
       head.appendChild(title);
       head.appendChild(el('span', state.className, state.label));
       const sign = el('span', 'module-list__sign', startOpen ? '−' : '+');
@@ -80,7 +81,7 @@
 
       const bar = el('div', 'progress');
       bar.setAttribute('role', 'img');
-      bar.setAttribute('aria-label', p.done + ' leçons terminées sur ' + p.total);
+      bar.setAttribute('aria-label', p.done + (p.done > 1 ? ' leçons terminées' : ' leçon terminée') + ' sur ' + p.total);
       const fill = el('div', 'progress__fill');
       fill.style.width = Progress.percent(p) + '%';
       bar.appendChild(fill);

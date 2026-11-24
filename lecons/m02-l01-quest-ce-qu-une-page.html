@@ -20,6 +20,9 @@
 <script src="../js/block-sims.js" defer></script>
 <script src="../js/db-sim.js" defer></script>
 <script src="../js/sort-ex.js" defer></script>
+<script src="../js/mobile.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/typographie.js" defer></script>
 </head>
 <body data-lesson="m2-l1" data-root="../">
 
@@ -53,29 +56,40 @@
       <h1>Qu'est-ce qu'une page</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Au module 1, tu as créé ta page « Studio Nova ». Dans Notion, tout commence par une page : tes notes, tes projets, ta page d'accueil. Avant de les remplir, il faut savoir de quoi une page est faite.</p>
-        <p>Une <strong>page</strong>, c'est une feuille blanche dans laquelle tu écris et ranges du contenu. Elle ressemble à un document Word, avec deux différences importantes :</p>
-        <ul>
-          <li>elle n'a pas de longueur fixe ni de mise en page à régler : elle s'allonge au fur et à mesure que tu écris ;</li>
-          <li>elle peut contenir <strong>d'autres pages</strong>, comme un dossier contient des fichiers. Une page rangée dans une autre s'appelle une <strong>sous-page</strong> (leçon 2.8).</li>
-        </ul>
-        <p>Une page a quatre parties :</p>
-        <ol>
-          <li><strong>L'icône</strong> (facultative) : un petit symbole devant le titre, qui aide à repérer la page d'un coup d'œil.</li>
-          <li><strong>La couverture</strong> (facultative) : une image en bandeau tout en haut de la page.</li>
-          <li><strong>Le titre</strong> : le nom de la page. C'est lui qui s'affiche dans la barre latérale et dans la recherche.</li>
-          <li><strong>Le contenu</strong> : tout ce qui se trouve sous le titre, c'est-à-dire le texte, les listes, les images…</li>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>Une <strong>page</strong> est un document sans limite de longueur. Elle peut contenir du contenu et d'autres pages.</p>
+        </div>
+
+        <p>Au module 1, tu as créé ta page « Studio Nova ». Dans Notion, tout commence par une page : tes notes, tes projets, ta page d'accueil.</p>
+
+        <h3>Une page, c'est quoi ?</h3>
+        <p>Une feuille blanche où tu écris et ranges du contenu. Elle ressemble à un document Word, avec deux différences :</p>
+        <dl class="reperes">
+          <div><dt>Pas de longueur fixe</dt><dd>Pas de mise en page à régler. La page s'allonge au fur et à mesure que tu écris.</dd></div>
+          <div><dt>Elle contient d'autres pages</dt><dd>Comme un dossier contient des fichiers. Une page rangée dans une autre s'appelle une <b>sous-page</b> (leçon 2.8).</dd></div>
+        </dl>
+
+        <h3>Les 4 parties d'une page</h3>
+        <ol class="zones zones--4">
+          <li><span class="zones__nom">La couverture</span><span class="zones__ou">Facultative</span><span class="zones__role">Une image en bandeau, tout en haut.</span></li>
+          <li><span class="zones__nom">L'icône</span><span class="zones__ou">Facultative</span><span class="zones__role">Un petit symbole devant le titre, pour repérer la page d'un coup d'œil.</span></li>
+          <li><span class="zones__nom">Le titre</span><span class="zones__ou">Indispensable</span><span class="zones__role">Le nom de la page. Il s'affiche dans la barre latérale et dans la recherche.</span></li>
+          <li><span class="zones__nom">Le contenu</span><span class="zones__ou">Sous le titre</span><span class="zones__role">Le texte, les listes, les images…</span></li>
         </ol>
+
         <figure class="illustration">
           <img src="../images/illustrations/m02-anatomie-page.svg" alt="Schéma d'une page Notion : en haut une couverture (1), une icône de maison (2), le titre « Accueil - Studio Nova » (3) et, en dessous, des lignes de contenu (4)." width="720" height="320">
           <figcaption>Les quatre parties d'une page.</figcaption>
         </figure>
-        <p class="definition">Une page est un document sans limite de longueur, qui peut contenir du contenu et d'autres pages.</p>
+
         <div class="callout callout--warning">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> dans Notion, il n'y a pas de dossiers. Pour ranger des pages ensemble, on les place dans une autre page. Si tu cherches un bouton « Nouveau dossier », c'est normal de ne pas le trouver.</p>
+          <p><strong>Attention :</strong> dans Notion, il n'y a pas de dossiers.</p>
+          <p>Pour ranger des pages ensemble, on les place dans une autre page. Si tu cherches un bouton « Nouveau dossier », c'est normal de ne pas le trouver.</p>
         </div>
       </section>
 
@@ -93,6 +107,7 @@
             <figure class="screenshot">
               <img src="../images/captures/m02-ligne-vide.png" alt="La ligne vide sous le titre, avec son texte d'invitation en gris" width="844" height="342" loading="lazy">
             </figure></li>
+          <li>Écris : « Espace de travail de l'agence Studio Nova. » Regarde la barre latérale : le titre de la page n'a pas changé, car cette phrase fait partie du contenu, pas du titre.</li>
         </ol>
 
         <div class="callout callout--tip">
@@ -100,16 +115,6 @@
           <p><strong>Astuce :</strong> le texte gris qui apparaît sur une ligne vide n'est qu'une aide. Il disparaît dès que tu commences à écrire : tu n'as pas besoin de l'effacer.</p>
         </div>
 
-        <div class="exercise">
-          <p class="exercise__kicker">Exercice · dans Notion</p>
-          <h3>Ta première phrase</h3>
-          <ol>
-            <li>Ouvre ta page « Studio Nova ».</li>
-            <li>Clique sous le titre et écris : « Espace de travail de l'agence Studio Nova. »</li>
-            <li>Regarde la barre latérale : le titre de la page n'a pas changé.</li>
-          </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> ta page « Studio Nova » a un titre et une première ligne de contenu. Le titre reste « Studio Nova » dans la barre latérale, car la phrase fait partie du contenu, pas du titre.</p>
-        </div>
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->

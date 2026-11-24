@@ -20,6 +20,9 @@
 <script src="../js/block-sims.js" defer></script>
 <script src="../js/db-sim.js" defer></script>
 <script src="../js/sort-ex.js" defer></script>
+<script src="../js/mobile.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/typographie.js" defer></script>
 </head>
 <body data-lesson="m4-l5" data-root="../">
 
@@ -53,10 +56,18 @@
       <h1>Créer la base Projets</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Tu as tout ce qu'il faut : tu sais ce qu'est une base, qu'une ligne est une page, et quels types de propriétés choisir. Place à la construction de la vraie base « Projets » de Studio Nova.</p>
-        <p>Avant de cliquer, un bon réflexe : <strong>dessiner la base sur papier</strong>. Quelles informations veut-on voir pour chaque projet ? Emma et Lucas se sont mis d'accord sur cinq propriétés, pas plus :</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>Une base <strong>pleine page</strong> occupe toute une page. Une base <strong>intégrée</strong> est un bloc dans une page. Pour « Projets », on veut une base pleine page.</p>
+        </div>
+
+        <p>Tu sais ce qu'est une base, qu'une ligne est une page, et quels types choisir. Place à la construction de la vraie base « Projets » de Studio Nova.</p>
+
+        <h3>D'abord, le plan</h3>
+        <p>Un bon réflexe avant de cliquer : <b>dessiner la base sur papier</b>. Emma et Lucas se sont mis d'accord sur cinq propriétés, pas plus :</p>
         <div class="db-sim__scroll">
           <table class="db-table">
             <caption class="sr-only">Plan de la base Projets</caption>
@@ -70,11 +81,18 @@
             </tbody>
           </table>
         </div>
-        <p>Deux façons de créer une base existent. Une base <strong>pleine page</strong> occupe toute une page : la page <em>est</em> la base. Une base <strong>intégrée</strong> (<em>inline</em>) est un bloc au milieu d'autres blocs. Le brouillon de la leçon 4.2, créé avec « / » au milieu de la page, était une base intégrée. Pour « Projets », on veut une base pleine page : la page « Projets » devient la base elle-même et ne contient que les projets. Son titre, « Projets », est aussi le nom de la base.</p>
-        <p class="definition">Une base pleine page est une page entièrement occupée par une base de données ; une base intégrée est un bloc dans une page.</p>
+
+        <h3>Pleine page ou intégrée ?</h3>
+        <dl class="reperes">
+          <div><dt>Pleine page</dt><dd>La page <b>est</b> la base. Elle ne contient que la base.</dd></div>
+          <div><dt>Intégrée (inline)</dt><dd>Un bloc au milieu d'autres blocs. Le brouillon de la leçon 4.2, créé avec « / » au milieu d'une page, était une base intégrée.</dd></div>
+        </dl>
+        <p>Pour « Projets », on choisit la pleine page : la page « Projets » devient la base elle-même. Son titre, « Projets », est aussi le nom de la base.</p>
+
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> commence avec peu de propriétés. Il est facile d'en ajouter une plus tard ; une base avec quinze colonnes, personne ne la remplit.</p>
+          <p><strong>Astuce :</strong> commence avec peu de propriétés. Il est facile d'en ajouter une plus tard.</p>
+          <p>Une base avec quinze colonnes, personne ne la remplit.</p>
         </div>
       </section>
 
@@ -101,8 +119,8 @@
           <li>Ajoute « Responsable », de type « Personne ».</li>
           <li>Ajoute « Échéance », de type « Date ».</li>
           <li>Ajoute « Priorité », de type <strong>« Sélectionner »</strong>. Pour créer ses options, clique sur le nom de la colonne « Priorité », puis sur <strong>« Modifier la propriété »</strong>. Dans la partie « Options », clique sur le <strong>+</strong> et crée les trois options : Haute, Moyenne, Basse.
-            <figure class="screenshot">
-              <img src="../images/captures/m04-projets-modifier-propriete.png" alt="Le menu de la colonne « Priorité » : « Modifier la propriété » encadré, puis le « + » des options entouré et les trois options Basse, Moyenne et Haute" width="1229" height="849" loading="lazy">
+            <figure class="screenshot screenshot--cropped">
+              <picture><source media="(max-width: 599px)" srcset="../images/captures/mobile/m04-projets-modifier-propriete.png"><img src="../images/captures/m04-projets-modifier-propriete.png" alt="Le menu de la colonne « Priorité » : « Modifier la propriété » encadré, puis le « + » des options entouré et les trois options Basse, Moyenne et Haute" width="1229" height="849" loading="lazy"></picture>
             </figure></li>
           <li>Saisis les trois projets : Site Orion (En cours, Emma, 15 novembre, Haute) ; Identité Luna (Pas commencé, Lucas, 28 novembre, Moyenne) ; Campagne Atlas (Terminé, Emma, 5 novembre, Basse). Comme responsable, choisis-toi toi-même (voir l'encadré au début).
             <figure class="screenshot">
@@ -112,17 +130,6 @@
           </ol>
 
 
-        <div class="exercise">
-          <p class="exercise__kicker">Exercice · dans Notion</p>
-          <h3>La base « Projets » de Studio Nova</h3>
-          <ol>
-            <li>Transforme la page « Projets » en base pleine page : option grise « Base de données », puis « Base de données vide ».</li>
-            <li>Vérifie les liens vers « Projets » et recrée ceux qui ne mènent plus à la base.</li>
-            <li>Crée les cinq propriétés : Nom, Statut, Responsable, Échéance, Priorité.</li>
-            <li>Saisis les trois projets de Studio Nova.</li>
-          </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> la page « Projets » affiche un tableau de cinq colonnes et trois lignes, conforme au plan de l'étape Comprendre. Dans la barre latérale, « Projets » est toujours rangée sous « Studio Nova ».</p>
-        </div>
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->

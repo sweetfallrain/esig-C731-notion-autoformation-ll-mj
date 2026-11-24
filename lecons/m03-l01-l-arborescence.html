@@ -20,6 +20,9 @@
 <script src="../js/block-sims.js" defer></script>
 <script src="../js/db-sim.js" defer></script>
 <script src="../js/sort-ex.js" defer></script>
+<script src="../js/mobile.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/typographie.js" defer></script>
 </head>
 <body data-lesson="m3-l1" data-root="../">
 
@@ -53,25 +56,40 @@
       <h1>L'arborescence</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Au module 2, tu as rangé « Accueil », « Projets » et « Ressources » à l'intérieur de « Studio Nova ». Sans le savoir, tu as commencé une <strong>arborescence</strong>.</p>
-        <p>Une arborescence, c'est la façon dont les pages sont rangées les unes dans les autres, comme les branches d'un arbre. Pense aux dossiers de ton ordinateur : un dossier « Clients » contient un dossier par client, qui contient lui-même des documents. Dans Notion, c'est pareil, sauf que chaque « dossier » est aussi une page qu'on peut remplir.</p>
-        <p>Deux mots reviennent souvent :</p>
-        <ul>
-          <li>la <strong>page parente</strong> : celle qui contient d'autres pages. « Studio Nova » est la page parente de « Projets » ;</li>
-          <li>la <strong>sous-page</strong> (ou page enfant) : celle qui est rangée dedans.</li>
-        </ul>
-        <p>Une page peut changer de place à tout moment. Pour la déplacer, tu peux la <strong>glisser</strong> dans la barre latérale sur une autre page, ou ouvrir le menu <strong>···</strong> en haut à droite de la page et choisir <strong>« Déplacer vers »</strong> (<em>Move to</em>). Le contenu suit : rien n'est perdu.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>L'<strong>arborescence</strong>, c'est le rangement des pages les unes dans les autres. Une page parente contient des sous-pages.</p>
+        </div>
+
+        <p>Au module 2, tu as rangé « Accueil », « Projets » et « Ressources » dans « Studio Nova ». Sans le savoir, tu as commencé une arborescence.</p>
+
+        <p class="mot-cle mot-cle--image"><span class="mot-cle__label">Pour imaginer</span><span>Les <b>dossiers de ton ordinateur</b> : un dossier « Clients » contient un dossier par client, qui contient des documents. Dans Notion, chaque « dossier » est aussi une page qu'on peut remplir.</span></p>
+
+        <h3>Deux mots à connaître</h3>
+        <dl class="reperes">
+          <div><dt>Page parente</dt><dd>Celle qui contient d'autres pages. « Studio Nova » est la page parente de « Projets ».</dd></div>
+          <div><dt>Sous-page</dt><dd>Celle qui est rangée dedans. On dit aussi « page enfant ».</dd></div>
+        </dl>
 
         <figure class="illustration">
           <img src="../images/illustrations/m03-arborescence.svg" alt="Schéma en trois niveaux : « Studio Nova » au niveau 1, relié à quatre pages au niveau 2 (Accueil, Projets, Ressources, Notes et réunions) ; « Notes et réunions », mise en avant, contient deux pages au niveau 3 : « Réunion d'équipe - 3 novembre » et « Brouillon »." width="720" height="320">
           <figcaption>L'arborescence de Studio Nova à la fin de cette leçon.</figcaption>
         </figure>
-        <p class="definition">L'arborescence est le rangement des pages les unes dans les autres : une page parente contient des sous-pages.</p>
+
+        <h3>Déplacer une page</h3>
+        <p>Une page peut changer de place à tout moment. Le contenu suit : rien n'est perdu.</p>
+        <dl class="reperes">
+          <div><dt>En glissant</dt><dd>Dans la barre latérale, glisse la page sur une autre page.</dd></div>
+          <div><dt>Avec le menu</dt><dd>En haut à droite de la page : <b>···</b>, puis <b>« Déplacer vers »</b> (Move to).</dd></div>
+        </dl>
+
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> vise <strong>trois niveaux au maximum</strong>. Au-delà, on oublie où sont les choses. Si une page est très loin dans l'arbre, c'est souvent qu'il faut simplifier.</p>
+          <p><strong>Astuce :</strong> vise <strong>trois niveaux au maximum</strong>. Au-delà, on oublie où sont les choses.</p>
+          <p>Si une page est très loin dans l'arbre, c'est souvent qu'il faut simplifier.</p>
         </div>
       </section>
 
@@ -94,6 +112,7 @@
                 <img src="../images/captures/m03-deplacer-vers-2.png" alt="Après le déplacement : le chemin « Studio Nova / Notes & réunions / Brouillon » en haut de la page, et « Brouillon » rangé sous « Notes & réunions » dans la barre latérale" width="923" height="819" loading="lazy" style="flex-grow: 1.127">
               </div>
             </figure></li>
+          <li>Tu peux ensuite supprimer « Brouillon » : il ne servait qu'à t'entraîner.</li>
         </ol>
 
         <div class="callout callout--warning">
@@ -101,16 +120,6 @@
           <p><strong>Attention :</strong> dans la barre latérale, quand tu glisses une page, regarde bien le repère bleu. Une <strong>ligne</strong> bleue range la page <em>entre</em> deux pages ; une page <strong>surlignée</strong> en bleu la range <em>dedans</em>. Si tu te trompes, Ctrl + Z (Cmd + Z sur Mac) annule.</p>
         </div>
 
-        <div class="exercise">
-          <p class="exercise__kicker">Exercice · dans Notion</p>
-          <h3>La partie « Notes & réunions »</h3>
-          <ol>
-            <li>Crée la sous-page « Notes &amp; réunions » dans « Studio Nova ».</li>
-            <li>Ajoute-y une sous-page « Réunion d'équipe - 3 novembre ».</li>
-            <li>Crée une page « Brouillon » dans « Pages privées », puis déplace-la dans « Notes &amp; réunions » avec « Déplacer vers ».</li>
-          </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> sous « Studio Nova », la barre latérale montre quatre pages : Accueil, Projets, Ressources et Notes &amp; réunions. « Notes &amp; réunions » contient deux pages : la réunion du 3 novembre et « Brouillon ». Tu peux supprimer « Brouillon » ensuite.</p>
-        </div>
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->

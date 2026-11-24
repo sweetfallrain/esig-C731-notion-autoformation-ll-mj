@@ -20,6 +20,9 @@
 <script src="../js/block-sims.js" defer></script>
 <script src="../js/db-sim.js" defer></script>
 <script src="../js/sort-ex.js" defer></script>
+<script src="../js/mobile.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/typographie.js" defer></script>
 </head>
 <body data-lesson="m4-l4" data-root="../">
 
@@ -53,10 +56,18 @@
       <h1>Sélection, statut, personne</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Certaines informations ne se tapent pas librement : on les <strong>choisit dans une liste</strong>. Un projet est « Pas commencé », « En cours » ou « Terminé », pas « presque fini » ou « en cours ?? ». Ces propriétés à choix garantissent que tout le monde écrit la même chose, ce qui rend le tri et le filtre fiables.</p>
-        <p>Notion en propose quatre :</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p><strong>Sélectionner</strong> : un seul choix. <strong>Sélection multiple</strong> : plusieurs choix. <strong>État</strong> : l'avancement. <strong>Personne</strong> : un membre de l'espace.</p>
+        </div>
+
+        <p>Certaines informations ne se tapent pas : on les <b>choisit dans une liste</b>. Un projet est « Pas commencé », « En cours » ou « Terminé », pas « presque fini ».</p>
+        <p>Comme tout le monde écrit la même chose, le tri et le filtre sont fiables.</p>
+
+        <h3>Les quatre types à choix</h3>
         <div class="db-sim__scroll">
           <table class="db-table">
             <caption class="sr-only">Les types de propriétés à choix</caption>
@@ -69,18 +80,26 @@
             </tbody>
           </table>
         </div>
-        <p>Les options se créent à la volée : clique dans la case, tape une nouvelle valeur, puis appuie sur Enter. Notion lui attribue une couleur, que tu peux changer.</p>
-        <p>La propriété <strong>Personne</strong> a un avantage de plus : la personne choisie peut recevoir une notification, et tu pourras filtrer « mes projets » en un clic (module 5).</p>
-        <p class="definition">Sélectionner : un seul choix. Sélection multiple : plusieurs choix. État : l'avancement. Personne : un membre de l'espace.</p>
+
+        <h3>Bon à savoir</h3>
+        <dl class="reperes">
+          <div><dt>Créer une option</dt><dd>Clique dans la case, tape une nouvelle valeur, puis Enter. Notion lui donne une couleur, que tu peux changer.</dd></div>
+          <div><dt>Le plus de « Personne »</dt><dd>La personne choisie peut recevoir une notification. Et tu pourras filtrer « mes projets » en un clic (module 5).</dd></div>
+        </dl>
+
         <div class="callout callout--warning">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> une faute de frappe crée une nouvelle option. « En cour » et « En cours » deviennent deux valeurs différentes, et le filtre « En cours » oublie le projet mal saisi. Choisis toujours une option existante dans la liste.</p>
+          <p><strong>Attention :</strong> une faute de frappe crée une nouvelle option. « En cour » et « En cours » deviennent deux valeurs différentes.</p>
+          <p>Le filtre « En cours » oublie alors le projet mal saisi. Choisis toujours une option existante dans la liste.</p>
         </div>
 
-        <h2>Les choix du projet Orion</h2>
+        <h3>Les choix du projet Orion</h3>
         <p>Dans la base « Projets », passe en vue Kanban : les projets se rangent en colonnes selon leur statut.</p>
         <div data-db data-views="table,board" data-columns="full"></div>
-        <p>Le projet Orion a deux tags, « Web » et « Design » : c'est une sélection multiple. Il n'a qu'un statut à la fois : c'est logique, un projet ne peut pas être « En cours » et « Terminé » en même temps.</p>
+        <ul>
+          <li>Orion a deux tags, « Web » et « Design » : c'est une sélection multiple.</li>
+          <li>Il n'a qu'un statut à la fois : un projet ne peut pas être « En cours » et « Terminé » en même temps.</li>
+        </ul>
       </section>
 
       <!-- ===================== Étape 3 : Faire ===================== -->
@@ -115,16 +134,6 @@
           <p class="sort-ex__score" data-sort-score role="status"></p>
         </div>
 
-        <div class="exercise">
-          <p class="exercise__kicker">Exercice · dans Notion</p>
-          <h3>Complète ta liste de propriétés</h3>
-          <ol>
-            <li>Reprends la liste de propriétés préparée à la leçon 4.3.</li>
-            <li>Ajoute au moins une propriété à choix : un statut, une catégorie ou un responsable.</li>
-            <li>Pour une sélection, écris les options possibles (trois ou quatre suffisent).</li>
-          </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> ta liste comprend maintenant des propriétés libres (texte, date…) et au moins une à choix, avec ses options. Exemple : « Statut — État (Nouveau, En traitement, Terminé) ; Responsable — Personne ».</p>
-        </div>
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->

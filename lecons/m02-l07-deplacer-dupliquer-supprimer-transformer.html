@@ -20,6 +20,9 @@
 <script src="../js/block-sims.js" defer></script>
 <script src="../js/db-sim.js" defer></script>
 <script src="../js/sort-ex.js" defer></script>
+<script src="../js/mobile.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/typographie.js" defer></script>
 </head>
 <body data-lesson="m2-l7" data-root="../">
 
@@ -53,28 +56,41 @@
       <h1>Déplacer, dupliquer, supprimer, transformer</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Une page n'est jamais parfaite du premier coup. Une tâche devient prioritaire, un paragraphe serait mieux en liste, une information est en double. Comme chaque bloc est indépendant (leçon 2.3), tu peux le réorganiser sans rien réécrire.</p>
-        <p>Tout part de la <strong>poignée ⋮⋮</strong>, qui apparaît à gauche d'un bloc quand tu le survoles.</p>
-        <ul>
-          <li><strong>Déplacer</strong> : attrape la poignée (clic maintenu) et fais glisser le bloc. Une ligne bleue montre où il va atterrir. Relâche pour le poser.</li>
-          <li><strong>Les autres actions</strong> : clique sur la poignée, sans glisser. Un menu s'ouvre. <strong>Dupliquer</strong> crée une copie du bloc juste en dessous ; <strong>Supprimer</strong> retire le bloc de la page ; <strong>Transformer en</strong> change le type du bloc, en gardant son texte. Par exemple, un paragraphe devient un titre ou une case à cocher.</li>
-        </ul>
-        <p>Tu t'es trompé ? <strong>Ctrl + Z</strong> (Cmd + Z sur Mac) annule la dernière action. Tu peux appuyer plusieurs fois pour revenir plusieurs étapes en arrière.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>La <strong>poignée ⋮⋮</strong> se <strong>glisse</strong> pour déplacer un bloc. Elle se <strong>clique</strong> pour le dupliquer, le supprimer ou le transformer.</p>
+        </div>
+
+        <p>Une page n'est jamais parfaite du premier coup. Comme chaque bloc est indépendant (leçon 2.3), tu peux le réorganiser sans rien réécrire.</p>
+
+        <h3>Tout part de la poignée ⋮⋮</h3>
+        <p>Elle apparaît à gauche d'un bloc quand tu le survoles.</p>
+        <dl class="reperes">
+          <div><dt>Déplacer</dt><dd>Attrape la poignée (clic maintenu) et fais glisser. Une ligne bleue montre où le bloc va atterrir. Relâche pour le poser.</dd></div>
+          <div><dt>Dupliquer</dt><dd>Clique sur la poignée, puis « Dupliquer » : une copie apparaît juste en dessous.</dd></div>
+          <div><dt>Supprimer</dt><dd>Clique sur la poignée, puis « Supprimer » : le bloc est retiré de la page.</dd></div>
+          <div><dt>Transformer en</dt><dd>Change le type du bloc en gardant son texte. Un paragraphe devient un titre ou une case à cocher.</dd></div>
+        </dl>
 
         <figure class="screenshot illustration">
           <img src="../images/captures/m02-menu-actions.png" alt="Le menu ouvert après un clic sur la poignée d'un bloc, avec les lignes « Supprimer », « Dupliquer » et « Transformer en » entourées" width="1308" height="911" loading="lazy">
           <figcaption>Un clic sur la poignée ouvre les actions du bloc.</figcaption>
         </figure>
-        <p class="definition">La poignée ⋮⋮ se glisse pour déplacer un bloc, et se clique pour le dupliquer, le supprimer ou le transformer.</p>
+
+        <p class="mot-cle mot-cle--image"><span class="mot-cle__label">Tu t'es trompé ?</span><span><b>Ctrl + Z</b> (Cmd + Z sur Mac) annule la dernière action. Appuie plusieurs fois pour revenir plusieurs étapes en arrière.</span></p>
+
         <div class="callout callout--warning">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> si le bloc que tu supprimes est une <strong>page</strong>, la page entière part dans la Corbeille, avec tout son contenu. Pas de panique : tu peux la restaurer depuis la Corbeille, ou annuler tout de suite avec Ctrl + Z.</p>
+          <p><strong>Attention :</strong> si le bloc supprimé est une <strong>page</strong>, la page entière part dans la Corbeille, avec tout son contenu.</p>
+          <p>Pas de panique : tu peux la restaurer depuis la Corbeille, ou annuler tout de suite avec Ctrl + Z.</p>
         </div>
 
-        <h2>Réorganiser la checklist de Studio Nova</h2>
-        <p>Le client a avancé la réunion. Mets « Préparer la réunion client » en premier, puis essaie les autres actions. « Monter » et « Descendre » remplacent ici le glisser-déposer, pour que la simulation fonctionne aussi au clavier : dans Notion, tu glisses la poignée.</p>
+        <h3>Réorganiser la checklist de Studio Nova</h3>
+        <p>Le client a avancé la réunion. Mets « Préparer la réunion client » en premier, puis essaie les autres actions.</p>
+        <p>Ici, « Monter » et « Descendre » remplacent le glisser-déposer, pour que la simulation marche aussi au clavier. Dans Notion, tu glisses la poignée.</p>
         <div data-block-menu-sim></div>
       </section>
 
@@ -90,6 +106,7 @@
               <img src="../images/captures/m02-glisser-bloc.png" alt="L'encadré en cours de déplacement, avec la ligne bleue sous la phrase de bienvenue" width="1308" height="915" loading="lazy">
             </figure></li>
           <li>Relâche le bouton : l'encadré est à sa nouvelle place.</li>
+          <li>Clique sur la poignée de la tâche « Préparer la réunion client », puis sur « Dupliquer » : une copie apparaît juste en dessous. Supprime cette copie avec le même menu (« Supprimer »).</li>
           <li>Survole maintenant la tâche « Mettre à jour les ressources », clique sur sa poignée, puis sur « Transformer en » et choisis « Liste à puces ». La case disparaît, remplacée par une puce.
             <figure class="screenshot">
               <img src="../images/captures/m02-transformer.png" alt="Le sous-menu « Transformer en » ouvert depuis la poignée d'une tâche" width="1587" height="1052" loading="lazy">
@@ -102,16 +119,6 @@
           <p><strong>Astuce :</strong> pour dupliquer un bloc très vite, clique dedans puis appuie sur Ctrl + D (Cmd + D sur Mac).</p>
         </div>
 
-        <div class="exercise">
-          <p class="exercise__kicker">Exercice · dans Notion</p>
-          <h3>Réorganiser la page d'accueil</h3>
-          <ol>
-            <li>Déplace l'encadré « Réunion d'équipe » juste sous la phrase de bienvenue.</li>
-            <li>Duplique la tâche « Préparer la réunion client », puis supprime la copie avec le menu de la poignée.</li>
-            <li>Transforme « Mettre à jour les ressources » en liste à puces, puis annule avec Ctrl + Z.</li>
-          </ol>
-          <p class="exercise__result"><strong>Résultat attendu :</strong> ta page d'accueil affiche, dans l'ordre : le titre « Studio Nova », la phrase de bienvenue, l'encadré « Réunion d'équipe chaque lundi à 9 h. », le titre « Cette semaine », les trois tâches (toujours en cases à cocher, sans doublon) et le séparateur.</p>
-        </div>
       </section>
 
       <!-- ===================== Étape 4 : Vérifier ===================== -->

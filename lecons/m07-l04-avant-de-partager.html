@@ -20,6 +20,9 @@
 <script src="../js/block-sims.js" defer></script>
 <script src="../js/db-sim.js" defer></script>
 <script src="../js/sort-ex.js" defer></script>
+<script src="../js/mobile.js" defer></script>
+<script src="../js/app.js" defer></script>
+<script src="../js/typographie.js" defer></script>
 </head>
 <body data-lesson="m7-l4" data-root="../">
 
@@ -53,28 +56,39 @@
       <h1>Avant de partager</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Partager prend deux secondes. Mal partager peut coûter cher : un budget lu par la mauvaise personne, une page effacée par erreur. Avant de cliquer sur « Inviter », prends dix secondes pour vérifier quatre points.</p>
-        <ol>
-          <li><strong>Le contenu</strong> : la page contient-elle des informations sensibles (salaires, données personnelles, budget, mots de passe) ? Si oui, la personne doit-elle vraiment les voir ?</li>
-          <li><strong>Les sous-pages</strong> : partager une page partage aussi <strong>toutes ses sous-pages</strong>. Une page confidentielle rangée dedans devient visible.</li>
-          <li><strong>Le niveau d'accès</strong> : le plus bas qui suffit (leçon 7.2).</li>
-          <li><strong>L'accès général</strong> : « Uniquement les personnes invitées », sauf raison précise.</li>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>Les sous-pages <strong>héritent des accès</strong> de leur page parente. Vérifie ce qu'elle contient avant de la partager.</p>
+        </div>
+
+        <p>Partager prend deux secondes. Mal partager peut coûter cher : un budget lu par la mauvaise personne, une page effacée par erreur.</p>
+
+        <h3>Avant d'inviter : 4 vérifications</h3>
+        <ol class="zones zones--4">
+          <li><span class="zones__nom">Le contenu</span><span class="zones__ou">Sensible ?</span><span class="zones__role">Salaires, données personnelles, budget, mots de passe : la personne doit-elle vraiment les voir ?</span></li>
+          <li><span class="zones__nom">Les sous-pages</span><span class="zones__ou">Partagées aussi</span><span class="zones__role">Partager une page partage <b>toutes ses sous-pages</b>.</span></li>
+          <li><span class="zones__nom">Le niveau d'accès</span><span class="zones__ou">Le plus bas</span><span class="zones__role">Celui qui suffit (leçon 7.2).</span></li>
+          <li><span class="zones__nom">L'accès général</span><span class="zones__ou">Par défaut</span><span class="zones__role">« Uniquement les personnes invitées », sauf raison précise.</span></li>
         </ol>
-        <p>Et après le partage, pense à <strong>retirer les accès</strong> qui ne servent plus : un stagiaire qui a fini son stage, un client dont le projet est terminé.</p>
+
+        <p class="mot-cle"><span class="mot-cle__label">Après le partage</span><span>Retire les accès qui ne servent plus : un stagiaire qui a fini son stage, un client dont le projet est terminé.</span></p>
 
         <figure class="illustration">
           <img src="../images/illustrations/m07-heritage-acces.svg" alt="Schéma : la page « Ressources », partagée avec Hugo, contient trois sous-pages : Logos Studio Nova, Modèle - Devis et Budget confidentiel. Pour chacune, la mention « Hugo y a accès » ; pour Budget confidentiel, entourée en rouge, « Hugo y a accès aussi ! ». Légende : partager une page partage aussi toutes ses sous-pages." width="720" height="320">
           <figcaption>Les sous-pages héritent des accès de la page qui les contient.</figcaption>
         </figure>
-        <p class="definition">Les sous-pages héritent des accès de leur page parente : vérifie ce qu'elle contient avant de la partager.</p>
+
         <div class="callout callout--warning">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> ne range jamais une page confidentielle dans une page largement partagée. Déplace-la ailleurs, dans « Pages privées » ou dans une page partagée seulement avec les bonnes personnes. Ne colle jamais de mot de passe dans une page Notion, même privée.</p>
+          <p><strong>Attention :</strong> ne range jamais une page confidentielle dans une page largement partagée.</p>
+          <p>Déplace-la dans « Pages privées » ou dans une page partagée seulement avec les bonnes personnes.</p>
+          <p>Ne colle jamais de mot de passe dans une page Notion, même privée.</p>
         </div>
 
-        <h2>Partager tel quel ou corriger ?</h2>
+        <h3>Partager tel quel ou corriger ?</h3>
         <p>Emma s'apprête à partager plusieurs pages. Pour chaque situation, est-ce que le partage peut se faire tel quel ?</p>
         <div class="sort-ex" data-sort-ex role="group" aria-label="Partager tel quel ou corriger d'abord">
           <div class="sort-ex__row" data-answer="ok" data-explain="Contenu utile à tous, niveau minimal, rien de sensible : le partage peut se faire.">
