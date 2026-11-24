@@ -56,25 +56,48 @@
       <h1>Filtrer, trier, regrouper</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>À trois projets, tout tient à l'écran. À cinquante, il faut pouvoir répondre vite à des questions comme « qu'est-ce qui est en cours ? » ou « qu'est-ce qui arrive en premier ? ». Trois outils servent à ça, en haut à droite de la base : Filtrer et Trier ont chacun leur icône, Grouper se trouve dans le menu des réglages de la vue.</p>
-        <ul>
-          <li><strong>Filtrer</strong> (<em>Filter</em>) : n'afficher que les entrées qui respectent une condition. « Statut est En cours » cache tous les autres projets.</li>
-          <li><strong>Trier</strong> (<em>Sort</em>) : changer l'ordre d'affichage. « Échéance, ancien → nouveau » met le projet le plus urgent en haut.</li>
-          <li><strong>Grouper</strong> (<em>Group</em>) : ranger les entrées en paquets selon une propriété, avec un titre par paquet : « Pas commencé », « En cours », « Terminé ».</li>
-        </ul>
-        <p>Ces réglages appartiennent à <strong>la vue</strong>, pas à la base. Un filtre ne supprime rien : il cache. Retire le filtre, et tous les projets reviennent. C'est pourquoi on crée souvent une vue par question : « En cours », « Mes projets », « Cette semaine ».</p>
-        <p>Un filtre peut porter sur n'importe quelle propriété, et tu peux en combiner plusieurs : « Responsable est Emma » <strong>et</strong> « Statut est En cours ».</p>
-        <p>Quand tu modifies le filtre ou le tri d'une vue que d'autres utilisent, Notion peut te proposer « Enregistrer pour tous » (<em>Save for everyone</em>). Tant que tu ne cliques pas dessus, le changement ne vaut que pour toi.</p>
-        <p class="definition">Filtrer cache ce qui ne correspond pas, trier change l'ordre, regrouper range en paquets ; rien n'est supprimé.</p>
-        <div class="callout callout--warning">
-          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> un filtre oublié trompe facilement. Si un projet « a disparu », vérifie d'abord si la vue a un filtre actif : Notion affiche les filtres actifs juste au-dessus de la base. Avant de modifier le filtre d'une vue partagée, pense que toute l'équipe la voit.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p><strong>Filtrer</strong> cache ce qui ne correspond pas, <strong>trier</strong> change l'ordre, <strong>regrouper</strong> range en paquets. Rien n'est supprimé.</p>
         </div>
 
-        <h2>Les outils au-dessus de la base</h2>
-        <p>Utilise les trois menus au-dessus de la base. Filtre sur « En cours », puis sur « Responsable = Emma ». Trie par échéance, puis regroupe par statut. Observe le compteur sous la base.</p>
+        <p>À cinquante projets, il faut répondre vite à « qu'est-ce qui est en cours ? » ou « qu'est-ce qui arrive en premier ? ». Trois outils servent à ça.</p>
+
+        <h3>Les trois outils</h3>
+        <dl class="reperes">
+          <div><dt>Filtrer (Filter)</dt><dd>N'afficher que les entrées qui respectent une condition. « Statut est En cours » cache les autres projets.</dd></div>
+          <div><dt>Trier (Sort)</dt><dd>Changer l'ordre. « Échéance, ancien → nouveau » met le plus urgent en haut.</dd></div>
+          <div><dt>Grouper (Group)</dt><dd>Ranger les entrées en paquets selon une propriété, avec un titre par paquet : « Pas commencé », « En cours », « Terminé ».</dd></div>
+        </dl>
+        <p>Où les trouver : en haut à droite de la base. Filtrer et Trier ont chacun leur icône ; Grouper est dans le menu des réglages de la vue.</p>
+
+        <h3>Ce qu'il faut savoir</h3>
+        <ul>
+          <li>Ces réglages appartiennent à <b>la vue</b>, pas à la base.</li>
+          <li>Un filtre ne supprime rien : il cache. Retire-le, et tous les projets reviennent.</li>
+          <li>On crée souvent une vue par question : « En cours », « Mes projets », « Cette semaine ».</li>
+          <li>Tu peux combiner plusieurs filtres : « Responsable est Emma » <b>et</b> « Statut est En cours ».</li>
+        </ul>
+
+        <details class="plus">
+          <summary>Une vue utilisée par d'autres <span>(facultatif)</span></summary>
+          <ul>
+            <li>Quand tu changes le filtre ou le tri d'une vue partagée, Notion peut proposer « Enregistrer pour tous » (Save for everyone).</li>
+            <li>Tant que tu ne cliques pas dessus, le changement ne vaut que pour toi.</li>
+          </ul>
+        </details>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> un filtre oublié trompe facilement. Un projet « a disparu » ? Vérifie d'abord si la vue a un filtre actif : Notion les affiche juste au-dessus de la base.</p>
+          <p>Avant de modifier le filtre d'une vue partagée, pense que toute l'équipe la voit.</p>
+        </div>
+
+        <h3>Les outils au-dessus de la base</h3>
+        <p>Filtre sur « En cours », puis sur « Responsable = Emma ». Trie par échéance, puis regroupe par statut. Observe le compteur sous la base.</p>
         <div data-db data-views="table,list" data-columns="basic" data-tools="true"></div>
       </section>
 

@@ -56,9 +56,16 @@
       <h1>Calendrier, galerie, chronologie</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Trois autres vues donnent une lecture plus visuelle de la base. Elles ont une condition : il faut que la base contienne la bonne information.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p><strong>Calendrier</strong> pour les échéances, <strong>galerie</strong> pour les contenus visuels, <strong>chronologie</strong> pour les périodes.</p>
+        </div>
+
+        <p>Trois vues plus visuelles. Condition : la base doit contenir la bonne information.</p>
+
         <div class="db-sim__scroll">
           <table class="db-table">
             <caption class="sr-only">Calendrier, galerie et chronologie</caption>
@@ -70,18 +77,27 @@
             </tbody>
           </table>
         </div>
-        <p>Dans le calendrier, tu peux aussi faire glisser une entrée à un autre jour : sa date change. Dans la chronologie, tu peux étirer une barre pour allonger un projet.</p>
-        <p>Si la base n'a pas de propriété Date, Notion te proposera d'en créer une au moment de créer la vue.</p>
-        <p class="definition">Calendrier pour les échéances, galerie pour les contenus visuels, chronologie pour les périodes.</p>
+
+        <h3>Bon à savoir</h3>
+        <dl class="reperes">
+          <div><dt>Calendrier</dt><dd>Glisse une entrée à un autre jour : sa date change.</dd></div>
+          <div><dt>Chronologie</dt><dd>Étire une barre pour allonger un projet.</dd></div>
+          <div><dt>Pas de date ?</dt><dd>Notion te propose d'en créer une au moment de créer la vue.</dd></div>
+        </dl>
+
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> la galerie est idéale pour une base de ressources (modèles, logos, photos) ou pour un portfolio de projets. Pour des tâches, le Kanban ou le tableau restent plus pratiques.</p>
+          <p><strong>Astuce :</strong> la galerie est idéale pour une base de ressources (modèles, logos, photos) ou un portfolio de projets.</p>
+          <p>Pour des tâches, le Kanban ou le tableau restent plus pratiques.</p>
         </div>
 
-        <h2>Projets dans le temps et en images</h2>
+        <h3>Projets dans le temps et en images</h3>
         <p>Voici la base « Projets » en calendrier, en galerie et en chronologie. Dans la chronologie, chaque barre va du début du projet à son échéance.</p>
         <div data-db data-views="calendar,gallery,timeline"></div>
-        <p>En calendrier, Lucas voit que la Campagne Atlas est tombée le 5 novembre et que Luna arrive le 28. En chronologie, Emma voit que Site Orion a commencé fin octobre et chevauche Luna : deux projets en parallèle, à anticiper.</p>
+        <ul>
+          <li>En calendrier, Lucas voit que la Campagne Atlas est tombée le 5 novembre et que Luna arrive le 28.</li>
+          <li>En chronologie, Emma voit que Site Orion a commencé fin octobre et chevauche Luna : deux projets en parallèle, à anticiper.</li>
+        </ul>
       </section>
 
       <!-- ===================== Étape 3 : Faire ===================== -->

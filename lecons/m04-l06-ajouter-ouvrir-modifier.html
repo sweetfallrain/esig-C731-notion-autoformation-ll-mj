@@ -56,24 +56,38 @@
       <h1>Ajouter, ouvrir, modifier</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Une base vit : on y ajoute des projets, on change un statut, on corrige une date. Voici les gestes du quotidien.</p>
-        <ul>
-          <li><strong>Ajouter une entrée</strong> : clique sur « + Nouvelle page » sous la dernière ligne, ou sur le bouton bleu <strong>« Nouveau »</strong> (<em>New</em>) en haut à droite de la base. Le bouton ouvre directement la nouvelle page.</li>
-          <li><strong>Modifier une propriété</strong> : clique dans la case, directement dans le tableau, et change la valeur. Pas besoin d'ouvrir la page.</li>
-          <li><strong>Ouvrir une entrée</strong> : bouton « Ouvrir » au survol du nom, pour écrire dans son contenu.</li>
-          <li><strong>Modifier une colonne</strong> : clique sur son nom pour la renommer, changer son type, la masquer ou la supprimer.</li>
-          <li><strong>Supprimer une entrée</strong> : clic droit sur la ligne, puis « Supprimer ». La page part dans la Corbeille.</li>
-        </ul>
-        <p>Une précision sur <strong>masquer</strong> et <strong>supprimer</strong> une propriété. Masquer cache la colonne du tableau, mais les valeurs restent dans chaque page. Supprimer efface la propriété et toutes ses valeurs, dans toutes les entrées.</p>
-        <p class="definition">Une valeur se modifie dans la case ; une colonne se modifie en cliquant sur son nom.</p>
-        <div class="callout callout--warning">
-          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> changer le type d'une propriété peut faire perdre des informations. Par exemple, passer une colonne « Texte » en « Date » efface les valeurs que Notion ne comprend pas comme des dates. Vérifie avant de valider.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>Une <strong>valeur</strong> se modifie dans la case. Une <strong>colonne</strong> se modifie en cliquant sur son nom.</p>
         </div>
 
-        <h2>Une base qui vit</h2>
+        <p>Une base vit : on ajoute des projets, on change un statut, on corrige une date. Voici les gestes du quotidien.</p>
+
+        <h3>Les gestes du quotidien</h3>
+        <dl class="reperes">
+          <div><dt>Ajouter une entrée</dt><dd>« + Nouvelle page » sous la dernière ligne, ou le bouton bleu <b>« Nouveau »</b> (New) en haut à droite. Le bouton ouvre directement la nouvelle page.</dd></div>
+          <div><dt>Modifier une valeur</dt><dd>Clique dans la case, dans le tableau, et change la valeur. Pas besoin d'ouvrir la page.</dd></div>
+          <div><dt>Ouvrir une entrée</dt><dd>Bouton « Ouvrir » au survol du nom, pour écrire dans son contenu.</dd></div>
+          <div><dt>Modifier une colonne</dt><dd>Clique sur son nom pour la renommer, changer son type, la masquer ou la supprimer.</dd></div>
+          <div><dt>Supprimer une entrée</dt><dd>Clic droit sur la ligne, puis « Supprimer ». La page part dans la Corbeille.</dd></div>
+        </dl>
+
+        <h3>Masquer ou supprimer une propriété ?</h3>
+        <ol class="zones">
+          <li><span class="zones__nom">Masquer</span><span class="zones__ou">Sans risque</span><span class="zones__role">La colonne disparaît du tableau, mais les valeurs restent dans chaque page.</span></li>
+          <li><span class="zones__nom">Supprimer</span><span class="zones__ou">Définitif</span><span class="zones__role">La propriété et toutes ses valeurs sont effacées, dans toutes les entrées.</span></li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
+          <p><strong>Attention :</strong> changer le type d'une propriété peut faire perdre des informations.</p>
+          <p>Passer une colonne « Texte » en « Date » efface les valeurs que Notion ne comprend pas comme des dates. Vérifie avant de valider.</p>
+        </div>
+
+        <h3>Une base qui vit</h3>
         <p>Voici la base « Projets ». La page « Site Orion » est déjà ouverte : sous ses propriétés, Emma a écrit un résumé et une checklist. Ferme-la, puis ouvre un autre projet.</p>
         <div data-db data-views="table" data-columns="basic" data-open="orion"></div>
       </section>

@@ -56,25 +56,47 @@
       <h1>Une base, plusieurs vues</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Ta base « Projets » s'affiche en table. C'est pratique pour tout voir d'un coup, mais pas toujours : Emma veut voir l'avancement en colonnes, Lucas veut savoir ce qui tombe cette semaine. Faut-il créer une base pour chacun ? Non.</p>
-        <p>Une <strong>vue</strong> est une façon d'afficher une base. Une même base peut avoir autant de vues que tu veux : un tableau, des colonnes de suivi, un calendrier… Les projets, eux, ne sont enregistrés <strong>qu'une seule fois</strong>.</p>
-        <p>Compare avec des lunettes : tu peux regarder la même pièce avec des lunettes de lecture ou des lunettes de soleil. La pièce ne change pas ; seule ta façon de la voir change. Si tu changes le statut d'un projet dans le tableau, il change aussi dans le calendrier, puisque c'est le même projet.</p>
-        <p>Les vues apparaissent sous forme d'<strong>onglets</strong> en haut de la base. Pour en ajouter une, clique sur le <strong>« + »</strong> au-dessus du tableau, à droite de la vue actuelle, choisis le type, puis donne-lui un nom dans les réglages de la vue.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>Une <strong>vue</strong> est une façon d'afficher une base. Les données, elles, ne sont jamais copiées.</p>
+        </div>
+
+        <h3>Le besoin</h3>
+        <p>Ta base « Projets » s'affiche en table. Mais Emma veut voir l'avancement en colonnes, et Lucas veut savoir ce qui tombe cette semaine.</p>
+        <p>Faut-il une base pour chacun ? Non : il suffit de plusieurs vues.</p>
+
+        <h3>Une base, plusieurs vues</h3>
+        <ul>
+          <li>Une base peut avoir autant de vues que tu veux : tableau, colonnes de suivi, calendrier…</li>
+          <li>Les projets ne sont enregistrés <b>qu'une seule fois</b>.</li>
+          <li>Si tu changes le statut d'un projet dans le tableau, il change aussi dans le calendrier : c'est le même projet.</li>
+        </ul>
+
+        <p class="mot-cle mot-cle--image"><span class="mot-cle__label">Pour imaginer</span><span>Des <b>lunettes</b> : tu regardes la même pièce avec des lunettes de lecture ou de soleil. La pièce ne change pas ; seule ta façon de la voir change.</span></p>
 
         <figure class="illustration">
           <img src="../images/illustrations/m05-une-base-plusieurs-vues.svg" alt="Schéma : la base « Projets », enregistrée une seule fois, est reliée par trois flèches à trois vues : une table avec les trois projets, un Kanban en trois colonnes Pas commencé, En cours et Terminé, et un calendrier où les projets sont placés à leur date." width="720" height="320">
           <figcaption>Une seule base, trois façons de la regarder.</figcaption>
         </figure>
-        <p class="definition">Une vue est une façon d'afficher une base ; les données, elles, ne sont jamais dupliquées.</p>
+
+        <h3>Ajouter une vue</h3>
+        <ol class="zones">
+          <li><span class="zones__nom">Clique sur « + »</span><span class="zones__ou">Au-dessus du tableau</span><span class="zones__role">À droite de la vue actuelle. Les vues sont des onglets.</span></li>
+          <li><span class="zones__nom">Choisis le type</span><span class="zones__ou">Table, Kanban, calendrier…</span><span class="zones__role">La nouvelle vue s'ouvre.</span></li>
+          <li><span class="zones__nom">Donne-lui un nom</span><span class="zones__ou">Dans les réglages de la vue</span><span class="zones__role">Un nom qui dit à quoi elle sert.</span></li>
+        </ol>
+
         <div class="callout callout--warning">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 6v8"/><path d="M12 18.5v.01"/></svg></span>
-          <p><strong>Attention :</strong> supprimer une <strong>vue</strong> ne supprime aucun projet : seule la façon de les afficher disparaît. En revanche, supprimer la <strong>base</strong> supprime tous les projets. Lis bien le menu avant de cliquer.</p>
+          <p><strong>Attention :</strong> supprimer une <strong>vue</strong> ne supprime aucun projet. Seule la façon de les afficher disparaît.</p>
+          <p>Supprimer la <strong>base</strong>, en revanche, supprime tous les projets. Lis bien le menu avant de cliquer.</p>
         </div>
 
-        <h2>Trois vues de la base Projets</h2>
-        <p>Voici la base « Projets » avec trois vues. Passe d'un onglet à l'autre : ce sont toujours les trois mêmes projets. Ouvre « Site Orion » dans une vue, puis dans une autre : c'est la même page.</p>
+        <h3>Trois vues de la base Projets</h3>
+        <p>Passe d'un onglet à l'autre : ce sont toujours les trois mêmes projets. Ouvre « Site Orion » dans une vue, puis dans une autre : c'est la même page.</p>
         <div data-db data-views="table,board,calendar" data-columns="basic"></div>
       </section>
 

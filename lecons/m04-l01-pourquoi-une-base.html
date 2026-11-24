@@ -56,25 +56,40 @@
       <h1>Pourquoi une base</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Pour l'instant, la page « Projets » de Studio Nova est vide. Emma pourrait y écrire une simple liste : « Site Orion — Emma — en cours — 15 novembre ». Ça marche pour trois projets. Mais à vingt projets, comment savoir lesquels sont en retard ? Lesquels sont à Lucas ?</p>
-        <p>C'est là qu'intervient la <strong>base de données</strong>. Une base de données, c'est une <strong>collection d'éléments du même genre</strong> (des projets, des tâches, des clients…), décrits chacun par les <strong>mêmes informations</strong> : un statut, un responsable, une échéance.</p>
-        <p>Visuellement, une base ressemble à un tableau Excel : une ligne par élément, une colonne par information. Mais elle fait beaucoup plus :</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>Une <strong>base de données</strong> est une collection d'éléments du même genre, décrits par les mêmes informations.</p>
+        </div>
+
+        <h3>Le problème</h3>
+        <p>La page « Projets » est vide. Emma pourrait y écrire une liste : « Site Orion — Emma — en cours — 15 novembre ».</p>
+        <p>Ça marche pour trois projets. Mais à vingt, comment savoir lesquels sont en retard ? Lesquels sont à Lucas ?</p>
+
+        <h3>La solution : une base</h3>
+        <dl class="reperes">
+          <div><dt>Des éléments du même genre</dt><dd>Des projets, des tâches, des clients…</dd></div>
+          <div><dt>Les mêmes informations</dt><dd>Pour chacun : un statut, un responsable, une échéance.</dd></div>
+        </dl>
+
+        <p>Une base ressemble à un tableau Excel : une ligne par élément, une colonne par information. Mais elle fait beaucoup plus :</p>
         <ul>
-          <li>elle <strong>trie</strong> et <strong>filtre</strong> en un clic : « seulement les projets en cours » ;</li>
-          <li>elle s'affiche de <strong>plusieurs façons</strong> : tableau, colonnes de suivi, calendrier (module 5) ;</li>
-          <li>chaque ligne est une <strong>vraie page</strong>, où l'on peut écrire (leçon suivante).</li>
+          <li>elle <b>trie</b> et <b>filtre</b> en un clic : « seulement les projets en cours » ;</li>
+          <li>elle s'affiche de <b>plusieurs façons</b> : tableau, colonnes de suivi, calendrier (module 5) ;</li>
+          <li>chaque ligne est une <b>vraie page</b>, où l'on peut écrire (leçon suivante).</li>
         </ul>
 
         <figure class="illustration">
           <img src="../images/illustrations/m04-liste-ou-base.svg" alt="Comparaison. À gauche, une liste à puces dans une page : « Site Orion — Emma — en cours — 15/11 », etc., avec la remarque : les informations sont mélangées, impossible de trier. Une flèche mène à droite vers une base de données : un tableau avec les colonnes Nom, Statut et Échéance, et la remarque : chaque information a sa colonne, on trie, on filtre, on change de vue." width="720" height="320">
           <figcaption>Les mêmes projets, écrits dans une page ou rangés dans une base.</figcaption>
         </figure>
-        <p class="definition">Une base de données est une collection d'éléments du même genre, décrits par les mêmes informations.</p>
+
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> un bon indice : si tu te surprends à écrire la même structure ligne après ligne (« nom — personne — date »), c'est qu'il te faut une base.</p>
+          <p><strong>Astuce :</strong> tu écris la même structure ligne après ligne (« nom — personne — date ») ?</p>
+          <p>C'est le signe qu'il te faut une base.</p>
         </div>
       </section>
 

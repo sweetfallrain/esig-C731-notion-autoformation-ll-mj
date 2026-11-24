@@ -379,6 +379,32 @@ corrections, astuces ou encadrés sans accord.
 
 ## Notes de migration
 
+### v13 — sections Comprendre en « lecture facile » (nov. 2026)
+
+- **Objectif** : des explications lisibles sans fatigue, y compris pour un
+  lecteur avec un TDAH ou une dyslexie. Les 31 sections Comprendre des modules
+  1 à 7 suivent la même structure (classe `lecture` sur la section, bloc
+  « Lecture facile » en fin de `css/components.css`) :
+  - `.essentiel` « À retenir » en tête (remplace l'ancienne `.definition` de fin
+    de section) ;
+  - sous-titres `h3` courts ;
+  - `dl.reperes` : un élément par ligne, nom à gauche, rôle à droite en une ou
+    deux phrases ;
+  - `ol.zones` : cartes numérotées pour ce qui se fait dans l'ordre
+    (`zones--4` = 2 × 2) ;
+  - `p.mot-cle` (« Mot clé », « Bon à savoir ») et `mot-cle--image`
+    (« Pour imaginer ») ;
+  - encadrés Attention / Astuce en phrases courtes, un `<p>` par idée ;
+  - facultatif replié dans `details.plus`.
+- Texte **aligné à gauche** dans ces sections (le texte justifié gêne les
+  lecteurs dyslexiques) ; Faire et Vérifier sont inchangés.
+- Aucune information retirée : reformulée, découpée ou repliée. Simulations,
+  tableaux, exercices de tri et images repris tels quels.
+- 2.1 : les 4 parties d'une page suivent la numérotation du schéma (couverture
+  en 1). **[décision de l'utilisatrice]**
+- **Règle pour toute nouvelle leçon** : écrire Comprendre dans ce format,
+  phrases courtes (environ 20 mots), une idée par bloc.
+
 ### v12 — téléphone en mode « appli » et quiz corrigés en une fois (nov. 2026)
 
 - **Téléphone (< 600 px) uniquement, l'ordinateur ne change pas** : blocs

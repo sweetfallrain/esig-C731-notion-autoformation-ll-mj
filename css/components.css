@@ -3325,7 +3325,7 @@ body[data-lesson] .course-panel h1 {
   body.has-app-bar .site-footer { border-top: 0; }
   body.has-app-bar .site-footer__inner { padding-top: 4px; opacity: 0.8; }
 }
-
+
 /* ===================================================================
    Lecture facile (TDAH, dyslexie) — sections Comprendre
    Une idée par bloc, texte aligné à gauche, lignes courtes,
@@ -3383,10 +3383,15 @@ body[data-lesson] .course-panel h1 {
   list-style: none;
   counter-reset: zone;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
   gap: 12px;
   margin: 0 0 18px;
   padding: 0;
+}
+.zones--4 {
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .prose.lecture ol.zones > li {
   counter-increment: zone;
@@ -3488,7 +3493,8 @@ body[data-lesson] .course-panel h1 {
 }
 
 @media (max-width: 767px) {
-  .zones { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .zones,
+  .zones--4 { grid-auto-flow: row; grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .zones li { padding: 12px 14px 12px 50px; }
   .prose.lecture ol.zones > li::before { top: 12px; }
   .zones__ou { display: inline; margin: 0 0 0 6px; }

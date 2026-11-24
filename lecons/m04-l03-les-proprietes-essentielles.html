@@ -56,11 +56,24 @@
       <h1>Les propriétés essentielles</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Une <strong>propriété</strong>, c'est une information que toutes les entrées de la base partagent : une colonne du tableau. Pour chaque propriété, tu choisis un <strong>type</strong>. Le type dit à Notion quel genre d'information il attend : un texte, un nombre, une date…</p>
-        <p>Pourquoi c'est important ? Parce que le type décide de ce que Notion sait faire avec l'information. Une échéance de type <em>Date</em> s'affiche dans un calendrier et se trie dans l'ordre chronologique. La même échéance écrite en <em>Texte</em> (« le 15 ») n'est qu'une suite de lettres.</p>
-        <p>Voici les types de base. Le premier, « Nom », existe déjà dans chaque base ; tu choisis les autres. Tu verras les quatre types « à choix » dans la leçon suivante.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p>Une <strong>propriété</strong> est une information commune à toutes les entrées. Son <strong>type</strong> dit à Notion comment la traiter.</p>
+        </div>
+
+        <h3>Propriété et type</h3>
+        <dl class="reperes">
+          <div><dt>Propriété</dt><dd>Une information que toutes les entrées partagent : une colonne du tableau.</dd></div>
+          <div><dt>Type</dt><dd>Le genre d'information attendu : un texte, un nombre, une date…</dd></div>
+        </dl>
+
+        <p class="mot-cle mot-cle--image"><span class="mot-cle__label">Pourquoi c'est important</span><span>Une échéance de type <b>Date</b> s'affiche dans un calendrier et se trie dans l'ordre. Écrite en <b>Texte</b> (« le 15 »), ce n'est qu'une suite de lettres.</span></p>
+
+        <h3>Les types de base</h3>
+        <p>« Nom » existe déjà dans chaque base ; tu choisis les autres. Les quatre types « à choix » viennent à la leçon suivante.</p>
         <div class="db-sim__scroll">
           <table class="db-table">
             <caption class="sr-only">Les types de propriétés de base</caption>
@@ -75,15 +88,20 @@
             </tbody>
           </table>
         </div>
-        <p>Les exemples du tableau (client, budget, facturé…) servent à expliquer chaque type : ta base « Projets », créée à la leçon 4.5, aura d'autres propriétés. Notion propose aussi d'autres types, par exemple <strong>ID</strong>, qui numérote chaque entrée automatiquement (PRJ-1, PRJ-2…). Il est utile quand on cite un élément par sa référence, comme une facture ; pour Studio Nova, le nom de chaque projet suffit.</p>
-        <p class="definition">Une propriété est une information commune à toutes les entrées ; son type dit à Notion comment la traiter.</p>
+
+        <ul>
+          <li>Ces exemples (client, budget, facturé…) servent à expliquer chaque type. Ta base « Projets », créée à la leçon 4.5, aura d'autres propriétés.</li>
+          <li>Il existe d'autres types. Par exemple <b>ID</b> numérote chaque entrée tout seul (PRJ-1, PRJ-2…). Utile pour citer une référence, comme une facture. Pour Studio Nova, le nom du projet suffit.</li>
+        </ul>
+
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> pour ajouter une propriété, clique sur le <strong>+</strong> à droite de la dernière colonne, nomme-la, puis choisis son type. Tu peux changer le type plus tard en cliquant sur le nom de la colonne.</p>
+          <p><strong>Astuce :</strong> pour ajouter une propriété, clique sur le <strong>+</strong> à droite de la dernière colonne, nomme-la, puis choisis son type.</p>
+          <p>Tu peux changer le type plus tard en cliquant sur le nom de la colonne.</p>
         </div>
 
-        <h2>Les propriétés du projet Orion</h2>
-        <p>Voici un exemple de base « Projets » avec toutes ces propriétés. Fais défiler le tableau horizontalement, puis ouvre un projet : chaque colonne réapparaît en haut de la page.</p>
+        <h3>Les propriétés du projet Orion</h3>
+        <p>Voici un exemple de base « Projets » avec toutes ces propriétés. Fais défiler le tableau vers la droite, puis ouvre un projet : chaque colonne réapparaît en haut de la page.</p>
         <div data-db data-views="table" data-columns="full"></div>
       </section>
 

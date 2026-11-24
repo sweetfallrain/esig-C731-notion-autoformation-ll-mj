@@ -56,9 +56,16 @@
       <h1>Table, liste et Kanban</h1>
 
       <!-- ===================== Étape 1 : Comprendre ===================== -->
-      <section class="lesson-step prose" data-step="Comprendre" aria-labelledby="etape-1">
+      <section class="lesson-step prose lecture" data-step="Comprendre" aria-labelledby="etape-1">
         <h2 id="etape-1" class="sr-only">Étape 1 : comprendre</h2>
-        <p>Les trois vues les plus utilisées au quotidien sont la table, la liste et le Kanban. Chacune répond à une question différente.</p>
+
+        <div class="essentiel">
+          <p class="essentiel__label">À retenir</p>
+          <p><strong>Table</strong> pour tout voir, <strong>liste</strong> pour lire vite, <strong>Kanban</strong> pour suivre l'avancement.</p>
+        </div>
+
+        <p>Ce sont les trois vues les plus utilisées au quotidien. Chacune répond à une question différente.</p>
+
         <div class="db-sim__scroll">
           <table class="db-table">
             <caption class="sr-only">Table, liste et Kanban</caption>
@@ -70,15 +77,24 @@
             </tbody>
           </table>
         </div>
-        <p>Le <strong>Kanban</strong> mérite une explication. Il range les cartes selon une propriété à choix, le plus souvent le <strong>Statut</strong>. Faire glisser une carte d'une colonne à l'autre <strong>change la propriété</strong> : déplacer « Identité Luna » dans « En cours » passe son statut à « En cours ». C'est la méthode Kanban, utilisée par beaucoup d'équipes.</p>
-        <p>Dans chaque vue, tu choisis quelles propriétés afficher : <strong>menu des réglages</strong> de la vue (en haut à droite de la base), puis « Visibilité des propriétés ». Une liste montre souvent seulement le nom et la date ; le tableau montre tout.</p>
-        <p class="definition">Table pour tout voir, liste pour lire vite, Kanban pour suivre l'avancement.</p>
+
+        <h3>Le Kanban, en détail</h3>
+        <ul>
+          <li>Il range les cartes selon une propriété à choix, le plus souvent le <b>Statut</b>.</li>
+          <li>Glisser une carte dans une autre colonne <b>change la propriété</b>. Déplacer « Identité Luna » dans « En cours » passe son statut à « En cours ».</li>
+          <li>C'est la méthode Kanban, utilisée par beaucoup d'équipes.</li>
+        </ul>
+
+        <h3>Choisir les propriétés affichées</h3>
+        <p>Dans chaque vue : <b>menu des réglages</b> de la vue (en haut à droite de la base), puis « Visibilité des propriétés ». Une liste montre souvent le nom et la date ; le tableau montre tout.</p>
+
         <div class="callout callout--tip">
           <span class="callout__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></span>
-          <p><strong>Astuce :</strong> sur un Kanban, tu peux aussi ranger les cartes par Responsable ou par Priorité : ouvre le menu des réglages de la vue, puis « Grouper » (<em>Group</em>), et change la propriété dans « Grouper par ».</p>
+          <p><strong>Astuce :</strong> sur un Kanban, tu peux aussi ranger les cartes par Responsable ou par Priorité.</p>
+          <p>Menu des réglages de la vue, puis « Grouper » (Group), et change la propriété dans « Grouper par ».</p>
         </div>
 
-        <h2>Trois vues du quotidien</h2>
+        <h3>Trois vues du quotidien</h3>
         <p>Passe de la vue Table à la vue Liste, puis à la vue Kanban. Ouvre un projet depuis n'importe quelle vue.</p>
         <div data-db data-views="table,list,board" data-columns="basic"></div>
       </section>
