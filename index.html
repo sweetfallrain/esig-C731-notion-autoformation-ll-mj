@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/responsive.css">
 <script src="js/nav.js"></script>
+<script src="js/mobile.js" defer></script>
+<script src="js/typographie.js" defer></script>
 </head>
 <body>
 
@@ -49,17 +51,17 @@
 
     <section id="programme" class="panel" aria-labelledby="titre-programme">
       <h2 id="titre-programme">Le programme</h2>
-      <p class="panel__lead">Du plus simple au plus complet. Chaque leçon se termine par un mini-exercice dans Notion et un petit quiz.</p>
+      <p class="panel__lead">Du plus simple au plus complet. Dans chaque leçon, tu pratiques directement dans Notion, puis un petit quiz vérifie que tu as compris.</p>
       <ol class="program">
         <li><span class="program__num">01</span><span class="program__title">Découvrir Notion</span><span class="program__desc">Comprendre à quoi sert l'outil, te repérer dans son interface et créer ton espace d'entraînement.</span></li>
         <li><span class="program__num">02</span><span class="program__title">Pages et blocs</span><span class="program__desc">La brique de base de Notion : une page est faite de blocs que tu crées, déplaces et transformes.</span></li>
-        <li><span class="program__num">03</span><span class="program__title">Organiser et naviguer</span><span class="program__desc">Sous-pages, liens entre pages, barre latérale et recherche pour retrouver vite ce que tu cherches.</span></li>
-        <li><span class="program__num">04</span><span class="program__title">Bases de données</span><span class="program__desc">Une base est une collection de pages décrites par des propriétés : tu crées la base « Projets ».</span></li>
+        <li><span class="program__num">03</span><span class="program__title">Organiser et naviguer</span><span class="program__desc">Ranger tes pages les unes dans les autres, les relier entre elles, épingler les plus utiles et retrouver n'importe laquelle avec la recherche.</span></li>
+        <li><span class="program__num">04</span><span class="program__title">Bases de données</span><span class="program__desc">Une base de données réunit des éléments du même genre, comme des projets, tous décrits par les mêmes informations. Tu crées la base « Projets » de Studio Nova.</span></li>
         <li><span class="program__num">05</span><span class="program__title">Vues, filtres et tris</span><span class="program__desc">Les mêmes informations présentées autrement : table, Kanban, calendrier, avec filtres et tris.</span></li>
         <li><span class="program__num">06</span><span class="program__title">Construire un espace pro</span><span class="program__desc">Un espace simple et bien nommé, où toute l'équipe trouve vite ce qu'elle cherche au quotidien.</span></li>
         <li><span class="program__num">07</span><span class="program__title">Partager et collaborer</span><span class="program__desc">Inviter tes collègues, choisir le bon niveau d'accès, commenter et mentionner au bon endroit.</span></li>
         <li><span class="program__num">08</span><span class="program__title">Cas pratique Studio Nova</span><span class="program__desc">Un exercice final sans pas-à-pas : organiser le matériel de l'agence, puis comparer avec le corrigé.</span></li>
-        <li><span class="program__num">09</span><span class="program__title">Questionnaire final</span><span class="program__desc">Valider tes acquis avec quinze questions, et repartir avec une fiche mémo des raccourcis.</span></li>
+        <li><span class="program__num">09</span><span class="program__title">Questionnaire final</span><span class="program__desc">Valider tes acquis avec quinze questions, et repartir avec une fiche mémo à imprimer.</span></li>
       </ol>
     </section>
 
@@ -75,7 +77,7 @@
           <li><span><span class="tree__branch" aria-hidden="true">├─</span> Accueil</span><span class="meta">Module 2</span></li>
           <li><span><span class="tree__branch" aria-hidden="true">├─</span> Projets</span><span class="meta">Module 4</span></li>
           <li><span><span class="tree__branch" aria-hidden="true">├─</span> Tâches</span><span class="meta">Module 6</span></li>
-          <li><span><span class="tree__branch" aria-hidden="true">├─</span> Ressources</span><span class="meta">Module 6</span></li>
+          <li><span><span class="tree__branch" aria-hidden="true">├─</span> Ressources</span><span class="meta">Module 2</span></li>
           <li><span><span class="tree__branch" aria-hidden="true">└─</span> Notes &amp; réunions</span><span class="meta">Module 3</span></li>
         </ul>
       </div>
@@ -86,9 +88,39 @@
       <p class="panel__lead">Tu avances étape par étape, sans jamais te retrouver devant un long texte.</p>
       <ol class="method">
         <li><strong>1. Comprendre</strong><span>La notion expliquée simplement, avec un exemple chez Studio Nova, souvent interactif.</span></li>
-        <li><strong>2. Faire</strong><span>Un tutoriel pas à pas dans Notion, avec une capture à chaque étape importante.</span></li>
+        <li><strong>2. Faire</strong><span>L'exercice de la leçon : tu le fais pas à pas dans Notion, avec une capture à chaque étape importante.</span></li>
         <li><strong>3. Vérifier</strong><span>Un quiz corrigé tout de suite, pour t'assurer que tu as compris.</span></li>
       </ol>
+    </section>
+
+    <section id="ressources" class="panel" aria-labelledby="titre-ressources">
+      <h2 id="titre-ressources">Ressources pour aller plus loin</h2>
+      <p class="panel__lead">La formation t'a donné les bases. Pour approfondir une fonction ou garder l'essentiel sous la main, voici des ressources choisies.</p>
+
+      <div class="resource-memo">
+        <div>
+          <h3>La fiche mémo Notion</h3>
+          <p>Les raccourcis, les commandes « / », les niveaux d'accès et les bons réflexes, sur une page A4 à imprimer.</p>
+        </div>
+        <a class="btn btn-primary" href="ressources/fiche-memo-notion.pdf" download>Télécharger la fiche (PDF)</a>
+      </div>
+
+      <h3 class="resource-group__title">Les ressources officielles de Notion</h3>
+      <ul class="resource-list">
+          <li><a class="resource-link" href="https://www.notion.com/fr/help" target="_blank" rel="noopener"><span class="resource-link__kind">Officiel · français</span><span class="resource-link__title">Centre d'aide Notion<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">La documentation officielle, en français : chaque fonction expliquée, avec des images.</span></a></li>
+          <li><a class="resource-link" href="https://academy.notion.com" target="_blank" rel="noopener"><span class="resource-link__kind">Officiel · anglais</span><span class="resource-link__title">Notion Academy<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">Les cours gratuits de Notion, du niveau débutant aux usages avancés, avec des badges.</span></a></li>
+          <li><a class="resource-link" href="https://www.notion.com/fr/help/intro-to-databases" target="_blank" rel="noopener"><span class="resource-link__kind">Officiel · français</span><span class="resource-link__title">Introduction aux bases de données<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">Pour revoir le module 4 : ce qu'est une base, ses propriétés et ses entrées.</span></a></li>
+          <li><a class="resource-link" href="https://www.notion.com/fr/help/category/database-views" target="_blank" rel="noopener"><span class="resource-link__kind">Officiel · français</span><span class="resource-link__title">Les vues de base de données<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">Pour approfondir le module 5 : chaque type de vue, ses réglages, ses filtres.</span></a></li>
+      </ul>
+
+      <h3 class="resource-group__title">Des tutoriels vidéo</h3>
+      <p class="resource-note">Ces vidéos sont faites par des créateurs indépendants. L'interface de Notion évolue : quelques boutons peuvent avoir changé de place ou de nom.</p>
+      <ul class="resource-list">
+          <li><a class="resource-link" href="https://www.youtube.com/watch?v=zZhQu4vh9z8" target="_blank" rel="noopener"><span class="resource-link__kind">YouTube · français</span><span class="resource-link__title">Tuto Notion simplifié : les bases en 10 minutes<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">Un tour rapide de l'interface et des pages, idéal après les modules 1 à 3.</span></a></li>
+          <li><a class="resource-link" href="https://www.youtube.com/watch?v=mMh-DvRIrVM" target="_blank" rel="noopener"><span class="resource-link__kind">YouTube · français</span><span class="resource-link__title">Maîtrise les bases de données sur Notion<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">Un guide complet sur les bases et leurs propriétés, pour aller plus loin que le module 4.</span></a></li>
+          <li><a class="resource-link" href="https://www.youtube.com/watch?v=-2y_s_QgPhI" target="_blank" rel="noopener"><span class="resource-link__kind">YouTube · français</span><span class="resource-link__title">Les vues des bases de données dans Notion<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">Table, Kanban, calendrier, galerie : les vues en vidéo, en complément du module 5.</span></a></li>
+          <li><a class="resource-link" href="https://www.youtube.com/watch?v=lD5oBYEwoOI" target="_blank" rel="noopener"><span class="resource-link__kind">YouTube · français</span><span class="resource-link__title">Afficher une base dans plusieurs pages<span class="sr-only"> (s'ouvre dans un nouvel onglet)</span></span><span class="resource-link__desc">Les vues liées en vidéo, comme sur la page d'accueil du module 6.</span></a></li>
+      </ul>
     </section>
 
     <section class="cta-band" aria-labelledby="titre-cta">

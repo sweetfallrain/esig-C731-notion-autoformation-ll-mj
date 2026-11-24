@@ -220,7 +220,7 @@ pas une histoire.
 
 ```
 esig-C731-notion-autoformation-ll-mj/
-├── index.html                 Accueil (illustration, programme, Studio Nova, méthode)
+├── index.html                 Accueil (illustration, programme, Studio Nova, méthode, ressources)
 ├── mon-parcours.html          Page « Les modules » : sommaire des 9 modules + progression
 ├── lecons/                    36 leçons : mXX-lYY-slug.html
 │   └── m02-l03-comprendre-les-blocs.html   Leçon gabarit (leçon en 3 étapes)
@@ -242,10 +242,14 @@ esig-C731-notion-autoformation-ll-mj/
 │   ├── notion-sim.js          Fausses pages Notion
 │   ├── block-sims.js          Simulations de blocs et de sous-pages (module 2)
 │   ├── db-sim.js              Simulation de la base Projets (modules 4 et 5)
-│   └── parcours.js            Page « Les modules » (accordéon, progression)
+│   ├── parcours.js            Page « Les modules » (accordéon, progression)
+│   ├── mobile.js              Images agrandissables, tableaux en fiches sur téléphone
+│   └── typographie.js         Espaces insécables françaises (chargé en dernier)
 ├── images/
 │   ├── captures/              Captures Notion de l'utilisatrice (m<module>-<sujet>.png)
 │   └── illustrations/         Schémas SVG (m<module>-<sujet>.svg) + accueil-hero.webp
+├── ressources/
+│   └── fiche-memo-notion.pdf  Fiche mémo A4 à imprimer (accueil et 9.1)
 ├── fonts/
 ├── styleguide.html            Référence visuelle (ancienne, à mettre à jour)
 ├── DESIGN.md
@@ -284,7 +288,7 @@ nom » à droite, puis le H1. Ensuite 3 étapes, chacune dans une
 (adresses `#comprendre`, `#faire`, `#verifier`) :
 
 1. **Comprendre** — introduction, explication, **image explicative** (schéma SVG), définition, erreur fréquente (bandeau Attention), simulation éventuelle.
-2. **Faire** — exercice de tri éventuel, tutoriel pas à pas avec captures, astuce (bandeau Astuce), mini-exercice « dans Notion » + résultat attendu.
+2. **Faire** — l'exercice de la leçon : exercice de tri éventuel, puis étapes pas à pas dans Notion avec captures, astuce (bandeau Astuce). Plus d'encadré « Exercice » ni de « Résultat attendu » à la fin (les captures montrent le résultat).
 3. **Vérifier** — objectif de la leçon (« Tu sais maintenant… »), mini-quiz (1-3 questions, correction expliquée), bouton « Marquer comme terminée ».
 
 Navigation du bas : « Étape précédente » / « Étape suivante », puis à la
@@ -347,8 +351,11 @@ suivi du bouton « Marquer comme terminée » et d'un seul bouton vers la suite.
 9. **Icônes** : SVG inline au trait, `aria-hidden="true"`. Pas d'emojis.
 10. **Simulations** : « inspirées de l'interface de Notion », toujours
     marquées « Simulation », jamais présentées comme l'application réelle.
-11. **Fichiers** : fins de ligne CRLF ; texte justifié dans les leçons
-    uniquement.
+11. **Fichiers** : fins de ligne CRLF ; texte justifié seulement dans la
+    colonne principale des leçons, sans césure, aligné à gauche sur téléphone.
+12. **Téléphone** : tester chaque page à 375 px (aucun débordement) ; les
+    tableaux de cours (`.prose > .db-sim__scroll > table.db-table`) passent en
+    fiches, les images s'agrandissent au toucher.
 
 ## Méthode de travail avec l'utilisatrice
 
@@ -370,6 +377,35 @@ corrections, astuces ou encadrés sans accord.
 ---
 
 ## Notes de migration
+
+### v11 — accueil, affichage téléphone et exercices (nov. 2026)
+
+- **Encadré « Exercice · dans Notion » supprimé** en fin de Faire (modules 1 à
+  7, 29 encadrés) : Faire est l'exercice, fait pas à pas avec les captures. Les
+  actions utiles qu'il ajoutait sont passées dans les étapes (2.1 phrase de la
+  page Studio Nova, 2.3 phrase de bienvenue, 2.5 cocher, 2.7 dupliquer, 3.1
+  supprimer Brouillon, 3.3 retirer un favori, 4.2 supprimer Brouillon base).
+  Exercices « sur papier » de 4.1, 4.3 et 4.4 supprimés : Faire = l'exercice de
+  tri interactif. **[décision de l'utilisatrice]**
+- **Module 4** : 4.2 et 4.3 précisent que la simulation et les propriétés
+  d'exemple ne sont pas celles de la base de l'apprenant ; types corrigés
+  (« Nom » = titre créé automatiquement, « Numéro » au lieu de « Nombre ») ;
+  type ID cité en une phrase. **[confirmé]**
+- **Accueil** : programme lu en colonnes (1-2-3 / 4-5-6 / 7-8-9), textes des
+  modules 3 et 4 réécrits, section « Ressources pour aller plus loin » (centre
+  d'aide, Notion Academy `academy.notion.com`, deux pages d'aide officielles,
+  quatre vidéos YouTube en français à vérifier par l'utilisatrice), fiche mémo
+  PDF A4 `ressources/fiche-memo-notion.pdf` (aussi en 9.1). « 1 leçon » au
+  singulier sur la page Les modules. **[décision de l'utilisatrice]**
+- **Texte** : justifié seulement dans la colonne principale des leçons, sans
+  césure (plus de mots coupés) ; aligné à gauche dans les encadrés, cartes,
+  tableaux et sur téléphone. `js/typographie.js` ajoute à l'affichage les
+  espaces insécables françaises (« … », avant : ; ? !) sans modifier les
+  sources. **[décision de l'utilisatrice]**
+- **Téléphone** : `js/mobile.js` (toucher une capture ou un schéma l'ouvre en
+  grand ; les tableaux de cours deviennent des fiches), carte de leçon plus
+  large, en-têtes de la page Les modules réalignés. Aucun débordement horizontal
+  à 375 px sur les 38 pages.
 
 ### v10 — relecture des modules 1 à 7 et mise à jour de ce document (nov. 2026)
 
